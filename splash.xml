@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <formatVersion>7</formatVersion>
+  
+  	<include>./theme.xml</include>
+	
+	<view name="splash">
+
+		<splash name="splash">
+			<backgroundColor>000000FF</backgroundColor>
+		</splash>
+		
+		<image name="background">
+			<path>./_art/backgrounds/169/splash.jpg</path>
+		</image>
+		
+		<text name="label, Version, Platforms, Loading, Warning, author" extra="true">
+			<origin>0.5 0.5</origin>
+			<fontPath>./_art/fonts/ARCADE.TTF</fontPath>
+			<fontSize>0.02</fontSize>
+			<color>d2bfa8FF</color>
+			<forceUppercase>true</forceUppercase>
+			<size>1 0.1</size>
+			<alignment>center</alignment>
+			<glowColor>00000080</glowColor>
+			<glowSize>2</glowSize>
+			<glowOffset>1</glowOffset>
+		</text>
+
+		<text name="label">
+			<size>0.33 0.05</size>
+			<pos>0.5 0.75</pos>
+			<color>DDDDDDff</color>
+		</text>
+				
+		<text name="Version" extra="true">
+			<pos>0.5 0.438</pos>
+			<fontSize>0.016</fontSize>
+			<color>A0A0A0</color>
+			<text>Arcade Planet V0.99.2</text>			
+		</text>
+		
+<!-- 		<text name="Platforms" extra="true">
+			<pos>0.5 0.280</pos>
+			<text>Theme for Batocera, Retrobat and Emuelec</text>			
+		</text> -->
+
+<!-- 		<text lang="fr" name="Platforms" extra="true">
+			<pos>0.5 0.280</pos>
+			<text>Theme pour Batocera, Retrobat and Emuelec</text>			
+		</text> -->
+		
+		<text name="Loading" extra="true">
+			<fontSize>0.04</fontSize>
+			<color>A00000</color>
+			<pos>0.5 0.400</pos>
+			<text>LOADING</text>			
+		</text>
+
+		<text lang="fr" name="Loading" extra="true">
+			<text>CHARGEMENT</text>			
+		</text>
+		
+		<text name="Warning" extra="true">
+			<pos>0.01 0.95</pos>
+			<color>909090</color>
+			<alignment>left</alignment>
+			<origin>0 0.5</origin>
+			<fontSize>0.016</fontSize>
+			<text>PLEASE REFER TO THE README IF THE THEME LOOKS WEIRD</text>			
+		</text>
+		
+		<text lang="fr" name="Warning" extra="true">
+			<text>LISEZ-BIEN LE README SI LE THEME VOUS PARAIT BIZARRE</text>			
+		</text>
+						
+		<text name="author" extra="true">
+			<pos>0.99 0.95</pos>
+			<origin>1 0.5</origin>
+			<fontSize>0.013</fontSize>
+			<alignment>right</alignment>
+			<color>DDDDDD</color>
+			<text>By EvilDindon, 2021</text>
+		</text>
+			
+		<image name="progressbar">
+			<origin>0 0.5</origin>
+			<pos>0.24 0.8</pos>
+			<size>0.25 0.03</size>
+			<color>800000</color>
+			<colorEnd>000000</colorEnd>
+		</image>
+		
+		<image name="progressbar:active">
+			<color>DA0030</color>
+			<colorEnd>000000</colorEnd>
+		</image>
+		
+	</view>
+	
+</theme>
