@@ -216,7 +216,7 @@ originally based on: "carbon" and "Arcade Planet"
     </text>
     
 	<controllerActivity name="controllerActivity">
-      <pos>0.43 0.916</pos>
+      <pos>0.5 0.916</pos>
 	  <origin>1 0.5</origin>
       <size>0.085 0.025</size>
       <itemSpacing>0.003</itemSpacing>
@@ -534,7 +534,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <forceUppercase>0</forceUppercase>
 	  <origin>0 0.5</origin>
 	  <alignment>left</alignment>
-      <pos>0.255 0.927</pos>
+      <pos>0.323 0.927</pos>
       <size>0.2 0.026</size>
       <backgroundColor>5522FF00</backgroundColor>
       <color>bbbbbbdd</color>
@@ -550,7 +550,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <forceUppercase>0</forceUppercase>
 	  <origin>1 0.5</origin>
 	  <alignment>right</alignment>
-      <pos>0.25 0.927</pos>
+      <pos>0.318 0.927</pos>
       <size>1 0.27</size>
       <color>bbbbbbdd</color>
       <glowColor>00000000</glowColor>
@@ -563,7 +563,7 @@ originally based on: "carbon" and "Arcade Planet"
       <origin>0.5 0.5</origin>
 	  <size>0.02604 0.037037037</size>
 	  <pos>0.59 0.36</pos>
-	  <color>D0D0D0</color>
+	  <color>D00000</color>
 	  <path>./_art/assets/arrowup.png</path>
       <linearSmooth>true</linearSmooth>
 	  <zIndex>41</zIndex>
@@ -576,7 +576,7 @@ originally based on: "carbon" and "Arcade Planet"
       <origin>0.5 0.5</origin>
 	  <size>0.02604 0.037037037</size>
 	  <pos>0.59 0.6</pos>
-	  <color>D0D0D0</color>
+	  <color>D00000</color>
 	  <path>./_art/assets/arrowdown.png</path>
       <linearSmooth>true</linearSmooth>
 	  <zIndex>41</zIndex>
