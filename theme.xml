@@ -281,7 +281,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="logo">
 		 <color>CCCCCCff</color>
 		 <default>./_art/assets/nologo.png</default>
-		 <saturation>0.45</saturation>
+		 <saturation>0.42</saturation>
 	     <linearSmooth>true</linearSmooth>
 	     <path>./_art/wheel/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
@@ -360,14 +360,14 @@ originally based on: "carbon" and "Arcade Planet"
 		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.48" to="0.115" begin="620" duration="375" mode="EaseOut"/>
-		  <animation property="offsetX" from="0" to="0.068" begin="2500" duration="375" mode="EaseOut"/>
+		  <animation property="offsetX" from="0" to="0.068" begin="2000" duration="375" mode="EaseOut"/>
 	   	 <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
 	  </storyboard>
 	  	  <storyboard ifSubset="flipsystemview:yes" repeat="forever">
 		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.48" to="0.115" begin="620" duration="375" mode="EaseOut"/>
-		 <animation  property="offsetX" from="0" to="-0.068" begin="2500" duration="375" mode="EaseOut"/>
+		 <animation  property="offsetX" from="0" to="-0.068" begin="2000" duration="375" mode="EaseOut"/>
 		 <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
 	  </storyboard>
 	</image>
@@ -392,14 +392,14 @@ originally based on: "carbon" and "Arcade Planet"
 		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.487" to="0.122" begin="620" duration="375" mode="EaseOut"/>
-		  <animation property="offsetX" from="0" to="0.068" begin="2500" duration="375" mode="EaseOut"/>
+		  <animation property="offsetX" from="0" to="0.068" begin="2000" duration="375" mode="EaseOut"/>
  		  <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>	 
 	 </storyboard>
 	 <storyboard ifSubset="flipsystemview:yes" repeat="forever">
 		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.487" to="0.122" begin="620" duration="375" mode="EaseOut"/>
-		 <animation  property="offsetX" from="0" to="-0.068" begin="2500" duration="375" mode="EaseOut"/>
+		 <animation  property="offsetX" from="0" to="-0.068" begin="2000" duration="375" mode="EaseOut"/>
 		 <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
 	  </storyboard>
 	</image>
@@ -465,10 +465,10 @@ originally based on: "carbon" and "Arcade Planet"
 		<image name="randomArt01">
 		    <path>{random:image}</path>
 			<storyboard repeat="forever">
-				<animation property="opacity" from="0" to="0" begin="" duration="2500" mode="linear"/>
-				<animation property="scale" from="1" to="1" begin="" duration="2500" mode="linear"/>				
-				<animation property="opacity" from="0" to="1" begin="2500" duration="1500" mode="linear"/>
-				<animation property="scale" from="1" to="2" begin="3500" duration="6500" mode="linear"/>
+				<animation property="opacity" from="0" to="0" begin="" duration="2000" mode="linear"/>
+				<animation property="scale" from="1" to="1" begin="" duration="2000" mode="linear"/>				
+				<animation property="opacity" from="0" to="1" begin="2000" duration="1500" mode="linear"/>
+				<animation property="scale" from="1" to="2" begin="3000" duration="7000" mode="linear"/>
 				<animation property="opacity" from="1" to="0" begin="8500" duration="1500" mode="linear"/>	
 				<animation property="opacity" from="0" to="0" begin="10000" duration="10000" mode="linear"/>				
             </storyboard>			
@@ -592,7 +592,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <size>0.02604 0.037037037</size>
 	  <pos>0.616 0.36</pos>
       <pos ifSubset="flipsystemview:yes" >0.42 0.36</pos>     
-	  <color>BB0000</color>
+	  <color>CC0000</color>
 	  <path>./_art/assets/arrowup.png</path>
       <linearSmooth>true</linearSmooth>
 	  <zIndex>41</zIndex>
@@ -606,7 +606,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <size>0.02604 0.037037037</size>
 	  <pos>0.616 0.6</pos>
 	  <pos ifSubset="flipsystemview:yes" >0.42 0.6</pos>   
-	  <color>BB0000</color>
+	  <color>CC0000</color>
 	  <path>./_art/assets/arrowdown.png</path>
       <linearSmooth>true</linearSmooth>
 	  <zIndex>41</zIndex>
