@@ -24,6 +24,9 @@ originally based on: "carbon" and "Arcade Planet"
 	<TextListColor>Text Color in Gamelists</TextListColor>
     <TextListColor lang="fr">Couleur du Texte dans la Liste de Jeux</TextListColor>
 	
+	<controllerstyle>Controller Style</controllerstyle>
+	<controllerstyle lang="fr">Style de Contrôleurs</controllerstyle>
+	
 	<yes>yes</yes>
     <yes lang="fr">oui</yes>
             
@@ -66,6 +69,9 @@ originally based on: "carbon" and "Arcade Planet"
 	<black>black</black>
     <black lang="fr">noir</black>
 	
+	<filiform>filiform</filiform>
+	<filiform lang="fr">filiforme</filiform>
+	
 	<theme.aspect-ratio>aspect ratio</theme.aspect-ratio>
     <theme.aspect-ratio lang="fr">format d'écran</theme.aspect-ratio>
 		
@@ -97,6 +103,18 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="5-4" displayName="5:4"/>
 	</subset>
 	
+	<!-- Subset options for Controler Style -->
+	<subset name="controllerstyle" displayName="${controllerstyle}">
+		<include name="plain" displayName="${plain}"/>
+		<include name="filiform" displayName="${filiform}"/>
+	</subset>
+	
+	<!-- Subset options for Neo Geo Artwork Style -->
+	<subset name="neogeostyle" displayName="Neo-Geo Style">
+		<include name="aes" displayName="AES (Console)"/>
+		<include name="mvs" displayName="MVS (Arcade)"/>
+	</subset>
+	
 	<!-- Subset options for Text Alignment in Game Lists -->
 	<subset name="gamelistalignment" displayName="${gamelistalignment}" appliesTo="detailed,video">
 		<include name="center" displayName="${center}"/>
@@ -117,19 +135,19 @@ originally based on: "carbon" and "Arcade Planet"
   <view name="menu">
   
     <menuText name="menutitle">
-      <fontPath>./_art/fonts/SairaCondensed-Bold.ttf</fontPath>
+      <fontPath>./_art/fonts/EurostileExtendedBlack.ttf</fontPath>
       <fontSize>0.046</fontSize>
       <color>767296</color>
     </menuText>
 	
     <menuText name="menufooter">
-      <fontPath>./_art/fonts/SairaCondensed-Light.ttf</fontPath>
+      <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
       <fontSize>0.032</fontSize>
       <color>777777FF</color>
     </menuText>
 	
     <menuText name="menutext">
-      <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
+      <fontPath>./_art/fonts/Eurostib.TTF</fontPath>
       <fontSize>0.032</fontSize>
       <color>969696</color>
       <separatorColor>323232FF</separatorColor>
@@ -141,13 +159,13 @@ originally based on: "carbon" and "Arcade Planet"
     </menuText>
 	
     <menuTextSmall name="menutextsmall">
-      <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
+      <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
       <fontSize>0.026</fontSize>
       <color>767296</color>
     </menuTextSmall>
 	
     <menuGroup name="menugroup">
-      <fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+      <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
       <fontSize>0.036</fontSize>
       <color>767296</color>
       <separatorColor>BD4747</separatorColor>    
@@ -212,10 +230,24 @@ originally based on: "carbon" and "Arcade Planet"
       <size>0.085 0.025</size>
       <itemSpacing>0.003</itemSpacing>
       <imagePath>./_art/icons/gamepad.svg</imagePath>
+	  <gunPath>./art/gun.svg</gunPath>
       <color>686068</color>
       <activityColor>A0A0FFC0</activityColor>
       <hotkeyColor>FFA0A0C0</hotkeyColor>
     </controllerActivity>
+	
+	<batteryIndicator name="batteryIndicator">
+      <pos>0.955 0.97</pos>
+      <size>0.033 0.0275</size>
+      <horizontalAlignment>right</horizontalAlignment>
+      <incharge>./_art/battery/incharge.svg</incharge>
+      <full>./_art/battery/full.svg</full>
+      <at75>./_art/battery/75.svg</at75>
+      <at50>./_art/battery/50.svg</at50>
+      <at25>./_art/battery/25.svg</at25>
+      <empty>./_art/battery/empty.svg</empty>
+      <color>FFFFFFA0</color>
+    </batteryIndicator>
 	
   </view>
   
@@ -234,14 +266,17 @@ originally based on: "carbon" and "Arcade Planet"
     </helpsystem>
 	
     <text name="logoText">
-		<fontPath>./_art/fonts/Eurostib.TTF</fontPath>
-		<color>FFFFFF</color>
-		<fontSize>0.044</fontSize>
+		<fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
+		<color>C2C2C2ff</color>
+		<fontSize>0.052</fontSize>
 	    <forceUppercase>1</forceUppercase>
-		<glowSize>3</glowSize>
+		<glowSize>2</glowSize>
 		<glowColor>000000ee</glowColor>
 		<glowOffset>1</glowOffset>
 		<zIndex>80</zIndex>
+		<storyboard event="activate">
+  			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>
+	  </storyboard>	
     </text>
 	
 	<image name="logo">
@@ -341,7 +376,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="ColorLogos" extra="static">
       <pos>0.25 0.48</pos>
       <origin>0.5 0.5</origin>
-      <maxSize>0.3 0.164</maxSize>
+      <maxSize>0.32 0.164</maxSize>
 	  <path>./_art/Colorlogos/default.png</path>
 	  <path>./_art/Colorlogos/${system.theme}.png</path>
       <path>./_art/Colorlogos/${system.theme}.svg</path>
@@ -352,17 +387,19 @@ originally based on: "carbon" and "Arcade Planet"
 	  <linearSmooth>true</linearSmooth>
       <zIndex>21</zIndex>
 	  <scale>0</scale>
-	  <storyboard>
+	  <storyboard repeat="forever">
 		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.48" to="0.115" begin="620" duration="375" mode="EaseOut"/>
+		  <animation property="offsetX" from="0" to="0.068" begin="2500" duration="375" mode="EaseOut"/>
+		  <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
 	  </storyboard>
 	</image>
 	
 	<image name="ColorLogosShadow" extra="static">
       <pos>0.257 0.487</pos>
       <origin>0.5 0.5</origin>
-      <maxSize>0.3 0.164</maxSize>
+      <maxSize>0.32 0.164</maxSize>
 	  <color>000000a0</color>
 	  <path>./_art/Colorlogos/default.png</path>
 	  <path>./_art/Colorlogos/${system.theme}.png</path>
@@ -374,23 +411,38 @@ originally based on: "carbon" and "Arcade Planet"
 	  <linearSmooth>true</linearSmooth>
       <zIndex>20</zIndex>
 	  <scale>0</scale>
-	  <storyboard>
+	  <storyboard repeat="forever">
 		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.487" to="0.122" begin="620" duration="375" mode="EaseOut"/>
-	  </storyboard>
+		  <animation property="offsetX" from="0" to="0.068" begin="2500" duration="375" mode="EaseOut"/>
+		  <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>	 
+	 </storyboard>
 	</image>
 	
 	<image name="Controller" extra="static">
       <scale>0</scale>
 	  <pos>0.25 0.48</pos>
       <origin>0.5 0.5</origin>
-      <size>0.24</size>
-	  <path>./_art/controllers/${system.theme}.svg</path>
+      <size>0.24 0</size>
+	       	<path>./_art/controllers/default.png</path>
+     		<path>./_art/controllers/${system.theme}.png</path>
+      		<path ifSubset="artworkregion:US">./_art/controllers/default.png</path>
+     		<path ifSubset="artworkregion:US">./_art/controllers/${system.theme}.png</path>
+			<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.png</path>
+			<path ifSubset="neogeostyle:mvs">./_art/controllers/special/${system.theme}.png</path>
+			<path ifSubset="controllerstyle:filiform">./_art/controllersFILIFORM/default.svg</path>
+			<path ifSubset="controllerstyle:filiform">./_art/controllersFILIFORM/${system.theme}.svg</path>
 	  <linearSmooth>true</linearSmooth>
-      <zIndex>1</zIndex>
-	  <storyboard>
+      <zIndex>10</zIndex>
+	  <storyboard repeat="forever">
+				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="335" mode="EaseOut"/>
+				<animation property="scale" from="1" to="0.572916" begin="2500" duration="335" mode="Linear"/>
+				<animation property="x" from="0.25" to="0.07" begin="2500" duration="335" mode="Linear"/>
+				<animation property="rotation" from="0" to="360" begin="2500" duration="335" mode="Linear"/>
+				<animation property="y" from="0.48" to="0.67" begin="2500" duration="335" mode="Linear"/>
+				<animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
       </storyboard>
 		<!-- <storyboard repeatAt="2">
 			<animation property="opacity" from="1" to="1" begin="335" duration="" mode="Linear"/>
@@ -405,23 +457,24 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="randomArt01,randomArt02" extra="true">
 			<linearSmooth>true</linearSmooth>
-			<size>0.5 0</size>
+			<size>0.7 0</size>
 			<scale>1</scale>
 			<opacity>0</opacity>
 			<origin>0.5 0.5</origin>
-			<pos>0.25 0.48</pos>
-     		<color>E0E0E0</color>
+			<pos>0.318 0.383</pos>
+			<saturation>0.66</saturation>
+     		<color>D8D8D8</color>
 	</image>
 	
 		<image name="randomArt01">
 		    <path>{random:image}</path>
 			<storyboard repeat="forever">
-				<animation property="opacity" from="0" to="0" begin="" duration="955" mode="linear"/>
-				<animation property="scale" from="1" to="1" begin="" duration="955" mode="linear"/>				
-				<animation property="opacity" from="0" to="1" begin="955" duration="1000" mode="linear"/>
-				<animation property="scale" from="1" to="2" begin="1955" duration="5000" mode="linear"/>
-				<animation property="opacity" from="1" to="0" begin="3955" duration="2000" mode="linear"/>	
-				<animation property="opacity" from="0" to="0" begin="5955" duration="4045" mode="linear"/>				
+				<animation property="opacity" from="0" to="0" begin="" duration="2500" mode="linear"/>
+				<animation property="scale" from="1" to="1" begin="" duration="2500" mode="linear"/>				
+				<animation property="opacity" from="0" to="1" begin="2500" duration="1500" mode="linear"/>
+				<animation property="scale" from="1" to="2" begin="3500" duration="6500" mode="linear"/>
+				<animation property="opacity" from="1" to="0" begin="8500" duration="1500" mode="linear"/>	
+				<animation property="opacity" from="0" to="0" begin="10000" duration="10000" mode="linear"/>				
             </storyboard>			
 			<zIndex>3</zIndex>	
 		</image>
@@ -429,12 +482,11 @@ originally based on: "carbon" and "Arcade Planet"
 		<image name="randomArt02">
 	        <path>{random:thumbnail}</path>
 			<storyboard repeat="forever">
-				<animation property="opacity" from="0" to="0" begin="0" duration="3955" mode="linear"/>
-				<animation property="scale" from="1" to="1" begin="0" duration="3955" mode="linear"/>				
-				<animation property="opacity" from="0" to="1" begin="3955" duration="1000" mode="linear"/>
-				<animation property="scale" from="1" to="2" begin="4955" duration="5000" mode="linear"/>
-				<animation property="opacity" from="1" to="0" begin="6955" duration="2000" mode="linear"/>
-				<animation property="opacity" from="0" to="0" begin="8955" duration="1045" mode="linear"/>
+				<animation property="opacity" from="0" to="0" begin="" duration="10000" mode="linear"/>
+				<animation property="scale" from="1" to="1" begin="" duration="10000" mode="linear"/>				
+				<animation property="opacity" from="0" to="1" begin="10000" duration="1500" mode="linear"/>
+				<animation property="scale" from="1" to="2" begin="10000" duration="10000" mode="linear"/>
+				<animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="linear"/>
             </storyboard>			
 			<zIndex>2</zIndex>	
 		</image>
