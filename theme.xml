@@ -24,8 +24,8 @@ originally based on: "carbon" and "Arcade Planet"
 	<TextListColor>Text Color in Gamelists</TextListColor>
     <TextListColor lang="fr">Couleur du Texte dans la Liste de Jeux</TextListColor>
 	
-	<controllerstyle>Controller Style</controllerstyle>
-	<controllerstyle lang="fr">Style de Contrôleurs</controllerstyle>
+	<flipsystemview>Flip System View</flipsystemview>
+	<flipsystemview lang="fr">Inverser la vue système</flipsystemview>
 	
 	<yes>yes</yes>
     <yes lang="fr">oui</yes>
@@ -100,6 +100,12 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="5-4" displayName="5:4"/>
 	</subset>
 
+<!-- Subset options for Neo Geo Artwork Style -->
+	<subset name="flipsystemview" displayName="flipsystemview">
+		<include name="no" displayName="no"/>
+		<include name="yes" displayName="yes"/>
+	</subset>
+	
 	<!-- Subset options for Neo Geo Artwork Style -->
 	<subset name="neogeostyle" displayName="Neo-Geo Style">
 		<include name="aes" displayName="AES (Console)"/>
@@ -205,7 +211,7 @@ originally based on: "carbon" and "Arcade Planet"
   <view name="screen">
     
 	<text name="clock">
-      <color>686068</color>
+      <color>777777</color>
 	  <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
       <fontSize>0.034</fontSize>
       <pos>0.99 0.97</pos>
@@ -217,8 +223,10 @@ originally based on: "carbon" and "Arcade Planet"
     
 	<controllerActivity name="controllerActivity">
       <pos>0.5 0.916</pos>
+	  <pos ifSubset="flipsystemview:yes">0.88 0.916</pos>
 	  <origin>1 0.5</origin>
-      <size>0.085 0.025</size>
+      <origin ifSubset="flipsystemview:yes">0 0.5</origin>
+	  <size>0.085 0.025</size>
       <itemSpacing>0.003</itemSpacing>
       <imagePath>./_art/icons/gamepad.svg</imagePath>
 	  <gunPath>./art/gun.svg</gunPath>
@@ -250,10 +258,10 @@ originally based on: "carbon" and "Arcade Planet"
 	  <pos>0.01 0.97</pos>
 	  <size>1 0.01</size>
 	  <origin>0 0.5</origin>
-	  <fontPath>./_art/fonts/Saira_ExtraCondensed-Regular.ttf</fontPath>
-	  <fontSize>0.042</fontSize>
-	  <textColor>3080B0AA</textColor>
-      <iconColor>40a0C0AA</iconColor>
+	  <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
+	  <fontSize>0.038</fontSize>
+	  <textColor>777777</textColor>
+      <iconColor>990000</iconColor>
     </helpsystem>
 	
     <text name="logoText">
@@ -273,7 +281,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="logo">
 		 <color>CCCCCCff</color>
 		 <default>./_art/assets/nologo.png</default>
-		 <saturation>0.4</saturation>
+		 <saturation>0.5</saturation>
 	     <linearSmooth>true</linearSmooth>
 	     <path>./_art/wheel/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
@@ -289,6 +297,7 @@ originally based on: "carbon" and "Arcade Planet"
       <type>vertical</type>
 	  <size>0.516 0.94259259259</size>
       <pos>0.78 0.47</pos>
+	  <pos ifSubset="flipsystemview:yes">0.22 0.47</pos>
       <origin>0.5 0.5</origin>
 	  <color>00000000</color>
       <colorEnd>00000000</colorEnd>
@@ -297,6 +306,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <logoScale>1.3333333333</logoScale>
       <logoSize>0.36328125 0.1527777777</logoSize>
 	  <logoAlignment>right</logoAlignment>
+	  <logoAlignment ifSubset="flipsystemview:yes">left</logoAlignment>
 	  <minLogoOpacity>1</minLogoOpacity>
 	  <transitionSpeed>335</transitionSpeed>
 	  <scrollSound>./_art/soundS/scroll.wav</scrollSound>
@@ -308,6 +318,7 @@ originally based on: "carbon" and "Arcade Planet"
       <size>1 1</size>
       <origin>0 0</origin>
       <path>./_art/backgrounds/bg.jpg</path>
+	  <flipX ifSubset="flipsystemview:yes">true</flipX>
       <zIndex>0</zIndex>	  
     </image>
 	
@@ -316,7 +327,8 @@ originally based on: "carbon" and "Arcade Planet"
       <size>1 1</size>
       <origin>0 0</origin>
       <path>./_art/backgrounds/bg2.png</path>
-      <zIndex>4</zIndex>
+	  <flipX ifSubset="flipsystemview:yes">true</flipX>     
+	 <zIndex>4</zIndex>
     </image>
 	
 	<image name="bg3" extra="static">
@@ -324,50 +336,14 @@ originally based on: "carbon" and "Arcade Planet"
       <size>1 1</size>
       <origin>0 0</origin>
       <path>./_art/backgrounds/bg3.png</path>
-      <zIndex>11</zIndex>
+      <flipX ifSubset="flipsystemview:yes">true</flipX>
+	  <zIndex>11</zIndex>
     </image>
-			
-    <image name="Sprites" extra="static">
-      <pos>0.5 0.3659259259</pos>
-      <origin>0.5 0.5</origin>
-      <size>0.5 0</size>
-	  <path>./_art/sprites/${system.theme}.png</path>
-      <linearSmooth>false</linearSmooth>
-	  <scale>0</scale>
-	  <zIndex>23</zIndex>
-	  <storyboard>
-				<animation property="scale" from="0" to="1" begin="620" duration="375" mode="EaseOut"/>
-      </storyboard>
-    </image>
-	
-	<image name="Sprites2" extra="static">
-      <pos>0.5 0.3659259259</pos>
-      <origin>0.5 0.5</origin>
-      <size>0.5 0</size>
-      <path>./_art/sprites2/${system.theme}.png</path>
-      <linearSmooth>false</linearSmooth>
-	  <scale>0</scale>
-	  <zIndex>22</zIndex>
-	  <storyboard>
-				<animation property="scale" from="0" to="1" begin="1350" duration="335" mode="EaseOut"/>
-      </storyboard>
-    </image>
-	
-	<image name="Sprites3" extra="static">
-      <pos>0.5 0.3659259259</pos>
-      <origin>0.5 0.5</origin>
-      <size>0.5 0</size>
-      <path>./_art/sprites3/${system.theme}.png</path>
-      <linearSmooth>false</linearSmooth>
-	  <scale>0</scale>
-	  <zIndex>22</zIndex>
-	  <storyboard>
-				<animation property="scale" from="0" to="1" begin="1605" duration="335" mode="EaseOut"/>
-      </storyboard>
-    </image>
-	
+		  
+
 	<image name="ColorLogos" extra="static">
       <pos>0.25 0.48</pos>
+	  <pos ifSubset="flipsystemview:yes">0.75 0.48</pos>
       <origin>0.5 0.5</origin>
       <maxSize>0.32 0.164</maxSize>
 	  <path>./_art/Colorlogos/default.png</path>
@@ -380,17 +356,25 @@ originally based on: "carbon" and "Arcade Planet"
 	  <linearSmooth>true</linearSmooth>
       <zIndex>21</zIndex>
 	  <scale>0</scale>
-	  <storyboard repeat="forever">
+	  <storyboard ifSubset="flipsystemview:no" repeat="forever">
 		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.48" to="0.115" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="offsetX" from="0" to="0.068" begin="2500" duration="375" mode="EaseOut"/>
-		  <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
+	   	 <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
+	  </storyboard>
+	  	  <storyboard ifSubset="flipsystemview:yes" repeat="forever">
+		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
+		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
+		  <animation property="y" from="0.48" to="0.115" begin="620" duration="375" mode="EaseOut"/>
+		 <animation  property="offsetX" from="0" to="-0.068" begin="2500" duration="375" mode="EaseOut"/>
+		 <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
 	  </storyboard>
 	</image>
 	
 	<image name="ColorLogosShadow" extra="static">
       <pos>0.257 0.487</pos>
+ 	  <pos ifSubset="flipsystemview:yes">0.750 0.48</pos>
       <origin>0.5 0.5</origin>
       <maxSize>0.32 0.164</maxSize>
 	  <color>000000a0</color>
@@ -404,19 +388,27 @@ originally based on: "carbon" and "Arcade Planet"
 	  <linearSmooth>true</linearSmooth>
       <zIndex>20</zIndex>
 	  <scale>0</scale>
-	  <storyboard repeat="forever">
+	  <storyboard ifSubset="flipsystemview:no" repeat="forever">
 		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.487" to="0.122" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="offsetX" from="0" to="0.068" begin="2500" duration="375" mode="EaseOut"/>
-		  <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>	 
+ 		  <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>	 
 	 </storyboard>
+	 <storyboard ifSubset="flipsystemview:yes" repeat="forever">
+		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
+		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
+		  <animation property="y" from="0.487" to="0.122" begin="620" duration="375" mode="EaseOut"/>
+		 <animation  property="offsetX" from="0" to="-0.068" begin="2500" duration="375" mode="EaseOut"/>
+		 <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
+	  </storyboard>
 	</image>
 	
 	<image name="Controller" extra="static">
       <scale>0</scale>
 	  <pos>0.25 0.48</pos>
-      <origin>0.5 0.5</origin>
+	  <pos ifSubset="flipsystemview:yes">0.75 0.48</pos>      
+	  <origin>0.5 0.5</origin>
       <size>0.24 0</size>
 	       	<path>./_art/controllers/default.png</path>
      		<path>./_art/controllers/${system.theme}.png</path>
@@ -426,24 +418,36 @@ originally based on: "carbon" and "Arcade Planet"
 			<path ifSubset="neogeostyle:mvs">./_art/controllers/special/${system.theme}.png</path>
 	  <linearSmooth>true</linearSmooth>
       <zIndex>30</zIndex>
-	  <storyboard repeat="forever">
+	  <storyboard ifSubset="flipsystemview:no" repeat="forever">
 				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="335" mode="EaseOut"/>
-				<animation property="scale" from="1" to="0.572916" begin="2500" duration="335" mode="Linear"/>
-				<animation property="x" from="0.25" to="0.08" begin="2500" duration="335" mode="Linear"/>
-				<animation property="rotation" from="0" to="360" begin="2500" duration="335" mode="Linear"/>
-				<animation property="y" from="0.48" to="0.68" begin="2500" duration="335" mode="Linear"/>
+				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
+				<animation property="x" from="0.25" to="0.08" begin="2000" duration="335" mode="Linear"/>
+				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
+				<animation property="y" from="0.48" to="0.68" begin="2000" duration="335" mode="Linear"/>
 				<animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
-      </storyboard>
-		<!-- <storyboard repeatAt="2">
-			<animation property="opacity" from="1" to="1" begin="335" duration="" mode="Linear"/>
-            <animation property="offsetY" from="0" to="-0.06" begin="620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
-            <animation property="offsetY" from="0" to="-0.038" begin="1320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
-			<animation property="offsetY" from="0" to="-0.024" begin="1820" duration="140" mode="EaseOutCubic" autoReverse="true"/>
-			<animation property="offsetY" from="0" to="-0.009" begin="2100" duration="60" mode="EaseOutCubic" autoReverse="true"/>
-			<animation property="offsetY" from="0" to="-0.0025" begin="2220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
-			<animation property="offsetY" from="0" to="0" begin="2260" duration="2500" mode="Linear"/>
-	  </storyboard>	   -->
+				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.024" begin="11820" duration="140" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.009" begin="12100" duration="60" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.0025" begin="12220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="0" begin="12260" duration="2500" mode="Linear"/>     
+	 </storyboard>
+     <storyboard ifSubset="flipsystemview:yes" repeat="forever">
+				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
+				<animation property="scale" from="0" to="1" begin="620" duration="335" mode="EaseOut"/>
+				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
+				<animation property="x" from="0.75" to="0.92" begin="2000" duration="335" mode="Linear"/>			
+				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
+				<animation property="y" from="0.48" to="0.68" begin="2000" duration="335" mode="Linear"/>
+				<animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
+				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.024" begin="11820" duration="140" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.009" begin="12100" duration="60" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.0025" begin="12220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="0" begin="12260" duration="2500" mode="Linear"/>     
+	 </storyboard>		
 	</image>
 	
 	<image name="randomArt01,randomArt02" extra="true">
@@ -453,6 +457,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<opacity>0</opacity>
 			<origin>0.5 0.5</origin>
 			<pos>0.318 0.383</pos>
+ 	        <pos ifSubset="flipsystemview:yes">0.682 0.48</pos>
 			<saturation>0.66</saturation>
      		<color>D8D8D8</color>
 	</image>
@@ -488,45 +493,64 @@ originally based on: "carbon" and "Arcade Planet"
 			<origin>0.5 0.5</origin>
 			<clipRect>0.0177 0.77407 0.483854 0.907407</clipRect>
 			<pos>-0.105 0.84166667</pos>
-			<storyboard repeat="forever">
+			<pos ifSubset="flipsystemview:yes">1.105 0.84166667</pos>
+			<storyboard ifSubset="flipsystemview:no" repeat="forever">
 				<animation property="offsetX" from="0.8" to="0" begin="0" duration="5000" mode="linear"/>
 				<animation property="offsetX" from="0" to="0" begin="5000" duration="5000" mode="linear"/>				
 			</storyboard>			
+			<storyboard ifSubset="flipsystemview:yes" repeat="forever">
+			    <animation property="offsetX" from="-0.8" to="0" begin="0" duration="5000" mode="linear"/>	
+				<animation property="offsetX" from="0" to="0" begin="5000" duration="5000" mode="linear"/>				
+			</storyboard>		
 			<zIndex>10</zIndex>	
 		</image>
 		
 		<image name="randomArt04" extra="true">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.126</maxSize>
-						<origin>0.5 0.5</origin>
+			<origin>0.5 0.5</origin>
 			<pos>-0.105 0.84166667</pos>
-			<storyboard repeat="forever">
+			<pos ifSubset="flipsystemview:yes">1.105 0.84166667</pos>
+			<storyboard ifSubset="flipsystemview:no" repeat="forever">
 				<animation property="offsetX" from="0.8" to="0" begin="2500" duration="5000" mode="linear"/>
 				<animation property="offsetX" from="0" to="0" begin="7500" duration="2500" mode="linear"/>
 			</storyboard>			
+			<storyboard ifSubset="flipsystemview:yes" repeat="forever">
+				<animation property="offsetX" from="-0.8" to="0" begin="2500" duration="5000" mode="linear"/>
+				<animation property="offsetX" from="0" to="0" begin="7500" duration="2500" mode="linear"/>
+			</storyboard>	
 			<zIndex>10</zIndex>	
 		</image>
 	
 		<image name="randomArt05" extra="true">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.126</maxSize>
-						<origin>0.5 0.5</origin>
+			<origin>0.5 0.5</origin>
 			<pos>-0.105 0.84166667</pos>
-			<storyboard repeat="forever">
-				<animation property="offsetX" from="0.8" to="0" begin="5000" duration="5000" mode="linear"/>
-			</storyboard>			
+			<pos ifSubset="flipsystemview:yes">1.105 0.84166667</pos>			
+			<storyboard ifSubset="flipsystemview:no" repeat="forever">
+				<animation  property="offsetX" from="0.8" to="0" begin="5000" duration="5000" mode="linear"/>
+			</storyboard>
+			<storyboard ifSubset="flipsystemview:yes" repeat="forever">
+				<animation property="offsetX" from="-0.8" to="0" begin="5000" duration="5000" mode="linear"/>
+			</storyboard>				
 			<zIndex>10</zIndex>	
 		</image>
 	
 		<image name="randomArt06" extra="true">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.126</maxSize>
-						<origin>0.5 0.5</origin>
+			<origin>0.5 0.5</origin>
 			<pos>-0.105 0.84166667</pos>
-			<storyboard repeat="forever">
+			<pos ifSubset="flipsystemview:yes">1.105 0.84166667</pos>			
+			<storyboard ifSubset="flipsystemview:no" repeat="forever">
 				<animation property="offsetX" from="0.8" to="0.4" begin="7500" duration="2500" mode="linear"/>
 				<animation property="opacity" from="1" to="0" begin="9000" duration="1000" mode="linear"/>
-			</storyboard>			
+			</storyboard>
+			<storyboard ifSubset="flipsystemview:yes" repeat="forever">
+				<animation property="offsetX" from="-0.8" to="-0.4" begin="7500" duration="2500" mode="linear"/>
+				<animation property="opacity" from="1" to="0" begin="9000" duration="1000" mode="linear"/>
+			</storyboard>				
 			<zIndex>10</zIndex>	
 		</image>	
 		
@@ -537,7 +561,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  <origin>0 0.5</origin>
 	  <alignment>left</alignment>
       <pos>0.323 0.927</pos>
-      <size>0.2 0.026</size>
+      <pos ifSubset="flipsystemview:yes" >0.687 0.927</pos>     
+	 <size>0.2 0.026</size>
       <backgroundColor>5522FF00</backgroundColor>
       <color>bbbbbbdd</color>
       <glowColor>00000000</glowColor>
@@ -553,7 +578,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  <origin>1 0.5</origin>
 	  <alignment>right</alignment>
       <pos>0.318 0.927</pos>
-      <size>1 0.27</size>
+      <pos ifSubset="flipsystemview:yes" >0.682 0.927</pos>     
+	  <size>1 0.27</size>
       <color>bbbbbbdd</color>
       <glowColor>00000000</glowColor>
       <glowSize>0.1</glowSize>
@@ -565,7 +591,8 @@ originally based on: "carbon" and "Arcade Planet"
       <origin>0.5 0.5</origin>
 	  <size>0.02604 0.037037037</size>
 	  <pos>0.616 0.36</pos>
-	  <color>40B0D0</color>
+      <pos ifSubset="flipsystemview:yes" >0.42 0.36</pos>     
+	  <color>BB0000</color>
 	  <path>./_art/assets/arrowup.png</path>
       <linearSmooth>true</linearSmooth>
 	  <zIndex>41</zIndex>
@@ -578,7 +605,8 @@ originally based on: "carbon" and "Arcade Planet"
       <origin>0.5 0.5</origin>
 	  <size>0.02604 0.037037037</size>
 	  <pos>0.616 0.6</pos>
-	  <color>40B0D0</color>
+	  <pos ifSubset="flipsystemview:yes" >0.42 0.6</pos>   
+	  <color>BB0000</color>
 	  <path>./_art/assets/arrowdown.png</path>
       <linearSmooth>true</linearSmooth>
 	  <zIndex>41</zIndex>
@@ -598,7 +626,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <pos>0.01 0.952</pos>
 	  <size>1 0.01</size>
 	  <origin>0 0.5</origin>
-	  <fontPath>./_art/fonts/Saira_ExtraCondensed-Regular.ttf</fontPath>
+	  <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
 	  <fontSize>0.031</fontSize>
 	  <textColor>686068</textColor>
       <iconColor>565296</iconColor>
