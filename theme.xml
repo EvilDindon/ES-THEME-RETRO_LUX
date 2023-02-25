@@ -281,7 +281,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="logo">
 		 <color>CCCCCCff</color>
 		 <default>./_art/assets/nologo.png</default>
-		 <saturation>0.5</saturation>
+		 <saturation>0.45</saturation>
 	     <linearSmooth>true</linearSmooth>
 	     <path>./_art/wheel/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
