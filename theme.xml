@@ -252,8 +252,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  <origin>0 0.5</origin>
 	  <fontPath>./_art/fonts/Saira_ExtraCondensed-Regular.ttf</fontPath>
 	  <fontSize>0.042</fontSize>
-	  <textColor>686068</textColor>
-      <iconColor>686068</iconColor>
+	  <textColor>3080B0AA</textColor>
+      <iconColor>40a0C0AA</iconColor>
     </helpsystem>
 	
     <text name="logoText">
@@ -276,6 +276,8 @@ originally based on: "carbon" and "Arcade Planet"
 		 <saturation>0.4</saturation>
 	     <linearSmooth>true</linearSmooth>
 	     <path>./_art/wheel/${system.theme}.png</path>
+		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
+		 <path ifSubset="neogeostyle:mvs">./_art/wheel/special/${system.theme}.png</path>
 		 <storyboard event="activate">
   			<animation property="saturation" from="1" to="1.9" begin="" duration="820" mode="Linear" autoReverse="true" repeat="forever"/>
 			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>
