@@ -212,7 +212,7 @@ originally based on: "carbon" and "Arcade Planet"
     
 	<text name="clock">
       <color>777777</color>
-	  <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
+	  <fontPath>./_art/fonts/./_art/fonts/Eurosti.TTF</fontPath>
       <fontSize>0.034</fontSize>
       <pos>0.99 0.97</pos>
 	  <origin>1 0.5</origin>
@@ -279,7 +279,7 @@ originally based on: "carbon" and "Arcade Planet"
     </text>
 	
 	<image name="logo">
-		 <color>CCCCCCff</color>
+		 <color>DDDDDDff</color>
 		 <default>./_art/assets/nologo.png</default>
 		 <saturation>0.42</saturation>
 	     <linearSmooth>true</linearSmooth>
