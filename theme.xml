@@ -101,7 +101,7 @@ originally based on: "carbon" and "Arcade Planet"
 	</subset>
 
 <!-- Subset options for Neo Geo Artwork Style -->
-	<subset name="flipsystemview" displayName="flipsystemview">
+	<subset name="flipsystemview" displayName="${flipsystemview}">
 		<include name="no" displayName="no"/>
 		<include name="yes" displayName="yes"/>
 	</subset>
