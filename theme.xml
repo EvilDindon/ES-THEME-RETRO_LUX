@@ -279,7 +279,7 @@ originally based on: "carbon" and "Arcade Planet"
     </text>
 	
 	<image name="logo">
-		 <color>DDDDDDff</color>
+		 <color>E8E8E8ff</color>
 		 <default>./_art/assets/nologo.png</default>
 		 <saturation>0.42</saturation>
 	     <linearSmooth>true</linearSmooth>
