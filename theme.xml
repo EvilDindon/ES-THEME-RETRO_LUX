@@ -243,7 +243,7 @@ originally based on: "carbon" and "Arcade Planet"
     
 	<text name="clock">
       <color>777777</color>
-	  <fontPath>./_art/fonts/./_art/fonts/Eurosti.TTF</fontPath>
+	  <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
       <fontSize>0.034</fontSize>
       <pos>0.99 0.97</pos>
 	  <origin>1 0.5</origin>
@@ -281,21 +281,42 @@ originally based on: "carbon" and "Arcade Planet"
 	
   </view>
   
-  <!-- SYSTEM VIEW LEFT OR RIGHT -->
   
-  <view name="system" ifSubset="systemviewlayout:right|left">
- 
-	<helpsystem name="help">
+  <!-- COMMON VALUES TO SYSTEM VIEW -->
+      
+  <view name="system">
+  
+  <helpsystem name="help">
 	  <pos>0.01 0.97</pos>
 	  <size>1 0.01</size>
 	  <origin>0 0.5</origin>
 	  <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
-	  <fontSize>0.038</fontSize>
+	  <fontSize>0.034</fontSize>
 	  <textColor>777777</textColor>
-      <iconColor>990000</iconColor>
+      <iconColor>888888</iconColor>
     </helpsystem>
 	
-    <text name="logoText">
+	<image name="bottom bar" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.05741</size>
+		  <pos>0 0.94259</pos>
+		  <color>112838ff</color>
+		  <zIndex>54</zIndex>
+	</image>
+	
+		<image name="bottom line" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.00185185</size>
+		  <pos>0 0.94259</pos>
+		  <color>557788ff</color>
+		  <zIndex>55</zIndex>
+	</image>
+  
+  <text name="logoText">
 		<fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
 		<color>C2C2C2ff</color>
 		<fontSize>0.048</fontSize>
@@ -317,18 +338,16 @@ originally based on: "carbon" and "Arcade Planet"
 	     <path>./_art/wheel/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/wheel/special/${system.theme}.png</path>
-		 <storyboard event="activate">
-  			<animation property="saturation" from="1" to="2" begin="" duration="820" mode="Linear" autoReverse="true" repeat="forever"/>
-			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>
+	  <storyboard event="activate">
+  			<animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/>
+			<animation property="color" from="00000000" to="00000000" begin="175" duration="" mode="Linear"/>
 	  </storyboard>	
 	</image>
-    
+	
 	<carousel name="systemcarousel">
 	  <defaultTransition>instant</defaultTransition>
       <type>vertical</type>
 	  <size>0.516 0.94259259259</size>
-      <pos>0.78 0.47</pos>
-	  <pos ifSubset="systemviewlayout:left">0.22 0.47</pos>
       <origin>0.5 0.5</origin>
 	  <color>00000000</color>
       <colorEnd>00000000</colorEnd>
@@ -336,46 +355,14 @@ originally based on: "carbon" and "Arcade Planet"
 	  <maxLogoCount>7</maxLogoCount>
 	  <logoScale>1.333333333333</logoScale>
       <logoSize>0.36328125 0.1527777777</logoSize>
-	  <logoAlignment>right</logoAlignment>
-	  <logoAlignment ifSubset="systemviewlayout:left">left</logoAlignment>
 	  <minLogoOpacity>1</minLogoOpacity>
 	  <transitionSpeed>335</transitionSpeed>
 	  <scrollSound>./_art/soundS/scroll.wav</scrollSound>
-	  <zIndex>37</zIndex>
+	  <zIndex>60</zIndex>
     </carousel>
-		
-    <image name="bg" extra="static">
-      <pos>0 0</pos>
-      <size>1 1</size>
-      <origin>0 0</origin>
-      <path>./_art/backgrounds/bg.jpg</path>
-	  <flipX ifSubset="systemviewlayout:left">true</flipX>
-      <zIndex>0</zIndex>	  
-    </image>
 	
-	<image name="bg2" extra="static">
-      <pos>0 0</pos>
-      <size>1 1</size>
-      <origin>0 0</origin>
-      <path>./_art/backgrounds/bg2.png</path>
-	  <flipX ifSubset="systemviewlayout:left">true</flipX>     
-	 <zIndex>4</zIndex>
-    </image>
-	
-	<image name="bg3" extra="static">
-      <pos>0 0</pos>
-      <size>1 1</size>
-      <origin>0 0</origin>
-      <path>./_art/backgrounds/bg3.png</path>
-      <flipX ifSubset="systemviewlayout:left">true</flipX>
-	  <zIndex>11</zIndex>
-    </image>
-		  
 	<image name="ColorLogos" extra="static">
-      <pos>0.25 0.48</pos>
-	  <pos ifSubset="systemviewlayout:left">0.75 0.48</pos>
       <origin>0.5 0.5</origin>
-      <maxSize>0.32 0.164</maxSize>
 	  <path>./_art/Colorlogos/default.png</path>
 	  <path>./_art/Colorlogos/${system.theme}.png</path>
       <path>./_art/Colorlogos/${system.theme}.svg</path>
@@ -384,17 +371,100 @@ originally based on: "carbon" and "Arcade Planet"
       <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.svg</path>
 	  <path ifSubset="neogeostyle:mvs">./_art/Colorlogos/special/${system.theme}.png</path>
 	  <linearSmooth>true</linearSmooth>
+	  <verticalAlignment>top</verticalAlignment>
       <zIndex>21</zIndex>
+	</image>
+	
+	<image name="Controller" extra="static">
+	  <origin>0.5 0.5</origin>
+	       	<path>./_art/controllers/default.png</path>
+     		<path>./_art/controllers/${system.theme}.png</path>
+      		<path ifSubset="artworkregion:US">./_art/controllers/default.png</path>
+     		<path ifSubset="artworkregion:US">./_art/controllers/${system.theme}.png</path>
+			<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.png</path>
+			<path ifSubset="neogeostyle:mvs">./_art/controllers/special/${system.theme}.png</path>
+	  <linearSmooth>true</linearSmooth>
+      <zIndex>30</zIndex>
+	</image>
+	
+	<image name="arrowup" extra="static">
+      <origin>0.5 0.5</origin>
+	  <size>0.02604 0.037037037</size>
+	  <color>557788ff</color>
+	  <path>./_art/assets/arrowup.png</path>
+      <linearSmooth>true</linearSmooth>
+	  <zIndex>60</zIndex>
+	  <storyboard repeatAt="1">
+            <animation property="offsetY" from="0" to="-0.01" begin="3000" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
+	  </storyboard>
+	</image>
+	
+	<image name="arrowdown" extra="static">
+      <origin>0.5 0.5</origin>
+	  <size>0.02604 0.037037037</size>
+	  <color>557788ff</color>
+	  <path>./_art/assets/arrowdown.png</path>
+      <linearSmooth>true</linearSmooth>
+	  <zIndex>60</zIndex>
+	  <storyboard repeatAt="1">
+            <animation property="offsetY" from="0" to="0.01" begin="" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
+			<animation property="offsetY" from="0" to="0" begin="2460" duration="1000" mode="Linear"/>
+	  </storyboard>
+	</image>
+	
+	</view>
+	
+  <!-- SYSTEM VIEW LEFT OR RIGHT -->
+      
+  <view name="system" ifSubset="systemviewlayout:right|left">
+     
+	<carousel name="systemcarousel">
+	  <pos>0.78 0.47</pos>
+	  <pos ifSubset="systemviewlayout:left">0.22 0.47</pos>
+      <logoAlignment>right</logoAlignment>
+	  <logoAlignment ifSubset="systemviewlayout:left">left</logoAlignment>
+    </carousel>
+		
+    <image name="bg" extra="static">
+      <pos>0 0</pos>
+      <size>1 1</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/white.png</path>
+	  <color>113344ff</color>
+	  <colorEnd>11334422</colorEnd>
+      <zIndex>0</zIndex>	  
+    </image>
+
+	<image name="circle" extra="static">
+      <pos>1 0</pos>
+      <size>0.4890625 0.9407407407</size>
+      <origin>1 0</origin>
+      <path>./_art/backgrounds/circle.png</path>
+      <flipX ifSubset="systemviewlayout:left">true</flipX>
+	  <zIndex>52</zIndex>
+    </image>
+		  
+	<image name="ColorLogos">
+      <pos>0.25 0.48</pos>
+	  <pos ifSubset="systemviewlayout:left">0.75 0.48</pos>
+      <maxSize>0.32 0.164</maxSize>
+	  <path>./_art/Colorlogos/default.png</path>
+	  <path>./_art/Colorlogos/${system.theme}.png</path>
+      <path>./_art/Colorlogos/${system.theme}.svg</path>
+      <path ifSubset="artworkregion:US">./_art/Colorlogos/US/default.png</path>
+	  <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.png</path>
+      <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.svg</path>
+	  <path ifSubset="neogeostyle:mvs">./_art/Colorlogos/special/${system.theme}.png</path>
 	  <scale>0</scale>
 	  <storyboard ifSubset="systemviewlayout:right" repeat="forever">
-		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
+		  <animation property="scale" from="0" to="1.5" begin="" duration="175" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.48" to="0.115" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="offsetX" from="0" to="0.068" begin="2000" duration="375" mode="EaseOut"/>
 	   	 <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
 	  </storyboard>
 	  	  <storyboard ifSubset="systemviewlayout:left" repeat="forever">
-		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
+		  <animation property="scale" from="0" to="1.5" begin="" duration="175" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.48" to="0.115" begin="620" duration="375" mode="EaseOut"/>
 		 <animation  property="offsetX" from="0" to="-0.068" begin="2000" duration="375" mode="EaseOut"/>
@@ -404,10 +474,12 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="ColorLogosShadow" extra="static">
       <pos>0.257 0.487</pos>
- 	  <pos ifSubset="systemviewlayout:left">0.750 0.48</pos>
-      <origin>0.5 0.5</origin>
+	  <origin>0.5 0.5</origin>
+ 	  <pos ifSubset="systemviewlayout:left">0.75 0.48</pos>
       <maxSize>0.32 0.164</maxSize>
 	  <color>000000a0</color>
+	  <zIndex>20</zIndex>
+	  <linearSmooth>true</linearSmooth>
 	  <path>./_art/Colorlogos/default.png</path>
 	  <path>./_art/Colorlogos/${system.theme}.png</path>
       <path>./_art/Colorlogos/${system.theme}.svg</path>
@@ -415,18 +487,17 @@ originally based on: "carbon" and "Arcade Planet"
 	  <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.png</path>
       <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.svg</path>
 	  <path ifSubset="neogeostyle:mvs">./_art/Colorlogos/special/${system.theme}.png</path>
-	  <linearSmooth>true</linearSmooth>
-      <zIndex>20</zIndex>
 	  <scale>0</scale>
+	  <verticalAlignment>top</verticalAlignment>
 	  <storyboard ifSubset="systemviewlayout:right" repeat="forever">
-		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
+		  <animation property="scale" from="0" to="1.5" begin="" duration="175" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.487" to="0.122" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="offsetX" from="0" to="0.068" begin="2000" duration="375" mode="EaseOut"/>
  		  <animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>	 
 	 </storyboard>
 	 <storyboard ifSubset="systemviewlayout:left" repeat="forever">
-		  <animation property="scale" from="0" to="1.5" begin="" duration="350" mode="Linear"/>
+		  <animation property="scale" from="0" to="1.5" begin="" duration="175" mode="Linear"/>
 		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.487" to="0.122" begin="620" duration="375" mode="EaseOut"/>
 		 <animation  property="offsetX" from="0" to="-0.068" begin="2000" duration="375" mode="EaseOut"/>
@@ -438,23 +509,14 @@ originally based on: "carbon" and "Arcade Planet"
       <scale>0</scale>
 	  <pos>0.25 0.48</pos>
 	  <pos ifSubset="systemviewlayout:left">0.75 0.48</pos>      
-	  <origin>0.5 0.5</origin>
       <size>0.24 0</size>
-	       	<path>./_art/controllers/default.png</path>
-     		<path>./_art/controllers/${system.theme}.png</path>
-      		<path ifSubset="artworkregion:US">./_art/controllers/default.png</path>
-     		<path ifSubset="artworkregion:US">./_art/controllers/${system.theme}.png</path>
-			<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.png</path>
-			<path ifSubset="neogeostyle:mvs">./_art/controllers/special/${system.theme}.png</path>
-	  <linearSmooth>true</linearSmooth>
-      <zIndex>30</zIndex>
 	  <storyboard ifSubset="systemviewlayout:right" repeat="forever">
 				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="335" mode="EaseOut"/>
 				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
 				<animation property="x" from="0.25" to="0.08" begin="2000" duration="335" mode="Linear"/>
 				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
-				<animation property="y" from="0.48" to="0.68" begin="2000" duration="335" mode="Linear"/>
+				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="Linear"/>
 				<animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
 				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
@@ -469,7 +531,7 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
 				<animation property="x" from="0.75" to="0.92" begin="2000" duration="335" mode="Linear"/>			
 				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
-				<animation property="y" from="0.48" to="0.68" begin="2000" duration="335" mode="Linear"/>
+				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="Linear"/>
 				<animation property="opacity" from="1" to="0" begin="18500" duration="1500" mode="Linear"/>
 				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
@@ -478,6 +540,18 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="offsetY" from="0" to="-0.0025" begin="12220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="0" begin="12260" duration="2500" mode="Linear"/>     
 	 </storyboard>		
+	</image>
+	
+	<image name="nakedwheel" extra="static">
+		<path>./_art/nakedwheel/${system.theme}.png</path>
+		<size>0.48375 0</size>
+		<origin>0.5 0.5</origin>
+		<pos>0.76 0.47</pos>
+		<opacity>0</opacity>
+		<zIndex>61</zIndex>
+		<storyboard>
+			<animation property="opacity" from="1" to="1" begin="175" duration="" mode="Linear"/>
+	  </storyboard>	
 	</image>
 	
 	<image name="randomArt01,randomArt02" extra="true" ifSubset="systemviewstyle:randomartworks">
@@ -532,7 +606,7 @@ originally based on: "carbon" and "Arcade Planet"
 			    <animation property="offsetX" from="-0.8" to="0" begin="0" duration="5000" mode="linear"/>	
 				<animation property="offsetX" from="0" to="0" begin="5000" duration="5000" mode="linear"/>				
 			</storyboard>		
-			<zIndex>10</zIndex>	
+			<zIndex>46</zIndex>	
 		</image>
 		
 		<image name="randomArt04" extra="true" ifSubset="systemviewbottom:randomlogos">
@@ -549,7 +623,7 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="offsetX" from="-0.8" to="0" begin="2500" duration="5000" mode="linear"/>
 				<animation property="offsetX" from="0" to="0" begin="7500" duration="2500" mode="linear"/>
 			</storyboard>	
-			<zIndex>10</zIndex>	
+			<zIndex>46</zIndex>	
 		</image>
 	
 		<image name="randomArt05" extra="true" ifSubset="systemviewbottom:randomlogos">
@@ -564,7 +638,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<storyboard ifSubset="systemviewlayout:left" repeat="forever">
 				<animation property="offsetX" from="-0.8" to="0" begin="5000" duration="5000" mode="linear"/>
 			</storyboard>				
-			<zIndex>10</zIndex>	
+			<zIndex>46</zIndex>	
 		</image>
 	
 		<image name="randomArt06" extra="true" ifSubset="systemviewbottom:randomlogos">
@@ -581,7 +655,7 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="offsetX" from="-0.8" to="-0.4" begin="7500" duration="2500" mode="linear"/>
 				<animation property="opacity" from="1" to="0" begin="9000" duration="1000" mode="linear"/>
 			</storyboard>				
-			<zIndex>10</zIndex>	
+			<zIndex>46</zIndex>	
 		</image>	
 		
 	<text name="systemInfo">
@@ -592,8 +666,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  <alignment>left</alignment>
       <pos>0.323 0.927</pos>
       <pos ifSubset="systemviewlayout:left" >0.687 0.927</pos>     
-	 <size>0.2 0.026</size>
-      <backgroundColor>5522FF00</backgroundColor>
+	 <size>1 0.026</size>
+      <backgroundColor>11334400</backgroundColor>
       <color>bbbbbbdd</color>
       <glowColor>00000000</glowColor>
       <glowSize>0.1</glowSize>
@@ -614,49 +688,47 @@ originally based on: "carbon" and "Arcade Planet"
       <glowColor>00000000</glowColor>
       <glowSize>0.1</glowSize>
       <reflexion>0.0 0.0</reflexion>
-      <zIndex>40</zIndex>
+      <zIndex>51</zIndex>
 	</text>
 			
 	<image name="arrowup" extra="static">
-      <origin>0.5 0.5</origin>
-	  <size>0.02604 0.037037037</size>
-	  <pos>0.616 0.36</pos>
+ 	  <pos>0.616 0.36</pos>
       <pos ifSubset="systemviewlayout:left" >0.42 0.36</pos>     
-	  <color>CC0000</color>
-	  <path>./_art/assets/arrowup.png</path>
-      <linearSmooth>true</linearSmooth>
-	  <zIndex>41</zIndex>
-	  <storyboard repeatAt="1">
-            <animation property="offsetY" from="0" to="-0.01" begin="3000" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
-	  </storyboard>
 	</image>
 	
 	<image name="arrowdown" extra="static">
-      <origin>0.5 0.5</origin>
-	  <size>0.02604 0.037037037</size>
 	  <pos>0.616 0.6</pos>
 	  <pos ifSubset="systemviewlayout:left" >0.42 0.6</pos>   
-	  <color>CC0000</color>
-	  <path>./_art/assets/arrowdown.png</path>
-      <linearSmooth>true</linearSmooth>
-	  <zIndex>41</zIndex>
-	  <storyboard repeatAt="1">
-            <animation property="offsetY" from="0" to="0.01" begin="" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
-			<animation property="offsetY" from="0" to="0" begin="2460" duration="1000" mode="Linear"/>
-	  </storyboard>
 	</image>
 	
 	<image name="redline" extra="static">
       <origin>0 0.5</origin>
-	  <size>0.5 0</size>
-	  <pos>0.16 0.754</pos>
-	  <color>CC0000</color>
-	  <path>./_art/assets/redline.png</path>
+	  <size>0.00208333333 0.0037037037</size>
+	  <pos>0 0.754</pos>
+	  <gradientType>horizontal</gradientType>
+	  <color>CC0000ff</color>
+	  <colorEnd>CC000000</colorEnd>
+	  <path>./_art/assets/white.png</path>
       <linearSmooth>true</linearSmooth>
-	  <zIndex>5</zIndex>
+	  <zIndex>45</zIndex>
 	  <storyboard>
-            <animation property="w" from="0" to="0" begin="" duration="2500" mode="Linear"/>
-			<animation property="w" from="0" to="1" begin="2500" duration="620" mode="Linear"/>
+            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+			<animation property="w" from="0" to="0.75" begin="2000" duration="335" mode="Linear"/>
+		</storyboard>
+	</image>
+	
+	<image name="bottom tape" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.26</size>
+		  <pos>0 0.754</pos>
+		  <color>283032ff</color>
+		  <colorEnd>000000ff</colorEnd>
+		  <zIndex>44</zIndex>
+		<storyboard>
+            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
 		</storyboard>
 	</image>
 	
@@ -803,31 +875,14 @@ originally based on: "carbon" and "Arcade Planet"
       <zIndex>40</zIndex>
 	</text>
 			
-	<image name="arrowup" extra="static">
-      <origin>0.5 0.5</origin>
-	  <size>0.02604 0.037037037</size>
+	<image name="arrowup">
+ 	  <size>0.02604 0.037037037</size>
 	  <pos>0.616 0.36</pos>
-	  <color>CC0000</color>
-	  <path>./_art/assets/arrowup.png</path>
-      <linearSmooth>true</linearSmooth>
-	  <zIndex>41</zIndex>
-	  <storyboard repeatAt="1">
-            <animation property="offsetY" from="0" to="-0.01" begin="3000" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
-	  </storyboard>
 	</image>
 	
-	<image name="arrowdown" extra="static">
-      <origin>0.5 0.5</origin>
-	  <size>0.02604 0.037037037</size>
+	<image name="arrowdown">
+ 	  <size>0.02604 0.037037037</size>
 	  <pos>0.616 0.6</pos>
-	  <color>CC0000</color>
-	  <path>./_art/assets/arrowdown.png</path>
-      <linearSmooth>true</linearSmooth>
-	  <zIndex>41</zIndex>
-	  <storyboard repeatAt="1">
-            <animation property="offsetY" from="0" to="0.01" begin="" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
-			<animation property="offsetY" from="0" to="0" begin="2460" duration="1000" mode="Linear"/>
-	  </storyboard>
 	</image>
 			
   </view>
