@@ -331,15 +331,16 @@ originally based on: "carbon" and "Arcade Planet"
     </text>
 	
 	<image name="logo">
-		 <color>E8E8E8ff</color>
+		 <color>F0F0F0ff</color>
 		 <default>./_art/assets/nologo.png</default>
-		 <saturation>0.435</saturation>
+		 <saturation>0.5</saturation>
 	     <linearSmooth>true</linearSmooth>
 	     <path>./_art/wheel/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/wheel/special/${system.theme}.png</path>
 	  <storyboard event="activate">
   			<animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/>
+			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>			
 			<animation property="color" from="00000000" to="00000000" begin="175" duration="" mode="Linear"/>
 	  </storyboard>	
 	</image>
@@ -389,8 +390,8 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="arrowup" extra="static">
       <origin>0.5 0.5</origin>
-	  <size>0.02604 0.037037037</size>
-	  <color>557788ff</color>
+	  <size>0.031 0</size>
+	  <color>A0A0BBff</color>
 	  <path>./_art/assets/arrowup.png</path>
       <linearSmooth>true</linearSmooth>
 	  <zIndex>60</zIndex>
@@ -401,8 +402,8 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="arrowdown" extra="static">
       <origin>0.5 0.5</origin>
-	  <size>0.02604 0.037037037</size>
-	  <color>557788ff</color>
+	  <size>0.031 0</size>
+	  <color>A0A0BBff</color>
 	  <path>./_art/assets/arrowdown.png</path>
       <linearSmooth>true</linearSmooth>
 	  <zIndex>60</zIndex>
@@ -561,7 +562,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<pos>0.568333333 0.47</pos>
 		<opacity>0</opacity>
 		<zIndex>61</zIndex>
-		<linearSmooth>true</linearSmooth>
+		<linearSmooth>false</linearSmooth>
 		<storyboard ifSubset="systemviewstyle:simplesprite" repeatAt="2375">
 			<animation property="opacity" from="1" to="1" begin="175" duration="" mode="Linear"/>
 			<animation property="scale" from="1" to="3" begin="2000" duration="375" mode="EaseOutCubic"/>
