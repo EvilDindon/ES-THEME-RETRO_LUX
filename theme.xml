@@ -127,8 +127,8 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<!-- Subset options for System view style -->
 	<subset ifSubset="systemviewlayout:right|left" name="systemviewstyle" displayName="${systemviewstyle}">
-		<include name="randomartworks" displayName="${randomartworks}"/>
 		<include name="simplesprite" displayName="${simplesprite}"/>
+		<include name="randomartworks" displayName="${randomartworks}"/>
 	</subset>
 
 	<!-- Subset options for System view bottom -->
@@ -511,9 +511,9 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="335" mode="EaseOut"/>
 				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
-				<animation property="x" from="0.25" to="0.08" begin="2000" duration="335" mode="Linear"/>
+				<animation property="x" from="0.25" to="0.08" begin="2000" duration="335" mode="EaseOutCubic"/>
 				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
-				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="Linear"/>
+				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="EaseOutCubic"/>
 				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="-0.024" begin="11820" duration="140" mode="EaseOutCubic" autoReverse="true"/>
@@ -525,9 +525,9 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="335" mode="EaseOut"/>
 				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
-				<animation property="x" from="0.75" to="0.92" begin="2000" duration="335" mode="Linear"/>			
+				<animation property="x" from="0.75" to="0.92" begin="2000" duration="335" mode="EaseOutCubic"/>			
 				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
-				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="Linear"/>
+				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="EaseOutCubic"/>
 				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="-0.024" begin="11820" duration="140" mode="EaseOutCubic" autoReverse="true"/>
