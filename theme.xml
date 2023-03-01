@@ -349,6 +349,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <defaultTransition>instant</defaultTransition>
       <type>vertical</type>
 	  <size>0.516 0.94259259259</size>
+	  <size ifSubset="aspect-ratio:4-3">0.688 0.94259259259</size>
       <origin>0.5 0.5</origin>
 	  <color>00000000</color>
       <colorEnd>00000000</colorEnd>
@@ -356,6 +357,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <maxLogoCount>7</maxLogoCount>
 	  <logoScale>1.333333333333</logoScale>
       <logoSize>0.36328125 0.1527777777</logoSize>
+	  <logoSize ifSubset="aspect-ratio:4-3">0.484375 0.2037037037</logoSize>
 	  <minLogoOpacity>1</minLogoOpacity>
 	  <transitionSpeed>335</transitionSpeed>
 	  <scrollSound>./_art/soundS/scroll.wav</scrollSound>
@@ -421,8 +423,10 @@ originally based on: "carbon" and "Arcade Planet"
      
 	<carousel name="systemcarousel">
 	  <pos>0.78 0.47</pos>
-	  <pos ifSubset="systemviewlayout:left">0.22 0.47</pos>
-      <logoAlignment>right</logoAlignment>
+	  <pos ifSubset="aspect-ratio:4-3">0.7182 0.47</pos>
+	  <pos ifSubset="systemviewlayout:left, aspect-ratio:16-9">0.22 0.47</pos>
+      <pos ifSubset="systemviewlayout:left, aspect-ratio:4-3">0.2818 0.47</pos>
+	  <logoAlignment>right</logoAlignment>
 	  <logoAlignment ifSubset="systemviewlayout:left">left</logoAlignment>
     </carousel>
 		
@@ -435,19 +439,41 @@ originally based on: "carbon" and "Arcade Planet"
 	  <colorEnd>11334422</colorEnd>
       <zIndex>0</zIndex>	  
     </image>
+	
+	<image name="electronic" extra="static">
+      <pos>0.318 0</pos>
+      <size>0 1</size>
+      <origin>0.5 0</origin>
+	  <path>./_art/assets/electronic.png</path>
+	  <color>FFFFFF44</color>
+	  <colorEnd>FFFFFF11</colorEnd>
+      <zIndex>0</zIndex>	  
+    </image>
+	
+	<image name="electronic2" extra="static">
+      <pos>0.036 0</pos>
+      <size>0 1</size>
+      <origin>1 0</origin>
+	  <path>./_art/assets/electronic.png</path>
+	  <color>FFFFFF44</color>
+	  <colorEnd>FFFFFF11</colorEnd>
+      <zIndex>0</zIndex>	  
+    </image>
 
 	<image name="circle" extra="static">
-      <pos>1 0</pos>
-      <size>0.4890625 0.9407407407</size>
-      <origin>1 0</origin>
-      <path>./_art/backgrounds/circle.png</path>
-      <flipX ifSubset="systemviewlayout:left">true</flipX>
+      <pos>1 0.48</pos>
+      <size>0 1.5</size>
+	  <linearSmooth>true</linearSmooth>
+      <origin>0.5 0.5</origin>
+	  <color>484848</color>
+	  <colorEnd>222222</colorEnd>
+      <path>./_art/assets/circle.png</path>
 	  <zIndex>52</zIndex>
     </image>
 		  
 	<image name="ColorLogos">
-      <pos>0.25 0.48</pos>
-	  <pos ifSubset="systemviewlayout:left">0.75 0.48</pos>
+      <pos>0.318 0.48</pos>
+	  <pos ifSubset="systemviewlayout:left">0.682 0.48</pos>
       <maxSize>0.32 0.164</maxSize>
 	  <path>./_art/Colorlogos/default.png</path>
 	  <path>./_art/Colorlogos/${system.theme}.png</path>
@@ -458,23 +484,21 @@ originally based on: "carbon" and "Arcade Planet"
 	  <path ifSubset="neogeostyle:mvs">./_art/Colorlogos/special/${system.theme}.png</path>
 	  <scale>0</scale>
 	  <storyboard ifSubset="systemviewlayout:right">
-		  <animation property="scale" from="0" to="1.5" begin="" duration="175" mode="Linear"/>
-		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
+		  <animation property="scale" from="0" to="1.3" begin="" duration="175" mode="Linear"/>
+		  <animation property="scale" from="1.3" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.48" to="0.115" begin="620" duration="375" mode="EaseOut"/>
-		  <animation property="offsetX" from="0" to="0.068" begin="2000" duration="375" mode="EaseOut"/>
 	  </storyboard>
 	  	  <storyboard ifSubset="systemviewlayout:left">
-		  <animation property="scale" from="0" to="1.5" begin="" duration="175" mode="Linear"/>
-		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
+		  <animation property="scale" from="0" to="1.3" begin="" duration="175" mode="Linear"/>
+		  <animation property="scale" from="1.3" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.48" to="0.115" begin="620" duration="375" mode="EaseOut"/>
-		 <animation  property="offsetX" from="0" to="-0.068" begin="2000" duration="375" mode="EaseOut"/>
 	  </storyboard>
 	</image>
 	
 	<image name="ColorLogosShadow" extra="static">
-      <pos>0.257 0.487</pos>
+      <pos>0.318 0.487</pos>
 	  <origin>0.5 0.5</origin>
- 	  <pos ifSubset="systemviewlayout:left">0.75 0.48</pos>
+ 	  <pos ifSubset="systemviewlayout:left">0.682 0.48</pos>
       <maxSize>0.32 0.164</maxSize>
 	  <color>000000a0</color>
 	  <zIndex>20</zIndex>
@@ -489,29 +513,28 @@ originally based on: "carbon" and "Arcade Planet"
 	  <scale>0</scale>
 	  <verticalAlignment>top</verticalAlignment>
 	  <storyboard ifSubset="systemviewlayout:right">
-		  <animation property="scale" from="0" to="1.5" begin="" duration="175" mode="Linear"/>
-		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
+		  <animation property="scale" from="0" to="1.3" begin="" duration="175" mode="Linear"/>
+		  <animation property="scale" from="1.3" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.487" to="0.122" begin="620" duration="375" mode="EaseOut"/>
-		  <animation property="offsetX" from="0" to="0.068" begin="2000" duration="375" mode="EaseOut"/>
 	 </storyboard>
 	 <storyboard ifSubset="systemviewlayout:left">
-		  <animation property="scale" from="0" to="1.5" begin="" duration="175" mode="Linear"/>
-		  <animation property="scale" from="1.5" to="1" begin="620" duration="375" mode="EaseOut"/>
+		  <animation property="scale" from="0" to="1.3" begin="" duration="175" mode="Linear"/>
+		  <animation property="scale" from="1.3" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.487" to="0.122" begin="620" duration="375" mode="EaseOut"/>
-		 <animation  property="offsetX" from="0" to="-0.068" begin="2000" duration="375" mode="EaseOut"/>
 	  </storyboard>
 	</image>
 	
 	<image name="Controller" extra="static">
       <scale>0</scale>
-	  <pos>0.25 0.48</pos>
+	  <pos>0.318 0.48</pos>
 	  <pos ifSubset="systemviewlayout:left">0.75 0.48</pos>      
       <size>0.24 0</size>
+	  <size ifSubset="aspect-ratio:4-3">0.32 0</size>
 	  <storyboard ifSubset="systemviewlayout:right" repeatAt="2335">
 				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="335" mode="EaseOut"/>
 				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
-				<animation property="x" from="0.25" to="0.08" begin="2000" duration="335" mode="EaseOutCubic"/>
+				<animation property="x" from="0.318" to="0.08" begin="2000" duration="335" mode="EaseOutCubic"/>
 				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
 				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="EaseOutCubic"/>
 				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
@@ -525,7 +548,7 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="335" mode="EaseOut"/>
 				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
-				<animation property="x" from="0.75" to="0.92" begin="2000" duration="335" mode="EaseOutCubic"/>			
+				<animation property="x" from="0.682" to="0.92" begin="2000" duration="335" mode="EaseOutCubic"/>			
 				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
 				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="EaseOutCubic"/>
 				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
@@ -540,11 +563,14 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="nakedwheel" extra="static">
 		<path>./_art/nakedwheel/${system.theme}.png</path>
 		<size>0.48375 0</size>
+	   <size ifSubset="aspect-ratio:4-3">0.645 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.76 0.47</pos>
+		<pos>0.7595 0.47</pos>
+		<pos ifSubset="aspect-ratio:4-3">0.692 0.47</pos>
 		<opacity>0</opacity>
 		<zIndex>61</zIndex>
-		<storyboard repeatAt="2">
+		<storyboard repeatAt="1">
+			<animation property="scale" from="1" to="1" begin="" duration="175" mode="Linear"/>
 			<animation property="opacity" from="1" to="1" begin="175" duration="" mode="Linear"/>
 		    <animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
 		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
@@ -554,14 +580,38 @@ originally based on: "carbon" and "Arcade Planet"
 		</storyboard>
 		
 	</image>
-	
+
+	<image name="reflet" extra="static">
+		<path>./_art/assets/reflet.png</path>
+		<size>0.0546875 0.1148148</size>
+		<origin>0.5 0.5</origin>
+		<pos>0.9723958 0.47</pos>
+		<opacity>0</opacity>
+		<zIndex>62</zIndex>
+		<storyboard repeatAt="1">
+			<animation property="opacity" from="1" to="1" begin="6500" duration="2000" mode="Linear"/>
+			<animation property="scale" from="0" to="0" begin="" duration="6500" mode="Linear"/>
+			<animation property="scale" from="0" to="1" begin="6500" duration="100" mode="EaseInQuint"/>
+			<animation property="scale" from="1" to="1" begin="6600" duration="800" mode="Linear"/>
+		    <animation property="scale" from="1" to="0" begin="7400" duration="100" mode="EaseInQuint"/>
+			<animation property="scale" from="0" to="1" begin="7500" duration="100" mode="EaseInQuint"/>
+			<animation property="scale" from="1" to="1" begin="7600" duration="800" mode="Linear"/>
+		    <animation property="scale" from="1" to="0" begin="8400" duration="100" mode="EaseInQuint"/>
+			<animation property="scale" from="0" to="0" begin="8500" duration="1500" mode="Linear"/>
+			<animation property="offsetX" from="-0.3822916" to="0" begin="6500" duration="1000" mode="Linear" autoreverse="true"/>
+			<animation property="opacity" from="0" to="0" begin="8500" duration="1500" mode="Linear"/>		
+		</storyboard>
+		
+	</image>	
 	<image name="sprite" extra="static">
 		<path>./_art/sprites/${system.theme}.png</path>
 		<size>0.1010416666 0</size>
+		<size ifSubset="aspect-ratio:4-3">0.1347222 0</size>
 		<origin>0.5 0.5</origin>
 		<pos>0.568333333 0.47</pos>
+	    <pos ifSubset="aspect-ratio:4-3">0.437 0.47</pos>
 		<opacity>0</opacity>
-		<zIndex>61</zIndex>
+		<zIndex>63</zIndex>
 		<linearSmooth>false</linearSmooth>
 		<storyboard ifSubset="systemviewstyle:simplesprite" repeatAt="2375">
 			<animation property="opacity" from="1" to="1" begin="175" duration="" mode="Linear"/>
@@ -747,6 +797,7 @@ originally based on: "carbon" and "Arcade Planet"
 		  <origin>0 0</origin>
 		  <size>1 0.26</size>
 		  <pos>0 0.754</pos>
+		  <gradientType>horizontal</gradientType>
 		  <color>283032ff</color>
 		  <colorEnd>000000ff</colorEnd>
 		  <zIndex>44</zIndex>
