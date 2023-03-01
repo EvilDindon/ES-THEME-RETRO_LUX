@@ -33,8 +33,11 @@ originally based on: "carbon" and "Arcade Planet"
 	<systemviewbottom>System view bottom</systemviewbottom>
 	<systemviewbottom lang="fr">Pied de la vue système</systemviewbottom>
 	
-	<randomartworks>Random Artworks</randomartworks>
-	<randomartworks lang="fr">Artworks aléatoires</randomartworks>
+	<randomfanart>Random Fan Art</randomfanart>
+	<randomfanart lang="fr">Fan Art aléatoire</randomfanart>
+	
+	<randomboxart>Random Box Art</randomboxart>
+	<randomboxart lang="fr">Jacquettes Aléatoires</randomboxart>
 	
 	<simplesprite>Simple Sprite</simplesprite>
 	<simplesprite lang="fr">Sprite simple</simplesprite>
@@ -128,7 +131,8 @@ originally based on: "carbon" and "Arcade Planet"
 	<!-- Subset options for System view style -->
 	<subset ifSubset="systemviewlayout:right|left" name="systemviewstyle" displayName="${systemviewstyle}">
 		<include name="simplesprite" displayName="${simplesprite}"/>
-		<include name="randomartworks" displayName="${randomartworks}"/>
+		<include name="randomfanart" displayName="${randomfanart}"/>
+		<include name="randomboxart" displayName="${randomboxart}"/>
 	</subset>
 
 	<!-- Subset options for System view bottom -->
@@ -333,7 +337,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="logo">
 		 <color>F0F0F0ff</color>
 		 <default>./_art/assets/nologo.png</default>
-		 <saturation>0.5</saturation>
+		 <saturation>0.55</saturation>
 	     <linearSmooth>true</linearSmooth>
 	     <path>./_art/wheel/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
@@ -364,7 +368,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <zIndex>60</zIndex>
     </carousel>
 	
-	<image name="ColorLogos" extra="static">
+	<image name="ColorLogos,ColorLogosShadow">
       <origin>0.5 0.5</origin>
 	  <path>./_art/Colorlogos/default.png</path>
 	  <path>./_art/Colorlogos/${system.theme}.png</path>
@@ -441,9 +445,9 @@ originally based on: "carbon" and "Arcade Planet"
     </image>
 	
 	<image name="electronic" extra="static">
-      <pos>0.318 0</pos>
+      <pos>0.318 0.494</pos>
       <size>0 1</size>
-      <origin>0.5 0</origin>
+      <origin>0.5 0.5</origin>
 	  <path>./_art/assets/electronic.png</path>
 	  <color>FFFFFF44</color>
 	  <colorEnd>FFFFFF11</colorEnd>
@@ -451,9 +455,9 @@ originally based on: "carbon" and "Arcade Planet"
     </image>
 	
 	<image name="electronic2" extra="static">
-      <pos>0.036 0</pos>
+      <pos>0.036 0.494</pos>
       <size>0 1</size>
-      <origin>1 0</origin>
+      <origin>1 0.5</origin>
 	  <path>./_art/assets/electronic.png</path>
 	  <color>FFFFFF44</color>
 	  <colorEnd>FFFFFF11</colorEnd>
@@ -461,27 +465,20 @@ originally based on: "carbon" and "Arcade Planet"
     </image>
 
 	<image name="circle" extra="static">
-      <pos>1 0.48</pos>
-      <size>0 1.5</size>
+      <pos>1 0.494</pos>
+      <size>0 1.6</size>
 	  <linearSmooth>true</linearSmooth>
       <origin>0.5 0.5</origin>
-	  <color>484848</color>
-	  <colorEnd>222222</colorEnd>
+	  <color>464042</color>
+	  <colorEnd>181214</colorEnd>
       <path>./_art/assets/circle.png</path>
 	  <zIndex>52</zIndex>
     </image>
 		  
-	<image name="ColorLogos">
+	<image name="ColorLogos" extra="static">
       <pos>0.318 0.48</pos>
 	  <pos ifSubset="systemviewlayout:left">0.682 0.48</pos>
       <maxSize>0.32 0.164</maxSize>
-	  <path>./_art/Colorlogos/default.png</path>
-	  <path>./_art/Colorlogos/${system.theme}.png</path>
-      <path>./_art/Colorlogos/${system.theme}.svg</path>
-      <path ifSubset="artworkregion:US">./_art/Colorlogos/US/default.png</path>
-	  <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.png</path>
-      <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.svg</path>
-	  <path ifSubset="neogeostyle:mvs">./_art/Colorlogos/special/${system.theme}.png</path>
 	  <scale>0</scale>
 	  <storyboard ifSubset="systemviewlayout:right">
 		  <animation property="scale" from="0" to="1.3" begin="" duration="175" mode="Linear"/>
@@ -502,16 +499,7 @@ originally based on: "carbon" and "Arcade Planet"
       <maxSize>0.32 0.164</maxSize>
 	  <color>000000a0</color>
 	  <zIndex>20</zIndex>
-	  <linearSmooth>true</linearSmooth>
-	  <path>./_art/Colorlogos/default.png</path>
-	  <path>./_art/Colorlogos/${system.theme}.png</path>
-      <path>./_art/Colorlogos/${system.theme}.svg</path>
-      <path ifSubset="artworkregion:US">./_art/Colorlogos/US/default.png</path>
-	  <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.png</path>
-      <path ifSubset="artworkregion:US">./_art/Colorlogos/US/${system.theme}.svg</path>
-	  <path ifSubset="neogeostyle:mvs">./_art/Colorlogos/special/${system.theme}.png</path>
 	  <scale>0</scale>
-	  <verticalAlignment>top</verticalAlignment>
 	  <storyboard ifSubset="systemviewlayout:right">
 		  <animation property="scale" from="0" to="1.3" begin="" duration="175" mode="Linear"/>
 		  <animation property="scale" from="1.3" to="1" begin="620" duration="375" mode="EaseOut"/>
@@ -526,7 +514,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="Controller" extra="static">
       <scale>0</scale>
-	  <pos>0.318 0.48</pos>
+	  <pos>0.314 0.48</pos>
 	  <pos ifSubset="systemviewlayout:left">0.75 0.48</pos>      
       <size>0.24 0</size>
 	  <size ifSubset="aspect-ratio:4-3">0.32 0</size>
@@ -563,11 +551,12 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="nakedwheel" extra="static">
 		<path>./_art/nakedwheel/${system.theme}.png</path>
 		<size>0.48375 0</size>
-	   <size ifSubset="aspect-ratio:4-3">0.645 0</size>
+	    <size ifSubset="aspect-ratio:4-3">0.645 0</size>
 		<origin>0.5 0.5</origin>
 		<pos>0.7595 0.47</pos>
 		<pos ifSubset="aspect-ratio:4-3">0.692 0.47</pos>
 		<opacity>0</opacity>
+		<linearSmooth>true</linearSmooth>
 		<zIndex>61</zIndex>
 		<storyboard repeatAt="1">
 			<animation property="scale" from="1" to="1" begin="" duration="175" mode="Linear"/>
@@ -577,6 +566,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
 			<animation property="offsetX" from="0" to="0" begin="6250" duration="3750" mode="Linear"/>
 		    <animation property="saturation" from="1" to="2.5" begin="" duration="1000" mode="Linear" autoReverse="true" repeat="5"/>
+			
 		</storyboard>
 		
 	</image>
@@ -593,7 +583,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="0" to="0" begin="" duration="6500" mode="Linear"/>
 			<animation property="scale" from="0" to="1" begin="6500" duration="100" mode="EaseInQuint"/>
 			<animation property="scale" from="1" to="1" begin="6600" duration="800" mode="Linear"/>
-		    <animation property="scale" from="1" to="0" begin="7400" duration="100" mode="EaseInQuint"/>
+			<animation property="scale" from="1" to="0" begin="7400" duration="100" mode="EaseInQuint"/>
 			<animation property="scale" from="0" to="1" begin="7500" duration="100" mode="EaseInQuint"/>
 			<animation property="scale" from="1" to="1" begin="7600" duration="800" mode="Linear"/>
 		    <animation property="scale" from="1" to="0" begin="8400" duration="100" mode="EaseInQuint"/>
@@ -602,7 +592,8 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="opacity" from="0" to="0" begin="8500" duration="1500" mode="Linear"/>		
 		</storyboard>
 		
-	</image>	
+	</image>
+	
 	<image name="sprite" extra="static">
 		<path>./_art/sprites/${system.theme}.png</path>
 		<size>0.1010416666 0</size>
@@ -616,19 +607,22 @@ originally based on: "carbon" and "Arcade Planet"
 		<storyboard ifSubset="systemviewstyle:simplesprite" repeatAt="2375">
 			<animation property="opacity" from="1" to="1" begin="175" duration="" mode="Linear"/>
 			<animation property="scale" from="1" to="3" begin="2000" duration="375" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="0" to="-0.25033333" begin="2000" duration="375" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="-0.2555" begin="2000" duration="375" mode="EaseOutCubic"/>
 			<animation property="scale" from="3" to="2" begin="6250" duration="125" mode="Linear"/>
 			<animation property="scale" from="2" to="3" begin="6850" duration="125" mode="Linear"/>
 			<animation property="scale" from="3" to="3" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
-	  <storyboard ifSubset="systemviewstyle:randomartworks" repeatAt="1">
+	  <storyboard ifSubset="systemviewstyle:randomfanart" repeatAt="1">
 			<animation property="opacity" from="1" to="1" begin="175" duration="" mode="Linear"/>
 			<animation property="scale" from="1" to="1.5" begin="6250" duration="125" mode="Linear"/>
 			<animation property="scale" from="1.5" to="1" begin="6850" duration="125" mode="Linear"/>
 	  </storyboard>	
 	</image>
 	
-	<image name="randomArt01,randomArt02" extra="true" ifSubset="systemviewstyle:randomartworks">
+	<image name="randomFanart1,randomFanart2" extra="true" ifSubset="systemviewstyle:randomfanart">
+			<path>{random:image}</path>
+			<path>{random:thumbnail}</path>
+			<path>{random:fanart}</path>
 			<linearSmooth>true</linearSmooth>
 			<size>0.7 0</size>
 			<scale>1</scale>
@@ -640,8 +634,7 @@ originally based on: "carbon" and "Arcade Planet"
      		<color>D8D8D8</color>
 	</image>
 	
-		<image name="randomArt01" ifSubset="systemviewstyle:randomartworks">
-		    <path>{random:image}</path>
+		<image name="randomFanart1" ifSubset="systemviewstyle:randomfanart">
 			<storyboard repeat="forever">
 				<animation property="opacity" from="0" to="0" begin="" duration="2000" mode="linear"/>
 				<animation property="scale" from="1" to="1" begin="" duration="2000" mode="linear"/>				
@@ -653,8 +646,8 @@ originally based on: "carbon" and "Arcade Planet"
 			<zIndex>3</zIndex>	
 		</image>
 				
-		<image name="randomArt02" ifSubset="systemviewstyle:randomartworks">
-	        <path>{random:thumbnail}</path>
+		<image name="randomFanart2" ifSubset="systemviewstyle:randomfanart">
+
 			<storyboard repeat="forever">
 				<animation property="opacity" from="0" to="0" begin="" duration="10000" mode="linear"/>
 				<animation property="scale" from="1" to="1" begin="" duration="10000" mode="linear"/>				
@@ -665,7 +658,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<zIndex>2</zIndex>	
 		</image>
 		
-		<image name="randomArt03" extra="true" ifSubset="systemviewbottom:randomlogos">
+		<image name="randomLogo1" extra="true" ifSubset="systemviewbottom:randomlogos">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.126</maxSize>
 			<origin>0.5 0.5</origin>
@@ -683,7 +676,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<zIndex>46</zIndex>	
 		</image>
 		
-		<image name="randomArt04" extra="true" ifSubset="systemviewbottom:randomlogos">
+		<image name="randomLogo2" extra="true" ifSubset="systemviewbottom:randomlogos">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.126</maxSize>
 			<origin>0.5 0.5</origin>
@@ -700,7 +693,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<zIndex>46</zIndex>	
 		</image>
 	
-		<image name="randomArt05" extra="true" ifSubset="systemviewbottom:randomlogos">
+		<image name="randoLogo3" extra="true" ifSubset="systemviewbottom:randomlogos">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.126</maxSize>
 			<origin>0.5 0.5</origin>
@@ -715,7 +708,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<zIndex>46</zIndex>	
 		</image>
 	
-		<image name="randomArt06" extra="true" ifSubset="systemviewbottom:randomlogos">
+		<image name="randomLogo4" extra="true" ifSubset="systemviewbottom:randomlogos">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.126</maxSize>
 			<origin>0.5 0.5</origin>
