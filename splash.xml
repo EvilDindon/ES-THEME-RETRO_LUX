@@ -11,7 +11,17 @@
 		</splash>
 		
 		<image name="background">
-			<path>./_art/backgrounds/169/splash.jpg</path>
+			<path>./_art/assets/white.png</path>
+			<size>1 1</size>
+			<color>701108</color>
+			<colorEnd>100201</colorEnd>
+		</image>
+		
+		<image name="logo" extra="true">
+			<path>./_art/assets/logo.png</path>
+			<size>0.33 0</size>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.25</pos>
 		</image>
 		
 		<text name="label, Version, Platforms, Loading, Warning, author" extra="true">
@@ -37,18 +47,8 @@
 			<pos>0.5 0.438</pos>
 			<fontSize>0.016</fontSize>
 			<color>A0A0A0</color>
-			<text>Arcade Planet V0.99.2</text>			
+			<text>Retro Lux V0.12</text>			
 		</text>
-		
-<!-- 		<text name="Platforms" extra="true">
-			<pos>0.5 0.280</pos>
-			<text>Theme for Batocera, Retrobat and Emuelec</text>			
-		</text> -->
-
-<!-- 		<text lang="fr" name="Platforms" extra="true">
-			<pos>0.5 0.280</pos>
-			<text>Theme pour Batocera, Retrobat and Emuelec</text>			
-		</text> -->
 		
 		<text name="Loading" extra="true">
 			<fontSize>0.04</fontSize>
@@ -80,7 +80,7 @@
 			<fontSize>0.013</fontSize>
 			<alignment>right</alignment>
 			<color>DDDDDD</color>
-			<text>By EvilDindon, 2021</text>
+			<text>By EvilDindon, 2023</text>
 		</text>
 			
 		<image name="progressbar">
