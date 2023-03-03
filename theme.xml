@@ -347,6 +347,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="wheelbg" extra="static">
 		  <path>./_art/assets/white.png</path>
 		  <linearSmooth>false</linearSmooth>
+		  <visible ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewbottom:systemdetails">false</visible>
 		  <origin>0 0</origin>
 		  <size>0.358 1</size>
 		  <pos>0 0</pos>
@@ -788,6 +789,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<maxSize>0.20833333 0.15</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>-0.105 0.832</pos>
+		    <pos ifSubset="systemviewlayout:left">0.25 0.832</pos>
 			<clipRect>0 0 1 1</clipRect>
 			<zIndex>46</zIndex>	
 		</image>
