@@ -344,6 +344,18 @@ originally based on: "carbon" and "Arcade Planet"
 		  <zIndex>55</zIndex>
 	</image>
   
+	<image name="wheelbg" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>0.358 1</size>
+		  <pos>0 0</pos>
+		  <pos ifSubset="systemviewlayout:right">0.656 0</pos>
+		  <color>113344ff</color>
+		  <colorEnd>030a0d</colorEnd>
+		  <zIndex>48</zIndex>
+	</image>
+  
   <text name="logoText">
 		<fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
 		<color>C2C2C2ff</color>
@@ -487,6 +499,8 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="arrowup" extra="static">
       <origin>0.5 0.5</origin>
 	  <size>0.031 0</size>
+	  <pos>0.644 0.36</pos>
+      <pos ifSubset="systemviewlayout:left" >0.38 0.4</pos>   
 	  <color>A0A0AAff</color>
 	  <path>./_art/assets/arrowup.png</path>
       <linearSmooth>true</linearSmooth>
@@ -499,6 +513,8 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="arrowdown" extra="static">
       <origin>0.5 0.5</origin>
 	  <size>0.031 0</size>
+	  <pos>0.644 0.6</pos>
+	  <pos ifSubset="systemviewlayout:left" >0.38 0.564</pos> 
 	  <color>A0A0AAff</color>
 	  <path>./_art/assets/arrowdown.png</path>
       <linearSmooth>true</linearSmooth>
@@ -541,7 +557,49 @@ originally based on: "carbon" and "Arcade Planet"
       <reflexion>0.0 0.0</reflexion>
       <zIndex>51</zIndex>
 	</text>
-
+	
+	<image name="whiteline1" extra="static">
+      <origin>0 0.5</origin>
+	  <size>0.00208333333 0.002</size>
+	  <pos>0 0.754</pos>
+	  <color>CCCCCCff</color>
+	  <path>./_art/assets/white.png</path>
+      <linearSmooth>true</linearSmooth>
+	  <zIndex>45</zIndex>
+	  <storyboard>
+            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
+		</storyboard>
+	</image>
+	
+	<image name="whiteline2" extra="static">
+      <origin>0 0.5</origin>
+	  <size>0.00208333333 0.002</size>
+	  <pos>0 0.91</pos>
+	  <color>CCCCCCff</color>
+	  <path>./_art/assets/white.png</path>
+      <linearSmooth>true</linearSmooth>
+	  <zIndex>45</zIndex>
+	  <storyboard>
+            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
+		</storyboard>
+	</image>
+	
+	<image name="bottom tape" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.156</size>
+		  <pos>0 0.754</pos>
+		  <color>240610</color>
+		  <zIndex>44</zIndex>
+		<storyboard>
+            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
+		</storyboard>
+	</image>
+	
 	</view>	
 	
   <!-- SYSTEM VIEW LEFT OR RIGHT -->
@@ -731,107 +789,36 @@ originally based on: "carbon" and "Arcade Planet"
 			<origin>0.5 0.5</origin>
 			<pos>-0.105 0.832</pos>
 			<clipRect>0 0 1 1</clipRect>
-			<pos ifSubset="systemviewlayout:left">1.105 0.832</pos>
 			<zIndex>46</zIndex>	
 		</image>
 		
 		<image name="randomLogo1" ifSubset="systemviewbottom:randomlogos">
-			<storyboard ifSubset="systemviewlayout:right" repeat="forever">
-				<animation property="offsetX" from="0.9" to="0" begin="0" duration="5000" mode="linear"/>
-				<animation property="offsetX" from="0" to="0" begin="5000" duration="5000" mode="linear"/>				
-			</storyboard>			
-			<storyboard ifSubset="systemviewlayout:left" repeat="forever">
-			    <animation property="offsetX" from="-0.9" to="0" begin="0" duration="5000" mode="linear"/>	
+			<storyboard repeat="forever">
+			    <animation property="offsetX" to="0" begin="0.84" duration="5000" mode="linear"/>	
 				<animation property="offsetX" from="0" to="0" begin="5000" duration="5000" mode="linear"/>				
 			</storyboard>		
 		</image>
 		
 		<image name="randomLogo2" ifSubset="systemviewbottom:randomlogos">
-			<pos ifSubset="systemviewlayout:left">1.105 0.832</pos>
-			<storyboard ifSubset="systemviewlayout:right" repeat="forever">
-				<animation property="offsetX" from="0.9" to="0" begin="2500" duration="5000" mode="linear"/>
-				<animation property="offsetX" from="0" to="0" begin="7500" duration="2500" mode="linear"/>
-			</storyboard>			
-			<storyboard ifSubset="systemviewlayout:left" repeat="forever">
-				<animation property="offsetX" from="-0.9" to="0" begin="2500" duration="5000" mode="linear"/>
+			<storyboard repeat="forever">
+				<animation property="offsetX" to="0.84" begin="2500" duration="5000" mode="linear"/>
 				<animation property="offsetX" from="0" to="0" begin="7500" duration="2500" mode="linear"/>
 			</storyboard>	
 		</image>
 	
 		<image name="randomLogo3" ifSubset="systemviewbottom:randomlogos">
-			<pos ifSubset="systemviewlayout:left">1.105 0.832</pos>			
-			<storyboard ifSubset="systemviewlayout:right" repeat="forever">
-				<animation  property="offsetX" from="0.9" to="0" begin="5000" duration="5000" mode="linear"/>
-			</storyboard>
-			<storyboard ifSubset="systemviewlayout:left" repeat="forever">
-				<animation property="offsetX" from="-0.9" to="0" begin="5000" duration="5000" mode="linear"/>
+				<storyboard repeat="forever">
+				<animation property="offsetX" to="0.84" begin="5000" duration="5000" mode="linear"/>
 			</storyboard>				
 		</image>
 	
 		<image name="randomLogo4" ifSubset="systemviewbottom:randomlogos">
-			<pos ifSubset="systemviewlayout:left">1.105 0.832</pos>			
-			<storyboard ifSubset="systemviewlayout:right" repeat="forever">
-				<animation property="offsetX" from="0.9" to="0.4" begin="7500" duration="2500" mode="linear"/>
-				<animation property="opacity" from="1" to="0" begin="9000" duration="1000" mode="linear"/>
-			</storyboard>
-			<storyboard ifSubset="systemviewlayout:left" repeat="forever">
-				<animation property="offsetX" from="-0.9" to="-0.4" begin="7500" duration="2500" mode="linear"/>
+			<storyboard repeat="forever">
+				<animation property="offsetX" to="0.42" begin="7500" duration="2500" mode="linear"/>
 				<animation property="opacity" from="1" to="0" begin="9000" duration="1000" mode="linear"/>
 			</storyboard>				
   	</image>	
-			
-	<image name="arrowup" extra="static">
- 	  <pos>0.644 0.36</pos>
-      <pos ifSubset="systemviewlayout:left" >0.42 0.36</pos>     
-	</image>
-	
-	<image name="arrowdown" extra="static">
-	  <pos>0.644 0.6</pos>
-	  <pos ifSubset="systemviewlayout:left" >0.42 0.6</pos>   
-	</image>
-	
-	<image name="whiteline" extra="static">
-      <origin>0 0.5</origin>
-	  <size>0.00208333333 0.002</size>
-	  <pos>0 0.754</pos>
-	  <color>CCCCCCff</color>
-	  <path>./_art/assets/white.png</path>
-      <linearSmooth>true</linearSmooth>
-	  <zIndex>45</zIndex>
-	  <storyboard>
-            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
-			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
-		</storyboard>
-	</image>
-	
-	<image name="whiteline2" extra="static">
-      <origin>0 0.5</origin>
-	  <size>0.00208333333 0.002</size>
-	  <pos>0 0.91</pos>
-	  <color>CCCCCCff</color>
-	  <path>./_art/assets/white.png</path>
-      <linearSmooth>true</linearSmooth>
-	  <zIndex>45</zIndex>
-	  <storyboard>
-            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
-			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
-		</storyboard>
-	</image>
-	
-	<image name="bottom tape" extra="static">
-		  <path>./_art/assets/white.png</path>
-		  <linearSmooth>false</linearSmooth>
-		  <origin>0 0</origin>
-		  <size>1 0.156</size>
-		  <pos>0 0.754</pos>
-		  <color>240610</color>
-		  <zIndex>44</zIndex>
-		<storyboard>
-            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
-			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
-		</storyboard>
-	</image>
-	
+		
   </view>
 
   <!-- SYSTEM VIEW CENTER -->
