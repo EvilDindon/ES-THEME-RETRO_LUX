@@ -136,9 +136,9 @@ originally based on: "carbon" and "Arcade Planet"
 	</subset>
 
 	<!-- Subset options for System view bottom -->
-	<subset ifSubset="systemviewlayout:right|left, systemviewstyle:randomfanart|simplesprite" name="systemviewbottom" displayName="${systemviewbottom}">
-		<include name="randomlogos" displayName="${randomlogos}"/>
+	<subset name="systemviewbottom" displayName="${systemviewbottom}">
 		<include name="systemdetails" displayName="${systemdetails}"/>
+		<include name="randomlogos" ifSubset="systemviewlayout:right|left, systemviewstyle:randomfanart|simplesprite" displayName="${randomlogos}"/>
 	</subset>
 	
 	<!-- Subset options for Neo Geo Artwork Style -->
@@ -469,8 +469,8 @@ Jugados : {binding:gamesPlayed}
 El más jugado : {binding:mostPlayed}
 Última partida : {binding:lastPlayedDate}</text>
         <pos ifSubset="systemviewlayout:left">0.6 0.795</pos>
-		<pos ifSubset="systemviewlayout:right">0.3 0.795</pos>
-        <size>0.4 0.28</size>
+		<pos ifSubset="systemviewlayout:right">0.25 0.795</pos>
+        <size>0.45 0.28</size>
       </text>
 	  
 	  <text name="systemdetails2">
@@ -560,7 +560,7 @@ Numero de juegos : {binding:total}</text>
 		<opacity>0</opacity>
 		<zIndex>63</zIndex>
 		<linearSmooth>false</linearSmooth>
-		<storyboard ifSubset="systemviewstyle:randomfanart" repeatAt="1">
+		<storyboard ifSubset="systemviewstyle:randomfanart|randomboxart" repeatAt="1">
 			<animation property="opacity" from="1" to="1" begin="200" duration="" mode="Linear"/>
 			<animation property="scale" from="1" to="1.5" begin="6250" duration="125" mode="Linear"/>
 			<animation property="scale" from="1.5" to="1" begin="6850" duration="125" mode="Linear"/>
@@ -663,7 +663,7 @@ Numero de juegos : {binding:total}</text>
 	  <pos ifSubset="systemviewlayout:left">0.691 0.48</pos>
       <maxSize>0.32 0.164</maxSize>
 	  <scale>0</scale>
-	  <storyboard ifSubset="systemviewlayout:right, systemviewstyle:simplesprite">
+	  <storyboard ifSubset="systemviewlayout:right, systemviewstyle:simplesprite|randomboxart">
 		  <animation property="scale" from="0" to="1.3" begin="" duration="200" mode="Linear"/>
 		  <animation property="scale" from="1.3" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.471296295" to="0.115" begin="620" duration="375" mode="EaseOut"/>
@@ -676,7 +676,7 @@ Numero de juegos : {binding:total}</text>
 		  <animation property="x" from="0.318" to="0.164" begin="620" duration="375" mode="EaseOut"/>
 	  </storyboard>
 
-	  <storyboard ifSubset="systemviewlayout:left, systemviewstyle:simplesprite">
+	  <storyboard ifSubset="systemviewlayout:left, systemviewstyle:simplesprite|randomboxart">
 		  <animation property="scale" from="0" to="1.3" begin="" duration="200" mode="Linear"/>
 		  <animation property="scale" from="1.3" to="1" begin="620" duration="375" mode="EaseOut"/>
 		  <animation property="y" from="0.471296295" to="0.115" begin="620" duration="375" mode="EaseOut"/>
@@ -736,6 +736,20 @@ Numero de juegos : {binding:total}</text>
 				<animation property="x" from="0.318" to="0.08" begin="2000" duration="335" mode="EaseOutCubic"/>
 				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
 				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="EaseOutCubic"/>
+				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.024" begin="11820" duration="140" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.009" begin="12100" duration="60" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.0025" begin="12220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="0" begin="12260" duration="2500" mode="Linear"/>     
+	 </storyboard>
+	 	  <storyboard ifSubset="systemviewlayout:right, systemviewstyle:randomfanart|randomboxart" repeatAt="2335">
+				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
+				<animation property="scale" from="0" to="1" begin="620" duration="375" mode="EaseOut"/>
+				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
+				<animation property="x" from="0.318" to="0.5" begin="2000" duration="335" mode="EaseOutCubic"/>
+				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
+				<animation property="y" from="0.48" to="0.76" begin="2000" duration="335" mode="EaseOutCubic"/>
 				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="-0.024" begin="11820" duration="140" mode="EaseOutCubic" autoReverse="true"/>
@@ -844,7 +858,7 @@ Numero de juegos : {binding:total}</text>
 			<zIndex>3</zIndex>	
 		</image>
 				
-		<image name="randomFanart2" ifSubset="systemviewstyle:randomfanart">
+		<image name="randomFanart2">
 			<storyboard repeat="forever">
 				<animation property="opacity" from="0" to="0" begin="" duration="10000" mode="linear"/>
 				<animation property="scale" from="1" to="1" begin="" duration="10000" mode="linear"/>				
@@ -855,7 +869,47 @@ Numero de juegos : {binding:total}</text>
 			<zIndex>2</zIndex>	
 		</image>
 
-	<image name="randomLogo1,randomLogo2,randomLogo3,randomLogo4" extra="true" ifSubset="systemviewbottom:randomlogos">
+	<image name="randombox1,randombox2" extra="static" ifSubset="systemviewstyle:randomboxart">
+			<linearSmooth>true</linearSmooth>
+            <maxSize>0.22 0.38</maxSize>
+			<path>{random:thumbnail}</path>
+			<color>E0E0E0</color>
+			<origin>0.5 0.5</origin>
+			<pos>0.318 0.471296295</pos>
+			<pos ifSubset="systemviewlayout:left">0.682 0.471296295</pos>
+			<scale if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'gb2players' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx'">0.79</scale>
+			<zIndex>10</zIndex>
+	</image>
+	
+		<image name="randombox1">
+			<storyboard ifSubset="systemviewlayout:right" repeatAt="1">
+				<animation property="offsetX" from="-0.468" to="-0.466" begin= "" duration="2000" mode="linear"/>
+                <animation property="offsetX" from="-0.468" to="0" begin="2000" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0" to="-0.468" begin="4750" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="-0.468" to="-0.468" begin="5000" duration="5000" mode="linear"/>
+            </storyboard>
+			<storyboard ifSubset="systemviewlayout:left" repeatAt="1">
+				<animation property="offsetX" from="0.468" to="0.466" begin= "" duration="2000" mode="linear"/>
+                <animation property="offsetX" from="0.468" to="0" begin="2000" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0" to="0.468" begin="4750" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0.468" to="0.468" begin="5000" duration="5000" mode="linear"/>
+            </storyboard>
+		</image>
+		
+		<image name="randombox2">
+			<storyboard ifSubset="systemviewlayout:right" repeatAt="1">
+				<animation property="offsetX" from="-0.468" to="-0.466" begin= "" duration="7000" mode="linear"/>
+                <animation property="offsetX" from="-0.468" to="0" begin="7000" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0" to="-0.468" begin="9750" duration="250" mode="easeOut"/>
+            </storyboard>
+			<storyboard ifSubset="systemviewlayout:left" repeatAt="1">
+				<animation property="offsetX" from="0.468" to="0.466" begin= "" duration="7000" mode="linear"/>
+                <animation property="offsetX" from="0.468" to="0" begin="7000" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0" to="0.468" begin="9750" duration="250" mode="easeOut"/>
+            </storyboard>
+		</image>
+		
+	<image name="randomLogo1,randomLogo2,randomLogo3,randomLogo4" extra="static" ifSubset="systemviewbottom:randomlogos, systemviewstyle:randomfanart|simplesprite">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.15</maxSize>
 			<origin>0.5 0.5</origin>
@@ -865,27 +919,27 @@ Numero de juegos : {binding:total}</text>
 			<zIndex>46</zIndex>	
 		</image>
 		
-		<image name="randomLogo1" ifSubset="systemviewbottom:randomlogos">
+		<image name="randomLogo1">
 			<storyboard repeat="forever">
 			    <animation property="offsetX" to="0" begin="0.84" duration="5000" mode="linear"/>	
 				<animation property="offsetX" from="0" to="0" begin="5000" duration="5000" mode="linear"/>				
 			</storyboard>		
 		</image>
 		
-		<image name="randomLogo2" ifSubset="systemviewbottom:randomlogos">
+		<image name="randomLogo2">
 			<storyboard repeat="forever">
 				<animation property="offsetX" to="0.84" begin="2500" duration="5000" mode="linear"/>
 				<animation property="offsetX" from="0" to="0" begin="7500" duration="2500" mode="linear"/>
 			</storyboard>	
 		</image>
 	
-		<image name="randomLogo3" ifSubset="systemviewbottom:randomlogos">
+		<image name="randomLogo3">
 				<storyboard repeat="forever">
 				<animation property="offsetX" to="0.84" begin="5000" duration="5000" mode="linear"/>
 			</storyboard>				
 		</image>
 	
-		<image name="randomLogo4" ifSubset="systemviewbottom:randomlogos">
+		<image name="randomLogo4">
 			<storyboard repeat="forever">
 				<animation property="offsetX" to="0.42" begin="7500" duration="2500" mode="linear"/>
 				<animation property="opacity" from="1" to="0" begin="9000" duration="1000" mode="linear"/>
@@ -931,10 +985,10 @@ Numero de juegos : {binding:total}</text>
 		  <pos>0 0.754</pos>
 		  <pos ifSubset="systemviewlayout:left">1 0.754</pos>
 		  <color>240610</color>
-		  <color ifSubset="systemviewstyle:simplesprite, systemviewlayout:left">24061000</color>
+		  <color ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewlayout:left">24061000</color>
 		  <gradientType>horizontal</gradientType>
-		  <colorEnd ifSubset="systemviewstyle:simplesprite, systemviewlayout:right">24061000</colorEnd>
-		  <colorEnd ifSubset="systemviewstyle:simplesprite, systemviewlayout:left">240610ff</colorEnd>
+		  <colorEnd ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewlayout:right">24061000</colorEnd>
+		  <colorEnd ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewlayout:left">240610ff</colorEnd>
 		  <zIndex>44</zIndex>
 		<storyboard>
             <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
@@ -992,16 +1046,6 @@ Numero de juegos : {binding:total}</text>
 <!-- COMMON ELEMENTS in Gamelist Views -->
   
   <view name="basic,detailed,gamecarousel,grid">
-    
-  	<helpsystem name="help">
-	  <pos>0.01 0.952</pos>
-	  <size>1 0.01</size>
-	  <origin>0 0.5</origin>
-	  <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
-	  <fontSize>0.031</fontSize>
-	  <textColor>686068</textColor>
-      <iconColor>565296</iconColor>
-    </helpsystem>
     
 	<image name="background, background2">
 	  <pos>0 0</pos>
