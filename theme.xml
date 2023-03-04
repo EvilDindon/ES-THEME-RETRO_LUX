@@ -348,6 +348,7 @@ originally based on: "carbon" and "Arcade Planet"
 		  <path>./_art/assets/white.png</path>
 		  <linearSmooth>false</linearSmooth>
 		  <visible ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewbottom:systemdetails">false</visible>
+		  <visible ifSubset="systemviewlayout:center">false</visible>
 		  <origin>0 0</origin>
 		  <size>0.358 1</size>
 		  <pos>0 0</pos>
@@ -372,8 +373,7 @@ originally based on: "carbon" and "Arcade Planet"
     </text>
 	
 	<image name="logo">
-		 <color>D8D8D8ff</color>
-		 <saturation>1</saturation>
+		 <color>E8E8E8ff</color>
 	     <linearSmooth>true</linearSmooth>
 	     <path>./_art/wheel/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
@@ -381,7 +381,11 @@ originally based on: "carbon" and "Arcade Planet"
 	  <storyboard event="activate">
 			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>			
 			<animation property="color" from="00000000" to="00000000" begin="200" duration="" mode="Linear"/>
-	  </storyboard>	
+	  </storyboard>
+	  <storyboard event="open">
+			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>			
+			<animation property="color" from="00000000" to="00000000" begin="200" duration="" mode="Linear"/>
+	  </storyboard>
 	</image>
 	
 	<carousel name="systemcarousel">
