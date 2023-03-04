@@ -840,10 +840,12 @@ originally based on: "carbon" and "Arcade Planet"
 		  <linearSmooth>false</linearSmooth>
 		  <origin>0 0</origin>
 		  <size>0.1 0.156</size>
-		  <pos>0.7 0.754</pos>
+		  <pos>0.556 0.754</pos>
 		  <pos ifSubset="systemviewlayout:left">0.358 0.754</pos>
 		  <color>240610</color>
 		  <colorEnd>24061000</colorEnd>
+		  <color ifSubset="systemviewlayout:right">24061000</color>
+		  <colorEnd ifSubset="systemviewlayout:right">240610</colorEnd>
 		  <gradientType>horizontal</gradientType>
 		  <zIndex>47</zIndex>
 		  <opacity>0</opacity>
