@@ -469,7 +469,7 @@ Favoritos : {binding:favorites}
 Jugados : {binding:gamesPlayed}
 El más jugado : {binding:mostPlayed}</text>
         <pos ifSubset="systemviewlayout:left">0.6 0.795</pos>
-		<pos ifSubset="systemviewlayout:right">0.03 0.795</pos>
+		<pos ifSubset="systemviewlayout:right">0.3 0.795</pos>
         <size>0.4 0.28</size>
       </text>
 	  
@@ -477,7 +477,7 @@ El más jugado : {binding:mostPlayed}</text>
        <text>${system.fullName}</text>
         <fontSize>0.026</fontSize>
         <pos ifSubset="systemviewlayout:left">0.38 0.759</pos>
-		<pos ifSubset="systemviewlayout:right">0.03 0.759</pos>
+		<pos ifSubset="systemviewlayout:right">0.02 0.759</pos>
         <size>0.5 0.28</size>
         <color>BB0000ff</color>
 	</text>
@@ -488,7 +488,7 @@ ${system.hardwareType}
 ${system.releaseYearOrNull}
 ${system.sortedBy}</text>
         <pos ifSubset="systemviewlayout:left">0.38 0.795</pos>
-		<pos ifSubset="systemviewlayout:right">0.03 0.795</pos>
+		<pos ifSubset="systemviewlayout:right">0.02 0.795</pos>
         <size>0.32 0.28</size>
       </text>
 	  
@@ -721,7 +721,7 @@ ${system.sortedBy}</text>
 	  <pos ifSubset="systemviewlayout:left">0.691 0.48</pos>      
       <size>0.24 0</size>
 	  <size ifSubset="aspect-ratio:4-3">0.32 0</size>
-	  <storyboard ifSubset="systemviewlayout:right, systemviewbottom:randomlogos" repeatAt="2335">
+	  <storyboard ifSubset="systemviewlayout:right" repeatAt="2335">
 				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="375" mode="EaseOut"/>
 				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
@@ -735,21 +735,7 @@ ${system.sortedBy}</text>
 				<animation property="offsetY" from="0" to="-0.0025" begin="12220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="0" begin="12260" duration="2500" mode="Linear"/>     
 	 </storyboard>
-	 <storyboard ifSubset="systemviewlayout:right, systemviewbottom:systemdetails" repeatAt="2335">
-				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
-				<animation property="scale" from="0" to="1" begin="620" duration="375" mode="EaseOut"/>
-				<animation property="scale" from="1" to="0.572916" begin="2000" duration="335" mode="Linear"/>
-				<animation property="x" from="0.318" to="0.08" begin="2000" duration="335" mode="EaseOutCubic"/>
-				<animation property="rotation" from="0" to="360" begin="2000" duration="335" mode="Linear"/>
-				<animation property="y" from="0.48" to="0.76" begin="2000" duration="335" mode="EaseOutCubic"/>
-				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
-				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
-				<animation property="offsetY" from="0" to="-0.024" begin="11820" duration="140" mode="EaseOutCubic" autoReverse="true"/>
-				<animation property="offsetY" from="0" to="-0.009" begin="12100" duration="60" mode="EaseOutCubic" autoReverse="true"/>
-				<animation property="offsetY" from="0" to="-0.0025" begin="12220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
-				<animation property="offsetY" from="0" to="0" begin="12260" duration="2500" mode="Linear"/>     
-	 </storyboard>
-     <storyboard ifSubset="systemviewlayout:left, systemviewbottom:randomlogos" repeatAt="2750">
+	 <storyboard ifSubset="systemviewlayout:left, systemviewbottom:randomlogos" repeatAt="2750">
 				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="375" mode="EaseOut"/>
 				<animation property="scale" from="1" to="0.572916" begin="2000" duration="750" mode="Linear"/>
@@ -763,7 +749,7 @@ ${system.sortedBy}</text>
 				<animation property="offsetY" from="0" to="-0.0025" begin="12220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="0" begin="12260" duration="2500" mode="Linear"/>     
 	 </storyboard>
-     <storyboard ifSubset="systemviewlayout:left systemviewbottom:systemdetails" repeatAt="2750">
+     <storyboard ifSubset="systemviewlayout:left, systemviewbottom:systemdetails, systemviewstyle:randomfanart|randomboxart" repeatAt="2750">
 				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
 				<animation property="scale" from="0" to="1" begin="620" duration="375" mode="EaseOut"/>
 				<animation property="scale" from="1" to="0.572916" begin="2000" duration="750" mode="Linear"/>
@@ -776,7 +762,21 @@ ${system.sortedBy}</text>
 				<animation property="offsetY" from="0" to="-0.009" begin="12100" duration="60" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="-0.0025" begin="12220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
 				<animation property="offsetY" from="0" to="0" begin="12260" duration="2500" mode="Linear"/>     
-	 </storyboard>	 
+	 </storyboard>
+	 <storyboard ifSubset="systemviewlayout:left, systemviewbottom:systemdetails, systemviewstyle:simplesprite" repeatAt="2750">
+				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
+				<animation property="scale" from="0" to="1" begin="620" duration="375" mode="EaseOut"/>
+				<animation property="scale" from="1" to="0.572916" begin="2000" duration="750" mode="Linear"/>
+				<animation property="x" from="0.682" to="0.92" begin="2000" duration="750" mode="EaseOutCubic"/>			
+				<animation property="rotation" from="0" to="360" begin="2000" duration="750" mode="Linear"/>
+				<animation property="y" from="0.48" to="0.64" begin="2000" duration="335" mode="EaseOutCubic"/>
+				<animation property="offsetY" from="0" to="-0.06" begin="10620" duration="350" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.038" begin="11320" duration="250" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.024" begin="11820" duration="140" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.009" begin="12100" duration="60" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="-0.0025" begin="12220" duration="20" mode="EaseOutCubic" autoReverse="true"/>
+				<animation property="offsetY" from="0" to="0" begin="12260" duration="2500" mode="Linear"/>     
+	 </storyboard>
 	</image>
 	
 	<image name="nakedwheel">
