@@ -10,9 +10,10 @@
  - Ultra customizable
  - 37 custom collections themed
  - 16/9, 4/3, 5/4 and 16/10 Support
+ - 
+![nes left details](https://user-images.githubusercontent.com/30436625/222903739-b40d0d0c-86a5-4dc4-8ef1-e5bea0122a5a.jpg)
 
-https://youtu.be/U78Em3CpSIY
- 
+
   # ** IMPORTANT SCRAPING INSTRUCTIONS **
 
 This theme relies on clean artwork.
