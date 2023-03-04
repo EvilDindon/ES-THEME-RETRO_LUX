@@ -475,9 +475,9 @@ El más jugado : {binding:mostPlayed}
 	  
 	  <text name="systemdetails2">
        <text>${system.fullName}</text>
-        <fontSize>0.026</fontSize>
-        <pos ifSubset="systemviewlayout:left">0.38 0.759</pos>
-		<pos ifSubset="systemviewlayout:right">0.02 0.759</pos>
+        <fontSize>0.03</fontSize>
+        <pos ifSubset="systemviewlayout:left">0.38 0.754</pos>
+		<pos ifSubset="systemviewlayout:right">0.02 0.754</pos>
         <size>0.5 0.28</size>
         <color>BB0000ff</color>
 	</text>
