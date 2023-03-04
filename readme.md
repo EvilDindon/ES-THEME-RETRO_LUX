@@ -1,12 +1,15 @@
-# ES-THEME-RETROLUXURY
+![logo](https://user-images.githubusercontent.com/30436625/222884645-cc23f7c9-d680-461f-8164-7abf152aa58f.png)
+
  Theme for Emulation Station compatible with Batocera >=V35, Emuelec >=4.0 and Retrobat >= 5.0
  By EvilDindon (Mickaël ISMAN), 2021, based on "Carbon".
  
  V0.1
  
  Features :
+ - Clean retro style
+ - Ultra customizable
  - 37 custom collections themed
- - 16/9 and 4/3 Support ! (5/4, 16/10, 3/2 and 5/3 not supported for for now)
+ - 16/9, 4/3, 5/4 and 16/10 Support
  
   # ** IMPORTANT SCRAPING INSTRUCTIONS **
 
@@ -18,6 +21,8 @@ I recommand SCRAPING all your games using SCREENSCRAPER with the following param
 # BOX SOURCE : BOX 2D
 
 # LOGO SOURCE : WHEEL
+
+# SCRAP FANART : YES
 
 These 3 parameters are mandatory. If you put other thing (mix images, etc.) the theme will not look as good as intended.
 
