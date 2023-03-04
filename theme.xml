@@ -456,18 +456,18 @@ originally based on: "carbon" and "Arcade Planet"
       </text>
 	  
 	<text name="systemdetails">
-       <text>Games : {binding:total}
-Favorites : {binding:favorites}
+       <text>Favorites : {binding:favorites}
 Games played : {binding:gamesPlayed}
-Most played : {binding:mostPlayed}</text>
-        <text lang="fr">Nombre de jeux : {binding:total}
-Favoris : {binding:favorites}
+Most played : {binding:mostPlayed}
+Last played : {binding:lastPlayedDate}</text>
+        <text lang="fr">Favoris : {binding:favorites}
 Jeux joués : {binding:gamesPlayed}
-Le plus joué : {binding:mostPlayed}</text>
-        <text lang="es">Número de juegos : {binding:total}
-Favoritos : {binding:favorites}
+Le plus joué : {binding:mostPlayed}
+Dernière partie : {binding:lastPlayedDate}</text>
+        <text lang="es">Favoritos : {binding:favorites}
 Jugados : {binding:gamesPlayed}
-El más jugado : {binding:mostPlayed}</text>
+El más jugado : {binding:mostPlayed}
+Última partida : {binding:lastPlayedDate}</text>
         <pos ifSubset="systemviewlayout:left">0.6 0.795</pos>
 		<pos ifSubset="systemviewlayout:right">0.3 0.795</pos>
         <size>0.4 0.28</size>
@@ -486,7 +486,15 @@ El más jugado : {binding:mostPlayed}</text>
        <text>${system.manufacturer}
 ${system.hardwareType}
 ${system.releaseYearOrNull}
-${system.sortedBy}</text>
+Games : {binding:total}</text>
+		<text lang="fr">${system.manufacturer}
+${system.hardwareType}
+${system.releaseYearOrNull}
+Nombre de Jeux : {binding:total}</text>
+		<text lang="es">${system.manufacturer}
+${system.hardwareType}
+${system.releaseYearOrNull}
+Numero de juegos : {binding:total}</text>
         <pos ifSubset="systemviewlayout:left">0.38 0.795</pos>
 		<pos ifSubset="systemviewlayout:right">0.02 0.795</pos>
         <size>0.32 0.28</size>
