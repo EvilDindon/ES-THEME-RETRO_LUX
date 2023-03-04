@@ -6,6 +6,8 @@
  V0.1
  
  Features :
+ - Clean retro style
+ - Ultra customizable
  - 37 custom collections themed
  - 16/9, 4/3, 5/4 and 16/10 Support
  
