@@ -372,7 +372,7 @@ originally based on: "carbon" and "Arcade Planet"
 		  <color ifSubset="systemviewlayout:right">FFFFFF00</color>
 		  <colorEnd ifSubset="systemviewlayout:right">FFFFFFff</colorEnd>
 		  <gradientType>horizontal</gradientType>
-		  <zIndex>47</zIndex>
+		  <zIndex>49</zIndex>
 	</image>
   
   <text name="logoText">
@@ -813,18 +813,18 @@ originally based on: "carbon" and "Arcade Planet"
 			</storyboard>				
   	</image>	
 
-    <image name="whiteline1,whiteline2" ifSubset="systemviewbottom:randomlogos, systemviewstyle:randomfanart|simplesprite" extra="static">
+    <image name="whiteline1,whiteline2" extra="static">
       <origin>0 0.5</origin> 
       <origin ifSubset="systemviewlayout:left">1 0.5</origin> 
 	  <size>0.00208333333 0.002</size>
-	  <gradientType>horizontal</gradientType>
 	  <color>CCCCCCff</color>
 	  <colorEnd>CCCCCC00</colorEnd>
+	  <gradientType>horizontal</gradientType>
 	  <color ifSubset="systemviewlayout:left">CCCCCC00</color>
 	  <colorEnd ifSubset="systemviewlayout:left">CCCCCCff</colorEnd>
 	  <path>./_art/assets/white.png</path>
       <linearSmooth>true</linearSmooth>
-	  <zIndex>48</zIndex>
+	  <zIndex>46</zIndex>
      <storyboard>
             <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
 			<animation property="w" from="0" to="0.7" begin="2000" duration="335" mode="Linear"/>
@@ -836,20 +836,26 @@ originally based on: "carbon" and "Arcade Planet"
 	  <pos ifSubset="systemviewlayout:left">1 0.754</pos>
  	</image>
 	
-	<image name="whiteline2" ifSubset="systemviewbottom:randomlogos" extra="static">
- 	  <pos>0 0.91</pos>
+	<image name="whiteline2" extra="static">
+ 	  <visible ifSubset="systemviewbottom:systemdetails">false</visible>
+	  <pos>0 0.91</pos>
 	  <pos ifSubset="systemviewlayout:left">1 0.91</pos>
 	</image>
 	
-	<image name="bottomtape" ifSubset="systemviewbottom:randomlogos, systemviewstyle:randomfanart|simplesprite" extra="static">
+	<image name="bottomtape" extra="static">
 		  <path>./_art/assets/white.png</path>
 		  <linearSmooth>false</linearSmooth>
 		  <origin>0 0</origin>
 		  <origin ifSubset="systemviewlayout:left">1 0</origin>
-		  <size>1 0.156</size>
+		  <size ifSubset="systemviewbottom:systemdetails">1 0.2</size>
+		  <size ifSubset="systemviewbottom:randomlogos">1 0.156</size>
 		  <pos>0 0.754</pos>
 		  <pos ifSubset="systemviewlayout:left">1 0.754</pos>
 		  <color>240610</color>
+		  <color ifSubset="systemviewstyle:simplesprite, systemviewlayout:left">24061000</color>
+		  <gradientType>horizontal</gradientType>
+		  <colorEnd ifSubset="systemviewstyle:simplesprite, systemviewlayout:right">24061000</colorEnd>
+		  <colorEnd ifSubset="systemviewstyle:simplesprite, systemviewlayout:left">240610ff</colorEnd>
 		  <zIndex>44</zIndex>
 		<storyboard>
             <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
@@ -857,25 +863,20 @@ originally based on: "carbon" and "Arcade Planet"
 		</storyboard>
 	</image>
 	
-	<image name="bottomtapemask" ifSubset="systemviewbottom:randomlogos, systemviewstyle:randomfanart|simplesprite" extra="static">
+		<image name="systeminfobg" ifSubset="systemviewbottom:randomlogos" extra="static">
 		  <path>./_art/assets/white.png</path>
 		  <linearSmooth>false</linearSmooth>
 		  <origin>0 0</origin>
-		  <size>0.1 0.156</size>
-		  <pos>0.556 0.754</pos>
-		  <pos ifSubset="systemviewlayout:left">0.358 0.754</pos>
-		  <color>240610</color>
-		  <colorEnd>24061000</colorEnd>
-		  <color ifSubset="systemviewlayout:right">24061000</color>
-		  <colorEnd ifSubset="systemviewlayout:right">240610</colorEnd>
-		  <gradientType>horizontal</gradientType>
-		  <zIndex>47</zIndex>
-		  <opacity>0</opacity>
-		  <storyboard>
-            <animation property="opacity" from="1" to="1" begin="2335" duration="" mode="Linear"/>
+		  <size>1 0.156</size>
+		  <pos>0 0.91</pos>
+		  <color>000000</color>
+		  <zIndex>10</zIndex>
+		<storyboard>
+            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
 		</storyboard>
 	</image>
-	
+
   </view>
 
   <!-- SYSTEM VIEW CENTER -->
