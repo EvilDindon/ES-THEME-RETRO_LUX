@@ -20,7 +20,7 @@ I recommand SCRAPING all your games using SCREENSCRAPER with the following param
 
 # LOGO SOURCE : WHEEL
 
-SCRAP FANART : YES
+# SCRAP FANART : YES
 
 These 3 parameters are mandatory. If you put other thing (mix images, etc.) the theme will not look as good as intended.
 
