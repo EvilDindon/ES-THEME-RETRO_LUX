@@ -257,10 +257,8 @@ originally based on: "carbon" and "Arcade Planet"
     </text>
     
 	<controllerActivity name="controllerActivity">
-      <pos>0.5 0.916</pos>
-	  <pos ifSubset="systemviewlayout:left">0.88 0.916</pos>
+      <pos>0.89 0.958</pos>
 	  <origin>1 0.5</origin>
-      <origin ifSubset="systemviewlayout:left">0 0.5</origin>
 	  <size>0.085 0.025</size>
       <itemSpacing>0.003</itemSpacing>
       <imagePath>./_art/icons/gamepad.svg</imagePath>
@@ -414,7 +412,6 @@ originally based on: "carbon" and "Arcade Planet"
       <origin>0.5 0.5</origin>
 	  <color>00000000</color>
       <colorEnd>00000000</colorEnd>
-	  <systemInfoDelay>2000</systemInfoDelay>
 	  <maxLogoCount>7</maxLogoCount>
 	  <maxLogoCount tinyScreen="true">5</maxLogoCount>
 	  <logoScale>1.333333333333</logoScale>
@@ -422,8 +419,9 @@ originally based on: "carbon" and "Arcade Planet"
       <logoSize>0.34921875 0.1527777777</logoSize>
 	  <logoSize ifSubset="aspect-ratio:4-3">0.51736111 0.2037037037</logoSize>
 	  <minLogoOpacity>1</minLogoOpacity>
-	  <transitionSpeed>335</transitionSpeed>
+	  <transitionSpeed>200</transitionSpeed>
 	  <scrollSound>./_art/soundS/scroll.wav</scrollSound>
+	  <systemInfoDelay>1500</systemInfoDelay>
 	  <zIndex>60</zIndex>
     </carousel>
 
@@ -431,23 +429,72 @@ originally based on: "carbon" and "Arcade Planet"
 	  <visible ifSubset="systemviewbottom:systemdetails">false</visible>
 	  <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
 	  <fontSize>0.026</fontSize>
-	  <forceUppercase>0</forceUppercase>
+	  <forceUppercase>false</forceUppercase>
 	  <origin>0 0.5</origin>
 	  <alignment>left</alignment>
       <pos>0.323 0.927</pos>
       <pos ifSubset="systemviewlayout:left" >0.687 0.927</pos>     
 	  <size>1 0.026</size>
-      <backgroundColor>00000000</backgroundColor>
       <color>bbbbbbdd</color>
-      <glowColor>000000dd</glowColor>
-      <glowSize>0.1</glowSize>
-      <reflexion>0.0 0.0</reflexion>
-	  <opacity>0</opacity>
-	  <storyboard>
+      <glowSize>0</glowSize>
+    </text>	
+	
+	<text name="systemdetails,systemdetails2,systemdetails3" ifSubset="systemviewbottom:systemdetails" extra="static">
+        <alignment>left</alignment>
+        <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
+        <fontSize>0.024</fontSize>
+        <zIndex>100</zIndex>
+        <glowColor>000000A0</glowColor>
+        <glowSize>1</glowSize>
+		<opacity>0</opacity>
+	   <storyboard>
+			<animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
 			<animation property="opacity" from="0" to="1" begin="2000" duration="500" mode="Linear"/>			
 	  </storyboard>
-    </text>	
-		
+      </text>
+	  
+	<text name="systemdetails">
+       <text>Games : {binding:total}
+Favorites : {binding:favorites}
+Games played : {binding:gamesPlayed}
+Most played : {binding:mostPlayed}
+Last played : {binding:lastPlayedDate}</text>
+        <text lang="fr">Nombre de jeux : {binding:total}
+Favoris : {binding:favorites}
+Jeux joués : {binding:gamesPlayed}
+Le plus joué : {binding:mostPlayed}
+Dernière partie : {binding:lastPlayedDate}</text>
+        <text lang="es">Número de juegos : {binding:total}
+Favoritos : {binding:favorites}
+Jugados : {binding:gamesPlayed}
+El más jugado : {binding:mostPlayed}
+Última partida : {binding:lastPlayedDate}</text>
+        <color>D0D0D0FF</color>
+        <pos ifSubset="systemviewlayout:left">0.68 0.71</pos>
+		<pos ifSubset="systemviewlayout:right">0.03 0.71</pos>
+        <size>0.32 0.1</size>
+      </text>
+	  
+	  <text name="systemdetails2">
+       <text>${system.fullName}</text>
+        <fontSize>0.026</fontSize>
+        <pos ifSubset="systemviewlayout:left">0.38 0.638</pos>
+		<pos ifSubset="systemviewlayout:right">0.03 0.638</pos>
+        <size>0.32 0.1</size>
+        <color>FFFFFFff</color>
+	</text>
+	  
+	  <text name="systemdetails3">
+       <text>${system.manufacturer}
+${system.hardwareType}
+${system.releaseYearOrNull}
+${system.sortedBy}</text>
+        <color>D0D0D0ff</color>
+        <pos ifSubset="systemviewlayout:left">0.38 0.726</pos>
+		<pos ifSubset="systemviewlayout:right">0.03 0.726</pos>
+        <size>0.32 0.28</size>
+      </text>
+	  
 	<image name="nakedwheel" extra="static">
 		<path>./_art/nakedwheel/${system.theme}.png</path>
 	    <path>./_art/nakedwheel/${system.theme}-${lang}.png</path>
@@ -596,10 +643,9 @@ originally based on: "carbon" and "Arcade Planet"
       <pos ifSubset="systemviewlayout:left" >0.682 0.927</pos>     
 	  <size>1 0.27</size>
       <color>bbbbbbdd</color>
-      <glowColor>00000088</glowColor>
-      <glowSize>0.1</glowSize>
-      <reflexion>0.0 0.0</reflexion>
-      <zIndex>51</zIndex>
+      <glowColor>00000000</glowColor>
+      <glowSize>0</glowSize>
+      <zIndex>50</zIndex>
 	  <opacity>0</opacity>
 	   <storyboard>
 			<animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
@@ -868,14 +914,10 @@ originally based on: "carbon" and "Arcade Planet"
 		  <linearSmooth>false</linearSmooth>
 		  <origin>0 0</origin>
 		  <size>1 0.156</size>
-		  <pos>0 0.91</pos>
+		  <pos>0 0.908</pos>
 		  <color>000000</color>
 		  <zIndex>10</zIndex>
-		<storyboard>
-            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
-			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
-		</storyboard>
-	</image>
+   	</image>
 
   </view>
 
