@@ -388,7 +388,8 @@ originally based on: "carbon" and "Arcade Planet"
     </text>
 	
 	<image name="logo">
-		 <color>E8E8E8ff</color>
+		 <color>D8D8D8ff</color>
+		 <saturation>0.75</saturation>
 	     <linearSmooth>true</linearSmooth>
 	     <path>./_art/wheel/${system.theme}.png</path>
 		 <path>./_art/wheel/${system.theme}-${lang}.png</path>
@@ -396,10 +397,12 @@ originally based on: "carbon" and "Arcade Planet"
 		 <path ifSubset="neogeostyle:mvs">./_art/wheel/special/${system.theme}.png</path>
 	  <storyboard event="activate">
 			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>			
+			<animation property="saturation" from="1" to="1" begin="200" duration="" mode="Linear"/>	
 			<animation property="color" from="00000000" to="00000000" begin="200" duration="" mode="Linear"/>
 	  </storyboard>
 	  <storyboard event="open">
 			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>			
+			<animation property="saturation" from="1" to="1" begin="200" duration="" mode="Linear"/>	
 			<animation property="color" from="00000000" to="00000000" begin="200" duration="" mode="Linear"/>
 	  </storyboard>
 	</image>
