@@ -559,7 +559,7 @@ Numero de juegos : {binding:total}</text>
 		<x ifSubset="systemviewlayout:left">0.3447916</x>
 		<origin>0.5 0.5</origin>
 		<zIndex>62</zIndex>
-		<color>FFFFFFdd</color>
+		<color>FFFFFFaa</color>
 		<opacity>0</opacity>
 	</image>
 
