@@ -871,7 +871,7 @@ Numero de juegos : {binding:total}</text>
 
 	<image name="randombox1,randombox2" extra="static" ifSubset="systemviewstyle:randomboxart">
 			<linearSmooth>true</linearSmooth>
-            <maxSize>0.22 0.38</maxSize>
+            <maxSize>0.24 0.40</maxSize>
 			<path>{random:thumbnail}</path>
 			<color>E0E0E0</color>
 			<origin>0.5 0.5</origin>
@@ -995,8 +995,9 @@ Numero de juegos : {binding:total}</text>
 			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
 		</storyboard>
 	</image>
+
 	
-		<image name="systeminfobg" ifSubset="systemviewbottom:randomlogos" extra="static">
+	<image name="systeminfobg" ifSubset="systemviewbottom:randomlogos" extra="static">
 		  <path>./_art/assets/white.png</path>
 		  <linearSmooth>false</linearSmooth>
 		  <origin>0 0</origin>
@@ -1005,7 +1006,7 @@ Numero de juegos : {binding:total}</text>
 		  <color>000000</color>
 		  <zIndex>10</zIndex>
    	</image>
-
+	
   </view>
 
   <!-- SYSTEM VIEW CENTER -->
