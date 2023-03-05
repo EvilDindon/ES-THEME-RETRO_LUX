@@ -506,6 +506,8 @@ Numero de juegos : {binding:total}</text>
 	<image name="nakedwheel" extra="static">
 		<path>./_art/nakedwheel/${system.theme}.png</path>
 	    <path>./_art/nakedwheel/${system.theme}-${lang}.png</path>
+		<path ifSubset="artworkregion:US">./_art/nakedwheel/US/${system.theme}.png</path>
+     	<path ifSubset="neogeostyle:mvs">./_art/nakedwheel/special/${system.theme}.png</path>
 		<size>0.465625 0</size>
 	    <size ifSubset="aspect-ratio:4-3">0.51736111 0</size>
 		<origin>0.5 0.5</origin>
@@ -652,6 +654,8 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="sprite" extra="static">
 		<path>./_art/sprites/${system.theme}.png</path>
+		<path ifSubset="artworkregion:US">./_art/sprites/US/${system.theme}.png</path>
+     	<path ifSubset="neogeostyle:mvs">./_art/sprites/special/${system.theme}.png</path>
 		<size>0.1010416666 0</size>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
 		<origin>0.5 0.5</origin>
@@ -1057,8 +1061,8 @@ Numero de juegos : {binding:total}</text>
       <linearSmooth>true</linearSmooth>
 	  <zIndex>46</zIndex>
      <storyboard>
-            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
-			<animation property="w" from="0" to="0.7" begin="2000" duration="335" mode="Linear"/>
+            <animation property="w" from="0" to="0" begin="" duration="620" mode="Linear"/>
+			<animation property="w" from="0" to="0.7" begin="620" duration="335" mode="Linear"/>
 		</storyboard>
 	</image>
 	
@@ -1089,8 +1093,8 @@ Numero de juegos : {binding:total}</text>
 		  <colorEnd ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewlayout:left">240610ff</colorEnd>
 		  <zIndex>44</zIndex>
 		<storyboard>
-            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
-			<animation property="w" from="0" to="1" begin="2000" duration="335" mode="Linear"/>
+            <animation property="w" from="0" to="0" begin="" duration="620" mode="Linear"/>
+			<animation property="w" from="0" to="1" begin="620" duration="335" mode="Linear"/>
 		</storyboard>
 	</image>
 
@@ -1141,10 +1145,6 @@ Numero de juegos : {binding:total}</text>
 	</image>
 			
   </view>
-
-<!-- INCLUDING CUSTOM ANIMATIONS ON CERTAIN SYSTEMS -->
-
-<include>./_art/animations/${system.theme}.xml</include>
 
 <!-- COMMON ELEMENTS in Gamelist Views -->
   
