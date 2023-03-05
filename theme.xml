@@ -1142,6 +1142,10 @@ Numero de juegos : {binding:total}</text>
 			
   </view>
 
+<!-- INCLUDING CUSTOM ANIMATIONS ON CERTAIN SYSTEMS -->
+
+<include>./_art/animations/${system.theme}.xml</include>
+
 <!-- COMMON ELEMENTS in Gamelist Views -->
   
   <view name="basic,detailed,gamecarousel,grid">
