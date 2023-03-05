@@ -607,15 +607,15 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="refletssecondaires4">
 		<y>0.73888888</y>
-		<storyboard repeatAt="6250">
-			<animation property="opacity" from="0" to="0" begin="" duration="6250" mode="Linear"/>
-			<animation property="scale" from="0" to="0" begin="" duration="6250" mode="Linear"/>
-			<animation property="opacity" from="1" to="1" begin="6250" duration="800" mode="Linear"/>
-			<animation property="scale" from="0" to="1" begin="6250" duration="100" mode="EaseInQuint"/>
-			<animation property="scale" from="1" to="1" begin="6350" duration="600" mode="Linear"/>
-			<animation property="scale" from="1" to="0" begin="6950" duration="100" mode="EaseInQuint"/>
-		  	<animation property="offsetX" from="-0.2867187" to="0" begin="6250" duration="800" mode="Linear"/>
-			<animation property="offsetX" from="0" to="0" begin="7050" duration="15000" mode="Linear"/>
+		<storyboard repeatAt="8250">
+			<animation property="opacity" from="0" to="0" begin="" duration="8250" mode="Linear"/>
+			<animation property="scale" from="0" to="0" begin="" duration="8250" mode="Linear"/>
+			<animation property="opacity" from="1" to="1" begin="8250" duration="800" mode="Linear"/>
+			<animation property="scale" from="0" to="1" begin="8250" duration="100" mode="EaseInQuint"/>
+			<animation property="scale" from="1" to="1" begin="8350" duration="600" mode="Linear"/>
+			<animation property="scale" from="1" to="0" begin="8950" duration="100" mode="EaseInQuint"/>
+		  	<animation property="offsetX" from="-0.2867187" to="0" begin="8250" duration="800" mode="Linear"/>
+			<animation property="offsetX" from="0" to="0" begin="9050" duration="15000" mode="Linear"/>
 		</storyboard>
 	</image>
 	
@@ -635,7 +635,7 @@ Numero de juegos : {binding:total}</text>
 	
 	   <image name="refletssecondaires6">
 		<y>0.201</y>
-		<storyboard repeatAt="7550">
+		<storyboard repeatAt="12550">
 			<animation property="opacity" from="0" to="0" begin="" duration="12550" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="12550" mode="Linear"/>
 			<animation property="opacity" from="1" to="1" begin="12550" duration="800" mode="Linear"/>
