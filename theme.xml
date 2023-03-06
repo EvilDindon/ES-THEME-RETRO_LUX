@@ -1623,7 +1623,7 @@ Numero de juegos : {binding:total}</text>
 	  <selectedColor ifSubset="textlistcolor:yellow">EEEE00</selectedColor>
 	  <selectedColor ifSubset="textlistcolor:white">FFFFFF</selectedColor>
 	  <selectedColor ifSubset="textlistcolor:blue">88D8F0</selectedColor>
-	  <primaryColor ifSubset="textlistcolor:white">999999</primaryColor>
+	  <primaryColor ifSubset="textlistcolor:white">A0A0A0</primaryColor>
 	  <primaryColor ifSubset="textlistcolor:yellow">767670</primaryColor>
 	  <primaryColor ifSubset="textlistcolor:red">878585</primaryColor>
 	  <primaryColor ifSubset="textlistcolor:purple">766976</primaryColor>
