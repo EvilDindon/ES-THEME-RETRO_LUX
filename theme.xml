@@ -1439,6 +1439,68 @@ Numero de juegos : {binding:total}</text>
       <zIndex>10</zIndex>	  
     </image>
 	
+	<image name="bglistborderL" extra="true">
+      <pos>0.225 0</pos>
+      <size>0.015 1</size>
+      <origin>1 0</origin>
+	  <path>./_art/assets/white.png</path>
+	  <color>604141</color>
+	  <colorEnd>392727</colorEnd>
+      <zIndex>11</zIndex>	  
+    </image>
+	
+	<image name="bglistborderR" extra="true">
+      <pos>0.775 0</pos>
+      <size>0.015 1</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/white.png</path>
+	  <color>604141</color>
+	  <colorEnd>392727</colorEnd>
+      <zIndex>11</zIndex>	  
+    </image>
+
+	<image name="bglistborderlineL" extra="true">
+      <pos>0.225 0</pos>
+      <size>0.002 1</size>
+      <origin>1 0</origin>
+	  <path>./_art/assets/white.png</path>
+	  <color>332323</color>
+	  <colorEnd>563a3a</colorEnd>
+	  <zIndex>11</zIndex>	  
+    </image>
+	
+	<image name="bglistborderlineR" extra="true">
+      <pos>0.775 0</pos>
+      <size>0.002 1</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/white.png</path>
+	  <color>332323</color>
+	  <colorEnd>563a3a</colorEnd>
+      <zIndex>11</zIndex>	  
+    </image>
+	
+	<image name="bglistbordershadowR" extra="true">
+      <pos>0.790 0</pos>
+      <size>0.006 1</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/white.png</path>
+	  <gradientType>horizontal</gradientType>
+	  <color>00000088</color>
+	  <colorEnd>00000000</colorEnd>
+      <zIndex>11</zIndex>	  
+    </image>
+	
+	<image name="bglistbordershadowL" extra="true">
+      <pos>0.225 0</pos>
+      <size>0.006 1</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/white.png</path>
+	  <gradientType>horizontal</gradientType>
+	  <color>00000055</color>
+	  <colorEnd>00000000</colorEnd>
+      <zIndex>11</zIndex>	  
+    </image>
+	
 	<text name="logoText">
       <size>0.98 0.126</size>
 	  <fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
@@ -1462,7 +1524,7 @@ Numero de juegos : {binding:total}</text>
 	  <pos>0.47 0.1</pos>
 	  <origin>0.5 0.5</origin>
 	  <saturation>1</saturation>
-	  <color>C8C800</color>
+	  <color>C8C8C8</color>
 	 </image>
 	
 	<image name="Sprites L,Sprites R" extra="true">
