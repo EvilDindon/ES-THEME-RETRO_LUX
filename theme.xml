@@ -1150,11 +1150,58 @@ Numero de juegos : {binding:total}</text>
   
   <view name="basic,detailed,gamecarousel,grid">
     
-	<image name="background, background2">
-	  <pos>0 0</pos>
-     	  <origin>0 0</origin>
-          <size>1 1</size>
-	  <linearSmooth>true</linearSmooth>	  
+	  <helpsystem name="help">
+	  <pos>0.01 0.97</pos>
+	  <size>1 0.01</size>
+	  <origin>0 0.5</origin>
+	  <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
+	  <fontSize>0.034</fontSize>
+	  <textColor>777777</textColor>
+      <iconColor>888888</iconColor>
+    </helpsystem>
+
+    <image name="background">
+      <pos>0 0</pos>
+      <size>1 1</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/white.png</path>
+	  <color>153842ff</color>
+	  <colorEnd>15384211</colorEnd>
+      <zIndex>0</zIndex>	  
+    </image>
+	
+	<image name="electronic" extra="static">
+      <pos>0.377 0.816</pos>
+	  <pos if="${screen.height} == 720">0.416 0.6</pos>
+      <size>3 4</size>
+	  <scale if="${screen.height} == 1080">0.66666666</scale>
+	  <scale if="${screen.height} == 720">0.444444444</scale>
+      <origin>0.5 0.5</origin>
+	  <tile>true</tile>
+	  <path>./_art/assets/electronic.png</path>
+	  <color>FFFFFF44</color>
+	  <colorEnd>FFFFFF11</colorEnd>
+      <zIndex>0</zIndex>	  
+    </image>
+	
+	<image name="bottom bar" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.05741</size>
+		  <pos>0 0.94259</pos>
+		  <color>112838ff</color>
+		  <zIndex>54</zIndex>
+	</image>
+	
+		<image name="bottom line" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.00185185</size>
+		  <pos>0 0.94259</pos>
+		  <color>557788ff</color>
+		  <zIndex>55</zIndex>
 	</image>
 		
     <image name="logo">
@@ -1227,7 +1274,6 @@ Numero de juegos : {binding:total}</text>
 	  <default>./_art/assets/noboxart.png</default>
 	  <linearSmooth>true</linearSmooth>
 	  <origin>0.5 0.5</origin>
-      <reflexion>0.3 0.0</reflexion>
 	  <zIndex>11</zIndex>	  
 	</image>
 	
@@ -1270,12 +1316,12 @@ Numero de juegos : {binding:total}</text>
 	  <zIndex>149</zIndex>	  
 	</image>
 	
-	<image name="ghostcheevos,ghostfavorite,ghostkidgame,ghostmanual,ghostsavestate,ghosthidden" extra="true">
+	<!-- <image name="ghostcheevos,ghostfavorite,ghostkidgame,ghostmanual,ghostsavestate,ghosthidden" extra="true">
 	  <linearSmooth>true</linearSmooth>
 	  <origin>0.5 0.5</origin>
 	  <color>76767640</color>
 	  <zIndex>148</zIndex>	  
-	</image>
+	</image> -->
 	
 	<image name="md_hidden,ghosthidden">
       <path>./_art/icons/hidden.svg</path>
@@ -1364,12 +1410,30 @@ Numero de juegos : {binding:total}</text>
 	</datetime>
 			
     </view>
-
+	
 <!-- BASIC -->
 
     <view name="basic">
    		
-    <text name="logoText">
+    <image name="background">
+		<saturation>0.3</saturation>
+    </image>
+	
+	<image name="bglist" extra="true">
+      <pos>0.5 0</pos>
+      <size>0.55 1</size>
+      <origin>0.5 0</origin>
+	  <path>./_art/assets/white.png</path>
+	  <color>222222ee</color>
+	  <colorEnd>222222ee</colorEnd>
+      <zIndex>10</zIndex>	  
+    </image>
+	
+	 <image name="electronic">
+		<saturation>0</saturation>
+    </image>
+	
+	<text name="logoText">
       <size>0.98 0.126</size>
 	  <fontPath>./fonts/SairaCondensed-Bold.ttf</fontPath>
 	  <forceUppercase>1</forceUppercase>
@@ -1378,29 +1442,46 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
     <image name="logo">
-      <maxSize>0.25 0.18</maxSize>
+      <visible>false</visible>
+	 </image>
+	 
+	 <image name="logo2" extra="true">
+      <path>./_art/nakedwheel/${system.theme}.png</path>
+	     <path>./_art/nakedwheel/${system.theme}.svg</path>
+		 <path>./_art/nakedwheel/${system.theme}-${lang}.png</path>
+			 <path ifSubset="artworkregion:US">./_art/nakedwheel/US/${system.theme}.png</path>
+		 <path ifSubset="artworkregion:US">./_art/nakedwheel/US/${system.theme}.svg</path>
+		 <path ifSubset="neogeostyle:mvs">./_art/nakedwheel/special/${system.theme}.png</path>
+	  <size>0.484375 0</size>
+	  <pos>0.47 0.1</pos>
+	  <origin>0.5 0.5</origin>
+	  <saturation>2.5</saturation>
+	  <color>C8C8AA</color>
 	 </image>
 	
-	<image name="Sprites L,Sprites R">
+	<image name="Sprites L,Sprites R" extra="true">
 	  <linearSmooth>true</linearSmooth>
       <origin>0.5 0.5</origin>
-      <maxSize>0.28 0.28</maxSize>
+	  <y>0.39</y>
+	  <scale>2</scale>
+		<size>0.1010416666 0</size>
+		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
+		<path>./_art/sprites/${system.theme}.png</path>
+		<saturation>0.5</saturation>
+		<color>D8D8D8</color>
+		<origin>0.5 0.5</origin>
       <zIndex>102</zIndex>
     </image>
 
-	<image name="Sprites L" extra="true">
-		<pos>0.3 0.14</pos>
-	    <path>./sprites2/${system.theme}.png</path>
+	<image name="Sprites L">
+		<x>0.1125</x>
+
 	</image>
 	
-	<image name="Sprites R" extra="true">
-			<pos>0.7 0.14</pos>
-		    <path>./sprites3/${system.theme}.png</path>
+	<image name="Sprites R">
+			<x>0.8875</x>
+			<flipX>true</flipX>
     </image>
-	
-    <image name="background">
-	  <path>./backgrounds/bgbasic.jpg</path>
-	</image>
 	
 	<image name="Chevron Bas">
       <pos>0.5 0.897</pos>
@@ -1414,83 +1495,53 @@ Numero de juegos : {binding:total}</text>
 	  <color>00000000</color>
 	</image>
 	
-	<image name="Controller+logo 1, Controller+logo 2">
+	<image name="Controller1, Controller2">
 	  <linearSmooth>true</linearSmooth>
       <origin>0.5 0.5</origin>
       <size>0.1375 0</size>
-      <path>./controllers/default.png</path>
-      <path>./wheel/${system.theme}.png</path>
-      <path ifSubset="artworkregion:US">./controllers/default.png</path>
-	  <path ifSubset="artworkregion:US">./wheel/${system.theme}.png</path>
-      <path ifSubset="artworkregion:US">./wheel/US/${system.theme}.png</path>
-	  <path ifSubset="neogeostyle:mvs">./wheel/special/${system.theme}.png</path>
+	  <y>0.75</y>
+      <path>./_art/controllers/default.png</path>
+      <path>./_art/controllers/${system.theme}.png</path>
+	  <path ifSubset="artworkregion:US">./_art/controllers/${system.theme}.png</path>
+      <path ifSubset="artworkregion:US">._art//controllers/US/${system.theme}.png</path>
+	  <path ifSubset="neogeostyle:mvs">./_art/controllers/special/${system.theme}.png</path>
 	  <zIndex>102</zIndex>
+	  <saturation>0</saturation>
     </image>
 
-	<image name="Controller+logo 1" extra="true">
-			<pos>0.874 0.55</pos>
+	<image name="Controller1" extra="true">
+			<x>0.8875</x>
      </image>
 	
-	<image name="Controller+logo 2" extra="true">
-			<pos>0.126 0.55</pos>
+	<image name="Controller2" extra="true">
+			<x>0.1125</x>
     </image>
-	 	  
-	<textlist name="gamelist" ifSubset="selectorstyle:bar">
-     <scrollSound>./sounds/scroll.wav</scrollSound>
-	 <selectorImagePath>./assets/bar.png</selectorImagePath>
-	 <selectorColor ifSubset="selectorcolor:blue">3070FFff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:red">B21302ff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:black">000000ff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:grey">707070ff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:yellow">CCBB00ff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:purple">6e55a7</selectorColor>
-	  <selectedColor ifSubset="textlistcolor:blue">88D8F0</selectedColor>
-	  <selectedColor ifSubset="textlistcolor:purple">A672E6</selectedColor>
-	  <selectedColor ifSubset="textlistcolor:red">A00000</selectedColor>
-	  <selectedColor ifSubset="textlistcolor:yellow">EEEE00</selectedColor>
-	  <selectedColor ifSubset="textlistcolor:white">FFFFFF</selectedColor>
-      <primaryColor ifSubset="textlistcolor:white">777277</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:yellow">767670</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:red">777070</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:purple">766976</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:blue">727277</primaryColor>
-      <secondaryColor>7a6161</secondaryColor>
-	  <fontSize>0.034</fontSize>
-	  <fontPath>./fonts/Saira_SemiCondensed-Medium.ttf</fontPath>
-      <forceUppercase>1</forceUppercase>
-	  <pos>0.25 0.263</pos>
-      <size>0.5 0.62</size>
-	  <glowColor>000000aa</glowColor>
-	  <glowSize>1.5</glowSize>
-	  <glowOffset>1.5 1.5</glowOffset>
-	  <lines>11</lines>
-      <alignment>center</alignment>
-	</textlist>
-	
-	<textlist name="gamelist" ifSubset="selectorstyle:none">
-	 <selectorColor>00000000</selectorColor>
+		
+	<textlist name="gamelist">
+	 <selectorColor>880000</selectorColor>
 	 <selectedColor ifSubset="textlistcolor:purple">A672E6</selectedColor>
-	  <selectedColor ifSubset="textlistcolor:red">A00000</selectedColor>
+	  <selectedColor ifSubset="textlistcolor:red">CC0000</selectedColor>
 	  <selectedColor ifSubset="textlistcolor:yellow">EEEE00</selectedColor>
 	  <selectedColor ifSubset="textlistcolor:white">FFFFFF</selectedColor>
 	  <selectedColor ifSubset="textlistcolor:blue">88D8F0</selectedColor>
-	  <primaryColor ifSubset="textlistcolor:white">888688</primaryColor>
+	  <primaryColor ifSubset="textlistcolor:white">999999</primaryColor>
 	  <primaryColor ifSubset="textlistcolor:yellow">767670</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:red">777070</primaryColor>
+	  <primaryColor ifSubset="textlistcolor:red">878585</primaryColor>
 	  <primaryColor ifSubset="textlistcolor:purple">766976</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:blue">727077</primaryColor>
+	  <primaryColor ifSubset="textlistcolor:blue">828087</primaryColor>
       <secondaryColor>7a6161</secondaryColor>
-	  <scrollSound>./sounds/scroll.wav</scrollSound>
+	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
 	  <secondaryColor>7a6161</secondaryColor>
-	  <fontSize>0.034</fontSize>
-	  <fontPath>./fonts/Saira_SemiCondensed-Medium.ttf</fontPath>
-      <forceUppercase>1</forceUppercase>
-	  <pos>0.25 0.263</pos>
-      <size>0.5 0.62</size>
+	  <fontSize>0.038</fontSize>
+	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
+      <forceUppercase>0</forceUppercase>
+	  <pos>0.5 0.18</pos>
+	  <origin>0.5 0</origin>
+      <size>0.538 0.74</size>
 	  <glowColor>000000aa</glowColor>
 	  <glowSize>1.5</glowSize>
 	  <glowOffset>1.5 1.5</glowOffset>
-	  <lines>11</lines>
+	  <lines>13</lines>
       <alignment>center</alignment>
 	</textlist>
 		
