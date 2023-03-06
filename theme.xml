@@ -1421,6 +1421,14 @@ Numero de juegos : {binding:total}</text>
 		<colorEnd>383838</colorEnd>
     </image>
 	
+	 <image name="electronic">
+		<color>CC0000cc</color>
+		<colorEnd>440000cc</colorEnd>
+		<scale>0.444444</scale>
+		<saturation>1</saturation>
+    </image>
+
+	
 	<image name="bglist" extra="true">
       <pos>0.5 0</pos>
       <size>0.55 1</size>
@@ -1431,16 +1439,9 @@ Numero de juegos : {binding:total}</text>
       <zIndex>10</zIndex>	  
     </image>
 	
-	 <image name="electronic">
-		<color>CC0000cc</color>
-		<colorEnd>440000cc</colorEnd>
-		<scale>0.444444</scale>
-		<saturation>1</saturation>
-    </image>
-	
 	<text name="logoText">
       <size>0.98 0.126</size>
-	  <fontPath>./fonts/SairaCondensed-Bold.ttf</fontPath>
+	  <fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
 	  <forceUppercase>1</forceUppercase>
       <fontSize>0.1</fontSize>
       <color>FFFFFF</color>
@@ -1460,8 +1461,8 @@ Numero de juegos : {binding:total}</text>
 	  <size>0.484375 0</size>
 	  <pos>0.47 0.1</pos>
 	  <origin>0.5 0.5</origin>
-	  <saturation>2.5</saturation>
-	  <color>C8C8AA</color>
+	  <saturation>1</saturation>
+	  <color>C8C800</color>
 	 </image>
 	
 	<image name="Sprites L,Sprites R" extra="true">
@@ -1472,9 +1473,10 @@ Numero de juegos : {binding:total}</text>
 		<size>0.1010416666 0</size>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
 		<path>./_art/sprites/${system.theme}.png</path>
-		<saturation>0.5</saturation>
-		<color>D8D8D8</color>
+		<saturation>0.75</saturation>
+		<color>E8E8E8</color>
 		<origin>0.5 0.5</origin>
+		<linearSmooth>true</linearSmooth>
       <zIndex>102</zIndex>
     </image>
 
@@ -1511,7 +1513,7 @@ Numero de juegos : {binding:total}</text>
       <path ifSubset="artworkregion:US">._art//controllers/US/${system.theme}.png</path>
 	  <path ifSubset="neogeostyle:mvs">./_art/controllers/special/${system.theme}.png</path>
 	  <zIndex>102</zIndex>
-	  <saturation>0</saturation>
+	  <color>E8E8E8</color>
     </image>
 
 	<image name="Controller1" extra="true">
@@ -1542,7 +1544,7 @@ Numero de juegos : {binding:total}</text>
       <forceUppercase>0</forceUppercase>
 	  <pos>0.5 0.18</pos>
 	  <origin>0.5 0</origin>
-      <size>0.538 0.74</size>
+      <size>0.54 0.74</size>
 	  <glowColor>000000aa</glowColor>
 	  <glowSize>1.5</glowSize>
 	  <glowOffset>1.5 1.5</glowOffset>
