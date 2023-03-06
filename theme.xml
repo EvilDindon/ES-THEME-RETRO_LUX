@@ -298,6 +298,26 @@ originally based on: "carbon" and "Arcade Planet"
       <iconColor>888888</iconColor>
     </helpsystem>
 
+	<image name="bottom bar" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.05741</size>
+		  <pos>0 0.94259</pos>
+		  <color>112838ff</color>
+		  <zIndex>54</zIndex>
+	</image>
+	
+		<image name="bottom line" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.00185185</size>
+		  <pos>0 0.94259</pos>
+		  <color>557788ff</color>
+		  <zIndex>55</zIndex>
+	</image>
+	
     <image name="bg" extra="static">
       <pos>0 0</pos>
       <size>1 1</size>
@@ -321,27 +341,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <colorEnd>FFFFFF11</colorEnd>
       <zIndex>0</zIndex>	  
     </image>
-	
-	<image name="bottom bar" extra="static">
-		  <path>./_art/assets/white.png</path>
-		  <linearSmooth>false</linearSmooth>
-		  <origin>0 0</origin>
-		  <size>1 0.05741</size>
-		  <pos>0 0.94259</pos>
-		  <color>112838ff</color>
-		  <zIndex>54</zIndex>
-	</image>
-	
-		<image name="bottom line" extra="static">
-		  <path>./_art/assets/white.png</path>
-		  <linearSmooth>false</linearSmooth>
-		  <origin>0 0</origin>
-		  <size>1 0.00185185</size>
-		  <pos>0 0.94259</pos>
-		  <color>557788ff</color>
-		  <zIndex>55</zIndex>
-	</image>
-  
+	  
 	<image name="wheelbg" extra="static">
 		  <path>./_art/assets/white.png</path>
 		  <linearSmooth>false</linearSmooth>
@@ -372,7 +372,7 @@ originally based on: "carbon" and "Arcade Planet"
 		  <gradientType>horizontal</gradientType>
 		  <zIndex>49</zIndex>
 	</image>
-  
+ 
   <text name="logoText">
 		<fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
 		<color>C2C2C2ff</color>
@@ -502,18 +502,18 @@ Numero de juegos : {binding:total}</text>
 		<pos ifSubset="systemviewlayout:right">0.02 0.795</pos>
         <size>0.32 0.28</size>
       </text>
-	  
+
 	<image name="nakedwheel" extra="static">
 		<path>./_art/nakedwheel/${system.theme}.png</path>
 	    <path>./_art/nakedwheel/${system.theme}-${lang}.png</path>
 		<path ifSubset="artworkregion:US">./_art/nakedwheel/US/${system.theme}.png</path>
      	<path ifSubset="neogeostyle:mvs">./_art/nakedwheel/special/${system.theme}.png</path>
+		<zIndex>61</zIndex>
 		<size>0.465625 0</size>
 	    <size ifSubset="aspect-ratio:4-3">0.51736111 0</size>
 		<origin>0.5 0.5</origin>
 		<opacity>0</opacity>
 		<linearSmooth>true</linearSmooth>
-		<zIndex>61</zIndex>
 		<storyboard ifSubset="systemviewlayout:right" repeatAt="5000">
 			<animation property="opacity" from="1" to="1" begin="200" duration="" mode="Linear"/>
 		    <animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
@@ -535,7 +535,7 @@ Numero de juegos : {binding:total}</text>
 			<animation property="saturation" from="1" to="2.5" begin="5000" duration="1000" mode="Linear" autoReverse="true" repeat="5"/>
 		</storyboard>
 	</image>
-	
+		
 	<image name="reflet" extra="static">
 		<path>./_art/assets/reflet.png</path>
 		<size>0.0546875 0</size>
@@ -1151,7 +1151,7 @@ Numero de juegos : {binding:total}</text>
   
   <view name="basic,detailed,gamecarousel,grid">
     
-	  <helpsystem name="help">
+	<helpsystem name="help">
 	  <pos>0.01 0.97</pos>
 	  <size>1 0.01</size>
 	  <origin>0 0.5</origin>
@@ -1161,6 +1161,26 @@ Numero de juegos : {binding:total}</text>
       <iconColor>888888</iconColor>
     </helpsystem>
 
+	<image name="bottom bar" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.05741</size>
+		  <pos>0 0.94259</pos>
+		  <color>112838ff</color>
+		  <zIndex>150</zIndex>
+	</image>
+	
+		<image name="bottom line" extra="static">
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0 0</origin>
+		  <size>1 0.00185185</size>
+		  <pos>0 0.94259</pos>
+		  <color>557788ff</color>
+		  <zIndex>150</zIndex>
+	</image>
+	
     <image name="background">
       <pos>0 0</pos>
       <size>1 1</size>
@@ -1185,26 +1205,15 @@ Numero de juegos : {binding:total}</text>
       <zIndex>0</zIndex>	  
     </image>
 	
-	<image name="bottom bar" extra="static">
-		  <path>./_art/assets/white.png</path>
-		  <linearSmooth>false</linearSmooth>
-		  <origin>0 0</origin>
-		  <size>1 0.05741</size>
-		  <pos>0 0.94259</pos>
-		  <color>112838ff</color>
-		  <zIndex>54</zIndex>
-	</image>
+	<image name="wheelborder" extra="true">
+		<path>./_art/assets/border.png</path>
+		<size>0.484375 0</size>
+	    <size ifSubset="aspect-ratio:4-3">0.51736111 0</size>
+		<origin>0.5 0.5</origin>
+		<origin>0.5 0.5</origin>
+		<zIndex>62</zIndex>
+	</image>	
 	
-		<image name="bottom line" extra="static">
-		  <path>./_art/assets/white.png</path>
-		  <linearSmooth>false</linearSmooth>
-		  <origin>0 0</origin>
-		  <size>1 0.00185185</size>
-		  <pos>0 0.94259</pos>
-		  <color>557788ff</color>
-		  <zIndex>55</zIndex>
-	</image>
-		
     <image name="logo">
 	  <linearSmooth>true</linearSmooth>
       <path>./_art/Colorlogos/${system.theme}.png</path>
@@ -1215,6 +1224,15 @@ Numero de juegos : {binding:total}</text>
       <origin>0.5 0.5</origin>
 	  <zIndex>201</zIndex>
 	 </image>
+
+	<text name="logoText">
+      <size>0.55 0.126</size>
+	  <pos>0.5 0.1</pos>
+	  <fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
+	  <forceUppercase>1</forceUppercase>
+      <fontSize>0.3</fontSize>
+      <color>FFFFFF</color>
+	</text>
 	
 	<image name="Controller">
 	  	<linearSmooth>true</linearSmooth>
@@ -1417,8 +1435,8 @@ Numero de juegos : {binding:total}</text>
     <view name="basic">
    		
     <image name="background">
-		<color>888888</color>
-		<colorEnd>383838</colorEnd>
+		<color>778288</color>
+		<colorEnd>273238</colorEnd>
     </image>
 	
 	 <image name="electronic">
@@ -1427,7 +1445,6 @@ Numero de juegos : {binding:total}</text>
 		<scale>0.444444</scale>
 		<saturation>1</saturation>
     </image>
-
 	
 	<image name="bglist" extra="true">
       <pos>0.5 0</pos>
@@ -1435,54 +1452,48 @@ Numero de juegos : {binding:total}</text>
       <origin>0.5 0</origin>
 	  <path>./_art/assets/white.png</path>
 	  <color>111111aa</color>
-	  <colorEnd>111111aa</colorEnd>
+	  <colorEnd>11111155</colorEnd>
       <zIndex>10</zIndex>	  
     </image>
 	
-	<image name="bglistborderL" extra="true">
-      <pos>0.225 0</pos>
+	<image name="bglistborderL,bglistborderR" extra="true">
       <size>0.015 1</size>
-      <origin>1 0</origin>
 	  <path>./_art/assets/white.png</path>
 	  <color>604141</color>
 	  <colorEnd>392727</colorEnd>
       <zIndex>11</zIndex>	  
     </image>
 	
-	<image name="bglistborderR" extra="true">
+	<image name="bglistborderL">
+      <pos>0.225 0</pos>
+      <origin>1 0</origin>
+    </image>
+	
+	<image name="bglistborderR">
       <pos>0.775 0</pos>
-      <size>0.015 1</size>
       <origin>0 0</origin>
-	  <path>./_art/assets/white.png</path>
-	  <color>604141</color>
-	  <colorEnd>392727</colorEnd>
-      <zIndex>11</zIndex>	  
     </image>
 
-	<image name="bglistborderlineL" extra="true">
-      <pos>0.225 0</pos>
+	<image name="bglistborderlineL,bglistborderlineR" extra="true">
       <size>0.002 1</size>
-      <origin>1 0</origin>
 	  <path>./_art/assets/white.png</path>
 	  <color>332323</color>
 	  <colorEnd>563a3a</colorEnd>
 	  <zIndex>11</zIndex>	  
     </image>
 	
-	<image name="bglistborderlineR" extra="true">
-      <pos>0.775 0</pos>
-      <size>0.002 1</size>
-      <origin>0 0</origin>
-	  <path>./_art/assets/white.png</path>
-	  <color>332323</color>
-	  <colorEnd>563a3a</colorEnd>
-      <zIndex>11</zIndex>	  
+	<image name="bglistborderlineL">
+      <pos>0.225 0</pos>
+      <origin>1 0</origin>
     </image>
 	
-	<image name="bglistbordershadowR" extra="true">
-      <pos>0.790 0</pos>
-      <size>0.006 1</size>
+	<image name="bglistborderlineR">
+      <pos>0.775 0</pos>
       <origin>0 0</origin>
+    </image>
+
+	<image name="bglistbordershadowR,bglistbordershadowL" extra="true">
+      <size>0.006 1</size>
 	  <path>./_art/assets/white.png</path>
 	  <gradientType>horizontal</gradientType>
 	  <color>00000088</color>
@@ -1490,25 +1501,55 @@ Numero de juegos : {binding:total}</text>
       <zIndex>11</zIndex>	  
     </image>
 	
-	<image name="bglistbordershadowL" extra="true">
-      <pos>0.225 0</pos>
-      <size>0.006 1</size>
+	<image name="bglistbordershadowR">
+      <pos>0.790 0</pos>
       <origin>0 0</origin>
-	  <path>./_art/assets/white.png</path>
-	  <gradientType>horizontal</gradientType>
-	  <color>00000055</color>
-	  <colorEnd>00000000</colorEnd>
-      <zIndex>11</zIndex>	  
     </image>
 	
-	<text name="logoText">
-      <size>0.98 0.126</size>
-	  <fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
-	  <forceUppercase>1</forceUppercase>
-      <fontSize>0.1</fontSize>
-      <color>FFFFFF</color>
-	</text>
+	<image name="bglistbordershadowL">
+      <pos>0.225 0</pos>
+      <origin>0 0</origin>
+    </image>
 	
+	<image name="bgcontrollerL,bgcontrollerR" extra="true">
+      <size>0.21 0.25</size>
+	  <path>./_art/assets/white.png</path>
+	  <color>111111aa</color>
+	  <colorEnd>11111155</colorEnd>
+      <zIndex>9</zIndex>	  
+    </image>
+	
+	<image name="bgcontrollerL">
+      <origin>0 0</origin>
+	  <pos>0 0.692</pos>
+    </image>
+
+	<image name="bgcontrollerR">
+	  <origin>1 0</origin>
+	  <pos>1 0.692</pos>
+    </image>
+	
+	<image name="bgcontrollerborderL,bgcontrollerborderR" extra="true">
+      <size>0.21 0.016</size>
+	  <path>./_art/assets/white.png</path>
+	  <gradientType>horizontal</gradientType>
+      <zIndex>10</zIndex>	  
+    </image>
+	
+	<image name="bgcontrollerborderL">
+      <origin>0 1</origin>
+	  <pos>0 0.692</pos>
+	  <color>604141</color>
+	  <colorEnd>362525</colorEnd>
+    </image>
+	
+	<image name="bgcontrollerborderR">
+      <origin>1 1</origin>
+	  <pos>1 0.692</pos>
+		<color>362525</color>
+		<colorEnd>604141</colorEnd>
+    </image>
+		
     <image name="logo">
       <visible>false</visible>
 	 </image>
@@ -1523,14 +1564,22 @@ Numero de juegos : {binding:total}</text>
 	  <size>0.484375 0</size>
 	  <pos>0.47 0.1</pos>
 	  <origin>0.5 0.5</origin>
-	  <saturation>1</saturation>
-	  <color>C8C8C8</color>
+	  <saturation>0</saturation>
+	  <color>D9D9D9</color>
 	 </image>
-	
+
+	<image name="wheelborder">
+		<pos>0.47 0.1</pos>
+		<color>DD0000</color>
+		<storyboard>
+                <animation property="opacity" from="0.15" to="1" begin="" duration="1200" mode="Linear" autoreverse="true" repeat="forever"/>
+		</storyboard>
+	</image>	
+
 	<image name="Sprites L,Sprites R" extra="true">
 	  <linearSmooth>true</linearSmooth>
       <origin>0.5 0.5</origin>
-	  <y>0.39</y>
+	  <y>0.36</y>
 	  <scale>2</scale>
 		<size>0.1010416666 0</size>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
@@ -1543,12 +1592,11 @@ Numero de juegos : {binding:total}</text>
     </image>
 
 	<image name="Sprites L">
-		<x>0.1125</x>
-
+		<x>0.11</x>
 	</image>
 	
 	<image name="Sprites R">
-			<x>0.8875</x>
+			<x>0.89</x>
 			<flipX>true</flipX>
     </image>
 	
@@ -1568,7 +1616,7 @@ Numero de juegos : {binding:total}</text>
 	  <linearSmooth>true</linearSmooth>
       <origin>0.5 0.5</origin>
       <size>0.1375 0</size>
-	  <y>0.75</y>
+	  <y>0.822</y>
       <path>./_art/controllers/default.png</path>
       <path>./_art/controllers/${system.theme}.png</path>
 	  <path ifSubset="artworkregion:US">./_art/controllers/${system.theme}.png</path>
@@ -1579,11 +1627,11 @@ Numero de juegos : {binding:total}</text>
     </image>
 
 	<image name="Controller1" extra="true">
-			<x>0.8875</x>
+			<x>0.89</x>
      </image>
 	
 	<image name="Controller2" extra="true">
-			<x>0.1125</x>
+			<x>0.11</x>
     </image>
 		
 	<textlist name="gamelist">
