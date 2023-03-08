@@ -441,7 +441,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <storyboard event="activate">
 			<animation property="color" from="C8C8C8ff" to="FFFFFFff" begin="" duration="200" mode="Linear"/>	
 			<animation property="saturation" from="0.75" to="1" begin="" duration="200" mode="Linear"/>	
-			<animation property="color" from="FFFFFFff" to="FFFFFF00" begin="200" duration="" mode="Linear"/>			
+			<animation property="" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>			
 	  </storyboard>
 	  <storyboard event="activate" ifSubset="carouselLogoStyle:whiteandsprite,selectedLogoStyle:color">
 			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>
