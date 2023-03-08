@@ -24,6 +24,9 @@ originally based on: "carbon" and "Arcade Planet"
 	<selectedLogoStyle>Selected Logo Style</selectedLogoStyle>
 	<selectedLogoStyle lang="fr">Style du logo actif</selectedLogoStyle>
 	
+	<selectedBorderColor>Selected Logo Border Color</selectedBorderColor>
+	<selectedBorderColor lang="fr">Couleur de la bordure du logo actif</selectedBorderColor>
+	
 	<whiteandsprite>White + Sprite</whiteandsprite>
 	<whiteandsprite lang="fr">Blanc + Sprite</whiteandsprite>
 	
@@ -105,6 +108,12 @@ originally based on: "carbon" and "Arcade Planet"
 	<black>black</black>
     <black lang="fr">noir</black>
 	
+	<gold>gold</gold>
+	<gold lang="fr">dorée</gold>
+	
+	<silver>silver</silver>
+	<silver lang="fr">chromée</silver>
+	
 	<theme.aspect-ratio>aspect ratio</theme.aspect-ratio>
     <theme.aspect-ratio lang="fr">format d'écran</theme.aspect-ratio>
 		
@@ -164,7 +173,15 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="whitenosprite" displayName="${whitenosprite}"/>
 	</subset>
 
-		<!-- Subset for Selected Logo Style -->
+		<!-- Subset for Selected Border Color -->
+	<subset name="selectedBorderColor" displayName="${selectedBorderColor}">
+		<include name="gold" displayName="${gold}"/>
+		<include name="silver" displayName="${silver}"/>
+		<include name="red" displayName="${red}"/>
+		<include name="blue" displayName="${blue}"/>
+	</subset>
+	
+			<!-- Subset for Selected Logo Style -->
 	<subset name="selectedLogoStyle" displayName="${selectedLogoStyle}">
 		<include name="color" displayName="${color}"/>
 		<include name="white" ifSubset="carouselLogoStyle:whiteandsprite|whitenosprite" displayName="${white}"/>
@@ -566,7 +583,27 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
 		</storyboard>
 	</image>
-		
+	
+	<image name="selectedborder" ifSubset="selectedBorderColor:gold|red|yellow|blue" extra="true">
+		<path>./_art/assets/border.png</path>
+		<size>0.40520833333 0</size>
+	    <size ifSubset="aspect-ratio:4-3">0.5402777 0</size>
+		<origin>0.5 0.5</origin>
+		<pos>0.797 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0.203 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:center">0.5 0.471296295</pos>
+		<zIndex>63</zIndex>
+		<opacity>0</opacity>
+		<color ifSubset="selectedBorderColor:gold">D8C844</color>
+		<storyboard repeatAt="5000">
+			<animation property="opacity" from="0" to="1" begin="200" duration="620" mode="Linear"/>
+		    <animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
+		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
+			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
+			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
+		</storyboard>
+	</image>	
+	
 	<!-- <image name="reflet" extra="static">
 		<path>./_art/assets/reflet.png</path>
 		<size>0.0546875 0</size>
