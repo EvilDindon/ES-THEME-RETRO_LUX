@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
 Theme: Retro Luxury
-version: 0.1
+version: 0.12
 author: Mickaël Isman (EvilDindon Ken)
 license: creative commons CC-BY-NC-SA
 originally based on: "carbon" and "Arcade Planet"
@@ -18,9 +18,24 @@ originally based on: "carbon" and "Arcade Planet"
 	<artworkregion>Logos and Artwork Region</artworkregion>
 	<artworkregion lang="fr">Région des Logos et Artworks</artworkregion>
 	
-	<LogoColor>Active Text Color</LogoColor>
-    <LogoColor lang="fr">Couleur du Texte Actif</LogoColor>
+	<carouselLogoStyle>Carousel Logo Style</carouselLogoStyle>
+	<carouselLogoStyle lang="fr">Style de Logos dans le Carousel</carouselLogoStyle>
 	
+	<selectedLogoStyle>Selected Logo Style</selectedLogoStyle>
+	<selectedLogoStyle lang="fr">Style du logo actif</selectedLogoStyle>
+	
+	<whiteandsprite>White + Sprite</whiteandsprite>
+	<whiteandsprite lang="fr">Blanc + Sprite</whiteandsprite>
+	
+	<whitenosprite>White no sprite</whitenosprite>
+	<whitenosprite lang="fr">White no sprite</whitenosprite>
+	
+	<colorandsprite>Color + Sprite</colorandsprite>
+	<colorandsprite lang="fr">Color + Sprite</colorandsprite>
+	
+	<colornosprite>Color no sprite</colornosprite>
+	<colornosprite lang="fr">Color no sprite</colornosprite>
+		
 	<TextListColor>Text Color in Gamelists</TextListColor>
     <TextListColor lang="fr">Couleur du Texte dans la Liste de Jeux</TextListColor>
 	
@@ -60,7 +75,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<left>left</left>
     <left lang="fr">gauche</left>
 		
-	<color>Color</color>
+	<color>color</color>
     <color lang="fr">couleur</color>
    
    	<none>none</none>
@@ -141,6 +156,22 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="randomlogos" ifSubset="systemviewlayout:right|left, systemviewstyle:randomfanart|simplesprite" displayName="${randomlogos}"/>
 	</subset>
 	
+		<!-- Subset for Carousel Logos Style -->
+	<subset name="carouselLogoStyle" displayName="${carouselLogoStyle}">
+		<include name="whiteandsprite" displayName="${whiteandsprite}"/>		
+		<include name="colorandsprite" displayName="${colorandsprite}"/>
+		<include name="colornosprite" displayName="${colornosprite}"/>
+		<include name="whitenosprite" displayName="${whitenosprite}"/>
+	</subset>
+
+		<!-- Subset for Selected Logo Style -->
+	<subset name="selectedLogoStyle" ifSubset="carouselLogoStyle:whiteandsprite|whitenosprite" displayName="${selectedLogoStyle}">
+		<include name="color" displayName="${color}"/>
+		<include name="white" displayName="${white}"/>
+		<include name="blue" displayName="${blue}"/>
+		<include name="red" displayName="${red}"/>
+	</subset>
+	
 	<!-- Subset options for Neo Geo Artwork Style -->
 	<subset name="neogeostyle" displayName="Neo-Geo Style">
 		<include name="aes" displayName="AES (Console)"/>
@@ -151,6 +182,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<subset name="gamelistalignment" displayName="${gamelistalignment}" appliesTo="detailed">
 		<include name="center" displayName="${center}"/>
 		<include name="left" displayName="${left}"/>
+		<include name="right" displayName="${right}"/>
 	</subset>
 	
 	<!-- Subset options for Selected Text -->
@@ -390,19 +422,30 @@ originally based on: "carbon" and "Arcade Planet"
 		 <color>D8D8D8ff</color>
 		 <saturation>0.75</saturation>
 	     <linearSmooth>true</linearSmooth>
-	     <path>./_art/wheel/${system.theme}.png</path>
-		 <path>./_art/wheel/${system.theme}-${lang}.png</path>
-		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
-		 <path ifSubset="neogeostyle:mvs">./_art/wheel/special/${system.theme}.png</path>
-	  <storyboard event="activate">
-			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>			
-			<animation property="saturation" from="1" to="1" begin="200" duration="" mode="Linear"/>	
+	     <path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorSprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorSprite/${system.theme}-${lang}.png</path>
+		 <path ifSubset="carouselLogoStyle:colorandsprite,artworkregion:US">./_art/US/wheelColorSprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colorandsprite,neogeostyle:mvs">./_art/SPECIAL/wheelColorSprite/${system.theme}.png</path>
+     	 <path ifSubset="carouselLogoStyle:whiteandsprite">./_art/wheelWhiteSprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:whiteandsprite">./_art/wheelWhiteSprite/${system.theme}-${lang}.png</path>
+		 <path ifSubset="carouselLogoStyle:whiteandsprite,artworkregion:US">./_art/US/wheelWhiteSprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:whiteandsprite,neogeostyle:mvs">./_art/SPECIAL/wheelWhiteSprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:whitenosprite">./_art/wheelWhiteNosprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:whitenosprite">./_art/wheelWhiteNosprite/${system.theme}-${lang}.png</path>
+		 <path ifSubset="carouselLogoStyle:whitenosprite,artworkregion:US">./_art/US/wheelWhiteNosprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:whitenosprite,neogeostyle:mvs">./_art/SPECIAL/wheelWhiteNosprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colornosprite">./_art/wheelColorNosprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colornosprite">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
+		 <path ifSubset="carouselLogoStyle:colornosprite,artworkregion:US">./_art/US/wheelColorNosprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colornosprite,neogeostyle:mvs">./_art/SPECIAL/wheelColorNosprite/${system.theme}.png</path>	  
+	  
+	  <storyboard event="activate" ifSubset="carouselLogoStyle:whiteandsprite|colorandsprite">
+			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>
+			<animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/>			
 			<animation property="color" from="00000000" to="00000000" begin="200" duration="" mode="Linear"/>
 	  </storyboard>
-	  <storyboard event="open">
+	  <storyboard event="activate" ifSubset="carouselLogoStyle:whitenosprite,colornosprite">
 			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>			
-			<animation property="saturation" from="1" to="1" begin="200" duration="" mode="Linear"/>	
-			<animation property="color" from="00000000" to="00000000" begin="200" duration="" mode="Linear"/>
 	  </storyboard>
 	</image>
 	
@@ -411,9 +454,9 @@ originally based on: "carbon" and "Arcade Planet"
       <type>vertical</type>
 	  <size>0.5 0.94259259259</size>
 	  <size ifSubset="aspect-ratio:4-3">0.688 0.94259259259</size>
-      <pos>0.7845 0.471296295</pos>
+      <pos>0.78 0.471296295</pos>
 	  <pos ifSubset="systemviewlayout:left">0.22 0.471296295</pos>
-	  <pos ifSubset="systemviewlayout:center">0.48 0.471296295</pos>
+	  <pos ifSubset="systemviewlayout:center">0.5 0.471296295</pos>
 	  <pos ifSubset="aspect-ratio:4-3">0.7098 0.471296295</pos>
 	  <logoAlignment>right</logoAlignment>
 	  <logoAlignment ifSubset="systemviewlayout:left">left</logoAlignment>
@@ -425,7 +468,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  <maxLogoCount tinyScreen="true">5</maxLogoCount>
 	  <logoScale>1.333333333333</logoScale>
 	  <logoScale ifSubset="aspect-ratio:4-3">1</logoScale>
-      <logoSize>0.34921875 0.1527777777</logoSize>
+      <logoSize>0.30390625 0.17916666</logoSize>
+<!-- 	  <logoSize>0.34921875 0.1527777777</logoSize> -->
 	  <logoSize ifSubset="aspect-ratio:4-3">0.51736111 0.2037037037</logoSize>
 	  <minLogoOpacity>1</minLogoOpacity>
 	  <transitionSpeed>200</transitionSpeed>
@@ -434,18 +478,26 @@ originally based on: "carbon" and "Arcade Planet"
 	  <zIndex>60</zIndex>
     </carousel>
 
-	<image name="nakedwheel" extra="static">
-		<path>./_art/nakedwheel/${system.theme}.png</path>
-	    <path>./_art/nakedwheel/${system.theme}-${lang}.png</path>
-		<path ifSubset="artworkregion:US">./_art/nakedwheel/US/${system.theme}.png</path>
-     	<path ifSubset="neogeostyle:mvs">./_art/nakedwheel/special/${system.theme}.png</path>
+	<image name="nakedwheel" idSubset="carouselLogoStyle:whiteandsprite|colorandsprite" extra="static">
+		<path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorNosprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
+		 <path ifSubset="carouselLogoStyle:colorandsprite,artworkregion:US">./_art/US/wheelColorNosprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colorandsprite,neogeostyle:mvs">./_art/SPECIAL/wheelColorNosprite/${system.theme}.png</path>
+		<path ifSubset="selectedLogoStyle:white, carouselLogoStyle:whiteandsprite">./_art/wheelWhiteNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:white, carouselLogoStyle:whiteandsprite">./_art/wheelWhiteNosprite/${system.theme}-${lang}.png</path>
+		 <path ifSubset="selectedLogoStyle:white, carouselLogoStyle:whiteandsprite, artworkregion:US">./_art/US/wheelWhiteNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:white, carouselLogoStyle:whiteandsprite, neogeostyle:mvs">./_art/SPECIAL/wheelWhiteNosprite/${system.theme}.png</path>
+		<path ifSubset="selectedLogoStyle:color, carouselLogoStyle:whiteandsprite">./_art/wheelColorNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:color, carouselLogoStyle:whiteandsprite">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
+		 <path ifSubset="selectedLogoStyle:color, carouselLogoStyle:whiteandsprite, artworkregion:US">./_art/US/wheelColorNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:color, carouselLogoStyle:whiteandsprite, neogeostyle:mvs">./_art/SPECIAL/wheelColorNosprite/${system.theme}.png</path>
 		<zIndex>61</zIndex>
-		<size>0.465625 0</size>
+		<size>0.40520833333 0</size>
 	    <size ifSubset="aspect-ratio:4-3">0.51736111 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.7669 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left">0.2375 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:center">0.48 0.471296295</pos>
+		<pos>0.797 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0.203 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:center">0.5 0.471296295</pos>
 		<pos ifSubset="aspect-ratio:4-3">0.7436 0.471296295</pos>
 		<opacity>0</opacity>
 		<linearSmooth>true</linearSmooth>
@@ -482,7 +534,7 @@ originally based on: "carbon" and "Arcade Planet"
 		</storyboard>
 	</image>
 		
-	<image name="reflet" extra="static">
+	<!-- <image name="reflet" extra="static">
 		<path>./_art/assets/reflet.png</path>
 		<size>0.0546875 0</size>
 		<pos>0.988 0.471296295</pos>
@@ -599,9 +651,9 @@ originally based on: "carbon" and "Arcade Planet"
 		  	<animation property="offsetX" from="-0.2867187" to="0" begin="12550" duration="800" mode="Linear"/>
 			<animation property="offsetX" from="0" to="0" begin="13350" duration="13000" mode="Linear"/>
 		</storyboard>
-	</image>
+	</image> -->
 	
-	<image name="sprite" extra="static">
+	<image name="sprite" ifSubset="carouselLogoStyle:colorandsprite|whiteandsprite" extra="static">
 		<path>./_art/sprites/${system.theme}.png</path>
 		<path ifSubset="artworkregion:US">./_art/sprites/US/${system.theme}.png</path>
      	<path ifSubset="neogeostyle:mvs">./_art/sprites/special/${system.theme}.png</path>
@@ -611,8 +663,8 @@ originally based on: "carbon" and "Arcade Planet"
 		<opacity>0</opacity>
 		<zIndex>63</zIndex>
 		<linearSmooth>false</linearSmooth>
-		<pos>0.5845 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left">0.055 0.471296295</pos>
+		<pos>0.645 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0 0.471296295</pos>
 	    <pos ifSubset="aspect-ratio:4-3">0.0845 0.471296295</pos>
 		<storyboard ifSubset="systemviewstyle:randomfanart|randomboxart" repeatAt="1">
 			<animation property="opacity" from="1" to="1" begin="200" duration="" mode="Linear"/>
@@ -1651,7 +1703,6 @@ Numero de juegos : {binding:total}</text>
   <view name="detailed">
 
 	<image name="background">
-	  <path>./backgrounds/169/bgdetailed.jpg</path>
 	</image>
 
 <image name="logo">
@@ -1726,7 +1777,7 @@ Numero de juegos : {binding:total}</text>
 			</storyboard>
 	</image>
 	
-    <image name="md_marquee,bigtv">
+    <image name="md_marquee">
 	  <visible>false</visible>
 	</image>
 	
