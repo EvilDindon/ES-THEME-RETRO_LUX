@@ -441,16 +441,23 @@ originally based on: "carbon" and "Arcade Planet"
 	  <storyboard event="activate">
 			<animation property="color" from="C8C8C8ff" to="FFFFFFff" begin="" duration="200" mode="Linear"/>	
 			<animation property="saturation" from="0.75" to="1" begin="" duration="200" mode="Linear"/>	
-			<animation property="" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>			
+			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>			
 	  </storyboard>
-	  <storyboard event="activate" ifSubset="carouselLogoStyle:whiteandsprite,selectedLogoStyle:color">
+	  <storyboard event="activate" ifSubset="carouselLogoStyle:whiteandsprite|colorandsprite,selectedLogoStyle:color">
 			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>
 			<animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/>			
-			<animation property="color" from="FFFFFFff" to="FFFFFF00" begin="820" duration="" mode="Linear"/>
+			<animation property="color" from="FFFFFFff" to="00000000" begin="820" duration="" mode="Linear"/>
 	  </storyboard>
-
+	  	  <storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite|colornosprite">
+			<animation property="color" from="C8C8C8ff" to="FFFFFFff" begin="" duration="200" mode="Linear"/>
+			<animation property="saturation" from="0.75" to="1" begin="" duration="200" mode="Linear"/>			
+			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
+		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
+			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
+			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
+	  </storyboard>
 	</image>
-	
+	 			   
 	<carousel name="systemcarousel">
 	  <defaultTransition>instant</defaultTransition>
       <type>vertical</type>
@@ -480,19 +487,17 @@ originally based on: "carbon" and "Arcade Planet"
 	  <zIndex>60</zIndex>
     </carousel>
 
-	<image name="nakedwheel" idSubset="carouselLogoStyle:whiteandsprite|colorandsprite" extra="static">
-		<path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorNosprite/${system.theme}.png</path>
-		 <path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
-		 <path ifSubset="carouselLogoStyle:colorandsprite,artworkregion:US">./_art/US/wheelColorNosprite/${system.theme}.png</path>
-		 <path ifSubset="carouselLogoStyle:colorandsprite,neogeostyle:mvs">./_art/SPECIAL/wheelColorNosprite/${system.theme}.png</path>
-		<path ifSubset="selectedLogoStyle:white, carouselLogoStyle:whiteandsprite">./_art/wheelWhiteNosprite/${system.theme}.png</path>
-		 <path ifSubset="selectedLogoStyle:white, carouselLogoStyle:whiteandsprite">./_art/wheelWhiteNosprite/${system.theme}-${lang}.png</path>
-		 <path ifSubset="selectedLogoStyle:white, carouselLogoStyle:whiteandsprite, artworkregion:US">./_art/US/wheelWhiteNosprite/${system.theme}.png</path>
-		 <path ifSubset="selectedLogoStyle:white, carouselLogoStyle:whiteandsprite, neogeostyle:mvs">./_art/SPECIAL/wheelWhiteNosprite/${system.theme}.png</path>
-		<path ifSubset="selectedLogoStyle:color, carouselLogoStyle:whiteandsprite">./_art/wheelColorNosprite/${system.theme}.png</path>
-		 <path ifSubset="selectedLogoStyle:color, carouselLogoStyle:whiteandsprite">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
-		 <path ifSubset="selectedLogoStyle:color, carouselLogoStyle:whiteandsprite, artworkregion:US">./_art/US/wheelColorNosprite/${system.theme}.png</path>
-		 <path ifSubset="selectedLogoStyle:color, carouselLogoStyle:whiteandsprite, neogeostyle:mvs">./_art/SPECIAL/wheelColorNosprite/${system.theme}.png</path>
+	<image name="nakedwheel" extra="static">
+		<visible ifSubset="carouselLogoStyle:colornosprite">false</visible>
+		<visible ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:white">false</visible>
+		<path ifSubset="selectedLogoStyle:color">./_art/wheelColorNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:color">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
+		 <path ifSubset="selectedLogoStyle:color, artworkregion:US">./_art/US/wheelColorNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:color, neogeostyle:mvs">./_art/SPECIAL/wheelColorNosprite/${system.theme}.png</path>
+		<path ifSubset="selectedLogoStyle:white">./_art/wheelWhiteNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:white">./_art/wheelWhiteNosprite/${system.theme}-${lang}.png</path>
+		 <path ifSubset="selectedLogoStyle:white, artworkregion:US">./_art/US/wheelWhiteNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:white, neogeostyle:mvs">./_art/SPECIAL/wheelWhiteNosprite/${system.theme}.png</path>
 		<zIndex>61</zIndex>
 		<size>0.40520833333 0</size>
 	    <size ifSubset="aspect-ratio:4-3">0.51736111 0</size>
