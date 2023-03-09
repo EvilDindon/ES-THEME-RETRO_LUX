@@ -441,7 +441,8 @@ originally based on: "carbon" and "Arcade Planet"
 		 <color>C8C8C8ff</color>
 		 <saturation>0.75</saturation>
 	     <linearSmooth>true</linearSmooth>
-	     <path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorSprite/${system.theme}.png</path>
+	     <path>./_art/assets/underconstruction.png</path>
+		 <path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorSprite/${system.theme}.png</path>
 		 <path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorSprite/${system.theme}-${lang}.png</path>
 		 <path ifSubset="carouselLogoStyle:colorandsprite,artworkregion:US">./_art/US/wheelColorSprite/${system.theme}.png</path>
 		 <path ifSubset="carouselLogoStyle:colorandsprite,neogeostyle:mvs">./_art/SPECIAL/wheelColorSprite/${system.theme}.png</path>
@@ -543,6 +544,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="nakedwheel" extra="static">
 		<visible ifSubset="carouselLogoStyle:colornosprite">false</visible>
 		<visible ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:white">false</visible>
+		<path>./_art/assets/underconstruction.png</path>
 		<path ifSubset="selectedLogoStyle:color">./_art/wheelColorNosprite/${system.theme}.png</path>
 		 <path ifSubset="selectedLogoStyle:color">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
 		 <path ifSubset="selectedLogoStyle:color, artworkregion:US">./_art/US/wheelColorNosprite/${system.theme}.png</path>
@@ -1119,6 +1121,7 @@ originally based on: "carbon" and "Arcade Planet"
         <zIndex>100</zIndex>
         <glowColor>000000A0</glowColor>
         <glowSize>1</glowSize>
+		<glowOffset>1 1</glowOffset>
 		 <color>C0C0C0FF</color>
 		<opacity>0</opacity>
 	   <storyboard>
@@ -1153,7 +1156,7 @@ El más jugado : {binding:mostPlayed}
         <pos ifSubset="systemviewlayout:left">0.38 0.754</pos>
 		<pos ifSubset="systemviewlayout:right|center">0.02 0.754</pos>
         <size>0.5 0.28</size>
-        <color>BB0000ff</color>
+        <color>E80000ff</color>
 	</text>
 	  
 	  <text name="systemdetails3">
