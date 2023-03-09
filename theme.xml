@@ -471,7 +471,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
 	  </storyboard>
 	  <storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:blue">
-			<animation property="color" from="C8C8C8ff" to="00AADD" begin="" duration="200" mode="Linear"/>
+			<animation property="color" from="C8C8C8ff" to="00AADD" begin="200" duration="620" mode="Linear"/>
 			<animation property="saturation" from="0.5" to="1" begin="" duration="1250" autoreverse="true" repeat="2" mode="Linear"/>
 			<animation property="saturation" from="0.5" to="1" begin="5000" duration="1000" autoreverse="true" repeat="5" mode="Linear"/>						
 			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
@@ -480,7 +480,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
 	  </storyboard>
 	  <storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:red">
-			<animation property="color" from="C8C8C8ff" to="D80000" begin="" duration="200" mode="Linear"/>
+			<animation property="color" from="C8C8C8ff" to="D80000" begin="200" duration="620" mode="Linear"/>
 			<animation property="saturation" from="0.5" to="1" begin="" duration="1250" autoreverse="true" repeat="2" mode="Linear"/>
 			<animation property="saturation" from="0.5" to="1" begin="5000" duration="1000" autoreverse="true" repeat="5" mode="Linear"/>						
 			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
@@ -489,7 +489,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
 	  </storyboard>
 	  <storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:yellow">
-			<animation property="color" from="C8C8C8ff" to="C8C800" begin="" duration="200" mode="Linear"/>
+			<animation property="color" from="C8C8C8ff" to="C8C800" begin="200" duration="620" mode="Linear"/>
 			<animation property="saturation" from="0.5" to="1" begin="" duration="1250" autoreverse="true" repeat="2" mode="Linear"/>
 			<animation property="saturation" from="0.5" to="1" begin="5000" duration="1000" autoreverse="true" repeat="5" mode="Linear"/>						
 			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
@@ -498,7 +498,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
 	  </storyboard>
 	  	  <storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:purple">
-			<animation property="color" from="C8C8C8ff" to="AA44C8" begin="" duration="200" mode="Linear"/>
+			<animation property="color" from="C8C8C8ff" to="AA44C8" begin="200" duration="620" mode="Linear"/>
 			<animation property="saturation" from="0.5" to="1" begin="" duration="1250" autoreverse="true" repeat="2" mode="Linear"/>
 			<animation property="saturation" from="0.5" to="1" begin="5000" duration="1000" autoreverse="true" repeat="5" mode="Linear"/>						
 			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
@@ -568,20 +568,6 @@ originally based on: "carbon" and "Arcade Planet"
 		<pos ifSubset="systemviewlayout:center">0.5 0.471296295</pos>
 		<opacity>0</opacity>
 		<linearSmooth>true</linearSmooth>
-		<storyboard repeatAt="5000">
-			<animation property="opacity" from="1" to="1" begin="200" duration="0" mode="Linear"/>
-		    <animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
-		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
-			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
-			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
-		</storyboard>
-		<storyboard ifSubset="selectedlogostyle:color" repeatAt="5000">
-			<animation property="opacity" from="0" to="1" begin="200" duration="620" mode="Linear"/>
-		    <animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
-		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
-			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
-			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
-		</storyboard>
 	</image>
 	
 	<image name="selectedborder" ifSubset="selectedBorderColor:gold|red|yellow|blue" extra="true">
@@ -595,14 +581,20 @@ originally based on: "carbon" and "Arcade Planet"
 		<zIndex>63</zIndex>
 		<opacity>0</opacity>
 		<color ifSubset="selectedBorderColor:gold">D8C844</color>
+		<color ifSubset="selectedBorderColor:red">FF4444</color>
+	</image>
+
+	<control name="logo,nakedwheel,selectedborder">	
 		<storyboard repeatAt="5000">
 			<animation property="opacity" from="0" to="1" begin="200" duration="620" mode="Linear"/>
-		    <animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
+		    <animation property="saturation" from="0.5" to="1" begin="" duration="1250" autoreverse="true" repeat="2" mode="Linear"/>
+			<animation property="saturation" from="0.5" to="1.3" begin="5000" duration="1000" autoreverse="true" repeat="5" mode="Linear"/>	
+			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
 		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
 			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
 			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
-		</storyboard>
-	</image>	
+		</storyboard>	
+	</control>
 	
 	<!-- <image name="reflet" extra="static">
 		<path>./_art/assets/reflet.png</path>
