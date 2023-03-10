@@ -173,22 +173,19 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="whitenosprite" displayName="${whitenosprite}"/>
 	</subset>
 
+
+			<!-- Subset for Selected Logo Style -->
+	<subset name="selectedLogoStyle" displayName="${selectedLogoStyle}">
+		<include name="color" displayName="${color}"/>
+		<include name="white" ifSubset="carouselLogoStyle:whiteandsprite|whitenosprite" displayName="${white}"/>
+	</subset>
+	
 		<!-- Subset for Selected Border Color -->
 	<subset name="selectedBorderColor" displayName="${selectedBorderColor}">
 		<include name="gold" displayName="${gold}"/>
 		<include name="silver" displayName="${silver}"/>
 		<include name="red" displayName="${red}"/>
 		<include name="blue" displayName="${blue}"/>
-	</subset>
-	
-			<!-- Subset for Selected Logo Style -->
-	<subset name="selectedLogoStyle" displayName="${selectedLogoStyle}">
-		<include name="color" displayName="${color}"/>
-		<include name="white" ifSubset="carouselLogoStyle:whiteandsprite|whitenosprite" displayName="${white}"/>
-		<include name="blue" ifSubset="carouselLogoStyle:whiteandsprite|whitenosprite" displayName="${blue}"/>
-		<include name="red" ifSubset="carouselLogoStyle:whiteandsprite|whitenosprite" displayName="${red}"/>
-		<include name="yellow" ifSubset="carouselLogoStyle:whiteandsprite|whitenosprite" displayName="${yellow}"/>
-		<include name="purple" ifSubset="carouselLogoStyle:whiteandsprite|whitenosprite" displayName="${purple}"/>
 	</subset>
 	
 	<!-- Subset options for Neo Geo Artwork Style -->
@@ -471,34 +468,6 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
 			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
 	  </storyboard>
-	  <storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:blue">
-			<animation property="color" from="C8C8C8ff" to="00AADD" begin="200" duration="620" mode="Linear"/>
-				<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
-		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
-			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
-			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
-	  </storyboard>
-	  <storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:red">
-			<animation property="color" from="C8C8C8ff" to="D80000" begin="200" duration="620" mode="Linear"/>
-			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
-		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
-			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
-			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
-	  </storyboard>
-	  <storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:yellow">
-			<animation property="color" from="C8C8C8ff" to="C8C800" begin="200" duration="620" mode="Linear"/>
-			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
-		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
-			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
-			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
-	  </storyboard>
-	  	  <storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:purple">
-			<animation property="color" from="C8C8C8ff" to="AA44C8" begin="200" duration="620" mode="Linear"/>
-			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
-		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
-			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
-			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
-	  </storyboard>
 	  <storyboard event="activate" ifSubset="carouselLogoStyle:whiteandsprite|colorandsprite">
 			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>
 			<animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/>			
@@ -515,10 +484,10 @@ originally based on: "carbon" and "Arcade Planet"
 	<carousel name="systemcarousel">
 	  <defaultTransition>instant</defaultTransition>
       <type>vertical</type>
-	  <size>0.5 0.94259259259</size>
-	  <size ifSubset="aspect-ratio:4-3">0.688 0.94259259259</size>
-      <pos>0.78 0.471296295</pos>
-	  <pos ifSubset="systemviewlayout:left">0.22 0.471296295</pos>
+	  <size>0.44 0.94259259259</size>
+	  <size ifSubset="aspect-ratio:4-3">0.5472222 0.94259259259</size>
+      <pos>0.79 0.471296295</pos>
+	  <pos ifSubset="systemviewlayout:left">0.21 0.471296295</pos>
 	  <pos ifSubset="systemviewlayout:center">0.5 0.471296295</pos>
 	  <pos ifSubset="aspect-ratio:4-3">0.7098 0.471296295</pos>
 	  <logoAlignment>right</logoAlignment>
@@ -531,9 +500,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  <maxLogoCount tinyScreen="true">5</maxLogoCount>
 	  <logoScale>1.333333333333</logoScale>
 	  <logoScale ifSubset="aspect-ratio:4-3">1</logoScale>
-      <logoSize>0.30390625 0.17916666</logoSize>
-<!-- 	  <logoSize>0.34921875 0.1527777777</logoSize> -->
-	  <logoSize ifSubset="aspect-ratio:4-3">0.51736111 0.2037037037</logoSize>
+      <logoSize>0.3078125 0.145833</logoSize>
+	  <logoSize ifSubset="aspect-ratio:4-3">0.4104166 0.19444444</logoSize>
 	  <minLogoOpacity>1</minLogoOpacity>
 	  <transitionSpeed>200</transitionSpeed>
 	  <scrollSound>./_art/soundS/scroll.wav</scrollSound>
@@ -554,24 +522,24 @@ originally based on: "carbon" and "Arcade Planet"
 		 <path ifSubset="selectedLogoStyle:white, artworkregion:US">./_art/US/wheelWhiteNosprite/${system.theme}.png</path>
 		 <path ifSubset="selectedLogoStyle:white, neogeostyle:mvs">./_art/SPECIAL/wheelWhiteNosprite/${system.theme}.png</path>
 		<zIndex>61</zIndex>
-		<size>0.40520833333 0</size>
-	    <size ifSubset="aspect-ratio:4-3">0.51736111 0</size>
+		<size>0.4104166 0</size>
+	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.797 0.471296295</pos>
+		<pos>0.774 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:left">0.203 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:center">0.5 0.471296295</pos>
 		<opacity>0</opacity>
 		<linearSmooth>true</linearSmooth>
 	</image>
 	
-	<image name="selectedborder" ifSubset="selectedBorderColor:gold|red|yellow|blue" extra="true">
+	<image name="selectedborder" ifSubset="selectedBorderColor:gold|red|yellow|blue" extra="static">
 		<path>./_art/assets/border.png</path>
-		<size>0.40520833333 0</size>
-	    <size ifSubset="aspect-ratio:4-3">0.5402777 0</size>
+		<size>0.4104166 0</size>
+	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.797 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left">0.203 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:center">0.5 0.471296295</pos>
+		<pos>0.774 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:center">0.559375 0.471296295</pos>
 		<zIndex>63</zIndex>
 		<opacity>0</opacity>
 		<color ifSubset="selectedBorderColor:gold">D8C844</color>
@@ -714,13 +682,12 @@ originally based on: "carbon" and "Arcade Planet"
      	<path ifSubset="neogeostyle:mvs">./_art/sprites/special/${system.theme}.png</path>
 		<size>0.1010416666 0</size>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
-		<origin>0 0.5</origin>
+		<origin>0.5 0.5</origin>
 		<opacity>0</opacity>
 		<zIndex>63</zIndex>
 		<linearSmooth>false</linearSmooth>
-		<pos>0.594395833 0.471296295</pos>
-		<scaleOrigin>0.5 0</scaleOrigin>
-		<pos ifSubset="systemviewlayout:left">0.0004 0.471296295</pos>
+		<pos>0.6193125 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:center">0.29739583 0.471296295</pos>
 		<storyboard ifSubset="systemviewstyle:randomfanart|randomboxart" repeatAt="1">
 			<animation property="opacity" from="1" to="1" begin="200" duration="" mode="Linear"/>
@@ -730,7 +697,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<storyboard ifSubset="systemviewstyle:simplesprite, systemviewlayout:right" repeatAt="2375">
 			<animation property="opacity" from="1" to="1" begin="200" duration="" mode="Linear"/>
 			<animation property="scale" from="1" to="3" begin="2000" duration="375" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="0" to="-0.26689583" begin="2000" duration="375" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="-0.3013125" begin="2000" duration="375" mode="EaseOutCubic"/>
 			<animation property="scale" from="3" to="2" begin="6250" duration="125" mode="Linear"/>
 			<animation property="scale" from="2" to="3" begin="6850" duration="125" mode="Linear"/>
 			<animation property="scale" from="3" to="3" begin="6975" duration="3025" mode="Linear"/>				
@@ -1283,7 +1250,7 @@ Numero de juegos : {binding:total}</text>
 	<image name="wheelborder" extra="true">
 		<path>./_art/assets/border.png</path>
 		<size>0.484375 0</size>
-	    <size ifSubset="aspect-ratio:4-3">0.51736111 0</size>
+	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
 		<origin>0.5 0.5</origin>
 		<zIndex>62</zIndex>
