@@ -550,7 +550,7 @@ originally based on: "carbon" and "Arcade Planet"
 		</storyboard>
 		<storyboard ifSubset="systemviewlayout:left" repeatAt="5000">
 			<animation property="opacity" from="0" to="1" begin="200" duration="620" mode="Linear"/>
-			<animation property="offsetX" from="0" to="-0.048" begin="820" duration="375" mode="Linear"/>			
+			<animation property="offsetX" from="0" to="-0.048" begin="2000" duration="200" mode="Linear"/>			
 			<animation property="offsetX" from="-0.048" to="-0.078" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
 		    <animation property="offsetX" from="-0.048" to="-0.028" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
 			<animation property="offsetX" from="-0.048" to="-0.058" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
