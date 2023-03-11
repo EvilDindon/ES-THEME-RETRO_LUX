@@ -763,9 +763,9 @@ originally based on: "carbon" and "Arcade Planet"
 	 <image name="spriteoutsidewheel">
 		<visible ifSubset="carouselLogoStyle:whitenosprite|colornosprite, systemviewstyle:simplesprite, systemviewlayout:left|right">true</visible>
 		<visible ifSubset="carouselLogoStyle:whitenosprite|colornosprite, systemviewlayout:center">true</visible>
-		<pos>0.6193125 0.471296295</pos>
+		<pos>0.318 0.471296295</pos>
 		<scale>0</scale>
-		<pos ifSubset="systemviewlayout:left">0.0563125 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0.691 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:center">0.16 0.403</pos>
 		<storyboard ifSubset="systemviewlayout:right" repeatAt="2375">
 			<animation property="scale" from="0" to="3" begin="2000" duration="375" mode="EaseOutCubic"/>
@@ -774,7 +774,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="3" to="3" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
 	  <storyboard ifSubset="systemviewlayout:left" repeatAt="2750">
-			<animation property="scale" from="0" to="3" begin="2000" duration="750" mode="EaseOutCubic"/>
+			<animation property="scale" from="0" to="3" begin="2000" duration="375" mode="EaseOutCubic"/>
 				<animation property="scale" from="3" to="2" begin="6250" duration="125" mode="Linear"/>
 			<animation property="scale" from="2" to="3" begin="6850" duration="125" mode="Linear"/>
 			<animation property="scale" from="3" to="3" begin="6975" duration="3025" mode="Linear"/>				
