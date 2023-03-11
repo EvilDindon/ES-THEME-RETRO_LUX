@@ -491,7 +491,16 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/>			
 			<animation property="color" from="FFFFFFff" to="00000000" begin="820" duration="" mode="Linear"/>
 	  </storyboard>
+	  
+	  <storyboard event="activate" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:color, systemviewlayout:center">
+			<animation property="offsetX" from="0" to="-0.014" begin="" duration="" mode="Linear"/>		
+			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="620" mode="Linear"/>
+	  </storyboard>
 
+	  <storyboard event="activate" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:color, systemviewlayout:left">
+			<animation property="offsetX" from="0" to="-0.048" begin="" duration="" mode="Linear"/>		
+			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="620" mode="Linear"/>
+	  </storyboard>
 	</image>
 	 			   
 	<carousel name="systemcarousel">
