@@ -743,8 +743,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="spriteonwheel, spriteoutsidewheel" extra="static">
 		<path>./_art/sprites/${system.theme}.png</path>
-		<path ifSubset="artworkregion:US">./_art/sprites/US/${system.theme}.png</path>
-     	<path ifSubset="neogeostyle:mvs">./_art/sprites/S/$PECIAL/${system.theme}.png</path>
+     	<path ifSubset="neogeostyle:mvs">./_art/sprites/SPECIAL/${system.theme}.png</path>
 		<size>0.1010416666 0</size>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
 		<origin>0.5 0.5</origin>
