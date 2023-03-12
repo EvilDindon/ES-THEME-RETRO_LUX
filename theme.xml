@@ -1088,27 +1088,27 @@ originally based on: "carbon" and "Arcade Planet"
 		
 		<image name="randomLogo1">
 			<storyboard repeat="forever">
-			    <animation property="offsetX" to="0" begin="0" duration="5000" mode="linear"/>	
-				<animation property="offsetX" from="0" to="1.105" begin="5000" duration="5000" mode="linear"/>				
+			    <animation property="offsetX" from="0" to="1.105" begin="0" duration="5000" mode="linear"/>	
+				<animation property="offsetX" from="1.105" to="1.105" begin="5000" duration="5000" mode="linear"/>				
 			</storyboard>		
 		</image>
 		
 		<image name="randomLogo2">
 			<storyboard repeat="forever">
-				<animation property="offsetX" to="1.105" begin="2500" duration="5000" mode="linear"/>
-				<animation property="offsetX" from="0" to="0" begin="7500" duration="2500" mode="linear"/>
+				<animation property="offsetX" from="0" to="1.105" begin="2500" duration="5000" mode="linear"/>
+				<animation property="offsetX" from="1.105" to="1.105" begin="7500" duration="2500" mode="linear"/>
 			</storyboard>	
 		</image>
 	
 		<image name="randomLogo3">
-				<storyboard repeat="forever">
-				<animation property="offsetX" to="1.105" begin="5000" duration="5000" mode="linear"/>
+			<storyboard repeat="forever">
+				<animation property="offsetX" from="0" to="1.105" begin="5000" duration="5000" mode="linear"/>
 			</storyboard>				
 		</image>
 	
 		<image name="randomLogo4">
 			<storyboard repeat="forever">
-				<animation property="offsetX" to="0.55" begin="7500" duration="2500" mode="linear"/>
+				<animation property="offsetX" from="0" to="0.55" begin="7500" duration="2500" mode="linear"/>
 				<animation property="opacity" from="1" to="0" begin="9000" duration="1000" mode="linear"/>
 			</storyboard>				
   	</image>	
