@@ -472,20 +472,20 @@ originally based on: "carbon" and "Arcade Planet"
 	     <path>./_art/assets/underconstruction.png</path>
 		 <path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorSprite/${system.theme}.png</path>
 		 <path ifSubset="carouselLogoStyle:colorandsprite">./_art/wheelColorSprite/${system.theme}-${lang}.png</path>
-		 <path ifSubset="carouselLogoStyle:colorandsprite,artworkregion:US">./_art/US/wheelColorSprite/${system.theme}.png</path>
-		 <path ifSubset="carouselLogoStyle:colorandsprite,neogeostyle:mvs">./_art/SPECIAL/wheelColorSprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colorandsprite,artworkregion:US">./_art/wheelColorSprite/US/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colorandsprite,neogeostyle:mvs">./_art/wheelColorSprite/SPECIAL/${system.theme}.png</path>
      	 <path ifSubset="carouselLogoStyle:whiteandsprite">./_art/wheelWhiteSprite/${system.theme}.png</path>
 		 <path ifSubset="carouselLogoStyle:whiteandsprite">./_art/wheelWhiteSprite/${system.theme}-${lang}.png</path>
-		 <path ifSubset="carouselLogoStyle:whiteandsprite,artworkregion:US">./_art/US/wheelWhiteSprite/${system.theme}.png</path>
-		 <path ifSubset="carouselLogoStyle:whiteandsprite,neogeostyle:mvs">./_art/SPECIAL/wheelWhiteSprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:whiteandsprite,artworkregion:US">./_art/wheelWhiteSprite/US/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:whiteandsprite,neogeostyle:mvs">./_art/wheelWhiteSprite/SPECIAL/${system.theme}.png</path>
 		 <path ifSubset="carouselLogoStyle:whitenosprite">./_art/wheelWhiteNosprite/${system.theme}.png</path>
 		 <path ifSubset="carouselLogoStyle:whitenosprite">./_art/wheelWhiteNosprite/${system.theme}-${lang}.png</path>
-		 <path ifSubset="carouselLogoStyle:whitenosprite,artworkregion:US">./_art/US/wheelWhiteNosprite/${system.theme}.png</path>
-		 <path ifSubset="carouselLogoStyle:whitenosprite,neogeostyle:mvs">./_art/SPECIAL/wheelWhiteNosprite/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:whitenosprite,artworkregion:US">./_art/wheelWhiteNosprite/US/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:whitenosprite,neogeostyle:mvs">./_art/wheelWhiteNosprite/SPECIAL/${system.theme}.png</path>
 		 <path ifSubset="carouselLogoStyle:colornosprite">./_art/wheelColorNosprite/${system.theme}.png</path>
 		 <path ifSubset="carouselLogoStyle:colornosprite">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
-		 <path ifSubset="carouselLogoStyle:colornosprite,artworkregion:US">./_art/US/wheelColorNosprite/${system.theme}.png</path>
-		 <path ifSubset="carouselLogoStyle:colornosprite,neogeostyle:mvs">./_art/SPECIAL/wheelColorNosprite/${system.theme}.png</path>	  
+		 <path ifSubset="carouselLogoStyle:colornosprite,artworkregion:US">./_art/wheelColorNosprite/US/${system.theme}.png</path>
+		 <path ifSubset="carouselLogoStyle:colornosprite,neogeostyle:mvs">./_art/wheelColorNosprite/SPECIAL/${system.theme}.png</path>	  
 	  <storyboard event="activate">
 			<animation property="color" from="B0B0B0ff" to="FFFFFFff" begin="" duration="200" mode="Linear"/>	
 			<animation property="saturation" from="0.75" to="1" begin="" duration="200" mode="Linear"/>	
@@ -569,12 +569,12 @@ originally based on: "carbon" and "Arcade Planet"
 		<path>./_art/assets/underconstruction.png</path>
 		<path ifSubset="selectedLogoStyle:color">./_art/wheelColorNosprite/${system.theme}.png</path>
 		 <path ifSubset="selectedLogoStyle:color">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
-		 <path ifSubset="selectedLogoStyle:color, artworkregion:US">./_art/US/wheelColorNosprite/${system.theme}.png</path>
-		 <path ifSubset="selectedLogoStyle:color, neogeostyle:mvs">./_art/SPECIAL/wheelColorNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:color, artworkregion:US">./_art/wheelColorNosprite/US/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:color, neogeostyle:mvs">./_art/wheelColorNosprite/SPECIAL/${system.theme}.png</path>
 		<path ifSubset="selectedLogoStyle:white">./_art/wheelWhiteNosprite/${system.theme}.png</path>
 		 <path ifSubset="selectedLogoStyle:white">./_art/wheelWhiteNosprite/${system.theme}-${lang}.png</path>
-		 <path ifSubset="selectedLogoStyle:white, artworkregion:US">./_art/US/wheelWhiteNosprite/${system.theme}.png</path>
-		 <path ifSubset="selectedLogoStyle:white, neogeostyle:mvs">./_art/SPECIAL/wheelWhiteNosprite/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:white, artworkregion:US">./_art/wheelWhiteNosprite/US/${system.theme}.png</path>
+		 <path ifSubset="selectedLogoStyle:white, neogeostyle:mvs">./_art/wheelWhiteNosprite/SPECIAL/${system.theme}.png</path>
 		<zIndex>61</zIndex>
 	</image>
 	
@@ -744,13 +744,13 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="spriteonwheel, spriteoutsidewheel" extra="static">
 		<path>./_art/sprites/${system.theme}.png</path>
 		<path ifSubset="artworkregion:US">./_art/sprites/US/${system.theme}.png</path>
-     	<path ifSubset="neogeostyle:mvs">./_art/sprites/special/${system.theme}.png</path>
+     	<path ifSubset="neogeostyle:mvs">./_art/sprites/S/$PECIAL/${system.theme}.png</path>
 		<size>0.1010416666 0</size>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
 		<origin>0.5 0.5</origin>
 		<zIndex>63</zIndex>
 		<visible>false</visible>
-		<linearSmooth>true</linearSmooth>
+		<linearSmooth>false</linearSmooth>
 	 </image>
 	 
 	<image name="spriteonwheel">
