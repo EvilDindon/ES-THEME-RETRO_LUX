@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
-Theme: Retro Luxury
-version: 0.12
+Theme: Retro Lux
+version: 0.13
 author: Mickaël Isman (EvilDindon Ken)
 license: creative commons CC-BY-NC-SA
 originally based on: "carbon" and "Arcade Planet"
@@ -13,10 +13,13 @@ originally based on: "carbon" and "Arcade Planet"
 <!-- VARIABLES -->
   
 	<variables>
-		
+
 	<!--LANGS-->
 	<artworkregion>Logos and Artwork Region</artworkregion>
 	<artworkregion lang="fr">Région des Logos et Artworks</artworkregion>
+	
+	<bgcolor>System View Background color</bgcolor>
+	<bgcolor lang="fr">Couleur du fond d'écran vue système</bgcolor>
 	
 	<carouselLogoStyle>Carousel Logo Style</carouselLogoStyle>
 	<carouselLogoStyle lang="fr">Style de Logos dans le Carousel</carouselLogoStyle>
@@ -114,6 +117,18 @@ originally based on: "carbon" and "Arcade Planet"
 	<silver>silver</silver>
 	<silver lang="fr">chromée</silver>
 	
+	<darkblue>Dark Blue</darkblue>
+	<darkblue lang="fr">Bleu Nuit</darkblue>	
+	
+	<darkpurple>Dark Purple</darkpurple>
+	<darkpurple lang="fr">Pourpre Sombre</darkpurple>
+	
+	<darkred>Dark Red</darkred>
+	<darkred lang="fr">Rouge Foncé</darkred>
+	
+	<darkgrey>Dark Grey</darkgrey>
+	<darkgrey lang="fr">Gris Foncé</darkgrey>
+	
 	<theme.aspect-ratio>aspect ratio</theme.aspect-ratio>
     <theme.aspect-ratio lang="fr">format d'écran</theme.aspect-ratio>
 		
@@ -187,6 +202,14 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="red" displayName="${red}"/>
 		<include name="blue" displayName="${blue}"/>
 	</subset>
+
+<!-- Subset for System view Background Color Color -->
+	<subset name="bgcolor" displayName="${bgcolor}">
+		<include name="darkblue" displayName="${darkblue}"/>
+		<include name="darkpurple" displayName="${darkpurple}"/>
+		<include name="darkred" displayName="${darkred}"/>
+		<include name="darkgrey" displayName="${darkgrey}"/>
+	</subset>
 	
 	<!-- Subset options for Neo Geo Artwork Style -->
 	<subset name="neogeostyle" displayName="Neo-Geo Style">
@@ -209,7 +232,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="red" displayName="${red}"/>
 		<include name="purple" displayName="${purple}"/>
 	</subset>
-	
+
 <!-- MENU -->
 	
   <view name="menu">
@@ -365,18 +388,55 @@ originally based on: "carbon" and "Arcade Planet"
 		  <color>557788ff</color>
 		  <zIndex>55</zIndex>
 	</image>
+
+	<image name="bg,wheelbg,wheelbgfade" extra="static">
+		<linearSmooth>false</linearSmooth>
+		
+		<color ifSubset="bgcolor:darkblue">113344</color>
+		<colorEnd ifSubset="bgcolor:darkblue">030a0d</colorEnd>
+		
+		<color ifSubset="bgcolor:darkpurple">381140</color>
+		<colorEnd ifSubset="bgcolor:darkpurple">0c010c</colorEnd>
+		
+		<color ifSubset="bgcolor:darkred">440000</color>
+		<colorEnd ifSubset="bgcolor:darkred">0c0000</colorEnd>
+		
+		<color ifSubset="bgcolor:darkgrey">333333</color>
+		<colorEnd ifSubset="bgcolor:darkgrey">0c0c0c</colorEnd>
 	
-    <image name="bg" extra="static">
+	</image>
+	
+    <image name="bg">
       <pos>0 0</pos>
       <size>1 1</size>
       <origin>0 0</origin>
 	  <path>./_art/assets/white.png</path>
-	  <color>113344ff</color>
-	  <colorEnd>11334422</colorEnd>
       <zIndex>0</zIndex>	  
     </image>
 	
-	<image name="electronic" extra="static">
+	<image name="wheelbg" ifSubset="systemviewlayout:left|right">
+		  <path>./_art/assets/white.png</path>
+		  <visible ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewbottom:systemdetails">false</visible>
+		  <origin>0 0</origin>
+		  <size>0.3 1</size>
+		  <pos>0 0</pos>
+		  <pos ifSubset="systemviewlayout:right">0.7 0</pos>
+		  <zIndex>48</zIndex>
+	</image>
+	
+	<image name="wheelbgfade" ifSubset="systemviewlayout:left|right">
+		  <path>./_art/assets/wheelbgfade.png</path>
+		  <visible ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewbottom:systemdetails">false</visible>
+		  <origin>0 0</origin>
+		  <origin ifSubset="systemviewlayout:right">1 0</origin>
+		  <size>0.02 1</size>
+		  <pos>0.3 0</pos>
+		  <pos ifSubset="systemviewlayout:right">0.7 0</pos>
+		  <flipX ifSubset="systemviewlayout:left">true</flipX>
+		  <zIndex>49</zIndex>
+	</image>
+ 
+ 	<image name="electronic" extra="static">
       <pos>0.38 0.816</pos>
 	  <pos if="${screen.height} == 720">0.416 0.6</pos>
       <size>3 4</size>
@@ -385,41 +445,12 @@ originally based on: "carbon" and "Arcade Planet"
       <origin>0.5 0.5</origin>
 	  <tile>true</tile>
 	  <path>./_art/assets/electronic.png</path>
-	  <color>FFFFFF44</color>
-	  <colorEnd>FFFFFF11</colorEnd>
+	  <color>FFFFFF55</color>
+	  <colorEnd>FFFFFF10</colorEnd>
+	  <opacity>0.65</opacity>
       <zIndex>0</zIndex>	  
     </image>
-	  
-	<image name="wheelbg" ifSubset="systemviewlayout:left|right" extra="static">
-		  <path>./_art/assets/white.png</path>
-		  <linearSmooth>false</linearSmooth>
-		  <visible ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewbottom:systemdetails">false</visible>
-		  <origin>0 0</origin>
-		  <size>0.3 1</size>
-		  <pos>0 0</pos>
-		  <pos ifSubset="systemviewlayout:right">0.7 0</pos>
-		  <color>113344ff</color>
-		  <colorEnd>030a0d</colorEnd>
-		  <zIndex>48</zIndex>
-	</image>
 	
-	<image name="wheelbgfade" ifSubset="systemviewlayout:left|right" extra="static">
-		  <path>./_art/assets/wheelbgfade.png</path>
-		  <linearSmooth>false</linearSmooth>
-		  <visible ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewbottom:systemdetails">false</visible>
-		  <origin>0 0</origin>
-		  <origin ifSubset="systemviewlayout:right">1 0</origin>
-		  <size>0.02 1</size>
-		  <pos>0.3 0</pos>
-		  <pos ifSubset="systemviewlayout:right">0.7 0</pos>
-		  <color>FFFFFFff</color>
-		  <colorEnd>FFFFFF00</colorEnd>
-		  <color ifSubset="systemviewlayout:right">FFFFFF00</color>
-		  <colorEnd ifSubset="systemviewlayout:right">FFFFFFff</colorEnd>
-		  <gradientType>horizontal</gradientType>
-		  <zIndex>49</zIndex>
-	</image>
- 
   <text name="logoText">
 		<fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
 		<color>C2C2C2ff</color>
@@ -1091,8 +1122,8 @@ originally based on: "carbon" and "Arcade Planet"
       <linearSmooth>true</linearSmooth>
 	  <zIndex>46</zIndex>
      <storyboard>
-            <animation property="w" from="0" to="0" begin="" duration="620" mode="Linear"/>
-			<animation property="w" from="0" to="0.7" begin="620" duration="335" mode="Linear"/>
+            <animation property="w" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+			<animation property="w" from="0" to="0.7" begin="2000" duration="335" mode="Linear"/>
 		</storyboard>
 	</image>
 	
