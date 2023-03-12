@@ -1076,12 +1076,12 @@ originally based on: "carbon" and "Arcade Planet"
             </storyboard>
 		</image>
 		
-	<image name="randomLogo1,randomLogo2,randomLogo3,randomLogo4" extra="static" ifSubset="systemviewbottom:randomlogos, systemviewstyle:randomfanart|simplesprite">
+	<image name="randomLogo1,randomLogo2,randomLogo3,randomLogo4" extra="static" ifSubset="systemviewbottom:randomlogos, systemviewstyle:randomfanart|simplesprite, systemviewlayout:left|right">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.15</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>-0.105 0.832</pos>
-		    <pos ifSubset="systemviewlayout:left">0.25 0.832</pos>
+		    <pos ifSubset="systemviewlayout:left">0 0.832</pos>
 			<clipRect>0 0 1 1</clipRect>
 			<zIndex>46</zIndex>	
 		</image>
@@ -1089,26 +1089,26 @@ originally based on: "carbon" and "Arcade Planet"
 		<image name="randomLogo1">
 			<storyboard repeat="forever">
 			    <animation property="offsetX" to="0" begin="0" duration="5000" mode="linear"/>	
-				<animation property="offsetX" from="0" to="0.89" begin="5000" duration="5000" mode="linear"/>				
+				<animation property="offsetX" from="0" to="1.105" begin="5000" duration="5000" mode="linear"/>				
 			</storyboard>		
 		</image>
 		
 		<image name="randomLogo2">
 			<storyboard repeat="forever">
-				<animation property="offsetX" to="0.89" begin="2500" duration="5000" mode="linear"/>
+				<animation property="offsetX" to="1.105" begin="2500" duration="5000" mode="linear"/>
 				<animation property="offsetX" from="0" to="0" begin="7500" duration="2500" mode="linear"/>
 			</storyboard>	
 		</image>
 	
 		<image name="randomLogo3">
 				<storyboard repeat="forever">
-				<animation property="offsetX" to="0.89" begin="5000" duration="5000" mode="linear"/>
+				<animation property="offsetX" to="1.105" begin="5000" duration="5000" mode="linear"/>
 			</storyboard>				
 		</image>
 	
 		<image name="randomLogo4">
 			<storyboard repeat="forever">
-				<animation property="offsetX" to="0.42" begin="7500" duration="2500" mode="linear"/>
+				<animation property="offsetX" to="0.55" begin="7500" duration="2500" mode="linear"/>
 				<animation property="opacity" from="1" to="0" begin="9000" duration="1000" mode="linear"/>
 			</storyboard>				
   	</image>	
