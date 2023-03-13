@@ -593,7 +593,7 @@ originally based on: "carbon" and "Arcade Planet"
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
 		<pos>0.774 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left">0.211 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0.2108 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:center">0.486 0.403</pos>
 		<pos ifSubset="systemviewlayout:left, carouselLogoStyle:whitenosprite|colornosprite">0.163 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:center, carouselLogoStyle:whitenosprite|colornosprite">0.472 0.403</pos>
@@ -756,15 +756,15 @@ originally based on: "carbon" and "Arcade Planet"
 		<visible ifSubset="carouselLogoStyle:colorandsprite|whiteandsprite">true</visible>
 		<opacity>0</opacity>
 		<pos>0.6193125 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left">0.0563125 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0.0562 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:center">0.3313125 0.403</pos>
 		<storyboard ifSubset="systemviewstyle:randomfanart|randomboxart, systemviewlayout:right|left" repeatAt="1">
-			<animation property="opacity" from="1" to="1" begin="200" duration="" mode="Linear"/>
+			<animation property="opacity" from="0" to="1" begin="200" duration="620" mode="Linear"/>
 			<animation property="scale" from="1" to="1.5" begin="6250" duration="125" mode="Linear"/>
 			<animation property="scale" from="1.5" to="1" begin="6850" duration="125" mode="Linear"/>
 	  </storyboard>	
 		<storyboard ifSubset="systemviewstyle:simplesprite, systemviewlayout:right" repeatAt="2375">
-			<animation property="opacity" from="1" to="1" begin="200" duration="" mode="Linear"/>
+			<animation property="opacity" from="0" to="1" begin="200" duration="620" mode="Linear"/>
 			<animation property="scale" from="1" to="3" begin="2000" duration="375" mode="EaseOutCubic"/>
 			<animation property="offsetX" from="0" to="-0.3013125" begin="2000" duration="375" mode="EaseOutCubic"/>
 			<animation property="scale" from="3" to="2" begin="6250" duration="125" mode="Linear"/>
@@ -772,7 +772,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="3" to="3" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
 	  <storyboard ifSubset="systemviewstyle:simplesprite, systemviewlayout:left" repeatAt="2750">
-			<animation property="opacity" from="1" to="1" begin="200" duration="" mode="Linear"/>
+			<animation property="opacity" from="0" to="1" begin="200" duration="620" mode="Linear"/>
 			<animation property="scale" from="1" to="3" begin="2000" duration="750" mode="EaseOutCubic"/>
 			<animation property="offsetX" from="0" to="0.636" begin="2000" duration="750" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="2000" duration="375" mode="EaseOutCubic" autoReverse="true"/>
@@ -781,7 +781,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="3" to="3" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
 	  <storyboard ifSubset="systemviewlayout:center" repeatAt="2750">
-			<animation property="opacity" from="1" to="1" begin="200" duration="" mode="Linear"/>
+			<animation property="opacity" from="0" to="1" begin="200" duration="620" mode="Linear"/>
 			<animation property="scale" from="1" to="2" begin="820" duration="375" mode="EaseOutCubic"/>
 			<animation property="offsetX" from="0" to="-0.1693125" begin="820" duration="375" mode="EaseOutCubic"/>
 			<animation property="scale" from="2" to="1" begin="6250" duration="125" mode="Linear"/>
