@@ -123,8 +123,8 @@ originally based on: "carbon" and "Arcade Planet"
 	<darkpurple>Dark Purple</darkpurple>
 	<darkpurple lang="fr">Pourpre Sombre</darkpurple>
 	
-	<darkred>Dark Red</darkred>
-	<darkred lang="fr">Rouge Foncé</darkred>
+	<darkgreen>Dark Green</darkgreen>
+	<darkgreen lang="fr">Vert Foncé</darkgreen>
 	
 	<darkgrey>Dark Grey</darkgrey>
 	<darkgrey lang="fr">Gris Foncé</darkgrey>
@@ -207,7 +207,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<subset name="bgcolor" displayName="${bgcolor}">
 		<include name="darkblue" displayName="${darkblue}"/>
 		<include name="darkpurple" displayName="${darkpurple}"/>
-		<include name="darkred" displayName="${darkred}"/>
+		<include name="darkgreen" displayName="${darkgreen}"/>
 		<include name="darkgrey" displayName="${darkgrey}"/>
 	</subset>
 	
@@ -395,11 +395,11 @@ originally based on: "carbon" and "Arcade Planet"
 		<color ifSubset="bgcolor:darkblue">113344</color>
 		<colorEnd ifSubset="bgcolor:darkblue">030a0d</colorEnd>
 		
-		<color ifSubset="bgcolor:darkpurple">381140</color>
+		<color ifSubset="bgcolor:darkpurple">351837</color>
 		<colorEnd ifSubset="bgcolor:darkpurple">0c010c</colorEnd>
-		
-		<color ifSubset="bgcolor:darkred">440000</color>
-		<colorEnd ifSubset="bgcolor:darkred">0c0000</colorEnd>
+			
+		<color ifSubset="bgcolor:darkgreen">223322</color>
+		<colorEnd ifSubset="bgcolor:darkgreen">030d03</colorEnd>
 		
 		<color ifSubset="bgcolor:darkgrey">333333</color>
 		<colorEnd ifSubset="bgcolor:darkgrey">0c0c0c</colorEnd>
