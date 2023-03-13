@@ -486,11 +486,7 @@ originally based on: "carbon" and "Arcade Planet"
 		 <path ifSubset="carouselLogoStyle:colornosprite">./_art/wheelColorNosprite/${system.theme}-${lang}.png</path>
 		 <path ifSubset="carouselLogoStyle:colornosprite,artworkregion:US">./_art/wheelColorNosprite/US/${system.theme}.png</path>
 		 <path ifSubset="carouselLogoStyle:colornosprite,neogeostyle:mvs">./_art/wheelColorNosprite/SPECIAL/${system.theme}.png</path>	  
-<!-- 	  <storyboard event="activate">
-			<animation property="color" from="B0B0B0ff" to="FFFFFFff" begin="" duration="200" mode="Linear"/>	
-			<animation property="saturation" from="0.75" to="1" begin="" duration="200" mode="Linear"/>	
-			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>			
-	  </storyboard> -->
+
 	  	<storyboard event="activate" repeatAt="5000" ifSubset="carouselLogoStyle:whitenosprite|colornosprite, systemviewlayout:right">
 			<animation property="color" from="B0B0B0ff" to="FFFFFFff" begin="" duration="200" mode="Linear"/>
 			<animation property="saturation" from="0.75" to="1" begin="" duration="200" mode="Linear"/>			
@@ -517,20 +513,23 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="-0.048" to="-0.058" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
 			<animation property="offsetX" from="-0.048" to="-0.048" begin="6250" duration="8750" mode="Linear"/>
 	  </storyboard>
+	  
 	  <storyboard event="activate" ifSubset="carouselLogoStyle:whiteandsprite|colorandsprite">
-			<animation property="color" from="FFFFFFff" to="FFFFFFff" begin="" duration="" mode="Linear"/>
-			<animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/>			
-			<animation property="color" from="FFFFFFff" to="00000000" begin="820" duration="" mode="Linear"/>
+			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>
+	  </storyboard>
+
+	  <storyboard event="activate" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:color, systemviewlayout:right">
+			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>			
 	  </storyboard>
 	  
 	  <storyboard event="activate" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:color, systemviewlayout:center">
 			<animation property="offsetX" from="0" to="-0.014" begin="" duration="" mode="Linear"/>		
-			<animation property="color" from="FFFFFFff" to="00000000" begin="820" duration="" mode="Linear"/>
+			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>
 	  </storyboard>
 
 	  <storyboard event="activate" ifSubset="carouselLogoStyle:whitenosprite, selectedLogoStyle:color, systemviewlayout:left">
 			<animation property="offsetX" from="0" to="-0.048" begin="" duration="" mode="Linear"/>		
-			<animation property="color" from="FFFFFFff" to="00000000" begin="820" duration="" mode="Linear"/>
+			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>
 	  </storyboard>
 	</image>
 	 			   
