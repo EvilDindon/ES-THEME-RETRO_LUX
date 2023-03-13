@@ -1214,38 +1214,35 @@ originally based on: "carbon" and "Arcade Planet"
 		</image>
 		
 	<text name="systemInfo">
-	  <visible ifSubset="systemviewbottom:systemdetails|systemviewlayout:center">false</visible>
-	  <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
-	  <fontSize>0.026</fontSize>
-	  <forceUppercase>false</forceUppercase>
+	  <visible ifSubset="systemviewbottom:systemdetails,systemviewlayout:center">false</visible>
 	  <origin>0 0.5</origin>
 	  <alignment>left</alignment>
       <pos>0.323 0.927</pos>
       <pos ifSubset="systemviewlayout:left" >0.687 0.927</pos>     
 	  <size>1 0.026</size>
-      <color>bbbbbbdd</color>
-      <glowSize>0</glowSize>
     </text>
 	
 	<text name="hardwaretype" ifSubset="systemviewbottom:randomlogos,systemviewlayout:left|right" extra="static">
-	  <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
-	  <fontSize>0.028</fontSize>
 	  <text>${system.hardwareType} ${system.releaseYearOrNull} |</text>
-	  <forceUppercase>0</forceUppercase>
 	  <origin>1 0.5</origin>
 	  <alignment>right</alignment>
       <pos>0.318 0.927</pos>
       <pos ifSubset="systemviewlayout:left" >0.682 0.927</pos>     
 	  <size>1 0.27</size>
-      <color>bbbbbbdd</color>
-      <glowColor>00000000</glowColor>
-      <glowSize>0</glowSize>
-      <zIndex>50</zIndex>
-	  <opacity>0</opacity>
-	   <storyboard>
+      <zIndex>50</zIndex> 
+	</text>
+	
+	<text name="systemInfo,hardwaretype">
+		<fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
+		<fontSize>0.026</fontSize>
+		<forceUppercase>0</forceUppercase>
+		<color>bbbbbbdd</color>
+		<glowSize>0</glowSize>	
+		<opacity>0</opacity>
+		<storyboard>
 			<animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
 			<animation property="opacity" from="0" to="1" begin="2000" duration="500" mode="Linear"/>			
-	  </storyboard>
+		</storyboard>
 	</text>
 	
 	<text name="systemdetails,systemdetails2,systemdetails3" ifSubset="systemviewbottom:systemdetails" extra="static">
@@ -1315,7 +1312,7 @@ Numero de juegos : {binding:total}</text>
         <size>0.32 0.28</size>
       </text>
 
-	<image name="systeminfobg" ifSubset="systemviewbottom:randomlogos,systemviewlayout:left|roght" extra="static">
+	<image name="systeminfobg" ifSubset="systemviewbottom:randomlogos,systemviewlayout:left|right" extra="static">
 		  <path>./_art/assets/white.png</path>
 		  <linearSmooth>false</linearSmooth>
 		  <origin>0 0</origin>
