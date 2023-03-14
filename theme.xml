@@ -392,8 +392,8 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="bg,wheelbg,wheelbgfade" extra="static">
 		<linearSmooth>false</linearSmooth>
 		
-		<color ifSubset="bgcolor:darkblue">113344</color>
-		<colorEnd ifSubset="bgcolor:darkblue">030a0d</colorEnd>
+		<color ifSubset="bgcolor:darkblue">444453</color>
+		<colorEnd ifSubset="bgcolor:darkblue">282834</colorEnd>
 		
 		<color ifSubset="bgcolor:darkpurple">351837</color>
 		<colorEnd ifSubset="bgcolor:darkpurple">0c010c</colorEnd>
@@ -447,7 +447,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <path>./_art/assets/electronic.png</path>
 	  <color>FFFFFF55</color>
 	  <colorEnd>FFFFFF10</colorEnd>
-	  <opacity>0.65</opacity>
+	  <opacity>0.6</opacity>
       <zIndex>0</zIndex>	  
     </image>
 	
