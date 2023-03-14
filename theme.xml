@@ -657,7 +657,7 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
 
 		<image name="refletssecondaires1">
-		<y>0.336111</y>
+		<y>0.340111</y>
 		<storyboard repeatAt="4000">
 			<animation property="opacity" from="0" to="0" begin="" duration="4000" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="4000" mode="Linear"/>
@@ -671,7 +671,7 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
 	
 	<image name="refletssecondaires2">
-		<y>0.06759259</y>
+		<y>0.06979259</y>
 		<storyboard repeatAt="5000">
 			<animation property="opacity" from="0" to="0" begin="" duration="5000" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="5000" mode="Linear"/>
@@ -685,7 +685,7 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
 	
 	<image name="refletssecondaires3">
-		<y>0.6046296</y>
+		<y>0.6086296</y>
 		<storyboard repeatAt="5250">
 			<animation property="opacity" from="0" to="0" begin="" duration="5250" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="5250" mode="Linear"/>
@@ -699,7 +699,7 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
 	
 	<image name="refletssecondaires4">
-		<y>0.73888888</y>
+		<y>0.74288888</y>
 		<storyboard repeatAt="8250">
 			<animation property="opacity" from="0" to="0" begin="" duration="8250" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="8250" mode="Linear"/>
@@ -713,7 +713,7 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
 	
    <image name="refletssecondaires5">
-		<y>0.874074</y>
+		<y>0.878074</y>
 		<storyboard repeatAt="17750">
 			<animation property="opacity" from="0" to="0" begin="" duration="17750" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="17750" mode="Linear"/>
@@ -727,7 +727,7 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
 	
 	   <image name="refletssecondaires6">
-		<y>0.201</y>
+		<y>0.205</y>
 		<storyboard repeatAt="12550">
 			<animation property="opacity" from="0" to="0" begin="" duration="12550" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="12550" mode="Linear"/>
