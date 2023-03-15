@@ -117,18 +117,6 @@ originally based on: "carbon" and "Arcade Planet"
 	<silver>silver</silver>
 	<silver lang="fr">chromée</silver>
 	
-	<darkblue>Dark Blue</darkblue>
-	<darkblue lang="fr">Bleu Nuit</darkblue>	
-	
-	<darkpurple>Dark Purple</darkpurple>
-	<darkpurple lang="fr">Pourpre Sombre</darkpurple>
-	
-	<darkgreen>Dark Green</darkgreen>
-	<darkgreen lang="fr">Vert Foncé</darkgreen>
-	
-	<darkgrey>Dark Grey</darkgrey>
-	<darkgrey lang="fr">Gris Foncé</darkgrey>
-	
 	<theme.aspect-ratio>aspect ratio</theme.aspect-ratio>
     <theme.aspect-ratio lang="fr">format d'écran</theme.aspect-ratio>
 		
@@ -205,9 +193,9 @@ originally based on: "carbon" and "Arcade Planet"
 
 <!-- Subset for System view Background Color Color -->
 	<subset name="bgcolor" displayName="${bgcolor}">
-		<include name="darkblue" displayName="${darkblue}"/>
-		<include name="darkpurple" displayName="${darkpurple}"/>
-		<include name="darkgreen" displayName="${darkgreen}"/>
+		<include name="grey" displayName="${grey}"/>
+		<include name="purple" displayName="${purple}"/>
+		<include name="blue" displayName="${blue}"/>
 		<include name="darkgrey" displayName="${darkgrey}"/>
 	</subset>
 	
@@ -392,14 +380,14 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="bg,wheelbg,wheelbgfade" extra="static">
 		<linearSmooth>false</linearSmooth>
 		
-		<color ifSubset="bgcolor:darkblue">343438</color>
-		<colorEnd ifSubset="bgcolor:darkblue">545458</colorEnd>
+		<color ifSubset="bgcolor:grey">343438</color>
+		<colorEnd ifSubset="bgcolor:grey">545458</colorEnd>
 		
-		<color ifSubset="bgcolor:darkpurple">351837</color>
-		<colorEnd ifSubset="bgcolor:darkpurple">0c010c</colorEnd>
+		<color ifSubset="bgcolor:purple">351837</color>
+		<colorEnd ifSubset="bgcolor:purple">0c010c</colorEnd>
 			
-		<color ifSubset="bgcolor:darkgreen">223322</color>
-		<colorEnd ifSubset="bgcolor:darkgreen">030d03</colorEnd>
+		<color ifSubset="bgcolor:blue">223322</color>
+		<colorEnd ifSubset="bgcolor:blue">030d03</colorEnd>
 		
 		<color ifSubset="bgcolor:darkgrey">333333</color>
 		<colorEnd ifSubset="bgcolor:darkgrey">0c0c0c</colorEnd>
@@ -466,7 +454,7 @@ originally based on: "carbon" and "Arcade Planet"
     </text>
 	
 	<image name="logo">
-		 <color>B0B0B0ff</color>
+		 <color>C0C0C0ff</color>
 		 <saturation>0.75</saturation>
 	     <linearSmooth>true</linearSmooth>
 	     <path>./_art/assets/underconstruction.png</path>
@@ -515,6 +503,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  </storyboard>
 	  
 	  <storyboard event="activate" ifSubset="carouselLogoStyle:whiteandsprite|colorandsprite">
+			<animation property="color" from="FFFFFF" to="FFFFFF" begin="" duration="" mode="Linear"/>
+			<animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/>
 			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>
 	  </storyboard>
 
