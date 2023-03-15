@@ -177,7 +177,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<!-- Subset options for System view bottom -->
 	<subset name="systemviewbottom" displayName="${systemviewbottom}">
 		<include name="systemdetails" displayName="${systemdetails}"/>
-		<include name="randomlogos" ifSubset="systemviewlayout:right|left, systemviewstyle:randomfanart|simplesprite" displayName="${randomlogos}"/>
+		<include name="randomlogos" ifSubset="systemviewlayout:right|left, systemviewstyle:simplesprite" displayName="${randomlogos}"/>
 	</subset>
 	
 		<!-- Subset for Carousel Logos Style -->
@@ -392,8 +392,8 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="bg,wheelbg,wheelbgfade" extra="static">
 		<linearSmooth>false</linearSmooth>
 		
-		<color ifSubset="bgcolor:darkblue">444453</color>
-		<colorEnd ifSubset="bgcolor:darkblue">282834</colorEnd>
+		<color ifSubset="bgcolor:darkblue">343438</color>
+		<colorEnd ifSubset="bgcolor:darkblue">545458</colorEnd>
 		
 		<color ifSubset="bgcolor:darkpurple">351837</color>
 		<colorEnd ifSubset="bgcolor:darkpurple">0c010c</colorEnd>
@@ -1074,7 +1074,7 @@ originally based on: "carbon" and "Arcade Planet"
             </storyboard>
 		</image>
 		
-	<image name="randomLogo1,randomLogo2,randomLogo3,randomLogo4" extra="static" ifSubset="systemviewbottom:randomlogos, systemviewstyle:randomfanart|simplesprite, systemviewlayout:left|right">
+	<image name="randomLogo1,randomLogo2,randomLogo3,randomLogo4" extra="static" ifSubset="systemviewbottom:randomlogos, systemviewstyle:simplesprite, systemviewlayout:left|right">
 	        <path>{random:marquee}</path>
 			<maxSize>0.20833333 0.15</maxSize>
 			<origin>0.5 0.5</origin>
@@ -1246,9 +1246,12 @@ originally based on: "carbon" and "Arcade Planet"
 		</storyboard>
 	</text>
 	
-	<text name="systemdetails,systemdetails2,systemdetails3" ifSubset="systemviewbottom:systemdetails" extra="static">
+	<text name="systemdetails,systemdetails2,systemdetails3" extra="static">
         <alignment>left</alignment>
 		<alignment ifSubset="systemviewlayout:center">center</alignment>
+		<visible>false</visible>
+		<visible ifSubset="systemviewbottom:systemdetails, systemviewlayout:left|right">true</visible>
+		<visible ifSubset="systemviewlayout:center">true</visible>
 		<verticalAlignment>top</verticalAlignment>
         <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
         <fontSize>0.024</fontSize>
