@@ -1270,8 +1270,8 @@ Dernière partie : {binding:lastPlayedDate}</text>
 Jugados : {binding:gamesPlayed}
 El más jugado : {binding:mostPlayed}
 Última partida : {binding:lastPlayedDate}</text>
-        <pos ifSubset="systemviewlayout:left">0.6 0.795</pos>
-		<pos ifSubset="systemviewlayout:right">0.25 0.795</pos>
+        <pos ifSubset="systemviewlayout:left">0.58 0.762</pos>
+		<pos ifSubset="systemviewlayout:right">0.25 0.762</pos>
 		<pos ifSubset="systemviewlayout:center">0.64 0.758</pos>
         <size>0.45 0.28</size>
 		<size ifSubset="systemviewlayout:center">0.35 0.28</size>
@@ -1280,7 +1280,7 @@ El más jugado : {binding:mostPlayed}
 	  <text name="systemdetails2">
        <text>${system.fullName}</text>
         <fontSize>0.03</fontSize>
-        <pos ifSubset="systemviewlayout:left">0.38 0.754</pos>
+        <pos ifSubset="systemviewlayout:left">0.36 0.754</pos>
 		<pos ifSubset="systemviewlayout:right">0.02 0.754</pos>
 		<pos ifSubset="systemviewlayout:center">0.02 0.758</pos>
         <size>0.5 0.28</size>
@@ -1301,7 +1301,7 @@ Nombre de Jeux : {binding:total}</text>
 ${system.hardwareType}
 ${system.releaseYearOrNull}
 Numero de juegos : {binding:total}</text>
-        <pos ifSubset="systemviewlayout:left">0.38 0.795</pos>
+        <pos ifSubset="systemviewlayout:left">0.36 0.795</pos>
 		<pos ifSubset="systemviewlayout:right|center">0.02 0.795</pos>
         <size>0.32 0.28</size>
       </text>
