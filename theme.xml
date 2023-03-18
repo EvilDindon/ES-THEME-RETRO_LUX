@@ -383,14 +383,14 @@ originally based on: "carbon" and "Arcade Planet"
 		<color ifSubset="bgcolor:grey">343438</color>
 		<colorEnd ifSubset="bgcolor:grey">545458</colorEnd>
 		
-		<color ifSubset="bgcolor:purple">351837</color>
-		<colorEnd ifSubset="bgcolor:purple">0c010c</colorEnd>
+		<color ifSubset="bgcolor:purple">352835</color>
+		<colorEnd ifSubset="bgcolor:purple">554855</colorEnd>
 			
-		<color ifSubset="bgcolor:blue">223322</color>
-		<colorEnd ifSubset="bgcolor:blue">030d03</colorEnd>
+		<color ifSubset="bgcolor:blue">202834</color>
+		<colorEnd ifSubset="bgcolor:blue">104854</colorEnd>
 		
-		<color ifSubset="bgcolor:darkgrey">333333</color>
-		<colorEnd ifSubset="bgcolor:darkgrey">0c0c0c</colorEnd>
+		<color ifSubset="bgcolor:darkgrey">0c0c0c</color>
+		<colorEnd ifSubset="bgcolor:darkgrey">333333</colorEnd>
 	
 	</image>
 	
@@ -615,8 +615,8 @@ originally based on: "carbon" and "Arcade Planet"
 		<path>./_art/assets/reflet.png</path>
 		<size>0.0546875 0</size>
 		<pos>0.965625 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left">0.3978125 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:center">0.679166 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0.3552083 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:center">0.66302083 0.403</pos>
 		<origin>0.5 0.5</origin>
 		<zIndex>62</zIndex>
 		<opacity>0</opacity>
@@ -638,8 +638,8 @@ originally based on: "carbon" and "Arcade Planet"
 		<path>./_art/assets/reflet.png</path>
 		<size>0.041015625 0</size>
 		<x>0.9692708</x>
-		<x ifSubset="systemviewlayout:left">0.3447916</x>
-		<x ifSubset="systemviewlayout:center">0.64322916</x>
+		<x ifSubset="systemviewlayout:left">0.303125</x>
+		<x ifSubset="systemviewlayout:center">0.6265625</x>
 		<origin>0.5 0.5</origin>
 		<zIndex>62</zIndex>
 		<color>FFFFFFaa</color>
@@ -648,6 +648,7 @@ originally based on: "carbon" and "Arcade Planet"
 
 		<image name="refletssecondaires1">
 		<y>0.340111</y>
+		<y ifSubset="systemviewlayout:center">0.13433</y>
 		<storyboard repeatAt="4000">
 			<animation property="opacity" from="0" to="0" begin="" duration="4000" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="4000" mode="Linear"/>
@@ -662,6 +663,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="refletssecondaires2">
 		<y>0.06979259</y>
+		<y ifSubset="systemviewlayout:center">0.269518</y>
 		<storyboard repeatAt="5000">
 			<animation property="opacity" from="0" to="0" begin="" duration="5000" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="5000" mode="Linear"/>
@@ -676,6 +678,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="refletssecondaires3">
 		<y>0.6086296</y>
+		<y ifSubset="systemviewlayout:center">0.538037</y>
 		<storyboard repeatAt="5250">
 			<animation property="opacity" from="0" to="0" begin="" duration="5250" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="5250" mode="Linear"/>
@@ -690,6 +693,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="refletssecondaires4">
 		<y>0.74288888</y>
+		<y ifSubset="systemviewlayout:center">0.8084074</y>
 		<storyboard repeatAt="8250">
 			<animation property="opacity" from="0" to="0" begin="" duration="8250" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="8250" mode="Linear"/>
@@ -704,6 +708,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
    <image name="refletssecondaires5">
 		<y>0.878074</y>
+		<y ifSubset="systemviewlayout:center">0.672296</y>
 		<storyboard repeatAt="17750">
 			<animation property="opacity" from="0" to="0" begin="" duration="17750" mode="Linear"/>
 			<animation property="scale" from="0" to="0" begin="" duration="17750" mode="Linear"/>
@@ -716,7 +721,7 @@ originally based on: "carbon" and "Arcade Planet"
 		</storyboard>
 	</image>
 	
-	   <image name="refletssecondaires6">
+	   <image name="refletssecondaires6" ifSubset="systemviewlayout:left|right">
 		<y>0.205</y>
 		<storyboard repeatAt="12550">
 			<animation property="opacity" from="0" to="0" begin="" duration="12550" mode="Linear"/>
