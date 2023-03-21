@@ -377,7 +377,7 @@ originally based on: "carbon" and "Arcade Planet"
 		  <zIndex>55</zIndex>
 	</image>
 
-	<image name="bg,wheelbg,wheelbgfade" extra="static">
+	<!-- <image name="bg,wheelbg,wheelbgfade" extra="static">
 		<linearSmooth>false</linearSmooth>
 		
 		<color ifSubset="bgcolor:grey">343438</color>
@@ -392,17 +392,21 @@ originally based on: "carbon" and "Arcade Planet"
 		<color ifSubset="bgcolor:darkgrey">0c0c0c</color>
 		<colorEnd ifSubset="bgcolor:darkgrey">333333</colorEnd>
 	
-	</image>
+	</image> -->
 	
-    <image name="bg">
+    <image name="bg" extra="true">
       <pos>0 0</pos>
-      <size>1 1</size>
+      <size>0 1</size>
       <origin>0 0</origin>
-	  <path>./_art/assets/white.png</path>
-      <zIndex>0</zIndex>	  
+	  <flipX>false</flipX>
+	  <path>./_art/assets/wp3686791.jpg</path>
+      <zIndex>0</zIndex>
+	  <opacity>0.75</opacity>
+	  <saturation>0.5</saturation>
+	  <linearSmooth>true</linearSmooth>
     </image>
 	
-	<image name="wheelbg" ifSubset="systemviewlayout:left|right">
+	<!-- <image name="wheelbg" ifSubset="systemviewlayout:left|right">
 		  <path>./_art/assets/white.png</path>
 		  <visible ifSubset="systemviewstyle:simplesprite|randomboxart, systemviewbottom:systemdetails">false</visible>
 		  <origin>0 0</origin>
@@ -422,9 +426,9 @@ originally based on: "carbon" and "Arcade Planet"
 		  <pos ifSubset="systemviewlayout:right">0.7 0</pos>
 		  <flipX ifSubset="systemviewlayout:left">true</flipX>
 		  <zIndex>49</zIndex>
-	</image>
+	</image> -->
  
- 	<image name="electronic" extra="static">
+ 	<!-- <image name="electronic" extra="static">
       <pos>0.38 0.816</pos>
 	  <pos if="${screen.height} == 720">0.416 0.6</pos>
       <size>3 4</size>
@@ -437,7 +441,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <colorEnd>FFFFFF10</colorEnd>
 	  <opacity>0.6</opacity>
       <zIndex>0</zIndex>	  
-    </image>
+    </image> -->
 	
   <text name="logoText">
 		<fontPath>./_art/fonts/Eurostile LT Bold.ttf</fontPath>
