@@ -91,9 +91,6 @@ originally based on: "carbon" and "Arcade Planet"
 	<green>green</green>
     <green lang="fr">vert</green>
 	
-	<grey>grey</grey>
-    <grey lang="fr">gris</grey>
-	
     <yellow>yellow</yellow>
     <yellow lang="fr">jaune</yellow>
 
@@ -148,8 +145,8 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<!-- Subset options for System view style -->
 	<subset name="systemviewstyle" displayName="${systemviewstyle}">
-		<include ifSubset="systemviewlayout:right|left" name="randomfanart" displayName="${randomfanart}"/>
 		<include name="randomboxart" displayName="${randomboxart}"/>
+		<include name="randomfanart" displayName="${randomfanart}"/>
 	</subset>
 
 		<!-- Subset for Selected Border Color -->
@@ -162,10 +159,10 @@ originally based on: "carbon" and "Arcade Planet"
 
 <!-- Subset for System view Background Color Color -->
 	<subset name="bgcolor" displayName="${bgcolor}">
-		<include name="grey" displayName="${grey}"/>
-		<include name="purple" displayName="${purple}"/>
-		<include name="blue" displayName="${blue}"/>
 		<include name="darkgrey" displayName="${darkgrey}"/>
+		<include name="blue" displayName="${blue}"/>
+		<include name="purple" displayName="${purple}"/>
+
 	</subset>
 	
 	<!-- Subset options for Neo Geo Artwork Style -->
@@ -339,9 +336,6 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="bg,wheelbg,wheelbgfade" extra="static">
 		<linearSmooth>false</linearSmooth>
 		
-		<color ifSubset="bgcolor:grey">343438</color>
-		<colorEnd ifSubset="bgcolor:grey">545458</colorEnd>
-		
 		<color ifSubset="bgcolor:purple">352835</color>
 		<colorEnd ifSubset="bgcolor:purple">554855</colorEnd>
 			
@@ -388,7 +382,6 @@ originally based on: "carbon" and "Arcade Planet"
  	<image name="bgcontroller" extra="static">
       <pos>0 0</pos>
       <maxSize>0.72 0.75</maxSize>
-	  <scale>1</scale>
       <origin>0 0</origin>
 	  <tile>false</tile>
 	  <path>./_art/controllersFILIFORM/${system.theme}.svg</path>
@@ -427,11 +420,11 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="-0.048" to="-0.048" begin="6250" duration="8750" mode="Linear"/>
 	  </storyboard>
 	  
-	  <storyboard event="activate">
-			<animation property="color" from="FFFFFF" to="FFFFFF" begin="" duration="" mode="Linear"/>
-			<animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/>
-			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>
-	  </storyboard>
+	  <!-- <storyboard event="activate"> -->
+			<!-- <animation property="color" from="FFFFFF" to="FFFFFF" begin="" duration="" mode="Linear"/> -->
+			<!-- <animation property="saturation" from="1" to="1" begin="" duration="" mode="Linear"/> -->
+			<!-- <animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/> -->
+	  <!-- </storyboard> -->
 
 	  <storyboard event="activate" ifSubset="systemviewlayout:right">
 			<animation property="color" from="FFFFFFff" to="00000000" begin="200" duration="" mode="Linear"/>			
