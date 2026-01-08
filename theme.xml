@@ -307,10 +307,14 @@ originally based on: "carbon" and "Arcade Planet"
 	  <pos>0.01 0.97</pos>
 	  <size>1 0.01</size>
 	  <origin>0 0.5</origin>
-	  <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
+	  <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
+	  <iconA>:/help/buttons_east.svg</iconA>
+      <iconB>:/help/buttons_south.svg</iconB>
+      <iconX>:/help/buttons_north.svg</iconX>
+      <iconY>:/help/buttons_west.svg</iconY>
 	  <fontSize>0.034</fontSize>
 	  <textColor>777777</textColor>
-      <iconColor>888888</iconColor>
+      <iconColor>BBBBBB</iconColor>
     </helpsystem>
 
 	<image name="bottom bar" extra="static">
@@ -380,15 +384,25 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
  
  	<image name="bgcontroller" extra="static">
-      <pos>0 0</pos>
-      <maxSize>0.72 0.75</maxSize>
+      <pos>-0.03 0</pos>
+      <size>0.72 0</size>
       <origin>0 0</origin>
 	  <tile>false</tile>
 	  <path>./_art/controllersFILIFORM/${system.theme}.svg</path>
-	  <color>FFFFFFFF</color>
-	  <opacity>0.125</opacity>
-      <zIndex>0</zIndex>	  
+	  <color>FFFFFF12</color>
+      <zIndex>0</zIndex>
+	  <rotation>338</rotation>	  
 	  <linearSmooth>true</linearSmooth>
+    </image>
+	
+	<image name="infobox" extra="static">
+      <pos>0.4703125 0.84</pos>
+      <size>0.45833333 0</size>
+      <origin>0.5 0.5</origin>
+	  <path>./_art/assets/infobox.png</path>
+      <zIndex>4</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
     </image>
 	
 	<image name="logo">
@@ -431,31 +445,6 @@ originally based on: "carbon" and "Arcade Planet"
 	  <systemInfoDelay>1500</systemInfoDelay>
 	  <zIndex>60</zIndex>
     </carousel>
-
-	<image name="nakedwheel" extra="static">
-		<size>0.35 0</size>
-		<linearSmooth>true</linearSmooth>
-	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
-		<origin>0.5 0.5</origin>
-		<pos>0.81885 0.471296295</pos>
-		<path>./_art/assets/underconstruction.png</path>
-		<path>./_art/nakedWheel/${system.theme}.png</path>
-		 <path>./_art/nakedWheel/${system.theme}-${lang}.png</path>
-		 <path ifSubset="artworkregion:US">./_art/nakedWheel/US/${system.theme}.png</path>
-		 <path ifSubset="neogeostyle:mvs">./_art/nakedWheel/SPECIAL/${system.theme}.png</path>
-		<color ifSubset="selectedBorderColor:gold">D8C844</color>
-		<color ifSubset="selectedBorderColor:red">FF4444</color>
-		<color ifSubset="selectedBorderColor:blue">44C0D8</color>
-		<zIndex>61</zIndex>
-		<opacity>0</opacity>
-		<storyboard repeatAt="5000">
-			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
-			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
-		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
-			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
-			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
-		</storyboard>
-	</image>
 	
 	<image name="whiteLogo" extra="static">
 		<path>./_art/assets/underconstruction.png</path>
@@ -467,7 +456,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<linearSmooth>true</linearSmooth>
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.8178 0.47</pos>
+		<pos>0.8185 0.47</pos>
 		<zIndex>62</zIndex>
 		<opacity>0</opacity>
 		<storyboard>
@@ -489,7 +478,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<linearSmooth>true</linearSmooth>
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.8178 0.47</pos>
+		<pos>0.8185 0.47</pos>
 		<zIndex>63</zIndex>
 		<opacity>0</opacity>
 		<storyboard repeatAt="5000">
@@ -503,8 +492,32 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="-0.02604167" to="-0.02604167" begin="6250" duration="8750" mode="Linear"/>
 		</storyboard>
 	</image>
-	
 
+	<image name="nakedwheel" extra="static">
+		<size>0.35 0</size>
+		<linearSmooth>true</linearSmooth>
+	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
+		<origin>0.5 0.5</origin>
+		<pos>0.81885 0.471296295</pos>
+		<path>./_art/assets/underconstruction.png</path>
+		<path>./_art/nakedWheel/${system.theme}.png</path>
+		 <path>./_art/nakedWheel/${system.theme}-${lang}.png</path>
+		 <path ifSubset="artworkregion:US">./_art/nakedWheel/US/${system.theme}.png</path>
+		 <path ifSubset="neogeostyle:mvs">./_art/nakedWheel/SPECIAL/${system.theme}.png</path>
+		<color ifSubset="selectedBorderColor:gold">D8C844</color>
+		<color ifSubset="selectedBorderColor:red">FF4444</color>
+		<color ifSubset="selectedBorderColor:blue">44C0D8</color>
+		<zIndex>61</zIndex>
+		<opacity>0</opacity>
+		<storyboard repeatAt="5000">
+			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
+			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/> -->
+		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
+			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
+			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
+		</storyboard>
+	</image>	
+	
 	<image name="reflet" extra="static">
 		<path>./_art/assets/reflet.png</path>
 		<size>0.0546875 0</size>
@@ -636,7 +649,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<storyboard ifSubset="systemviewlayout:right" repeatAt="1500">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
 			<animation property="scale" from="1" to="3" begin="500" duration="1000" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="0" to="-0.58" begin="500" duration="800" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="-0.57" begin="500" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="500" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 			<animation property="offsetY" from ="0" to="0.3" begin="1300" duration="200" mode="EaseOutCubic"/>
 			<animation property="scale" from="3" to="2" begin="6250" duration="125" mode="Linear"/>
@@ -659,11 +672,11 @@ originally based on: "carbon" and "Arcade Planet"
 			<path>{random:thumbnail}</path>
 			<path>{random:fanart}</path>
 			<linearSmooth>true</linearSmooth>
-			<size>0.723 0</size>
+			<size>0.95 0</size>
 			<scale>1</scale>
 			<opacity>1</opacity>
 			<origin>0.5 0.5</origin>
-			<pos>0.3615 0.383</pos>
+			<pos>0.3615 0.47</pos>
  	        <pos ifSubset="systemviewlayout:left">0.65 0.383</pos>
 			<saturation>0.66</saturation>
      		<color>D8D8D8</color>
@@ -686,7 +699,7 @@ originally based on: "carbon" and "Arcade Planet"
 
 	<image name="randombox1,randombox2" extra="static" ifSubset="systemviewstyle:randomboxart">
 			<linearSmooth>true</linearSmooth>
-            <maxSize>0.37 0.53</maxSize>
+            <maxSize>0.37 0.54</maxSize>
 			<path>{random:thumbnail}</path>
 			<color>E0E0E0</color>
 			<origin>0.5 0.5</origin>
@@ -728,7 +741,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <visible>false</visible>
 	 </text>
 	
-	<text name="systemdetails,systemdetails2,systemdetails3" extra="static">
+	<text name="systemdetails,systemdetails2" extra="static">
         <alignment>left</alignment>
 		<verticalAlignment>top</verticalAlignment>
         <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
@@ -740,25 +753,7 @@ originally based on: "carbon" and "Arcade Planet"
 		 <color>C0C0C0FF</color>
 	</text>
 	  
-	<!-- <text name="systemdetails"> -->
-       <!-- <text>Favorites : {binding:favorites} -->
-<!-- Games played : {binding:gamesPlayed} -->
-<!-- Most played : {binding:mostPlayed} -->
-<!-- Last played : {binding:lastPlayedDate}</text> -->
-        <!-- <text lang="fr">Favoris : {binding:favorites} -->
-<!-- Jeux joués : {binding:gamesPlayed} -->
-<!-- Le plus joué : {binding:mostPlayed} -->
-<!-- Dernière partie : {binding:lastPlayedDate}</text> -->
-        <!-- <text lang="es">Favoritos : {binding:favorites} -->
-<!-- Jugados : {binding:gamesPlayed} -->
-<!-- El más jugado : {binding:mostPlayed} -->
-<!-- Última partida : {binding:lastPlayedDate}</text> -->
-        <!-- <pos ifSubset="systemviewlayout:left">0.58 0.795</pos> -->
-		<!-- <pos ifSubset="systemviewlayout:right">0.25 0.795</pos> -->
-        <!-- <size>0.45 0.28</size> -->
-      <!-- </text> -->
-	  
-	  <text name="systemdetails2">
+	  <text name="systemdetails">
        <text>${system.fullName}</text>
 	    <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
         <fontSize>0.03</fontSize>
@@ -768,28 +763,48 @@ originally based on: "carbon" and "Arcade Planet"
 		<color>00BBFF</color>
 	</text>
 	  
-	  <text name="systemdetails3">
-       <text>${system.manufacturer}
-${system.hardwareType}
-${system.releaseYearOrNull}
+	  <text name="systemdetails2">
+       <text>
+${system.hardwareType} ${system.releaseYearOrNull}
 Games : {binding:total}</text>
-		<text lang="fr">${system.manufacturer}
-${system.hardwareType}
-${system.releaseYearOrNull}
+		<text lang="fr">
+${system.hardwareType} ${system.releaseYearOrNull}
 Nombre de Jeux : {binding:total}</text>
-		<text lang="es">${system.manufacturer}
-${system.hardwareType}
-${system.releaseYearOrNull}
+		<text lang="es">
+${system.hardwareType} ${system.releaseYearOrNull}
 Numero de juegos : {binding:total}</text>
-        <pos ifSubset="systemviewlayout:left">0.36 0.795</pos>
-		<pos ifSubset="systemviewlayout:right">0.255 0.795</pos>
+        <pos ifSubset="systemviewlayout:left">0.36 0.8025</pos>
+		<pos ifSubset="systemviewlayout:right">0.255 0.8025</pos>
         <size>0.32 0.28</size>
+		<storyboard>
+		  <animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+		  <animation property="opacity" from="0" to="1" begin="2000" duration="200" mode="Linear"/>
+		 </storyboard>
       </text>
+	  
+	<image name="manfLogo" extra ="static">
+		<path>./_art/manfLogos/${system.manufacturer}.png</path>
+		<path>./_art/manfLogos/${system.manufacturer}.svg</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0 0.5</origin>
+		<pos>0.26 0.47</pos>
+		<maxSize>0.255 0.135</maxSize>
+		<color>AAAAAAee</color>
+		<saturation>0</saturation>
+		<zIndex>100</zIndex>
+		<storyboard>
+		  <animation property="scale" from="0" to="0" begin="" duration="1300" mode="Linear"/>
+		  <animation property="scale" from="0" to="1" begin="1300" duration="200" mode="Linear"/>
+		  <animation property="scale" from="1" to="0.333333" begin="2000" duration="200" mode="Linear"/>
+		  <animation property="offsetX" from="0" to="-0.005" begin="2000" duration="200" mode="Linear"/>
+		  <animation property="offsetY" from="0" to="0.428" begin="2000" duration="200" mode="Linear"/>
+	  </storyboard>
+	</image>
 
 	<image name="arrowup" extra="static">
       <origin>0.5 0.5</origin>
 	  <size>0.031 0</size>
-	  <pos>0.7 0.375</pos>
+	  <pos>0.7 0.398</pos>
       <pos ifSubset="systemviewlayout:left">0.34 0.4</pos>   
 	  <color>A0A0AAff</color>
 	  <path>./_art/assets/arrowup.png</path>
@@ -803,7 +818,7 @@ Numero de juegos : {binding:total}</text>
 	<image name="arrowdown" extra="static">
       <origin>0.5 0.5</origin>
 	  <size>0.031 0</size>
-	  <pos>0.7 0.59</pos>
+	  <pos>0.7 0.567</pos>
 	  <pos ifSubset="systemviewlayout:left" >0.34 0.564</pos>
 	  <color>A0A0AAff</color>
 	  <path>./_art/assets/arrowdown.png</path>
@@ -827,7 +842,7 @@ Numero de juegos : {binding:total}</text>
 	  <pos>0.01 0.97</pos>
 	  <size>1 0.01</size>
 	  <origin>0 0.5</origin>
-	  <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
+	  <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
 	  <fontSize>0.034</fontSize>
 	  <textColor>777777</textColor>
       <iconColor>888888</iconColor>
