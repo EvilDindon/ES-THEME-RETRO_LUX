@@ -763,14 +763,14 @@ Numero de juegos : {binding:total}</text>
       </text>
 	  
 	 <text name="systemdetails3">
-	         <fontSize>0.0208</fontSize>
+	         <fontSize>0.0206</fontSize>
        <text>Favorites : {binding:favorites}
 Save States : ${system.savestates}
 Cheevos : ${system.cheevos}
 Net Play : ${system.netplay}
 	</text>
                 <pos ifSubset="systemviewlayout:left">0.36 0.8025</pos>
-		<pos ifSubset="systemviewlayout:right">0.476 0.8025</pos>
+		<pos ifSubset="systemviewlayout:right">0.478 0.8025</pos>
         <size>0.22 0.28</size>
 		<storyboard>
 		  <animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
