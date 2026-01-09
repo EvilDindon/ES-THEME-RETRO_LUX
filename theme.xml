@@ -263,8 +263,8 @@ originally based on: "carbon" and "Arcade Planet"
     
 	<text name="clock">
       <color>777777</color>
-	  <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
-      <fontSize>0.034</fontSize>
+	  <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
+      <fontSize>0.037</fontSize>
       <pos>0.99 0.97</pos>
 	  <origin>1 0.5</origin>
       <size>0.09 0.058</size>
@@ -312,7 +312,7 @@ originally based on: "carbon" and "Arcade Planet"
       <iconB>:/help/buttons_south.svg</iconB>
       <iconX>:/help/buttons_north.svg</iconX>
       <iconY>:/help/buttons_west.svg</iconY>
-	  <fontSize>0.034</fontSize>
+	  <fontSize>0.037</fontSize>
 	  <textColor>777777</textColor>
       <iconColor>BBBBBB</iconColor>
     </helpsystem>
@@ -337,52 +337,28 @@ originally based on: "carbon" and "Arcade Planet"
 		  <zIndex>55</zIndex>
 	</image>
 
-	<image name="bg,wheelbg,wheelbgfade" extra="static">
-		<linearSmooth>false</linearSmooth>
-		
-		<color ifSubset="bgcolor:purple">352835</color>
-		<colorEnd ifSubset="bgcolor:purple">554855</colorEnd>
-			
-		<color ifSubset="bgcolor:blue">202834</color>
-		<colorEnd ifSubset="bgcolor:blue">104854</colorEnd>
-		
-		<color ifSubset="bgcolor:darkgrey">444444</color>
-		<colorEnd ifSubset="bgcolor:darkgrey">000000</colorEnd>
-	
-	</image>
-	
-    <image name="bg" extra="true">
+    <image name="backgound" extra="true">
       <pos>0 0</pos>
-      <size>1 1</size>
+      <size>0.9 1</size>
       <origin>0 0</origin>
-	  <flipX>false</flipX>
-	  <path>./_art/assets/white.png</path>
+	  <path>./_art/assets/graphite.jpg</path>
       <zIndex>0</zIndex>
-	  <opacity>1</opacity>
-	  <saturation>1</saturation>
+		<color ifSubset="bgcolor:purple">FFAAFF</color>
+		<color ifSubset="bgcolor:blue">E0EEFF</color>
+		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
 	  <linearSmooth>false</linearSmooth>
     </image>
 	
-	<image name="wheelbg">
-		  <path>./_art/assets/white.png</path>
-		  <origin>0 0</origin>
-		  <size>0.3 1</size>
-		  <pos>0 0</pos>
-		  <pos ifSubset="systemviewlayout:right">0.723 0</pos>
+	<image name="wheelbg" extra="true">
+		  <path>./_art/assets/wheelbg.png</path>
+		  <origin>0.5 0.5</origin>
+		  <size>0.353125 0</size>
+		  <pos>0.861979 0.471296</pos>
+		  <pos ifSubset="systemviewlayout:right">0.861979 0.471296</pos>
+		  <color>e0e0e0ff</color>
 		  <zIndex>48</zIndex>
 	</image>
 	
-	<image name="wheelbgfade">
-		  <path>./_art/assets/wheelbgfade.png</path>
-		  <origin>0 0</origin>
-		  <origin ifSubset="systemviewlayout:right">1 0</origin>
-		  <size>0.02 1</size>
-		  <pos>0.3 0</pos>
-		  <pos ifSubset="systemviewlayout:right">0.723 0</pos>
-		  <flipX ifSubset="systemviewlayout:left">true</flipX>
-		  <zIndex>49</zIndex>
-	</image>
- 
  	<image name="bgcontroller" extra="static">
       <pos>-0.03 0</pos>
       <size>0.72 0</size>
@@ -745,7 +721,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <visible>false</visible>
 	 </text>
 	
-	<text name="systemdetails,systemdetails2" extra="static">
+	<text name="systemdetails,systemdetails2,systemdetails3" extra="static">
         <alignment>left</alignment>
 		<verticalAlignment>top</verticalAlignment>
         <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
@@ -779,7 +755,23 @@ ${system.hardwareType} ${system.releaseYearOrNull}
 Numero de juegos : {binding:total}</text>
         <pos ifSubset="systemviewlayout:left">0.36 0.8025</pos>
 		<pos ifSubset="systemviewlayout:right">0.255 0.8025</pos>
-        <size>0.32 0.28</size>
+        <size>0.22 0.28</size>
+		<storyboard>
+		  <animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+		  <animation property="opacity" from="0" to="1" begin="2000" duration="200" mode="Linear"/>
+		 </storyboard>
+      </text>
+	  
+	 <text name="systemdetails3">
+	         <fontSize>0.0208</fontSize>
+       <text>Favorites : {binding:favorites}
+Save States : ${system.savestates}
+Cheevos : ${system.cheevos}
+Net Play : ${system.netplay}
+	</text>
+                <pos ifSubset="systemviewlayout:left">0.36 0.8025</pos>
+		<pos ifSubset="systemviewlayout:right">0.476 0.8025</pos>
+        <size>0.22 0.28</size>
 		<storyboard>
 		  <animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
 		  <animation property="opacity" from="0" to="1" begin="2000" duration="200" mode="Linear"/>
