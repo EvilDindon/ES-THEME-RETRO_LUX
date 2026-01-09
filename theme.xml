@@ -408,7 +408,8 @@ originally based on: "carbon" and "Arcade Planet"
 	<image name="logo">
 		 <color>C0C0C0ff</color>
 		 <saturation>0.75</saturation>
-	     <linearSmooth>true</linearSmooth>
+		 <linearSmooth>true</linearSmooth>
+	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
 	     <path>./_art/assets/underconstruction.png</path>
      	 <path>./_art/wheel/${system.theme}.png</path>
 		 <path>./_art/wheel/${system.theme}-${lang}.png</path>
@@ -453,10 +454,11 @@ originally based on: "carbon" and "Arcade Planet"
 		 <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/SPECIAL/${system.theme}.png</path>
 		 <size>0.25104166 0.14444444</size>
-		<linearSmooth>true</linearSmooth>
+		 <linearSmooth>true</linearSmooth>
+	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.8185 0.47</pos>
+		<pos>0.8185 0.471</pos>
 		<zIndex>62</zIndex>
 		<opacity>0</opacity>
 		<storyboard>
@@ -475,10 +477,11 @@ originally based on: "carbon" and "Arcade Planet"
 		 <path ifSubset="artworkregion:US">./_art/colorLogos/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/colorLogos/SPECIAL/${system.theme}.png</path>
 		 <size>0.25104166 0.1444444</size>
-		<linearSmooth>true</linearSmooth>
+		 <linearSmooth>true</linearSmooth>
+	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.8185 0.47</pos>
+		<pos>0.8185 0.471</pos>
 		<zIndex>63</zIndex>
 		<opacity>0</opacity>
 		<storyboard repeatAt="5000">
@@ -495,7 +498,8 @@ originally based on: "carbon" and "Arcade Planet"
 
 	<image name="nakedwheel" extra="static">
 		<size>0.35 0</size>
-		<linearSmooth>true</linearSmooth>
+		 <linearSmooth>true</linearSmooth>
+	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
 		<pos>0.81885 0.471296295</pos>
