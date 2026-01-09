@@ -184,8 +184,8 @@ originally based on: "carbon" and "Arcade Planet"
   
     <menuText name="menutitle">
       <fontPath>./_art/fonts/EurostileExtendedBlack.ttf</fontPath>
-      <fontSize>0.04</fontSize>
-      <color>767296</color>
+      <fontSize>0.035</fontSize>
+      <color>FFFFFFff</color>
     </menuText>
 	
     <menuText name="menufooter">
@@ -196,11 +196,11 @@ originally based on: "carbon" and "Arcade Planet"
 	
     <menuText name="menutext">
       <fontPath>./_art/fonts/Eurostib.TTF</fontPath>
-      <fontSize>0.032</fontSize>
+      <fontSize>0.031</fontSize>
       <color>969696</color>
       <separatorColor>323232FF</separatorColor>
-      <selectorColor>401010</selectorColor>
-	  <selectorColorEnd>401010</selectorColorEnd>
+      <selectorColor>112838ff</selectorColor>
+	  <selectorColorEnd>112838ff</selectorColorEnd>
       <selectedColor>FFEEFF</selectedColor>
 	  <selectorOffsetY>0.01</selectorOffsetY>
       <selectorGradientType>vertical</selectorGradientType>
@@ -214,10 +214,10 @@ originally based on: "carbon" and "Arcade Planet"
 	
     <menuGroup name="menugroup">
       <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
-      <fontSize>0.036</fontSize>
-      <color>767296</color>
-      <separatorColor>BD4747</separatorColor>    
-      <backgroundColor>70202020</backgroundColor>
+      <fontSize>0.033</fontSize>
+      <color>FFFFFFff</color>
+      <separatorColor>112838ff</separatorColor>    
+      <backgroundColor>11283844</backgroundColor>
       <lineSpacing>2.5</lineSpacing>
     </menuGroup>
 	
@@ -344,7 +344,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <path>./_art/assets/graphite.jpg</path>
       <zIndex>0</zIndex>
 		<color ifSubset="bgcolor:purple">FFAAFF</color>
-		<color ifSubset="bgcolor:blue">E0EEFF</color>
+		<color ifSubset="bgcolor:blue">B0D8FF</color>
 		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
 	  <linearSmooth>false</linearSmooth>
     </image>
@@ -357,6 +357,18 @@ originally based on: "carbon" and "Arcade Planet"
 		  <pos ifSubset="systemviewlayout:right">0.861979 0.471296</pos>
 		  <color>e0e0e0ff</color>
 		  <zIndex>48</zIndex>
+	</image>
+	
+		<image name="wheelbgelectronic" extra="true">
+		  <path>./_art/assets/electronic.png</path>
+		  <origin>0.5 0.5</origin>
+		  <size>0.264 2.8</size>
+		  <tile>true</tile>
+		  <scale>1</scale>
+		  <pos>0.861979 0.53</pos>
+		  <pos ifSubset="systemviewlayout:right">0.861979 0.497</pos>
+		  <color>00000060</color>
+		  <zIndex>49</zIndex>
 	</image>
 	
  	<image name="bgcontroller" extra="static">
