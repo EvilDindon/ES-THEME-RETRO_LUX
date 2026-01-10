@@ -199,7 +199,7 @@ originally based on: "carbon" and "Arcade Planet"
       <fontSize>0.031</fontSize>
       <color>969696</color>
       <separatorColor>323232FF</separatorColor>
-      <selectorColor>112838ff</selectorColor>
+      <selectorColor>113834ff</selectorColor>
 	  <selectorColorEnd>112838ff</selectorColorEnd>
       <selectedColor>FFEEFF</selectedColor>
 	  <selectorOffsetY>0.01</selectorOffsetY>
@@ -214,10 +214,10 @@ originally based on: "carbon" and "Arcade Planet"
 	
     <menuGroup name="menugroup">
       <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
-      <fontSize>0.033</fontSize>
+      <fontSize>0.031</fontSize>
       <color>FFFFFFff</color>
       <separatorColor>112838ff</separatorColor>    
-      <backgroundColor>11283844</backgroundColor>
+      <backgroundColor>11283868</backgroundColor>
       <lineSpacing>2.5</lineSpacing>
     </menuGroup>
 	
@@ -265,7 +265,7 @@ originally based on: "carbon" and "Arcade Planet"
       <color>777777</color>
 	  <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
       <fontSize>0.037</fontSize>
-      <pos>0.99 0.97</pos>
+      <pos>0.99 0.972</pos>
 	  <origin>1 0.5</origin>
       <size>0.09 0.058</size>
       <alignment>right</alignment>
@@ -304,7 +304,7 @@ originally based on: "carbon" and "Arcade Planet"
   <view name="system">
   
   <helpsystem name="help">
-	  <pos>0.01 0.97</pos>
+	  <pos>0.01 0.972</pos>
 	  <size>1 0.01</size>
 	  <origin>0 0.5</origin>
 	  <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
