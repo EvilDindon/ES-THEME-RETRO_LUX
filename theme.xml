@@ -199,8 +199,8 @@ originally based on: "carbon" and "Arcade Planet"
       <fontSize>0.031</fontSize>
       <color>969696</color>
       <separatorColor>323232FF</separatorColor>
-      <selectorColor>113834ff</selectorColor>
-	  <selectorColorEnd>112838ff</selectorColorEnd>
+      <selectorColor>112838ee</selectorColor>
+	  <selectorColorEnd>112838ee</selectorColorEnd>
       <selectedColor>FFEEFF</selectedColor>
 	  <selectorOffsetY>0.01</selectorOffsetY>
       <selectorGradientType>vertical</selectorGradientType>
@@ -214,10 +214,10 @@ originally based on: "carbon" and "Arcade Planet"
 	
     <menuGroup name="menugroup">
       <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
-      <fontSize>0.031</fontSize>
+      <fontSize>0.03</fontSize>
       <color>FFFFFFff</color>
       <separatorColor>112838ff</separatorColor>    
-      <backgroundColor>11283868</backgroundColor>
+      <backgroundColor>32323268</backgroundColor>
       <lineSpacing>2.5</lineSpacing>
     </menuGroup>
 	
