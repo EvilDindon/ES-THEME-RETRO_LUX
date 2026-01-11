@@ -353,8 +353,8 @@ originally based on: "carbon" and "Arcade Planet"
 		  <path>./_art/assets/wheelbg.png</path>
 		  <origin>0.5 0.5</origin>
 		  <size>0.353125 0</size>
-		  <pos>0.861979 0.471296</pos>
-		  <pos ifSubset="systemviewlayout:right">0.861979 0.471296</pos>
+		  <pos>0.854979 0.471296</pos>
+		  <pos ifSubset="systemviewlayout:right">0.854979 0.471296</pos>
 		  <color>e8e8e8ff</color>
 		  <zIndex>48</zIndex>
 	</image>
@@ -365,8 +365,8 @@ originally based on: "carbon" and "Arcade Planet"
 		  <size>0.264 2.8</size>
 		  <tile>true</tile>
 		  <scale>1</scale>
-		  <pos>0.861979 0.53</pos>
-		  <pos ifSubset="systemviewlayout:right">0.861979 0.497</pos>
+		  <pos>0.854979 0.53</pos>
+		  <pos ifSubset="systemviewlayout:right">0.854979 0.497</pos>
 		  <color>00000060</color>
 		  <zIndex>49</zIndex>
 	</image>
@@ -384,7 +384,7 @@ originally based on: "carbon" and "Arcade Planet"
     </image>
 	
 	<image name="infobox" extra="static">
-      <pos>0.4703125 0.84</pos>
+      <pos>0.4703125 0.82</pos>
       <size>0.45833333 0</size>
       <origin>0.5 0.5</origin>
 	  <path>./_art/assets/infobox.png</path>
@@ -414,7 +414,7 @@ originally based on: "carbon" and "Arcade Planet"
       <type>vertical</type>
 	  <size>0.42 0.94259259259</size>
 	  <size ifSubset="aspect-ratio:4-3">0.5472222 0.94259259259</size>
-      <pos>0.81 0.471296295</pos>
+      <pos>0.803 0.471296295</pos>
 	  <pos ifSubset="systemviewlayout:left">0.195 0.471296295</pos>
 	  <pos ifSubset="aspect-ratio:4-3">0.7098 0.471296295</pos>
 	  <logoAlignment>right</logoAlignment>
@@ -446,7 +446,7 @@ originally based on: "carbon" and "Arcade Planet"
 	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.8185 0.471</pos>
+		<pos>0.81185 0.471</pos>
 		<zIndex>62</zIndex>
 		<opacity>0</opacity>
 		<storyboard>
@@ -469,7 +469,7 @@ originally based on: "carbon" and "Arcade Planet"
 	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.8185 0.471</pos>
+		<pos>0.81185 0.471</pos>
 		<zIndex>63</zIndex>
 		<opacity>0</opacity>
 		<storyboard repeatAt="5000">
@@ -490,7 +490,7 @@ originally based on: "carbon" and "Arcade Planet"
 	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
-		<pos>0.81885 0.471296295</pos>
+		<pos>0.81185 0.471296295</pos>
 		<path>./_art/assets/underconstruction.png</path>
 		<path>./_art/nakedWheel/${system.theme}.png</path>
 		 <path>./_art/nakedWheel/${system.theme}-${lang}.png</path>
@@ -636,7 +636,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<zIndex>65</zIndex>
 		<linearSmooth>false</linearSmooth>
 		<opacity>0</opacity>
-		<pos>0.691245 0.471296295</pos>
+		<pos>0.6842458 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:left">0.0562 0.471296295</pos>
 		<storyboard ifSubset="systemviewlayout:right" repeatAt="1500">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
@@ -749,8 +749,8 @@ originally based on: "carbon" and "Arcade Planet"
        <text>${system.fullName}</text>
 	    <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
         <fontSize>0.03</fontSize>
-        <pos ifSubset="systemviewlayout:left">0.36 0.754</pos>
-		<pos ifSubset="systemviewlayout:right">0.255 0.754</pos>
+        <pos ifSubset="systemviewlayout:left">0.36 0.734</pos>
+		<pos ifSubset="systemviewlayout:right">0.255 0.734</pos>
         <size>0.5 0.28</size>
 		<color>00BBFF</color>
 	</text>
@@ -765,8 +765,8 @@ Nombre de Jeux : {binding:total}</text>
 		<text lang="es">
 ${system.hardwareType} ${system.releaseYearOrNull}
 Numero de juegos : {binding:total}</text>
-        <pos ifSubset="systemviewlayout:left">0.36 0.8025</pos>
-		<pos ifSubset="systemviewlayout:right">0.255 0.8025</pos>
+        <pos ifSubset="systemviewlayout:left">0.36 0.7825</pos>
+		<pos ifSubset="systemviewlayout:right">0.255 0.7825</pos>
         <size>0.22 0.28</size>
 		<storyboard>
 		  <animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
@@ -781,8 +781,8 @@ Save States : ${system.savestates}
 Cheevos : ${system.cheevos}
 Net Play : ${system.netplay}
 	</text>
-                <pos ifSubset="systemviewlayout:left">0.36 0.8025</pos>
-		<pos ifSubset="systemviewlayout:right">0.478 0.8025</pos>
+                <pos ifSubset="systemviewlayout:left">0.36 0.7825</pos>
+		<pos ifSubset="systemviewlayout:right">0.478 0.7825</pos>
         <size>0.22 0.28</size>
 		<storyboard>
 		  <animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
@@ -795,7 +795,7 @@ Net Play : ${system.netplay}
 		<path>./_art/manfLogos/${system.manufacturer}.svg</path>
 		<linearSmooth>true</linearSmooth>
 		<origin>0 0.5</origin>
-		<pos>0.26 0.47</pos>
+		<pos>0.26 0.45</pos>
 		<maxSize>0.255 0.135</maxSize>
 		<color>AAAAAAee</color>
 		<saturation>0</saturation>
