@@ -199,7 +199,7 @@ originally based on: "carbon" and "Arcade Planet"
       <fontSize>0.031</fontSize>
       <color>969696</color>
       <separatorColor>323232FF</separatorColor>
-      <selectorColor>112838ee</selectorColor>
+      <selectorColor>225676ff</selectorColor>
 	  <selectorColorEnd>112838ee</selectorColorEnd>
       <selectedColor>FFEEFF</selectedColor>
 	  <selectorOffsetY>0.01</selectorOffsetY>
@@ -217,7 +217,7 @@ originally based on: "carbon" and "Arcade Planet"
       <fontSize>0.03</fontSize>
       <color>FFFFFFff</color>
       <separatorColor>112838ff</separatorColor>    
-      <backgroundColor>32323268</backgroundColor>
+      <backgroundColor>32323288</backgroundColor>
       <lineSpacing>2.5</lineSpacing>
     </menuGroup>
 	
