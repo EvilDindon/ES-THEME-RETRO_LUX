@@ -383,11 +383,21 @@ originally based on: "carbon" and "Arcade Planet"
 	  <linearSmooth>true</linearSmooth>
     </image>
 	
-	<image name="infobox" extra="static">
-      <pos>0.4703125 0.82</pos>
-      <size>0.45833333 0</size>
+	<!-- <image name="infobox" extra="static"> -->
+      <!-- <pos>0.4703125 0.82</pos> -->
+      <!-- <size>0.45833333 0</size> -->
+      <!-- <origin>0.5 0.5</origin> -->
+	  <!-- <path>./_art/assets/infobox.png</path> -->
+      <!-- <zIndex>4</zIndex>	   -->
+	  <!-- <color>AAAAAA</color> -->
+	  <!-- <linearSmooth>false</linearSmooth> -->
+    <!-- </image> -->
+	
+	<image name="infobox2" extra="static">
+      <pos>0.3552083 0.79166666</pos>
+      <size>0.6880208 0</size>
       <origin>0.5 0.5</origin>
-	  <path>./_art/assets/infobox.png</path>
+	  <path>./_art/assets/infobox2.png</path>
       <zIndex>4</zIndex>	  
 	  <color>AAAAAA</color>
 	  <linearSmooth>false</linearSmooth>
@@ -640,13 +650,13 @@ originally based on: "carbon" and "Arcade Planet"
 		<pos ifSubset="systemviewlayout:left">0.0562 0.471296295</pos>
 		<storyboard ifSubset="systemviewlayout:right" repeatAt="1500">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
-			<animation property="scale" from="1" to="3" begin="500" duration="1000" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="0" to="-0.57" begin="500" duration="800" mode="EaseOutCubic"/>
+			<animation property="scale" from="1" to="2" begin="500" duration="1000" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="-0.555" begin="500" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="500" duration="400" mode="EaseOutCubic" autoReverse="true"/>
-			<animation property="offsetY" from ="0" to="0.3" begin="1300" duration="200" mode="EaseOutCubic"/>
-			<animation property="scale" from="3" to="2" begin="6250" duration="125" mode="Linear"/>
-			<animation property="scale" from="2" to="3" begin="6850" duration="125" mode="Linear"/>
-			<animation property="scale" from="3" to="3" begin="6975" duration="3025" mode="Linear"/>				
+			<animation property="offsetY" from ="0" to="0.325" begin="1300" duration="200" mode="EaseOutCubic"/>
+			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
+			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
+			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
 	  <storyboard ifSubset="systemviewlayout:left" repeatAt="2750">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
@@ -733,7 +743,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <visible>false</visible>
 	 </text>
 	
-	<text name="systemdetails,systemdetails2,systemdetails3" extra="static">
+	<text name="systemdetails,systemdetails2" extra="static">
         <alignment>left</alignment>
 		<verticalAlignment>top</verticalAlignment>
         <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
@@ -749,8 +759,8 @@ originally based on: "carbon" and "Arcade Planet"
        <text>${system.fullName}</text>
 	    <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
         <fontSize>0.03</fontSize>
-        <pos ifSubset="systemviewlayout:left">0.36 0.734</pos>
-		<pos ifSubset="systemviewlayout:right">0.255 0.734</pos>
+        <pos ifSubset="systemviewlayout:left">0.36 0.724</pos>
+		<pos ifSubset="systemviewlayout:right">0.255 0.6775</pos>
         <size>0.5 0.28</size>
 		<color>00BBFF</color>
 	</text>
@@ -758,31 +768,16 @@ originally based on: "carbon" and "Arcade Planet"
 	  <text name="systemdetails2">
        <text>
 ${system.hardwareType} ${system.releaseYearOrNull}
-Games : {binding:total}</text>
+Games : {binding:total}
+Favorites : {binding:favorites}</text>
 		<text lang="fr">
 ${system.hardwareType} ${system.releaseYearOrNull}
 Nombre de Jeux : {binding:total}</text>
 		<text lang="es">
 ${system.hardwareType} ${system.releaseYearOrNull}
 Numero de juegos : {binding:total}</text>
-        <pos ifSubset="systemviewlayout:left">0.36 0.7825</pos>
-		<pos ifSubset="systemviewlayout:right">0.255 0.7825</pos>
-        <size>0.22 0.28</size>
-		<storyboard>
-		  <animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
-		  <animation property="opacity" from="0" to="1" begin="2000" duration="200" mode="Linear"/>
-		 </storyboard>
-      </text>
-	  
-	 <text name="systemdetails3">
-	         <fontSize>0.0206</fontSize>
-       <text>Favorites : {binding:favorites}
-Save States : ${system.savestates}
-Cheevos : ${system.cheevos}
-Net Play : ${system.netplay}
-	</text>
-                <pos ifSubset="systemviewlayout:left">0.36 0.7825</pos>
-		<pos ifSubset="systemviewlayout:right">0.478 0.7825</pos>
+        <pos ifSubset="systemviewlayout:left">0.36 0.736</pos>
+		<pos ifSubset="systemviewlayout:right">0.255 0.736</pos>
         <size>0.22 0.28</size>
 		<storyboard>
 		  <animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
@@ -806,6 +801,23 @@ Net Play : ${system.netplay}
 		  <animation property="scale" from="1" to="0.333333" begin="2000" duration="200" mode="Linear"/>
 		  <animation property="offsetX" from="0" to="-0.005" begin="2000" duration="200" mode="Linear"/>
 		  <animation property="offsetY" from="0" to="0.428" begin="2000" duration="200" mode="Linear"/>
+	  </storyboard>
+	</image>
+	
+	<image name="miniature" extra ="static">
+		<path>./_art/consoles/${system.theme}.png</path>
+		<path>./_art/consoles/${system.theme}.svg</path>
+		<path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.png</path>
+		<path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.svg</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0.5 0.5</origin>
+		<pos>0.5807 0.8178</pos>
+		<maxSize>0.16875 0.175925</maxSize>
+		<color>FFFFFF</color>
+		<zIndex>100</zIndex>
+		<storyboard>
+		  <animation property="scale" from="0" to="0" begin="" duration="2000" mode="Linear"/>
+		  <animation property="scale" from="0" to="1" begin="2000" duration="200" mode="Linear"/>
 	  </storyboard>
 	</image>
 
