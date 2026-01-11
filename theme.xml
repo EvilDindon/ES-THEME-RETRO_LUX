@@ -788,6 +788,8 @@ Numero de juegos : {binding:total}</text>
 	<image name="manfLogo" extra ="static">
 		<path>./_art/manfLogos/${system.manufacturer}.png</path>
 		<path>./_art/manfLogos/${system.manufacturer}.svg</path>
+		<path>./_art/manfLogos/${system.theme}.png</path>
+		<path>./_art/manfLogos/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
 		<origin>0 0.5</origin>
 		<pos>0.26 0.45</pos>
@@ -809,6 +811,8 @@ Numero de juegos : {binding:total}</text>
 		<path>./_art/consoles/${system.theme}.svg</path>
 		<path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.png</path>
 		<path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.svg</path>
+		<path ifSubset="neogeostyle:mvs">./_art/consoles/special/${system.theme}.png</path>
+		<path ifSubset="neogeostyle:mvs">./_art/consoles/special/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<pos>0.5807 0.8178</pos>
