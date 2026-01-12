@@ -653,7 +653,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="1" to="2" begin="500" duration="1000" mode="EaseOutCubic"/>
 			<animation property="offsetX" from="0" to="-0.555" begin="500" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="500" duration="400" mode="EaseOutCubic" autoReverse="true"/>
-			<animation property="offsetY" from ="0" to="0.325" begin="1300" duration="200" mode="EaseOutCubic"/>
+			<animation property="offsetY" from ="0" to="0.32" begin="1300" duration="200" mode="EaseOutCubic"/>
 			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
 			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
 			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>				
@@ -757,11 +757,13 @@ originally based on: "carbon" and "Arcade Planet"
 	  
 	  <text name="systemdetails">
        <text>${system.fullName}</text>
+	    <alignment>center</alignment>
+		<origin>0.5 0.5</origin>
 	    <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
         <fontSize>0.03</fontSize>
         <pos ifSubset="systemviewlayout:left">0.36 0.724</pos>
-		<pos ifSubset="systemviewlayout:right">0.255 0.6775</pos>
-        <size>0.5 0.28</size>
+		<pos ifSubset="systemviewlayout:right">0.46979 0.8165</pos>
+        <size>0.441666 0.28</size>
 		<color>00BBFF</color>
 	</text>
 	  
@@ -777,7 +779,7 @@ Nombre de Jeux : {binding:total}</text>
 ${system.hardwareType} ${system.releaseYearOrNull}
 Numero de juegos : {binding:total}</text>
         <pos ifSubset="systemviewlayout:left">0.36 0.736</pos>
-		<pos ifSubset="systemviewlayout:right">0.255 0.736</pos>
+		<pos ifSubset="systemviewlayout:right">0.48125 0.736</pos>
         <size>0.22 0.28</size>
 		<storyboard>
 		  <animation property="opacity" from="0" to="0" begin="" duration="2000" mode="Linear"/>
@@ -792,7 +794,7 @@ Numero de juegos : {binding:total}</text>
 		<path>./_art/manfLogos/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
 		<origin>0 0.5</origin>
-		<pos>0.26 0.45</pos>
+		<pos>0.25 0.45</pos>
 		<maxSize>0.255 0.135</maxSize>
 		<color>AAAAAAee</color>
 		<saturation>0</saturation>
@@ -801,8 +803,8 @@ Numero de juegos : {binding:total}</text>
 		  <animation property="scale" from="0" to="0" begin="" duration="1300" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="1300" duration="200" mode="Linear"/>
 		  <animation property="scale" from="1" to="0.333333" begin="2000" duration="200" mode="Linear"/>
-		  <animation property="offsetX" from="0" to="-0.005" begin="2000" duration="200" mode="Linear"/>
-		  <animation property="offsetY" from="0" to="0.428" begin="2000" duration="200" mode="Linear"/>
+		  <animation property="offsetX" from="0" to="0.23125" begin="2000" duration="200" mode="Linear"/>
+		  <animation property="offsetY" from="0" to="0.422" begin="2000" duration="200" mode="Linear"/>
 	  </storyboard>
 	</image>
 	
@@ -815,7 +817,7 @@ Numero de juegos : {binding:total}</text>
 		<path ifSubset="neogeostyle:mvs">./_art/consoles/special/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
 		<origin>0.5 0.5</origin>
-		<pos>0.5807 0.8178</pos>
+		<pos>0.35677 0.8178</pos>
 		<maxSize>0.16875 0.175925</maxSize>
 		<color>FFFFFF</color>
 		<zIndex>100</zIndex>
