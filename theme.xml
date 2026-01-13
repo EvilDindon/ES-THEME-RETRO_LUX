@@ -872,6 +872,10 @@ Numero de juegos : {binding:total}</text>
 	  <fontSize>0.033</fontSize>
 	  <textColor>777777</textColor>
       <iconColor>888888</iconColor>
+	  <iconA>:/help/buttons_east.svg</iconA>
+      <iconB>:/help/buttons_south.svg</iconB>
+      <iconX>:/help/buttons_north.svg</iconX>
+      <iconY>:/help/buttons_west.svg</iconY>
     </helpsystem>
 
 	<image name="bottom bar" extra="static">
