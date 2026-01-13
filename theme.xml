@@ -903,8 +903,8 @@ Numero de juegos : {binding:total}</text>
       <size>1 1</size>
       <origin>0 0</origin>
 	  <path>./_art/assets/white.png</path>
-	  <color>153842ff</color>
-	  <colorEnd>15384211</colorEnd>
+	  <color>383842ff</color>
+	  <colorEnd>38384250</colorEnd>
       <zIndex>0</zIndex>	  
     </image>
 	
@@ -1098,7 +1098,6 @@ Numero de juegos : {binding:total}</text>
    	
     <image name="background">
 	  <color>343842ff</color>
-	  <saturation>0.1</saturation>
     </image>
 	
     <image name="bgbasic2" extra="true">
@@ -1106,23 +1105,45 @@ Numero de juegos : {binding:total}</text>
 	<size>1 1</size>
 	<origin>0 0</origin>
 	<pos>0 0</pos>
-	<zIndex>1</zIndex>
+	<zIndex>2</zIndex>
     </image>
+	
+	<image name="electronic1" extra="true">
+		  <path>./_art/assets/electronic.png</path>
+		  <origin>0.5 0.5</origin>
+		  <size>1 7</size>
+		  <tile>true</tile>
+		  <scale>1</scale>
+		  <pos>0.48 0.5</pos>
+		  <color>00000045</color>
+		  <zIndex>1</zIndex>
+	</image>	
+	
+	<image name="electronic2" extra="true">
+		  <path>./_art/assets/electronic2.png</path>
+		  <origin>0.5 0.5</origin>
+		  <size>0.535 3</size>
+		  <tile>true</tile>
+		  <scale>1</scale>
+		  <pos>0.5 0.472</pos>
+		  <color>0FFFFF15</color>
+		  <zIndex>4</zIndex>
+	</image>
 	
 	 
 	<image name="bgbasiclist" extra="true">
 	<path>./_art/assets/bgbasiclist.png</path>
-	<size>0.5661458333 0</size>
+	<size>0.5734375 0</size>
 	<origin>0.5 0</origin>
 	<pos>0.5 0</pos>
-	<zIndex>2</zIndex>
+	<zIndex>3</zIndex>
     </image>
 	
 <image name="logoleft,logoright" extra="true">
     <path>./_art/whiteLogos/${system.theme}.png</path>
       <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
 	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
-	 <maxSize>0.18 0.38</maxSize>
+	 <maxSize>0.1255208 0.38</maxSize>
 	 <origin>0.5 0.5</origin>
 	 <linearSmooth>true</linearSmooth>
 	 <opacity>0.65</opacity>
@@ -1141,7 +1162,7 @@ Numero de juegos : {binding:total}</text>
 	  <linearSmooth>true</linearSmooth>
       <origin>0.5 0.5</origin>
 	  <y>0.536</y>
-    	<maxSize>0.18 0.22</maxSize>
+    	<maxSize>0.142 0.22</maxSize>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
 		<path>./_art/consoles/${system.theme}.png</path>
 		<path>./_art/consoles/${system.theme}.svg</path>
@@ -1164,11 +1185,11 @@ Numero de juegos : {binding:total}</text>
     </image>
 	
 	<textlist name="gamelist">
-	 <selectorColor>224668ff</selectorColor>
+	 <selectorColor>224668dd</selectorColor>
 	  <selectedColor>FFFFFF</selectedColor>
 <!-- 	  <selectorHeight>0.05</selectorHeight> -->
 	  <selectorOffsetY>0.02</selectorOffsetY>
-	  <primaryColor>A0A0A0</primaryColor>
+	  <primaryColor>AAAAAA</primaryColor>
 	  <secondaryColor>7a6161</secondaryColor>
 	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
 	  <secondaryColor>7a6161</secondaryColor>
