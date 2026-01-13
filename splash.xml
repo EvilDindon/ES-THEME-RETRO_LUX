@@ -13,8 +13,8 @@
 		<image name="background">
 			<path>./_art/assets/white.png</path>
 			<size>1 1</size>
-			<color>701108</color>
-			<colorEnd>100201</colorEnd>
+		<color>153842ff</color>
+	  <colorEnd>15384211</colorEnd>
 		</image>
 		
 		<image name="logo" extra="true">
