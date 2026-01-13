@@ -383,16 +383,6 @@ originally based on: "carbon" and "Arcade Planet"
 	  <linearSmooth>true</linearSmooth>
     </image>
 	
-	<!-- <image name="infobox" extra="static"> -->
-      <!-- <pos>0.4703125 0.82</pos> -->
-      <!-- <size>0.45833333 0</size> -->
-      <!-- <origin>0.5 0.5</origin> -->
-	  <!-- <path>./_art/assets/infobox.png</path> -->
-      <!-- <zIndex>4</zIndex>	   -->
-	  <!-- <color>AAAAAA</color> -->
-	  <!-- <linearSmooth>false</linearSmooth> -->
-    <!-- </image> -->
-	
 	<image name="infobox2" extra="static">
       <pos>0.3552083 0.79166666</pos>
       <size>0.6880208 0</size>
@@ -982,27 +972,24 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="md_flag">
 		<color>D8D8D8</color>
+		<size>0.003 0</size>
 	</image>
 	
 	<image name="md_hidden,md_kidgame,md_favorite,md_flag,md_manual,md_cheevos,md_savestate">
 	  <linearSmooth>true</linearSmooth>
 	  <origin>0.5 0.5</origin>
 	  <zIndex>150</zIndex>	  
+	  <visible>false</visible>
 	</image>
 	
 	<image name="md_notkidgame,md_nomanual,md_notcheevos,md_nosavestate">
 	  <linearSmooth>true</linearSmooth>
 	  <origin>0.5 0.5</origin>
       <color>808080F0</color>
-	  <zIndex>149</zIndex>	  
+	  <zIndex>149</zIndex>
+	  <visible>false</visible>	  
 	</image>
 	
-	<!-- <image name="ghostcheevos,ghostfavorite,ghostkidgame,ghostmanual,ghostsavestate,ghosthidden" extra="true">
-	  <linearSmooth>true</linearSmooth>
-	  <origin>0.5 0.5</origin>
-	  <color>76767640</color>
-	  <zIndex>148</zIndex>	  
-	</image> -->
 	
 	<image name="md_hidden,ghosthidden">
       <path>./_art/icons/hidden.svg</path>
@@ -1066,7 +1053,9 @@ Numero de juegos : {binding:total}</text>
     </text>
 	
 	<text name="md_developer">
-      <color>4480AA</color>
+      <color>A0A0A0</color>
+	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Regular.ttf</fontPath>
+		  <fontSize>0.028</fontSize>
 	  <forceUppercase>0</forceUppercase>
 	  <glowColor>00000016</glowColor>
       <glowSize>2</glowSize>
@@ -1074,11 +1063,23 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
 	<datetime name="md_releasedate">
-      <color>d2bfa8FF</color>
+      <color>A04444</color>
+	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Regular.ttf</fontPath>
 	  <format>%Y</format>
+	  		  <fontSize>0.031</fontSize>
 	  <glowColor>00000016</glowColor>
       <glowSize>2</glowSize>
 	</datetime>
+	
+	<text name="md_name">
+			<color>11A0A0</color>
+	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
+		  <fontSize>0.03</fontSize>
+	  <forceUppercase>1</forceUppercase>
+	  <glowColor>00000016</glowColor>
+      <glowSize>2</glowSize>
+	  <zIndex>41</zIndex>
+	</text>
 		  
     <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_playcount, md_lbl_players, md_lbl_lastplayed, md_publisher, md_lbl_gametime, md_gametime, gridtile, gridtile:selected, logoText">
 		  <pos>1.5 1.5</pos>
@@ -1086,7 +1087,6 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
 	<datetime name="md_lastplayed">
-		<pos>1.5 1.5</pos>
   		<visible>false</visible>
 	</datetime>
 			
@@ -1213,62 +1213,113 @@ Numero de juegos : {binding:total}</text>
  
   <view name="detailed">
 
-	<image name="background">
+	<image name="backgound" extra="true">
+      <pos>0.6845166 0</pos>
+      <size>0.9 0</size>
+      <origin>0.5 0</origin>
+	  <path>./_art/assets/graphite.jpg</path>
+      <zIndex>0</zIndex>
+		<color ifSubset="bgcolor:purple">FFAAFF</color>
+		<color ifSubset="bgcolor:blue">B0D8FF</color>
+		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
+	<image name="bgcontroller" extra="static">
+      <pos>0.33 0</pos>
+      <size>0.72 0</size>
+      <origin>0 0</origin>
+	  <tile>false</tile>
+	  <path>./_art/controllersFILIFORM/${system.theme}.svg</path>
+	  <color>FFFFFF12</color>
+      <zIndex>0</zIndex>
+	  <rotation>338</rotation>	  
+	  <linearSmooth>true</linearSmooth>
+    </image>
+	
+	<image name="bgdetailedlist" extra="true">
+		  <path>./_art/assets/bgdetailedlist.png</path>
+		  <pos>0.190625 0</pos>
+		  <origin>0.5 0</origin>
+		  <size>0.3760416 0</size>
+		  <zIndex>12</zIndex>
 	</image>
-
-<image name="logo">
-    <path>./wheelv/${system.theme}.png</path>
-      <path ifSubset="artworkregion:US">./wheelv/US/${system.theme}.png</path>
-	  <path ifSubset="neogeostyle:mvs">./wheelv/special/${system.theme}.png</path>	  
-	 <size>0.164 0</size>
-	 <pos>0.7203125 0.06574074074</pos>
+	
+	<image name="electronic2" extra="true">
+		  <path>./_art/assets/electronic2.png</path>
+		  <origin>0.5 0.5</origin>
+		  <size>0.34 3</size>
+		  <tile>true</tile>
+		  <scale>1</scale>
+		  <pos>0.190625 0.472</pos>
+		  <color>0FFFFF15</color>
+		  <zIndex>13</zIndex>
 	</image>
+	
+		<image name="infoboxdetailed" extra="static">
+      <pos>0.6845166 0.8046296</pos>
+      <size>0.6203125 0</size>
+      <origin>0.5 0.5</origin>
+	  <path>./_art/assets/infoboxdetailed.png</path>
+      <zIndex>4</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
+	<image name="whitelogo" extra="true">
+    <path>./_art/whiteLogos/${system.theme}.png</path>
+      <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
+	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
+	 <maxSize>0.1255208 0.38</maxSize>
+	 <origin>0.5 0.5</origin>
+	 <linearSmooth>true</linearSmooth>
+	 <opacity>0.65</opacity>
+	 <pos>0.459375 0.71</pos>
+	</image>
+	
+	<image name="consoles" extra="true">
+	  <linearSmooth>true</linearSmooth>
+      <origin>0.5 0.5</origin>
+    	<maxSize>0.132 0.172</maxSize>
+		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
+		<path>./_art/consoles/${system.theme}.png</path>
+		<path>./_art/consoles/${system.theme}.svg</path>
+		  <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
+		  <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.svg</path>
+		<path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
+		<color>E8E8E8</color>
+		<origin>0.5 0.5</origin>
+		<linearSmooth>true</linearSmooth>
+      <zIndex>102</zIndex>
+	  	 <pos>0.459375 0.83</pos>
+    </image>
 
 	<textlist name="gamelist">
-	 <selectorColor ifSubset="selectorcolor:blue">3070FFff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:red">B21302ff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:black">000000ff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:grey">707070ff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:yellow">CCBB00ff</selectorColor>
-	 <selectorColor ifSubset="selectorcolor:purple">6e55a7</selectorColor>
-	  <selectedColor ifSubset="textlistcolor:purple">A672E6</selectedColor>
-	  <selectedColor ifSubset="textlistcolor:red">A00000</selectedColor>
-	  <selectedColor ifSubset="textlistcolor:yellow">EEEE00</selectedColor>
-	  <selectedColor ifSubset="textlistcolor:white">FFFFFF</selectedColor>
-	  <selectedColor ifSubset="textlistcolor:blue">88D8F0</selectedColor>
-	  <primaryColor ifSubset="textlistcolor:white">AAA2AA</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:yellow">767670</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:red">777070</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:purple">766976</primaryColor>
-	  <primaryColor ifSubset="textlistcolor:blue">727277</primaryColor>
-      <secondaryColor>7a6161</secondaryColor>
-	  <scrollSound>./sounds/scroll.wav</scrollSound>
-	  <origin>0 0.5</origin>
-	  <lines>13</lines>
-	  <selectorOffsetY>-0.0018</selectorOffsetY>
-	  <alignment ifSubset="gamelistalignment:left">left</alignment>
-	  <alignment ifSubset="gamelistalignment:center">center</alignment>
-	  <fontSize>0.034</fontSize>
-	  <fontPath>./fonts/Saira_SemiCondensed-Medium.ttf</fontPath>
-	  <forceUppercase>1</forceUppercase>
+	 <selectorColor>224668dd</selectorColor>
+	  <selectedColor>FFFFFF</selectedColor>
+<!-- 	  <selectorHeight>0.05</selectorHeight> -->
+	  <selectorOffsetY>0.02</selectorOffsetY>
+	  <primaryColor>AAAAAA</primaryColor>
+	  <secondaryColor>7a6161</secondaryColor>
+	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
+	  <secondaryColor>7a6161</secondaryColor>
+	  <fontSize>0.038</fontSize>
+	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
+      <forceUppercase>0</forceUppercase>
+	  <pos>0.02 0</pos>
+	  <origin>0 0</origin>
+      <size>0.34 0.9427</size>
 	  <glowColor>000000aa</glowColor>
 	  <glowSize>1.5</glowSize>
 	  <glowOffset>1.5 1.5</glowOffset>
-	  <zIndex>15</zIndex>
+	  <lines>17</lines>
+      <alignment>left</alignment>
+	  <horizontalMargin>0.005</horizontalMargin>
+	  <zIndex>14</zIndex>
 	</textlist>
 	
-	<image name="Chevron Bas">
-	  <scale>0.76</scale>
-      <pos>0.7203 0.92</pos>
-	</image>	
-	
-	<image name="Chevron Haut">
-	  <scale>0.76</scale>
-	  <pos>0.7203 0.148</pos>
-	</image>
-	
 	<image name="md_thumbnail">
-	  <pos>0.244 0.36</pos>
+	  <pos>0.6845166 0.336</pos>
 	  <origin>0.5 0.5</origin>
       <maxSize>0.36 0.61</maxSize>
 	  <reflexion>0.05 0</reflexion>
@@ -1297,40 +1348,36 @@ Numero de juegos : {binding:total}</text>
 	</video>
 	
 	<text name="md_developer">
-	  <origin>0 0</origin>
-	  <size>0.2 0.03</size>
-	  <pos>0.05 0.734</pos>
+	  <origin>0 0.5</origin>
+	  <size>0.2854 0.03</size>
+	  <pos>0.89 0.70925</pos>
 	</text>
 	
-	<text name="md_genre">
-	  <origin>1 0</origin>
-	  <color>928e94D0</color>
-	  <fontSize>0.028</fontSize>
-	  <fontPath>./fonts/SairaCondensed-Medium.ttf</fontPath>
-	  <size>0.22 0.03</size>
-	  <alignment>right</alignment>
-	  <pos>0.48 0.734</pos>
+	<text name="md_name">
+	  <origin>0.5 0.5</origin>
+	  <size>0.345 0.03</size>
+	  <pos>0.7125 0.70925</pos>
 	</text>
-		
+	
 	<datetime name="md_releasedate">
 	  <alignment>left</alignment>
-	  <pos>0.01 0.73</pos>
-	  <origin>0 0</origin>
+	  <pos>0.89 0.748</pos>
+	  <origin>0 0.5</origin>
 	  <size>0.04 0.037</size>
 	</datetime>
 	
 	<text name="md_description">
-      <origin>0.5 0</origin>
-	  <pos>0.244 0.776</pos>
-	  <size>0.48 0.161</size>
+      <origin>0 0</origin>
+	  <pos>0.54166 0.738888</pos>
+	  <size>0.342708 0.185185</size>
 	  <alignment>left</alignment>
     </text>
 	
 	<rating name="md_rating">
-      <pos>0.244 0.69</pos>
+      <pos>0.942 0.91</pos>
       <size>0.08 0.025</size>
 	  <origin>0.5 0.5</origin>
-      <color>E0A020</color>
+      <color>A0A0A0</color>
       <unfilledColor>808080</unfilledColor>
 	  <zIndex>41</zIndex>
 	  <storyboard event="activate">
@@ -1341,6 +1388,10 @@ Numero de juegos : {binding:total}</text>
                 <animation property="opacity" from="0" to="0" duration="" mode="Linear"/>
 			</storyboard>
     </rating>
+	
+	<text name="md_playcount,md_players,md_genre">
+		<visible>false</visible>
+	</text>
 	
   </view>
  
