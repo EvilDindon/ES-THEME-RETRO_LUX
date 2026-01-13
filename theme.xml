@@ -972,10 +972,9 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="md_flag">
 		<color>D8D8D8</color>
-		<size>0.003 0</size>
 	</image>
 	
-	<image name="md_hidden,md_kidgame,md_favorite,md_flag,md_manual,md_cheevos,md_savestate">
+	<image name="md_hidden,md_kidgame,md_favorite,md_manual,md_cheevos,md_savestate">
 	  <linearSmooth>true</linearSmooth>
 	  <origin>0.5 0.5</origin>
 	  <zIndex>150</zIndex>	  
@@ -1037,15 +1036,15 @@ Numero de juegos : {binding:total}</text>
 					
 	<text name="md_description">
       <origin>0.5 0.5</origin>
-      <color>E0E0E0ff</color>
+      <color>C0C0C0ff</color>
       <forceUppercase>0</forceUppercase>
-      <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
+      <fontPath>./_art/fonts/Saira_SemiCondensed-SemiBold.ttf</fontPath>
       <fontSize>0.023</fontSize>
 	  <glowColor>00000080</glowColor>
 	  <glowSize>1</glowSize>
 	  <lineSpacing>1.15</lineSpacing>
 	  <glowOffset>1</glowOffset>
-      <zIndex>15</zIndex>
+	 <zIndex>21</zIndex>
 		<storyboard>
                 <animation property="opacity" from="0" to="0" duration="600" mode="Linear"/>
 				<animation property="opacity" from="0" to="1" begin="600" duration="1500" mode="Linear"/>
@@ -1054,8 +1053,8 @@ Numero de juegos : {binding:total}</text>
 	
 	<text name="md_developer">
       <color>A0A0A0</color>
-	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Regular.ttf</fontPath>
-		  <fontSize>0.028</fontSize>
+	  	  <fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+		  <fontSize>0.026</fontSize>
 	  <forceUppercase>0</forceUppercase>
 	  <glowColor>00000016</glowColor>
       <glowSize>2</glowSize>
@@ -1063,16 +1062,16 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
 	<datetime name="md_releasedate">
-      <color>A04444</color>
-	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Regular.ttf</fontPath>
+      <color>888888</color>
+	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
 	  <format>%Y</format>
-	  		  <fontSize>0.031</fontSize>
+	  		  <fontSize>0.028</fontSize>
 	  <glowColor>00000016</glowColor>
       <glowSize>2</glowSize>
 	</datetime>
 	
 	<text name="md_name">
-			<color>11A0A0</color>
+			<color>AF0022</color>
 	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
 		  <fontSize>0.03</fontSize>
 	  <forceUppercase>1</forceUppercase>
@@ -1081,7 +1080,7 @@ Numero de juegos : {binding:total}</text>
 	  <zIndex>41</zIndex>
 	</text>
 		  
-    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_playcount, md_lbl_players, md_lbl_lastplayed, md_publisher, md_lbl_gametime, md_gametime, gridtile, gridtile:selected, logoText">
+    <text name="md_playcount,md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_playcount, md_lbl_players, md_lbl_lastplayed, md_publisher, md_lbl_gametime, md_gametime, gridtile, gridtile:selected, logoText">
 		  <pos>1.5 1.5</pos>
 	      <visible>false</visible>
 	</text>
@@ -1242,17 +1241,18 @@ Numero de juegos : {binding:total}</text>
 		  <pos>0.190625 0</pos>
 		  <origin>0.5 0</origin>
 		  <size>0.3760416 0</size>
+		  <color>dddddd</color>
 		  <zIndex>12</zIndex>
 	</image>
 	
 	<image name="electronic2" extra="true">
 		  <path>./_art/assets/electronic2.png</path>
 		  <origin>0.5 0.5</origin>
-		  <size>0.34 3</size>
+		  <size>0.34 3.5</size>
 		  <tile>true</tile>
 		  <scale>1</scale>
-		  <pos>0.190625 0.472</pos>
-		  <color>0FFFFF15</color>
+		  <pos>0.19 0.472</pos>
+		  <color>00000055</color>
 		  <zIndex>13</zIndex>
 	</image>
 	
@@ -1261,7 +1261,7 @@ Numero de juegos : {binding:total}</text>
       <size>0.6203125 0</size>
       <origin>0.5 0.5</origin>
 	  <path>./_art/assets/infoboxdetailed.png</path>
-      <zIndex>4</zIndex>	  
+      <zIndex>20</zIndex>	  
 	  <color>AAAAAA</color>
 	  <linearSmooth>false</linearSmooth>
     </image>
@@ -1275,6 +1275,7 @@ Numero de juegos : {binding:total}</text>
 	 <linearSmooth>true</linearSmooth>
 	 <opacity>0.65</opacity>
 	 <pos>0.459375 0.71</pos>
+	 <zIndex>21</zIndex>
 	</image>
 	
 	<image name="consoles" extra="true">
@@ -1284,9 +1285,9 @@ Numero de juegos : {binding:total}</text>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
 		<path>./_art/consoles/${system.theme}.png</path>
 		<path>./_art/consoles/${system.theme}.svg</path>
-		  <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
-		  <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.svg</path>
-		<path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
+		  <path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.png</path>
+		  <path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.svg</path>
+		<path ifSubset="neogeostyle:mvs">./_art/consoles/special/${system.theme}.png</path>	  
 		<color>E8E8E8</color>
 		<origin>0.5 0.5</origin>
 		<linearSmooth>true</linearSmooth>
@@ -1295,11 +1296,11 @@ Numero de juegos : {binding:total}</text>
     </image>
 
 	<textlist name="gamelist">
-	 <selectorColor>224668dd</selectorColor>
+	 <selectorColor>224168ee</selectorColor>
 	  <selectedColor>FFFFFF</selectedColor>
 <!-- 	  <selectorHeight>0.05</selectorHeight> -->
 	  <selectorOffsetY>0.02</selectorOffsetY>
-	  <primaryColor>AAAAAA</primaryColor>
+	  <primaryColor>a0a0a0</primaryColor>
 	  <secondaryColor>7a6161</secondaryColor>
 	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
 	  <secondaryColor>7a6161</secondaryColor>
@@ -1346,11 +1347,51 @@ Numero de juegos : {binding:total}</text>
 	<video name="md_video">
 		  <visible>false</visible>
 	</video>
+			
+	<image name="md_flag">
+		<origin>0.5 0.5</origin>
+		<size>0.03 0</size>
+		<pos>0.936 0.798</pos>
+	</image>
+	
+	<image name="players" extra="true">
+		<path>./_art/fonts/one_person_user.svg</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0.5 0.5</origin>
+		<size>0.008 0</size>
+		<pos>0.93 0.845</pos>
+		<color>909090</color>
+		<zIndex>22</zIndex>
+	</image>
+	
+	<text name="md_players">
+	<alignment>left</alignment>
+	<origin>0 0.5</origin>
+	<color>AAAAAA</color>
+	<pos>0.9365 0.845</pos>
+	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+	<fontSize>0.026</fontSize>
+	<zIndex>22</zIndex>
+	</text>
+	
+	<text name="playcount" extra = "true">
+	<text>Played {game:playcount} time(s)</text>
+	<alignment>center</alignment>
+	<origin>0.5 0.5</origin>
+	<size>0.1015625 0.03</size>
+	<color>a0a0a0</color>
+	<pos>0.9365 0.88</pos>
+	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+	<fontSize>0.022</fontSize>
+	<zIndex>22</zIndex>
+	</text>
 	
 	<text name="md_developer">
-	  <origin>0 0.5</origin>
-	  <size>0.2854 0.03</size>
-	  <pos>0.89 0.70925</pos>
+	  <origin>0.5 0.5</origin>
+	  <alignment>center</alignment>	  
+	  <size>0.0982 0.08</size>
+	  <pos>0.936 0.70925</pos>
+	  <lineSpacing>1</lineSpacing>
 	</text>
 	
 	<text name="md_name">
@@ -1361,21 +1402,21 @@ Numero de juegos : {binding:total}</text>
 	
 	<datetime name="md_releasedate">
 	  <alignment>left</alignment>
-	  <pos>0.89 0.748</pos>
-	  <origin>0 0.5</origin>
+	  <pos>0.94 0.758</pos>
+	  <origin>0.5 0.5</origin>
 	  <size>0.04 0.037</size>
 	</datetime>
 	
 	<text name="md_description">
-      <origin>0 0</origin>
-	  <pos>0.54166 0.738888</pos>
-	  <size>0.342708 0.185185</size>
-	  <alignment>left</alignment>
+      <origin>0.5 0</origin>
+	  <pos>0.7125 0.733</pos>
+	  <size>0.342708 0.19</size>
+	  <alignment>center</alignment>
     </text>
 	
 	<rating name="md_rating">
-      <pos>0.942 0.91</pos>
-      <size>0.08 0.025</size>
+      <pos>0.94 0.91</pos>
+      <size>0.06 0</size>
 	  <origin>0.5 0.5</origin>
       <color>A0A0A0</color>
       <unfilledColor>808080</unfilledColor>
@@ -1389,7 +1430,7 @@ Numero de juegos : {binding:total}</text>
 			</storyboard>
     </rating>
 	
-	<text name="md_playcount,md_players,md_genre">
+	<text name="md_genre">
 		<visible>false</visible>
 	</text>
 	
