@@ -1091,19 +1091,38 @@ Numero de juegos : {binding:total}</text>
 <!-- BASIC -->
 
     <view name="basic">
-   		
+   	
     <image name="background">
+	  <color>343842ff</color>
+	  <saturation>0.1</saturation>
+    </image>
+	
+    <image name="bgbasic2" extra="true">
+	<path>./_art/assets/bgbasic2.png</path>
+	<size>1 1</size>
+	<origin>0 0</origin>
+	<pos>0 0</pos>
+	<zIndex>1</zIndex>
+    </image>
+	
+	 
+	<image name="bgbasiclist" extra="true">
+	<path>./_art/assets/bgbasiclist.png</path>
+	<size>0.5661458333 0</size>
+	<origin>0.5 0</origin>
+	<pos>0.5 0</pos>
+	<zIndex>2</zIndex>
     </image>
 	
 <image name="logoleft,logoright" extra="true">
     <path>./_art/whiteLogos/${system.theme}.png</path>
       <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
 	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
-	 <maxSize>0.18 0.28</maxSize>
+	 <maxSize>0.18 0.38</maxSize>
 	 <origin>0.5 0.5</origin>
 	 <linearSmooth>true</linearSmooth>
 	 <opacity>0.65</opacity>
-	 <y>0.28</y>
+	 <y>0.286</y>
 	</image>
 	
 	<image name="logoleft">
@@ -1117,8 +1136,8 @@ Numero de juegos : {binding:total}</text>
 	<image name="consoles L,consoles R" extra="true">
 	  <linearSmooth>true</linearSmooth>
       <origin>0.5 0.5</origin>
-	  <y>0.54</y>
-    	<maxSize>0.18 0.24</maxSize>
+	  <y>0.536</y>
+    	<maxSize>0.18 0.22</maxSize>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
 		<path>./_art/consoles/${system.theme}.png</path>
 		<path>./_art/consoles/${system.theme}.svg</path>
@@ -1133,16 +1152,18 @@ Numero de juegos : {binding:total}</text>
     </image>
 
 	<image name="consoles L">
-		<x>0.11</x>
+		<x>0.108</x>
 	</image>
 	
 	<image name="consoles R">
-			<x>0.89</x>
+			<x>0.892</x>
     </image>
 	
 	<textlist name="gamelist">
-	 <selectorColor>225676ff</selectorColor>
+	 <selectorColor>224668ff</selectorColor>
 	  <selectedColor>FFFFFF</selectedColor>
+<!-- 	  <selectorHeight>0.05</selectorHeight> -->
+	  <selectorOffsetY>0.02</selectorOffsetY>
 	  <primaryColor>A0A0A0</primaryColor>
 	  <secondaryColor>7a6161</secondaryColor>
 	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
@@ -1152,12 +1173,13 @@ Numero de juegos : {binding:total}</text>
       <forceUppercase>0</forceUppercase>
 	  <pos>0.5 0</pos>
 	  <origin>0.5 0</origin>
-      <size>0.54 0.94</size>
+      <size>0.534 0.9427</size>
 	  <glowColor>000000aa</glowColor>
 	  <glowSize>1.5</glowSize>
 	  <glowOffset>1.5 1.5</glowOffset>
 	  <lines>17</lines>
       <alignment>center</alignment>
+	  <horizontalMargin>0.005</horizontalMargin>
 	</textlist>
 		
     </view>
