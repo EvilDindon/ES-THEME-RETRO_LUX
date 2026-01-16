@@ -1256,6 +1256,19 @@ Numero de juegos : {binding:total}</text>
 	  <zIndex>14</zIndex>
 	</textlist>
 	
+	<image name="whitelogo" extra="true">
+	<path>./_art/whiteLogos/${system.theme}.png</path>
+      <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
+	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
+	 <size>0.2510416 0</size>
+	 <origin>0.5 0.5</origin>
+	 <linearSmooth>true</linearSmooth>
+	 <opacity>1</opacity>
+	 <pos>0.1901 0.0638</pos>
+	 <color>AAAA9A</color>
+	 <zIndex>21</zIndex>
+	</image>
+	
 	
 	<image name="md_marquee">
 	  <visible>false</visible>
@@ -1294,11 +1307,9 @@ Numero de juegos : {binding:total}</text>
 	  <storyboard event="activate">
                 <animation property="opacity" from="0" to="0" begin="" duration="250" mode="Linear"/>
 				<animation property="opacity" from="0" to="1" begin="250" duration="250" mode="EaseIn"/>
-				<animation property="scale" from="0" to="1" duration="250" mode="EaseIn"/>
 			</storyboard>
 			<storyboard event="deactivate">
                 <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
-				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
 			</storyboard>
 
 	</image>
@@ -1422,19 +1433,6 @@ Numero de juegos : {binding:total}</text>
 		  <color>dddddd</color>
 		  <zIndex>12</zIndex>
 	</image>
-	
-	<image name="whitelogo" extra="true">
-		<path>./_art/whiteLogos/${system.theme}.png</path>
-      <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
-	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
-	 <size>0.2510416 0</size>
-	 <origin>0.5 0.5</origin>
-	 <linearSmooth>true</linearSmooth>
-	 <opacity>1</opacity>
-	 <pos>0.1901 0.0638</pos>
-	 <color>AAAA9A</color>
-	 <zIndex>21</zIndex>
-	</image>
 		
 </view>
 		
@@ -1485,8 +1483,14 @@ Numero de juegos : {binding:total}</text>
 	<video name="md_video">
    <visible>true</visible>
 	  <pos>0.653125 0.29</pos>
-	  <maxSize>0.75 0.53</maxSize>
+	  <maxSize>0.7 0.53</maxSize>
 	</video>
+	
+	<image name="whitelogo">
+	<rotation>270</rotation>
+	 <pos>0.037 0.472</pos>
+	 <opacity>0.85</opacity>
+	</image>
 	
 	<gamecarousel name="gamecarousel">
       <type>vertical</type>
@@ -1508,11 +1512,25 @@ Numero de juegos : {binding:total}</text>
       <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
 	  <forceUppercase>1</forceUppercase>
 	  <color>AA1122</color>
-	  <fontSize>0.06</fontSize>
+	  <fontSize>0.058</fontSize>
       <glowColor>000000FF</glowColor>
       <glowSize>2</glowSize>
       <lineSpacing>1.0</lineSpacing>
     </text>
+	
+	<image name="selectedlogobg" extra="true">
+    <path>./_art/assets/white.png</path>
+	 <size>0.21354166 0.2</size>
+	 <origin>0 0</origin>
+	 <linearSmooth>false</linearSmooth>
+	 <color>112856</color>
+	 <opacity>0.5</opacity>
+	 <pos>0.083854 0.371</pos>
+	 <zIndex>23</zIndex>
+	 	  <storyboard repeat="forever">
+                <animation property="color" from="112856" to="3384A2" begin="" duration="1000" mode="Linear" autoReverse="true"/>
+			</storyboard>
+	</image>
 	
 	<image name="md_thumbnail,md_flag,players">
 		<offsetX>-0.0313916</offsetX>
@@ -1551,16 +1569,6 @@ Numero de juegos : {binding:total}</text>
 	<video name="md_video">
 	  <visible>false</visible>
 	</video>
-	
-	<image name="Chevron Bas">
-      <size>0.017 0</size>
-	  <pos>0.986 0.9</pos>
-    </image>
-	
-	<image name="Chevron Haut">
-      <size>0.017 0</size>
-	  <pos>0.986 0.1</pos>
-    </image>
 	
 	<image name="logo">
 	 <pos>0.08 0.042</pos>
@@ -1663,7 +1671,7 @@ Numero de juegos : {binding:total}</text>
 
 <!-- Scaling Box Art --> 
    
-	<customView name="detailed">
+	<customView name="detailed,gamecarousel">
  
 		<image name="md_thumbnail"> 
 			<scale if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'gb2players' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx'">0.79</scale>
