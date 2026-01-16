@@ -1196,6 +1196,7 @@ Numero de juegos : {binding:total}</text>
 		<color ifSubset="bgcolor:blue">B0D8FF</color>
 		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
 	  <linearSmooth>false</linearSmooth>
+	  <zIndex>1</zIndex>
     </image>
 	
 	<image name="bgcontroller" extra="static">
@@ -1205,19 +1206,10 @@ Numero de juegos : {binding:total}</text>
 	  <tile>false</tile>
 	  <path>./_art/controllersFILIFORM/${system.theme}.svg</path>
 	  <color>FFFFFF12</color>
-      <zIndex>0</zIndex>
+      <zIndex>2</zIndex>
 	  <rotation>338</rotation>	  
 	  <linearSmooth>true</linearSmooth>
     </image>
-	
-	<image name="bgdetailedlist" extra="true">
-		  <path>./_art/assets/bgdetailedlist.png</path>
-		  <pos>0.190625 0</pos>
-		  <origin>0.5 0</origin>
-		  <size>0.3760416 0</size>
-		  <color>dddddd</color>
-		  <zIndex>12</zIndex>
-	</image>
 	
 	<image name="electronic2" extra="true">
 		  <path>./_art/assets/electronic2.png</path>
@@ -1239,20 +1231,6 @@ Numero de juegos : {binding:total}</text>
 	  <color>AAAAAA</color>
 	  <linearSmooth>false</linearSmooth>
     </image>
-	
-	<image name="whitelogo" extra="true">
-    <path>./_art/whiteLogos/${system.theme}.png</path>
-      <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
-	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
-	 <size>0.2510416 0</size>
-	 <origin>0.5 0.5</origin>
-	 <linearSmooth>true</linearSmooth>
-	 <opacity>1</opacity>
-	 <pos>0.1901 0.0638</pos>
-	 <color>AAAA9A</color>
-	 <zIndex>21</zIndex>
-	</image>
-	
 
 	<textlist name="gamelist">
 	 <selectorColor>214080ee</selectorColor>
@@ -1286,7 +1264,7 @@ Numero de juegos : {binding:total}</text>
 	<video name="md_video">
 	  <visible>true</visible>
 	  <pos>0.6845166 0.29</pos>
-	  <maxSize>0.65 0.5</maxSize>
+	  <maxSize>0.65 0.53</maxSize>
 	  <effect>none</effect>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
 	  <delay>0.7</delay>
@@ -1406,6 +1384,18 @@ Numero de juegos : {binding:total}</text>
                 <animation property="opacity" from="0" to="0" duration="" mode="Linear"/>
 			</storyboard>
     </rating>
+
+	<image name="arrowup">
+		<pos>0.3685 0.498629</pos>
+		<color>FFFFFFdd</color>
+		<scale>0.57</scale>
+	</image>
+	
+	<image name="arrowdown">
+		<pos>0.3685 0.584</pos>     
+		<color>FFFFFFdd</color>
+		<scale>0.57</scale>
+	</image>
 	
 </view> 
   
@@ -1424,64 +1414,130 @@ Numero de juegos : {binding:total}</text>
 	 <zIndex>20</zIndex>
 	</image>
 	
-	<image name="arrowup">
-		<pos>0.3685 0.498629</pos>
-		<color>FFFFFFdd</color>
-		<scale>0.57</scale>
+		<image name="bgdetailedlist" extra="true">
+		  <path>./_art/assets/bgdetailedlist.png</path>
+		  <pos>0.190625 0</pos>
+		  <origin>0.5 0</origin>
+		  <size>0.3760416 0</size>
+		  <color>dddddd</color>
+		  <zIndex>12</zIndex>
 	</image>
 	
-	<image name="arrowdown">
-		<pos>0.3685 0.584</pos>     
-		<color>FFFFFFdd</color>
-		<scale>0.57</scale>
+	<image name="whitelogo" extra="true">
+		<path>./_art/whiteLogos/${system.theme}.png</path>
+      <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
+	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
+	 <size>0.2510416 0</size>
+	 <origin>0.5 0.5</origin>
+	 <linearSmooth>true</linearSmooth>
+	 <opacity>1</opacity>
+	 <pos>0.1901 0.0638</pos>
+	 <color>AAAA9A</color>
+	 <zIndex>21</zIndex>
 	</image>
-	
-	
+		
 </view>
-	
-	
+		
 <!-- GAMECAROUSEL -->
 
 <view name="gamecarousel">
 	
-	<image name="logo">
-      <path>./wheel/${system.theme}.png</path>
-      <path ifSubset="artworkregion:US">./wheel/US/${system.theme}.png</path>
-      <path ifSubset="neogeostyle:mvs">./wheel/special/${system.theme}.png</path>
-	  <size>0.1375 0</size>
-	  <pos>0.84 0.467592592</pos>
+		<image name="bgcarousel" extra="true">
+		  <path>./_art/assets/bgcarousel.png</path>
+		  <pos>0.190625 0</pos>
+		  <origin>0.5 0</origin>
+		  <size>0.2515625 0</size>
+		  <color>dddddd</color>
+		  <zIndex>12</zIndex>
 	</image>
 	
-	<image name="md_marquee,Controller,md_thumbnail">
-	  <visible>false</visible>
-	</image>	  
+	<image name="backgound2" extra="true">
+      <pos>0 0</pos>
+      <size>0.9 0</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/graphite.jpg</path>
+      <zIndex>0</zIndex>
+		<color ifSubset="bgcolor:purple">FFAAFF</color>
+		<color ifSubset="bgcolor:blue">B0D8FF</color>
+		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+
+	<image name="bgcontroller">
+      <pos>0.27 0</pos>
+      <size>0.74 0</size>
+    </image>
+	
+	<image name="electronic2">
+		   <size>0.2151 2</size>
+	</image>
+	
+		<image name="infoboxdetailed" extra="static">
+      <pos>0.653125 0.756</pos>
+      <size>0.6203125 0</size>
+      <origin>0.5 0.5</origin>
+	  <path>./_art/assets/infoboxdetailed.png</path>
+      <zIndex>20</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
+	<video name="md_video">
+   <visible>true</visible>
+	  <pos>0.653125 0.29</pos>
+	  <maxSize>0.75 0.53</maxSize>
+	</video>
 	
 	<gamecarousel name="gamecarousel">
-      <type>vertical_wheel</type>
+      <type>vertical</type>
 	  <logoAlignment>center</logoAlignment>
-	  <logoRotationOrigin>3.6 0.5</logoRotationOrigin>
 	  <logoRotation>0</logoRotation>
 	  <origin>0.5 0.5</origin>
-      <pos>0.612 0.47</pos>
-      <size>0.5 0.93</size>
-      <logoScale>2</logoScale>
-      <logoSize>0.20833333 0.22222</logoSize>
-      <maxLogoCount>11</maxLogoCount>
+      <pos>0.19 0.47</pos>
+      <size>0.5 0.945</size>
+      <logoScale>1</logoScale>
+      <logoSize>0.4166666 0.22222</logoSize>
+      <maxLogoCount>5</maxLogoCount>
       <imageSource>marquee</imageSource>
-      <minLogoOpacity>0.8</minLogoOpacity>
-	  <zIndex>10</zIndex>
-	  <scrollSound>./sounds/scroll2.wav</scrollSound>
+      <minLogoOpacity>1</minLogoOpacity>
+	  <zIndex>24</zIndex>
+	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
     </gamecarousel>    
     
 	<text name="gamecarouselLogoText">
-      <fontPath>./fonts/SairaCondensed-SemiBold.ttf</fontPath>
-	  <color>AABBBBFF</color>
-	  <fontSize>0.042</fontSize>
+      <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
+	  <forceUppercase>1</forceUppercase>
+	  <color>AA1122</color>
+	  <fontSize>0.06</fontSize>
       <glowColor>000000FF</glowColor>
       <glowSize>2</glowSize>
       <lineSpacing>1.0</lineSpacing>
     </text>
 	
+	<image name="md_thumbnail,md_flag,players">
+		<offsetX>-0.0313916</offsetX>
+	</image>
+   
+	<text name="md_players,playcount,md_developer,md_name,md_releasedate,md_description">
+		<offsetX>-0.0313916</offsetX>
+	</text>
+	
+	<datetime name="md_releasedate">
+		<offsetX>-0.0313916</offsetX>
+	</datetime>
+	
+	<rating name="md_rating">
+		<offsetX>-0.0313916</offsetX>
+    </rating>
+	
+	<image name="arrowup">
+		<pos>0.3065 0.418629</pos>
+	</image>
+	
+	<image name="arrowdown">
+		<pos>0.3065 0.534</pos>
+	</image>
+
   </view>
 
 	<!-- GRID -->	
