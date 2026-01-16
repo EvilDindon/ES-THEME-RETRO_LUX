@@ -1443,28 +1443,6 @@ Numero de juegos : {binding:total}</text>
 <!-- GAMECAROUSEL -->
 
 <view name="gamecarousel">
-    
-	<image name="background">
-	  <path>./backgrounds/169/bggamecarousel.jpg</path>
-	</image>
-
-	<video name="md_video">
-	  <pos>0.249479 0.4145740740</pos>
-	</video>
-	
-	<image name="bigtv">
-	  <pos>0.249479 0.4145740740</pos>
-	</image>
-	
-	<image name="Chevron Bas">
-	  <opacity>0.7</opacity>
-      <pos>0.51 0.7</pos>
-	</image>	
-	
-	<image name="Chevron Haut">
-		<opacity>0.7</opacity>
-		<pos>0.51 0.24</pos>
-	</image>
 	
 	<image name="logo">
       <path>./wheel/${system.theme}.png</path>
@@ -1482,7 +1460,7 @@ Numero de juegos : {binding:total}</text>
       <type>vertical_wheel</type>
 	  <logoAlignment>center</logoAlignment>
 	  <logoRotationOrigin>3.6 0.5</logoRotationOrigin>
-	  <logoRotation>12</logoRotation>
+	  <logoRotation>0</logoRotation>
 	  <origin>0.5 0.5</origin>
       <pos>0.612 0.47</pos>
       <size>0.5 0.93</size>
@@ -1503,57 +1481,6 @@ Numero de juegos : {binding:total}</text>
       <glowSize>2</glowSize>
       <lineSpacing>1.0</lineSpacing>
     </text>
-	
-	<text name="md_name">
-      <color>DDD000</color>
-	  <pos>0.25 0.0556</pos>
-      <fontPath>./fonts/Saira_SemiCondensed-Bold.ttf</fontPath>  
-	  <size>0.4791666 0.11</size>
-	  <lineSpacing>1</lineSpacing>
-      <alignment>center</alignment>
-	  <fontSize>0.047</fontSize>
-	  <origin>0.5 0.5</origin>
-	  <glowColor>000000ff</glowColor>
-      <glowSize>3</glowSize>
-	  <forceUppercase>1</forceUppercase>
-	  <zIndex>41</zIndex>
-	  <storyboard repeat="forever">
-            <animation property="color" from="DDD000" to="908A40" begin="" duration="1150" mode="Linear" autoReverse="true"/>
-	  </storyboard>	  	  
-	</text>
-	
-	<text name="md_developer">
-	  <origin>0 0.5</origin>
-	  <size>0.401041666 0.03</size>
- 	  <pos>0.082 0.703703</pos>
-	</text>
-		
-	<datetime name="md_releasedate">
-	  <alignment>right</alignment>
- 	  <pos>0.018 0.703703</pos>
-	  <origin>0 0.5</origin>
-	  <size>0.055 0.037</size>
-	</datetime>
-	
-	<rating name="md_rating">
-      <pos>0.444 0.703703</pos>
-      <size>0.08 0.025</size>
-	  <origin>0.5 0.5</origin>
-      <color>E0A020</color>
-      <unfilledColor>808080</unfilledColor>
-	  <zIndex>41</zIndex>	  
-    </rating>	
-	
-	<text name="md_description">
-      <origin>0.5 0.5</origin>
-	  <pos>0.244 0.835185185</pos>
-	  <size>0.48 0.2</size>
-	  <alignment>right</alignment>
-   </text>
-   	
-	<text name="md_genre">
-		<visible>false</visible>
-	</text>
 	
   </view>
 
