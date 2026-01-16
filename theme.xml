@@ -852,7 +852,7 @@ Numero de juegos : {binding:total}</text>
 
 <!-- COMMON ELEMENTS in Gamelist Views -->
   
-  <view name="basic,detailed,video,gamecarousel,grid">
+  <view name="basic,detailed,gamecarousel,grid">
     
 	<helpsystem name="help">
 	  <pos>0.01 0.972</pos>
@@ -888,56 +888,28 @@ Numero de juegos : {binding:total}</text>
 		  <zIndex>150</zIndex>
 	</image>
 	
-    <image name="background">
-      <pos>0 0</pos>
-      <size>1 1</size>
-      <origin>0 0</origin>
-	  <path>./_art/assets/white.png</path>
-	  <color>383842ff</color>
-	  <colorEnd>38384250</colorEnd>
-      <zIndex>0</zIndex>	  
-    </image>
-	
-	<image name="Chevron Bas, Chevron Haut, Chevron gauche, Chevron droite">
+	<image name="arrowup" extra="static">
       <origin>0.5 0.5</origin>
-      <size>0.01875 0</size>
-	  <color>DDDDDD</color>
-	  <path>./_art/assets/chevron-arrows-svgrepo-com.svg</path>
+	  <size>0.031 0</size>
+	  <color>A0A0AAff</color>
+	  <path>./_art/assets/arrowup.png</path>
       <linearSmooth>true</linearSmooth>
-      <zIndex>41</zIndex>
-	</image>
-	
-	<image name="Chevron Bas" extra="true">
-	  <flipY>true</flipY>
-	  <rotation>0</rotation>
-      <storyboard repeatAt="1">
-            <animation property="offsetY" from="0" to="0.01" begin="" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
-			<animation property="offsetY" from="0" to="0" begin="2460" duration="1000" mode="Linear"/>
-	  </storyboard>
-	</image>
-	
-	<image name="Chevron Haut" extra="true">
-	  <flipY>false</flipY>
-	  <rotation>0</rotation>
-      <storyboard repeatAt="1">
+	  <zIndex>60</zIndex>
+	  <storyboard repeatAt="1">
             <animation property="offsetY" from="0" to="-0.01" begin="3000" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
 	  </storyboard>
 	</image>
 	
-	<image name="Chevron droite" extra="true">
-		<flipY>false</flipY>
-		<rotation>90</rotation>
-		<storyboard repeatAt="1">
-            <animation property="offsetX" from="0" to="0.01" begin="" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
-			<animation property="offsetX" from="0" to="0" begin="2460" duration="1000" mode="Linear"/>
-	  </storyboard>
-	</image>
-	
-	<image name="Chevron gauche" extra="true">
-	  <flipY>false</flipY>
-	  <rotation>-90</rotation>
-      <storyboard repeatAt="1">
-            <animation property="offsetX" from="0" to="-0.01" begin="3000" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
+	<image name="arrowdown" extra="static">
+      <origin>0.5 0.5</origin>
+	  <size>0.031 0</size>
+	  <color>A0A0AAff</color>
+	  <path>./_art/assets/arrowdown.png</path>
+      <linearSmooth>true</linearSmooth>
+	  <zIndex>60</zIndex>
+	  <storyboard repeatAt="1">
+            <animation property="offsetY" from="0" to="0.01" begin="" duration="115" mode="Linear" autoReverse="true" repeat="2"/>
+			<animation property="offsetY" from="0" to="0" begin="2460" duration="1000" mode="Linear"/>
 	  </storyboard>
 	</image>
 	
@@ -1052,7 +1024,7 @@ Numero de juegos : {binding:total}</text>
     </text>
 	
 	<text name="md_developer">
-      <color>A0A0A0</color>
+	 <color>AAAA9A</color>
 	  	  <fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
 		  <fontSize>0.026</fontSize>
 	  <forceUppercase>0</forceUppercase>
@@ -1062,7 +1034,7 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
 	<datetime name="md_releasedate">
-      <color>888888</color>
+	 <color>AAAA9A</color>
 	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
 	  <format>%Y</format>
 	  		  <fontSize>0.028</fontSize>
@@ -1080,7 +1052,7 @@ Numero de juegos : {binding:total}</text>
 	  <zIndex>41</zIndex>
 	</text>
 		  
-    <text name="md_playcount,md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_playcount, md_lbl_players, md_lbl_lastplayed, md_publisher, md_lbl_gametime, md_gametime, gridtile, gridtile:selected, logoText">
+    <text name="md_genre,md_playcount,md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_playcount, md_lbl_players, md_lbl_lastplayed, md_publisher, md_lbl_gametime, md_gametime, gridtile, gridtile:selected, logoText">
 		  <pos>1.5 1.5</pos>
 	      <visible>false</visible>
 	</text>
@@ -1088,9 +1060,11 @@ Numero de juegos : {binding:total}</text>
 	<datetime name="md_lastplayed">
   		<visible>false</visible>
 	</datetime>
+
 			
     </view>
-	
+
+
 <!-- BASIC -->
 
     <view name="basic">
@@ -1208,9 +1182,9 @@ Numero de juegos : {binding:total}</text>
 		
     </view>
   
-  <!-- COMMON ELEMENTS TO DETAILED AND VIDEO -->
+  <!-- COMMON ELEMENTS TO DETAILED AND GAMECAROUSEL -->
  
-  <view name="detailed,video">
+  <view name="detailed,gamecarousel">
 
 	<image name="backgound" extra="true">
       <pos>0.6845166 0</pos>
@@ -1257,7 +1231,7 @@ Numero de juegos : {binding:total}</text>
 	</image>
 	
 		<image name="infoboxdetailed" extra="static">
-      <pos>0.6845166 0.8046296</pos>
+      <pos>0.6845166 0.756</pos>
       <size>0.6203125 0</size>
       <origin>0.5 0.5</origin>
 	  <path>./_art/assets/infoboxdetailed.png</path>
@@ -1270,33 +1244,18 @@ Numero de juegos : {binding:total}</text>
     <path>./_art/whiteLogos/${system.theme}.png</path>
       <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
 	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
-	 <maxSize>0.1255208 0.38</maxSize>
+	 <size>0.2510416 0</size>
 	 <origin>0.5 0.5</origin>
 	 <linearSmooth>true</linearSmooth>
-	 <opacity>0.65</opacity>
-	 <pos>0.459375 0.71</pos>
+	 <opacity>1</opacity>
+	 <pos>0.1901 0.0638</pos>
+	 <color>AAAA9A</color>
 	 <zIndex>21</zIndex>
 	</image>
 	
-	<image name="consoles" extra="true">
-	  <linearSmooth>true</linearSmooth>
-      <origin>0.5 0.5</origin>
-    	<maxSize>0.132 0.172</maxSize>
-		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
-		<path>./_art/consoles/${system.theme}.png</path>
-		<path>./_art/consoles/${system.theme}.svg</path>
-		  <path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.png</path>
-		  <path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.svg</path>
-		<path ifSubset="neogeostyle:mvs">./_art/consoles/special/${system.theme}.png</path>	  
-		<color>E8E8E8</color>
-		<origin>0.5 0.5</origin>
-		<linearSmooth>true</linearSmooth>
-      <zIndex>102</zIndex>
-	  	 <pos>0.459375 0.83</pos>
-    </image>
 
 	<textlist name="gamelist">
-	 <selectorColor>11305Eee</selectorColor>
+	 <selectorColor>214080ee</selectorColor>
 	  <selectedColor>BBDDFF</selectedColor>
 <!-- 	  <selectorHeight>0.05</selectorHeight> -->
 	  <selectorOffsetY>0.02</selectorOffsetY>
@@ -1307,17 +1266,65 @@ Numero de juegos : {binding:total}</text>
 	  <fontSize>0.038</fontSize>
 	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
       <forceUppercase>0</forceUppercase>
-	  <pos>0.02 0</pos>
+	  <pos>0.02 0.1268</pos>
 	  <origin>0 0</origin>
-      <size>0.34 0.9427</size>
+      <size>0.34 0.81584</size>
 	  <glowColor>000000aa</glowColor>
 	  <glowSize>1.5</glowSize>
 	  <glowOffset>1.5 1.5</glowOffset>
-	  <lines>17</lines>
+	  <lines>15</lines>
       <alignment>left</alignment>
 	  <horizontalMargin>0.005</horizontalMargin>
 	  <zIndex>14</zIndex>
 	</textlist>
+	
+	
+	<image name="md_marquee">
+	  <visible>false</visible>
+	</image>	
+	
+	<video name="md_video">
+	  <visible>true</visible>
+	  <pos>0.6845166 0.29</pos>
+	  <maxSize>0.65 0.5</maxSize>
+	  <delay>0.1</delay>
+	  <effect>none</effect>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+	  <delay>0.7</delay>
+	  <showSnapshotDelay>true</showSnapshotDelay>
+	  <snapshotSource>image</snapshotSource>
+      <loops>2</loops>
+	  <color>DDDDDD</color>
+      <roundCorners>0.02</roundCorners>
+	  <zIndex>3</zIndex>	 
+
+	  <storyboard event="activate">
+                <animation property="offsetX" from="-0.3" to="0" duration="500" mode="EaseOutQuint"/>
+                <animation property="opacity" from="1" to="1" duration="" mode="Linear"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="500" mode="Linear"/>
+				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
+				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
+			</storyboard>	  
+	</video>
+	
+		<image name="md_thumbnail">
+	  <pos>0.476 0.7555</pos>
+	  <origin>0.5 0.5</origin>
+      <maxSize>0.18 0.325</maxSize>
+	  <zIndex>21</zIndex>
+	  <storyboard event="activate">
+                <animation property="opacity" from="0" to="0" begin="" duration="250" mode="Linear"/>
+				<animation property="opacity" from="0" to="1" begin="250" duration="250" mode="Linear"/>
+				<animation property="scale" from="0" to="1" duration="250" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
+				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
+			</storyboard>
+
+	</image>
 	
     <image name="md_flag">
 		<origin>0.5 0.5</origin>
@@ -1361,27 +1368,27 @@ Numero de juegos : {binding:total}</text>
 	  <origin>0.5 0.5</origin>
 	  <alignment>center</alignment>	  
 	  <size>0.0982 0.048</size>
-	  <pos>0.936 0.70925</pos>
+	  <pos>0.936 0.679</pos>
 	  <lineSpacing>1</lineSpacing>
 	</text>
 	
 	<text name="md_name">
 	  <origin>0.5 0.5</origin>
-	  <size>0.345 0.03</size>
-	  <pos>0.7125 0.70925</pos>
+	  <size>0.41 0.048</size>
+	  <pos>0.779 0.611</pos>
 	</text>
 	
 	<datetime name="md_releasedate">
 	  <alignment>left</alignment>
-	  <pos>0.94 0.758</pos>
+	  <pos>0.94 0.751</pos>
 	  <origin>0.5 0.5</origin>
 	  <size>0.04 0.037</size>
 	</datetime>
 	
 	<text name="md_description">
       <origin>0.5 0</origin>
-	  <pos>0.7125 0.733</pos>
-	  <size>0.342708 0.19</size>
+	  <pos>0.7289 0.637</pos>
+	  <size>0.312 0.285</size>
 	  <alignment>center</alignment>
     </text>
 	
@@ -1389,7 +1396,7 @@ Numero de juegos : {binding:total}</text>
       <pos>0.94 0.91</pos>
       <size>0.06 0</size>
 	  <origin>0.5 0.5</origin>
-      <color>A0A0A0</color>
+      <color>AAAA90</color>
       <unfilledColor>808080</unfilledColor>
 	  <zIndex>41</zIndex>
 	  <storyboard event="activate">
@@ -1401,107 +1408,39 @@ Numero de juegos : {binding:total}</text>
 			</storyboard>
     </rating>
 	
-	<text name="md_genre">
-		<visible>false</visible>
-	</text>
-	
-  </view>
- 
- <!-- DETAILED -->
- 
-  <view name="detailed">
-	
-	<image name="md_thumbnail">
-	  <pos>0.6845166 0.336</pos>
-	  <origin>0.5 0.5</origin>
-      <maxSize>0.36 0.61</maxSize>
-	  <reflexion>0.05 0</reflexion>
-	  <storyboard event="activate">
-                <animation property="offsetX" from="-0.3" to="0" duration="850" mode="EaseOutQuint"/>
-                <animation property="opacity" from="1" to="1" duration="" mode="Linear"/>
-			</storyboard>
-			<storyboard event="deactivate">
-                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
-				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
-				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
-			</storyboard>
-			<storyboard event="deactivate" if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'gb2players' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx'">
-                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
-				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
-				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
-			</storyboard>
-	</image>
-	
-    <image name="md_marquee">
-	  <visible>false</visible>
-	</image>
-	
-	<video name="md_video">
-		  <visible>false</visible>
-	</video>
-		
-  </view>
- 
-  <!-- VIDEO -->
+</view> 
   
- <view name="video">
-	
-	<image name="md_thumbnail">
-		<visible>false</visible>
+  <!-- DETAILED -->
+  
+  <view name="detailed">
+  
+	<image name="logobox" extra="true">
+    <path>./_art/assets/white.png</path>
+	 <size>0.340625 0.1259259</size>
+	 <origin>0.5 0.5</origin>
+	 <linearSmooth>false</linearSmooth>
+	 <color>00000088</color>
+	 <opacity>0.8</opacity>
+	 <pos>0.1901 0.0638</pos>
+	 <zIndex>20</zIndex>
 	</image>
 	
-    <image name="md_marquee">
-	  <visible>true</visible>
-	  <pos>0.6845166 0.116</pos>
-	  <linearSmooth>true</linearSmooth>
-	  <origin>0.5 0.5</origin>
-	  <maxSize>0.3 0.22685185</maxSize>
-	  <zIndex>42</zIndex>
-	  	  	
-			<storyboard event="open">
-                <animation property="offsetY" from="-0.25" to="-0.25" duration="1000" mode="Linear"/>
-				<animation property="offsetY" from="-0.25" to="0" begin="1000" duration="250" mode="Linear"/>
-			</storyboard>
-			
-			<storyboard event="activate">
-                <animation property="offsetY" from="-0.25" to="0" duration="500" mode="EaseOutQuint"/>
-				<animation property="opacity" from="1" to="1" duration="" mode="Linear"/>
-			</storyboard>
-			
-			<storyboard event="deactivate">
-			    <animation property="scale" from="1" to="0" duration="500" mode="Linear"/>
-			</storyboard>
-	</image>	
+	<image name="arrowup">
+		<pos>0.3685 0.498629</pos>
+		<color>FFFFFFdd</color>
+		<scale>0.57</scale>
+	</image>
 	
-	<video name="md_video">
-	  <visible>true</visible>
-	  <pos>0.6845166 0.41</pos>
-	  <maxSize>0.65 0.5</maxSize>
-	  <delay>0.1</delay>
-	  <effect>none</effect>
-      <showSnapshotNoVideo>true</showSnapshotNoVideo>
-	  <delay>0.7</delay>
-	  <showSnapshotDelay>true</showSnapshotDelay>
-	  <snapshotSource>image</snapshotSource>
-      <loops>2</loops>
-	  <color>888888</color>
-      <roundCorners>0.02</roundCorners>
-	  <zIndex>3</zIndex>	 
-
-	  <storyboard event="activate">
-                <animation property="offsetX" from="-0.3" to="0" duration="500" mode="EaseOutQuint"/>
-                <animation property="opacity" from="1" to="1" duration="" mode="Linear"/>
-			</storyboard>
-			<storyboard event="deactivate">
-                <animation property="opacity" from="1" to="0" duration="500" mode="Linear"/>
-				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
-				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
-			</storyboard>	  
-	</video>
-
-		
+	<image name="arrowdown">
+		<pos>0.3685 0.584</pos>     
+		<color>FFFFFFdd</color>
+		<scale>0.57</scale>
+	</image>
+	
+	
 </view>
- 
+	
+	
 <!-- GAMECAROUSEL -->
 
 <view name="gamecarousel">
