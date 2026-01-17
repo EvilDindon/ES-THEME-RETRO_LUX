@@ -399,7 +399,7 @@ originally based on: "carbon" and "Arcade Planet"
 		 <linearSmooth>true</linearSmooth>
 	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
 	     <path>./_art/assets/underconstruction.png</path>
-     	 <path>./_art/wheel/${system.theme}.png</path>
+     	 <path>./_art/wheelNoSprite/${system.theme}.png</path>
 		 <path>./_art/wheel/${system.theme}-${lang}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/wheel/SPECIAL/${system.theme}.png</path>
