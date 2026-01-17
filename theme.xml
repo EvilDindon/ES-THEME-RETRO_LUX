@@ -1070,10 +1070,10 @@ Numero de juegos : {binding:total}</text>
 <!-- BASIC -->
 
     <view name="basic">
-   	
+<!--    	
     <image name="background">
 	  <color>343842ff</color>
-    </image>
+    </image> -->
 	
     <image name="bgbasic2" extra="true">
 	<path>./_art/assets/bgbasic2.png</path>
@@ -1187,7 +1187,7 @@ Numero de juegos : {binding:total}</text>
   <!-- COMMON ELEMENTS TO DETAILED AND GAMECAROUSEL -->
  
   <view name="detailed,gamecarousel">
-
+	
 	<image name="backgound" extra="true">
       <pos>0.6845166 0</pos>
       <size>0.9 0</size>
@@ -1564,20 +1564,46 @@ Numero de juegos : {binding:total}</text>
   
 	<view name="grid">
 
-    <image name="background">
-	  <path>./backgrounds/169/bggrid.jpg</path>
-	</image>
-
+	<image name="backgound" extra="true">
+      <pos>0.5 0</pos>
+      <size>1 1.11111111</size>
+      <origin>0.5 0</origin>
+	  <path>./_art/assets/graphite.jpg</path>
+		<color ifSubset="bgcolor:purple">FFAAFF</color>
+		<color ifSubset="bgcolor:blue">B0D8FF</color>
+		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
+	  <linearSmooth>true</linearSmooth>
+	  <zIndex>1</zIndex>
+    </image>
+	
+	<image name="infoboxgrid" extra="static">
+      <pos>0 0</pos>
+      <size>1 0</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/infoboxgrid.png</path>
+      <zIndex>2</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
 	<video name="md_video">
 	  <visible>false</visible>
 	</video>
 	
-	<image name="logo">
-	 <pos>0.08 0.042</pos>
-	 <maxSize>0.12 0.076</maxSize>
+	<image name="whitelogo" extra="true">
+	<path>./_art/whiteLogos/${system.theme}.png</path>
+      <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
+	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
+	 <size>0.15 0</size>
+	 <origin>0 0.5</origin>
+	 <linearSmooth>true</linearSmooth>
+	 <opacity>1</opacity>
+	 <pos>0.005 0.039</pos>
+	 <color>AAAA9A</color>
+	 <zIndex>21</zIndex>
 	</image>
 	
-	<image name="md_thumbnail,md_marquee">
+	<image name="md_thumbnail,md_marquee,md_flag">
 	 <visible>false</visible>
 	</image>
 	 		
@@ -1604,8 +1630,8 @@ Numero de juegos : {binding:total}</text>
 	</imagegrid>
 	
     <gridtile name="default">
-      <backgroundColor>FFFFFF00</backgroundColor>
-      <backgroundCornerSize>9 9</backgroundCornerSize>
+      <backgroundColor>EEEEEE00</backgroundColor>
+      <backgroundCornerSize>0 0</backgroundCornerSize>
       <selectionMode>image</selectionMode>
       <padding>6 6</padding>
       <imageColor>999999FF</imageColor>
@@ -1613,8 +1639,8 @@ Numero de juegos : {binding:total}</text>
 	
     <gridtile name="selected">
       <backgroundCenterColor>00000000</backgroundCenterColor>
-      <backgroundEdgeColor>BB0000FF</backgroundEdgeColor>
-	  <padding>6 6</padding>
+      <backgroundEdgeColor>778888</backgroundEdgeColor>
+	  <padding>4 4</padding>
       <imageColor>FFFFFFFF</imageColor>
     </gridtile>
 	    	
@@ -1634,28 +1660,29 @@ Numero de juegos : {binding:total}</text>
     </image>
 	
     <ninepatch name="gridtile.background:selected">
-      <animateColor>BBBB00B0</animateColor>
-      <animateColorTime>350</animateColorTime>
+      <animateColor>EEFFFF</animateColor>
+      <animateColorTime>750</animateColorTime>
     </ninepatch>
 	
 	<text name="md_name">
       <color>EFEFEF</color>
-	  <pos>0.5 0.042</pos>
-      <size>0.69 0.05</size>
+	  <pos>0.5 0.039</pos>
+      <size>0.683333 0.05</size>
       <alignment>center</alignment>
 	  <fontPath>./fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
-	  <fontSize>0.056</fontSize>
+	  <fontSize>0.045</fontSize>
 	  <origin>0.5 0.5</origin>
-      <glowSize>2</glowSize>
+      <glowSize>3</glowSize>
+	  <glowColor>000000dd</glowColor>
 	  <forceUppercase>1</forceUppercase>
 	  <zIndex>41</zIndex>	  
 	</text>
 	
 	<rating name="md_rating">
-      <pos>0.904 0.042</pos>
-      <size>0.03 0.03</size>
+      <pos>0.921 0.053</pos>
+      <size>0.065 </size>
 	  <origin>0.5 0.5</origin>
-      <color>E0A020</color>
+      <color>AAAA90</color>
       <unfilledColor>808080</unfilledColor>
 	  <zIndex>41</zIndex>	  
     </rating>
@@ -1665,8 +1692,13 @@ Numero de juegos : {binding:total}</text>
     </text>
 	
 	<datetime name="md_releasedate">
-      <pos>2 2</pos>
+	  <alignment>center</alignment>
+	        <color>AAAAAA</color>
+	  <pos>0.91875 0.027</pos>
+	  <origin>0.5 0.5</origin>
+	  <size>0.04 0.037</size>
 	</datetime>
+	
 	
   </view>
 
