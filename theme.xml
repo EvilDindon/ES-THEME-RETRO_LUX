@@ -48,6 +48,9 @@ originally based on: "carbon" and "Arcade Planet"
 	<systemviewlayout>System View Layout</systemviewlayout>
 	<systemviewlayout lang="fr">Disposition de vue système</systemviewlayout>
 	
+	<wheelImageStyle>System View Wheel Image Style</wheelImageStyle>
+	<wheelImageStyle lang="fr">Style d'Images Carousel Sysytèmes</wheelImageStyle>
+	
 	<systemviewstyle>System view Style</systemviewstyle>
 	<systemviewstyle lang="fr">Style de vue Système</systemviewstyle>
 	
@@ -60,13 +63,15 @@ originally based on: "carbon" and "Arcade Planet"
 	<randomboxart>Random Box Art</randomboxart>
 	<randomboxart lang="fr">Jacquettes Aléatoires</randomboxart>
 	
-	<randomlogos>Logos flow</randomlogos>
-	<randomlogos lang="fr">Défilement de logos</randomlogos>
-	
+	<NoSprite>Without Sprite</NoSprite>
+    <NoSprite lang="fr">Sans Sprite</NoSprite>
 
+	<default>default</default>
+    <default lang="fr">Par Défaut</default>
+          
 	<yes>yes</yes>
     <yes lang="fr">oui</yes>
-            
+	
     <no>no</no>
     <no lang="fr">non</no>
 	
@@ -112,6 +117,9 @@ originally based on: "carbon" and "Arcade Planet"
 	<gamelistalignment>Gamelist Text Alignment</gamelistalignment>
 	<gamelistalignment lang="fr">Alignement du Texte des Listes de Jeux</gamelistalignment>
 	
+	<logogrid>Logo Grid</logogrid>
+	<logogrid lang="fr">Grille de Logos</logogrid>
+  
   </variables>
   
    <!-- Subset options for Regional Artwork and Logos -->
@@ -147,6 +155,12 @@ originally based on: "carbon" and "Arcade Planet"
 	<subset name="systemviewstyle" displayName="${systemviewstyle}">
 		<include name="randomboxart" displayName="${randomboxart}"/>
 		<include name="randomfanart" displayName="${randomfanart}"/>
+	</subset>
+	
+		<!-- Subset options for Wheel Image style -->
+	<subset name="wheelStyle" displayName="${wheelImageStyle}">
+		<include name="default" displayName="${default}"/>
+		<include name="NoSprite" displayName="${NoSprite}"/>
 	</subset>
 
 		<!-- Subset for Selected Border Color -->
@@ -399,14 +413,15 @@ originally based on: "carbon" and "Arcade Planet"
 		 <linearSmooth>true</linearSmooth>
 	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
 	     <path>./_art/assets/underconstruction.png</path>
-     	 <path>./_art/wheelNoSprite/${system.theme}.png</path>
-		 <path>./_art/wheel/${system.theme}-${lang}.png</path>
+     	 <path>./_art/wheel/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/wheel/SPECIAL/${system.theme}.png</path>
-	  <storyboard event="activate">
+		 <path ifSubset ="wheelStyle:NoSprite">./_art/wheelNoSprite/${system.theme}.png</path>
+		 <path ifSubset="wheelStyle:NoSprite,artworkregion:US">./_art/wheelNoSprite/US/${system.theme}.png</path>
+		 <path ifSubset="wheelStyle:NoSprite,neogeostyle:mvs">./_art/wheelNoSprite/SPECIAL/${system.theme}.png</path>
+		 <storyboard event="activate">
 			<animation property="color" from="C0C0C0ff" to="00000000" begin="200" duration="" mode="Linear"/>			
 	  </storyboard>
-
 	</image>
 	 			   
 	<carousel name="systemcarousel">
@@ -435,10 +450,9 @@ originally based on: "carbon" and "Arcade Planet"
 	  <zIndex>60</zIndex>
     </carousel>
 	
-	<image name="whiteLogo" extra="static">
+	<image name="whiteLogo" ifSubset="wheelStyle:default" extra="static">
 		<path>./_art/assets/underconstruction.png</path>
 		<path>./_art/whiteLogos/${system.theme}.png</path>
-		 <path>./_art/whiteLogos/${system.theme}-${lang}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/SPECIAL/${system.theme}.png</path>
 		 <size>0.25104166 0.14444444</size>
@@ -470,6 +484,7 @@ originally based on: "carbon" and "Arcade Planet"
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
 		<pos>0.81185 0.471</pos>
+		<pos ifSubset="wheelStyle:NoSprite">0.78580833 0.471</pos>
 		<zIndex>63</zIndex>
 		<opacity>0</opacity>
 		<storyboard repeatAt="5000">
@@ -482,8 +497,17 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="-0.02604167" to="-0.03604167" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
 			<animation property="offsetX" from="-0.02604167" to="-0.02604167" begin="6250" duration="8750" mode="Linear"/>
 		</storyboard>
-	</image>
+			
+		<storyboard ifSubset="wheelStyle:NoSprite" repeatAt="5000">
+			<animation property="opacity" from="1" to="1" begin="200"/>
+			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
+		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
+			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
+			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
+		</storyboard>
 
+	</image>
+	
 	<image name="nakedwheel" extra="static">
 		<size>0.35 0</size>
 		 <linearSmooth>true</linearSmooth>
@@ -1560,7 +1584,7 @@ Numero de juegos : {binding:total}</text>
 
   </view>
 
-	<!-- GRID -->	
+	<!-- GRID VIEWS -->	
   
 	<view name="grid">
 
@@ -1623,10 +1647,6 @@ Numero de juegos : {binding:total}</text>
 	  <scrollLoop>true</scrollLoop>
 	  <scrollSound>./sounds/scroll2.wav</scrollSound>
 	  <scrollDirection>vertical</scrollDirection>
-	  <storyboard ifSubset="animatedgamelistopenings:yes">
-				<animation property="scale" from="0" to="0" begin="" duration="620" mode="Linear"/>
-				<animation property="scale" from="0" to="1" begin="620" duration="175" mode="EaseOut"/>
-      </storyboard>
 	</imagegrid>
 	
     <gridtile name="default">
@@ -1699,9 +1719,51 @@ Numero de juegos : {binding:total}</text>
 	  <size>0.04 0.037</size>
 	</datetime>
 	
-	
   </view>
 
+<customView name="logogrid" inherits="grid" displayName="${logogrid}">
+	 		
+	<imagegrid name="gamegrid">
+      <autoLayout>6 6</autoLayout>
+	  <imageSource>marquee</imageSource>
+	</imagegrid>
+	
+    <gridtile name="default">
+      <backgroundColor>00000000</backgroundColor>
+      <backgroundCornerSize>8 8</backgroundCornerSize>
+      <selectionMode>tile</selectionMode>
+      <padding>12 12</padding>
+      <imageColor>A8A8A8FF</imageColor>
+    </gridtile>
+	
+    <gridtile name="selected">
+      <backgroundCenterColor>88888888</backgroundCenterColor>
+      <backgroundEdgeColor>88888888</backgroundEdgeColor>
+	  <padding>2 2</padding>
+      <imageColor>FFFFFFFF</imageColor>
+    </gridtile>
+	    	
+	<image name="gridtile.favorite">
+	 <linearSmooth>true</linearSmooth>
+      <path>./icons/star_filled.svg</path>
+      <pos>0.93 0.07</pos>
+      <maxSize>0.15 0.15</maxSize>
+      <origin>0.5 0.5</origin>
+      <horizontalAlignment>right</horizontalAlignment>
+      <color>FFFF0080</color>
+    </image>
+	
+    <image name="gridtile.favorite:selected">
+	  <linearSmooth>true</linearSmooth>
+      <color>FFFF00D0</color>
+    </image>
+	
+    <ninepatch name="gridtile.background:selected">
+      <animateColor>88888828</animateColor>
+      <animateColorTime>500</animateColorTime>
+    </ninepatch>
+	
+  </customView>
 
 <!-- Scaling Box Art --> 
    
