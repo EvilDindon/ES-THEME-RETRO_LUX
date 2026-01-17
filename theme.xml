@@ -1526,10 +1526,11 @@ Numero de juegos : {binding:total}</text>
       <pos>0.19 0.47</pos>
       <size>0.5 0.945</size>
       <logoScale>1</logoScale>
-      <logoSize>0.4166666 0.22222</logoSize>
-      <maxLogoCount>5</maxLogoCount>
+      <logoSize>0.20833333 0.22222</logoSize>
+      <maxLogoCount>11</maxLogoCount>
       <imageSource>marquee</imageSource>
-      <minLogoOpacity>1</minLogoOpacity>
+      <minLogoOpacity>0.5</minLogoOpacity>
+	  <scaledLogoSpacing>0.05</scaledLogoSpacing>
 	  <zIndex>24</zIndex>
 	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
     </gamecarousel>    
@@ -1546,12 +1547,12 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="selectedlogobg" extra="true">
     <path>./_art/assets/white.png</path>
-	 <size>0.21354166 0.2</size>
-	 <origin>0 0</origin>
+	 <size>0.21354166 0.09</size>
+	 <origin>0.5 0.5</origin>
 	 <linearSmooth>false</linearSmooth>
 	 <color>112856</color>
 	 <opacity>0.5</opacity>
-	 <pos>0.083854 0.371</pos>
+	 <pos>0.19 0.47</pos>
 	 <zIndex>23</zIndex>
 	 	  <storyboard repeat="forever">
                 <animation property="color" from="112856" to="3384A2" begin="" duration="1000" mode="Linear" autoReverse="true"/>
