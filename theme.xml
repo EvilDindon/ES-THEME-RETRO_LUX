@@ -29,22 +29,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<selectedBorderColor>Selected Logo Border Color</selectedBorderColor>
 	<selectedBorderColor lang="fr">Couleur de la bordure du logo actif</selectedBorderColor>
-	
-	<whiteandsprite>White + Sprite</whiteandsprite>
-	<whiteandsprite lang="fr">Blanc + Sprite</whiteandsprite>
-	
-	<whitenosprite>White no sprite</whitenosprite>
-	<whitenosprite lang="fr">Blanc sans sprite</whitenosprite>
-	
-	<colorandsprite>Color + Sprite</colorandsprite>
-	<colorandsprite lang="fr">Couleur + Sprite</colorandsprite>
-	
-	<colornosprite>Color no sprite</colornosprite>
-	<colornosprite lang="fr">Couleur sans sprite</colornosprite>
 		
-	<TextListColor>Text Color in Gamelists</TextListColor>
-    <TextListColor lang="fr">Couleur du Texte dans la Liste de Jeux</TextListColor>
-	
 	<systemviewlayout>System View Layout</systemviewlayout>
 	<systemviewlayout lang="fr">Disposition de vue système</systemviewlayout>
 	
@@ -53,10 +38,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<systemviewstyle>System view Style</systemviewstyle>
 	<systemviewstyle lang="fr">Style de vue Système</systemviewstyle>
-	
-	<systemviewbottom>System view bottom</systemviewbottom>
-	<systemviewbottom lang="fr">Pied de la vue système</systemviewbottom>
-	
+
 	<randomfanart>Random Fan Art</randomfanart>
 	<randomfanart lang="fr">Fan Art aléatoire</randomfanart>
 	
@@ -65,6 +47,9 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<NoSprite>Without Sprite</NoSprite>
     <NoSprite lang="fr">Sans Sprite</NoSprite>
+			
+	<boxcarousel>Box Carousel</boxcarousel>
+    <boxcarousel lang="fr">Carousel de Boîtes</boxcarousel>
 
 	<default>default</default>
     <default lang="fr">Par Défaut</default>
@@ -1462,7 +1447,7 @@ Numero de juegos : {binding:total}</text>
 		
 </view>
 		
-<!-- GAMECAROUSEL -->
+<!-- GAMECAROUSEL VIEWS -->
 
 <view name="gamecarousel">
 	
@@ -1510,6 +1495,11 @@ Numero de juegos : {binding:total}</text>
    <visible>true</visible>
 	  <pos>0.653125 0.29</pos>
 	  <maxSize>0.7 0.53</maxSize>
+	  	  <storyboard event="activate">
+		  </storyboard>
+		  <storyboard event="deactivate">
+		  </storyboard>
+		<zIndex>21</zIndex>
 	</video>
 	
 	<image name="whitelogo">
@@ -1585,6 +1575,117 @@ Numero de juegos : {binding:total}</text>
 
   </view>
 
+<customView name="boxcarousel" inherits="gamecarousel" displayName="${boxcarousel}">
+	
+	<image name="bgcarousel,electronic2,selectedlogobg,infoboxdetailed,arrowup,arrowdown,md_thumbnail">
+			<visible>false</visible>
+	</image>
+	
+	<image name="backgound2">
+      <pos>0.5 0</pos>
+      <size>1 1.11111111</size>
+      <origin>0.5 0</origin>
+	  <zIndex>1</zIndex>
+    </image>
+
+	<image name="bgcontroller">
+      <pos>0.5 0</pos>
+	  <origin>0.5 0</origin>
+      <size>1 0</size>
+	  <rotation>0</rotation>
+    </image>
+	
+	<image name="whitelogo">
+	<rotation>0</rotation>
+	 <pos>0.5 0.058</pos>
+	 <opacity>0.85</opacity>
+	</image>
+	
+	<image name="infoboxcarousel" extra="static">
+      <pos>0.5 0.762037</pos>
+      <size>0.62135416666 0</size>
+      <origin>0.5 0.5</origin>
+	  <path>./_art/assets/infoboxcarousel.png</path>
+      <zIndex>20</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
+	<video name="md_video">
+	  <pos>0.5 0.788</pos>
+	  <maxSize>0.21 0.272</maxSize>
+	</video>
+
+	<image name="logoleft">
+		<x>0.15</x>
+	</image>
+	
+	<image name="logoright">
+		<x>0.85</x>
+	</image>	
+	<gamecarousel name="gamecarousel">
+      <type>horizontal</type>
+	  <logoAlignment>center</logoAlignment>
+	  <origin>0.5 0</origin>
+      <pos>0.5 0.118</pos>
+      <size>1 0.459</size>
+      <logoScale>1.35</logoScale>
+      <logoSize>0.15 0.34</logoSize>
+	  <logoSize if="{system.theme} == 'snes' || {system.theme} == 'snesh' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx' || {system.theme} == 'scv' || {system.theme} == 'lcdgames'">0.23 0.34</logoSize>
+	  <maxLogoCount>5</maxLogoCount>
+      <maxLogoCount if="{system.theme} == 'snes' || {system.theme} == 'snesh' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx' || {system.theme} == 'scv' || {system.theme} == 'lcdgames'">3</maxLogoCount>
+      <imageSource>thumbnail</imageSource>
+      <minLogoOpacity>1</minLogoOpacity>
+    </gamecarousel>    
+    
+	<text name="gamecarouselLogoText">
+      <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
+	  <forceUppercase>1</forceUppercase>
+	  <color>AA1122</color>
+	  <fontSize>0.058</fontSize>
+      <glowColor>000000FF</glowColor>
+      <glowSize>2</glowSize>
+      <lineSpacing>1.0</lineSpacing>
+    </text>
+	
+	<image name="md_flag,players">
+		<offsetX>-0.228787433</offsetX>
+	</image>
+  	
+	<text name="playcount,md_developer">
+		<size>0.19</size>
+	</text>
+	
+	<text name="md_players,playcount,md_developer,md_name,md_releasedate">
+		<offsetX>-0.228787433</offsetX>
+	</text>
+	
+	<text name="md_developer">
+		<fontSize>0.03</fontSize>
+	</text>
+	
+	<datetime name="md_releasedate">
+		<offsetX>-0.228787433</offsetX>
+	</datetime>
+	
+	<rating name="md_rating">
+		<offsetX>-0.228787433</offsetX>
+    </rating>
+	
+	 <text name="md_name">
+		<offsetX>0</offsetX>
+		<size>0.604166666 0.048</size>
+		<pos>0.5 0.6175925</pos>
+		<color>eeeeee</color>
+	</text>
+		<text name="md_description">
+			<offsetX>0</offsetX>
+	<size>0.19 0.284</size>
+	  <pos>0.29270833 0.644</pos>
+	</text>
+	
+  </customView>
+  
 	<!-- GRID VIEWS -->	
   
 	<view name="grid">
