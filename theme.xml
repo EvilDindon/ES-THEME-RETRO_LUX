@@ -646,6 +646,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<linearSmooth>false</linearSmooth>
 		<opacity>0</opacity>
 		<pos>0.6842458 0.471296295</pos>
+		<pos ifSubset="wheelStyle:NoSprite">0.3615 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:left">0.0562 0.471296295</pos>
 		<storyboard ifSubset="systemviewlayout:right" repeatAt="1500">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
@@ -657,6 +658,17 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
 			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
+	  	<storyboard ifSubset="wheelStyle:NoSprite,systemviewlayout:right" repeatAt="1500">
+			<animation property="opacity" from="0" to="1" begin="" duration="" mode="Linear"/>
+			<animation property="scale" from="0" to="2" begin="" duration="500" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="-0.2322542" begin="500" duration="800" mode="EaseOutCubic"/>
+			<animation property="offsetY" to="-0.2" begin="500" duration="400" mode="EaseOutCubic" autoReverse="true"/>
+			<animation property="offsetY" from ="0" to="0.32" begin="1300" duration="200" mode="EaseOutCubic"/>
+			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
+			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
+			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>				
+	  </storyboard>
+	  
 	  <storyboard ifSubset="systemviewlayout:left" repeatAt="2750">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
 			<animation property="scale" from="1" to="3" begin="2000" duration="750" mode="EaseOutCubic"/>
@@ -1775,6 +1787,9 @@ Numero de juegos : {binding:total}</text>
       <origin>0.5 0.5</origin>
 	  <linearSmooth>true</linearSmooth>
 	  <zIndex>4</zIndex>
+	  		<storyboard repeat="forever">
+				<animation property="scale" from="1" to="2" begin="" duration="20000" mode="linear" autoReverse="true"/>
+            </storyboard>
     </image>
 	
 	<image name="whitelogo">
