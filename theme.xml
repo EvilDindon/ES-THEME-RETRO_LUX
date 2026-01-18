@@ -158,8 +158,8 @@ originally based on: "carbon" and "Arcade Planet"
 
 <!-- Subset for System view Background Color Color -->
 	<subset name="bgcolor" displayName="${bgcolor}">
-		<include name="darkgrey" displayName="${darkgrey}"/>
 		<include name="blue" displayName="${blue}"/>
+		<include name="darkgrey" displayName="${darkgrey}"/>
 		<include name="purple" displayName="${purple}"/>
 
 	</subset>
