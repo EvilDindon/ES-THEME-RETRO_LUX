@@ -1598,7 +1598,7 @@ Numero de juegos : {binding:total}</text>
 	<image name="whitelogo">
 	<rotation>0</rotation>
 	 <pos>0.5 0.058</pos>
-	 <opacity>0.85</opacity>
+	 <opacity>1</opacity>
 	</image>
 	
 	<image name="infoboxcarousel" extra="static">
@@ -1616,13 +1616,6 @@ Numero de juegos : {binding:total}</text>
 	  <maxSize>0.21 0.272</maxSize>
 	</video>
 
-	<image name="logoleft">
-		<x>0.15</x>
-	</image>
-	
-	<image name="logoright">
-		<x>0.85</x>
-	</image>	
 	<gamecarousel name="gamecarousel">
       <type>horizontal</type>
 	  <logoAlignment>center</logoAlignment>
@@ -1686,6 +1679,186 @@ Numero de juegos : {binding:total}</text>
 	
   </customView>
   
+  <customView name="fanart" inherits="boxcarousel" displayName="Fanart">
+  
+  	<image name="bgcarousel,electronic2,selectedlogobg,infoboxdetailed,infoboxcarousel,arrowup,arrowdown,md_thumbnail">
+			<visible>false</visible>
+	</image>
+	
+	<image name="backgound2">
+      <pos>0.5 0</pos>
+      <size>1 1.11111111</size>
+      <origin>0.5 0</origin>
+	  <zIndex>1</zIndex>
+    </image>
+	
+	<image name="bottom bg fade" extra="true">
+      <path>./_art/assets/white.png</path>
+	  <pos>0 0.744</pos>
+      <size>1 0.2</size>
+	  <color>00000001</color>
+	  <colorEnd>000000ff</colorEnd>
+      <origin>0 0</origin>
+	  <zIndex>5</zIndex>
+    </image>
+	
+	<image name="infobg" extra="true">
+      <path>./_art/assets/white.png</path>
+	  <pos>0.245 0</pos>
+      <size>0.244 0.94259</size>
+	  <color>110011a0</color>
+      <origin>0.5 0</origin>
+	  <zIndex>6</zIndex>
+    </image>
+	
+	<image name="infobgShadow" extra="true">
+      <path>./_art/assets/white.png</path>
+	  <pos>0.367 0</pos>
+      <size>0.004 0.94259</size>
+	  <color>00000080</color>
+	  <colorEnd>00000000</colorEnd>
+	  <gradientType>horizontal</gradientType>
+	      <origin>0 0</origin>
+	  <zIndex>6</zIndex>
+    </image>
+	
+	<image name="whitelogoBG" extra="true">
+      <path>./_art/assets/white.png</path>
+	  <pos>0.245 0</pos>
+      <size>0.244 0.114</size>
+	  <color>00000088</color>
+      <origin>0.5 0</origin>
+	  <zIndex>7</zIndex>
+    </image>
+	
+	<image name="whiteline,whiteline2,whiteline3,whiteline4,whiteline5,whiteline6" extra="true">
+      <path>./_art/assets/white.png</path>
+      <size>0.15 0.000925925</size>
+	  <x>0.245</x>
+	  <color>777777dd</color>
+      <origin>0.5 0.5</origin>
+	  
+	  <zIndex>7</zIndex>
+    </image>
+	
+	<image name="whiteline">
+		<y>0.19537</y>
+    </image>
+	
+	<image name="whiteline2">
+		<y>0.26759</y>
+    </image>
+	
+	<image name="whiteline3">
+		<y>0.3361111</y>
+    </image>
+
+	<image name="whiteline4">
+		<y>0.4027777</y>
+    </image>	
+
+	<image name="whiteline5">
+		<y>0.489814</y>
+		<w>0.2</w>
+    </image>	
+
+	<image name="whiteline6">
+		<y>0.729629</y>
+		<w>0.2</w>		
+    </image>
+	
+	<image name="md_fanart">
+      <path>./_art/assets/white.png</path>
+	  <pos>0.5 0.5</pos>
+      <size>1 0</size>
+	  <color>dddddd</color>
+      <origin>0.5 0.5</origin>
+	  <linearSmooth>true</linearSmooth>
+	  <zIndex>4</zIndex>
+    </image>
+	
+	<image name="whitelogo">
+	<rotation>0</rotation>
+	 <pos>0.245 0.058</pos>
+	 <opacity>1</opacity>
+	</image>
+	
+	<video name="md_video">
+	  <visible>false</visible>
+	</video>
+
+	<gamecarousel name="gamecarousel">
+      <type>horizontal</type>
+	  <logoAlignment>bottom</logoAlignment>
+	  <origin>0.5 0</origin>
+      <pos>0.5 0.72</pos>
+      <size>1 0.6</size>
+      <logoScale>1.741</logoScale>
+      <logoSize>0.12 0.11</logoSize>
+	  <maxLogoCount>6</maxLogoCount>
+	  <logoPos>0.185 0.1</logoPos>
+       <imageSource>marquee</imageSource>
+      <minLogoOpacity>0.75</minLogoOpacity>
+    </gamecarousel>    
+	
+	<image name="md_flag">
+		<offsetX>0</offsetX>
+		<pos>0.225 0.3</pos>
+	</image>
+	
+	<image name="players">
+		<offsetX>0</offsetX>
+		<pos>0.235 0.37</pos>
+	</image>
+	
+	<text name="md_players">
+		<pos>0.245 0.37</pos>
+	</text>
+  	
+	<text name="playcount">
+		<size>0.22 0.048</size>
+		<pos>0.245 0.465</pos>
+	</text>
+	
+	<text name="md_players,playcount,md_developer,md_name">
+		<offsetX>0</offsetX>
+	</text>
+	
+	<text name="md_developer">
+		<fontSize>0.03</fontSize>
+		<pos>0.245 0.23</pos>
+		<size>0.23 0.048</size>
+		<color>aaaaaa</color>
+	</text>
+	
+	<datetime name="md_releasedate">
+		<offsetX>0</offsetX>
+		<pos>0.5 0.3</pos>
+		<alignment>left></alignment>
+	</datetime>
+	
+	<rating name="md_rating">
+		<offsetX>0</offsetX>
+		<pos>0.24 0.43</pos>
+    </rating>
+	
+	 <text name="md_name">
+		<offsetX>0</offsetX>
+		<size>0.23 0.096</size>
+		<pos>0.245 0.154</pos>
+		<color>eeeeee</color>
+		<fontSize>0.028</fontSize>
+		<lineSpacing>1</lineSpacing>
+	</text>
+	
+		<text name="md_description">
+			<offsetX>0</offsetX>
+	<size>0.2 0.222</size>
+	  <pos>0.245 0.5</pos>
+	</text>
+	
+  </customView>
+
 	<!-- GRID VIEWS -->	
   
 	<view name="grid">
