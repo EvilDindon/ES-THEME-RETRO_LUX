@@ -660,7 +660,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  </storyboard>
 	  	<storyboard ifSubset="wheelStyle:NoSprite,systemviewlayout:right" repeatAt="1500">
 			<animation property="opacity" from="0" to="1" begin="" duration="" mode="Linear"/>
-			<animation property="scale" from="0" to="2" begin="" duration="500" mode="EaseOutCubic"/>
+			<animation property="scale" from="0" to="3" begin="" duration="500" mode="EaseOutCubic"/>
+			<animation property="scale" from="3" to="2" begin="500" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetX" from="0" to="-0.2322542" begin="500" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="500" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 			<animation property="offsetY" from ="0" to="0.32" begin="1300" duration="200" mode="EaseOutCubic"/>
