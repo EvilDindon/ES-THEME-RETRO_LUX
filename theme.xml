@@ -1819,8 +1819,14 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="md_flag">
 		<offsetX>0</offsetX>
-		<pos>0.225 0.3</pos>
+		<pos>0.225 0.303</pos>
 	</image>
+	
+		<datetime name="md_releasedate">
+		<offsetX>0</offsetX>
+		<pos>0.5 0.303</pos>
+		<alignment>left></alignment>
+	</datetime>
 	
 	<image name="players">
 		<offsetX>0</offsetX>
@@ -1846,12 +1852,6 @@ Numero de juegos : {binding:total}</text>
 		<size>0.23 0.048</size>
 		<color>aaaaaa</color>
 	</text>
-	
-	<datetime name="md_releasedate">
-		<offsetX>0</offsetX>
-		<pos>0.5 0.3</pos>
-		<alignment>left></alignment>
-	</datetime>
 	
 	<rating name="md_rating">
 		<offsetX>0</offsetX>
