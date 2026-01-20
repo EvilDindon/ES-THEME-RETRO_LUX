@@ -2296,33 +2296,42 @@ Numero de juegos : {binding:total}</text>
 	<video name="md_video">
 	        <visible>false</visible>
 	</video>
-
+	
+	<image name="infoboxlogogriddetails,md_thumbnail,players,md_flag,md_rating">
+		<visible>false</visible>
+	</image>
+	
+	<text name="md_description,md_name,md_developer,md_releasedate,md_playcount,md_players">
+		<visible>false</visible>	
+	</text>
+	
 	<imagegrid name="gamegrid">
-	  <padding>0 0 0 0</padding>
-      <pos>0 0.08</pos>
-	  <size>1 0.55</size>
+	  <padding>0.003 0.003 0.003 0.003</padding>
+      <pos>0 0.076</pos>
+	  <size>1 0.866</size>
 	  <scrollDirection>vertical</scrollDirection>
-      <autoLayout>5 2</autoLayout>
-      <autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+      <autoLayout>6 3</autoLayout>
+	  <autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
 	  <imageSource>image</imageSource>
-      <margin>0 0</margin>
+      <margin>0 0.02</margin>
 	  <showVideoAtDelay>100</showVideoAtDelay>
 	  <effect>none</effect>
     </imagegrid>
 		
     <gridtile name="default">
-      <padding>16 16</padding>
       <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
       <backgroundEdgeColor>999999ff</backgroundEdgeColor>
+	  <backgroundCornerSize>0</backgroundCornerSize>
 	  <selectionMode>image</selectionMode>
       <imageSizeMode>maxSize</imageSizeMode>
 	  <imageColor>858585ff</imageColor>
     </gridtile>
 	
     <gridtile name="selected">
-	  <padding>4 4</padding>
+	  <padding>3 3</padding>
       <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
-      <backgroundEdgeColor>FFFFFFff</backgroundEdgeColor>
+      <backgroundEdgeColor>ddFFFFff</backgroundEdgeColor>
+	  <backgroundCornerSize>0</backgroundCornerSize>
 	  <imageColor>FFFFFFFF</imageColor>
 	 </gridtile> 
 	    
@@ -2332,101 +2341,43 @@ Numero de juegos : {binding:total}</text>
     </image>
 	
     <ninepatch name="gridtile.background:selected">
-      <animateColor>88888828</animateColor>
+      <animateColor>779999ff</animateColor>
       <animateColorTime>1000</animateColorTime>
     </ninepatch>
+	
+	<text name="gridtile,gridtile:selected">
+	<visible>true</visible>
+	<pos>0.515 1</pos>
+	<origin>0.5 0</origin>
+	<size>0.965 0.15</size>
+            <autoScroll>horizontal</autoScroll>
+            <autoScrollSpeed>50</autoScrollSpeed>
+            <autoScrollDelay>1000</autoScrollDelay>
+            <singleLineScroll>true</singleLineScroll>
+	<alignment>center</alignment>
+		<verticalAlignment>top</verticalAlignment>
+	<color>C0C0C0ff</color>
+      <forceUppercase>0</forceUppercase>
+      <fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+      <fontSize>0.023</fontSize>
+	  <glowColor>00000080</glowColor>
+	  <glowSize>1</glowSize>
+	  <glowOffset>1</glowOffset>	
+	</text>
+	
+	<text name="gridtile:selected">
+	<color>bbFFFFff</color>
+	<size>1 0.35</size>
+	<pos>0.5 1</pos>
+      <singleLineScroll>true</singleLineScroll>
+      <forceUppercase>1</forceUppercase>
+      <fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+      <fontSize>0.026</fontSize>
+	  <glowColor>00000080</glowColor>
+	  <glowSize>1</glowSize>
+	  <glowOffset>1</glowOffset>
+	</text>
 
-	<image name="md_thumbnail">
-	  <pos>0.104 0.783</pos>
-	  <origin>0.5 0.5</origin>
-      <maxSize>0.18 0.28</maxSize>
-	  <zIndex>21</zIndex>
-	  <storyboard event="activate">
-                <animation property="opacity" from="0" to="0" begin="" duration="250" mode="Linear"/>
-				<animation property="opacity" from="0" to="1" begin="250" duration="250" mode="EaseIn"/>
-			</storyboard>
-			<storyboard event="deactivate">
-                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
-			</storyboard>
-
-	</image>
-	
-    <image name="md_flag">
-		<origin>0.5 0.5</origin>
-		<size>0.02 0</size>
-		<pos>0.75 0.91</pos>
-	</image>
-	
-	<image name="players" extra="true">
-		<path>./_art/fonts/one_person_user.svg</path>
-		<linearSmooth>true</linearSmooth>
-		<origin>0.5 0.5</origin>
-		<size>0.006 0</size>
-		<pos>0.64 0.91</pos>
-		<color>909090</color>
-		<zIndex>22</zIndex>
-	</image>
-	
-	<text name="md_players">
-	<alignment>left</alignment>
-	<origin>0 0.5</origin>
-	<color>AAAAAA</color>
-	<pos>0.65 0.91</pos>
-	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
-	<fontSize>0.026</fontSize>
-	<zIndex>22</zIndex>
-	</text>
-	
-	<text name="playcount" extra = "true">
-		<visible> false</visible>
-	</text>
-	
-	<text name="md_developer">
-	  <origin>0 0.5</origin>
-	  <alignment>left</alignment>	  
-	  <size>0.2625 0.0236</size>
-	  <pos>0.204 0.91</pos>
-	  <lineSpacing>1</lineSpacing>
-	</text>
-	
-	<text name="md_name">
-	  <origin>0.5 0.5</origin>
-	  <size>0.6 0.048</size>
-	  <pos>0.5 0.667</pos>
-	  <fontSize>0.034</fontSize>
-	</text>
-	
-	<datetime name="md_releasedate">
-	  <alignment>right</alignment>
-	  <pos>0.798 0.91</pos>
-	  <origin>1 0.5</origin>
-	  <size>0.04 0.037</size>
-	</datetime>
-	
-	<text name="md_description">
-      <origin>0.5 0</origin>
-	  <pos>0.5 0.6935</pos>
-	  <size>0.6 0.20185</size>
-	  <alignment>center</alignment>
-	  <lineSpacing>1.55</lineSpacing>
-    </text>
-	
-	<rating name="md_rating">
-      <pos>0.502 0.91</pos>
-      <size>0.06 0</size>
-	  <origin>0.5 0.5</origin>
-      <color>AAAA90</color>
-      <unfilledColor>808080</unfilledColor>
-	  <zIndex>41</zIndex>
-	  <storyboard event="activate">
-                <animation property="opacity" from="0" to="0" begin="" duration="1000" mode="EaseOutQuint"/>
-				<animation property="opacity" from="0" to="1" begin="1000" duration="1000" mode="EaseOutQuint"/>
-			</storyboard>
-			<storyboard event="deactivate">
-                <animation property="opacity" from="0" to="0" duration="" mode="Linear"/>
-			</storyboard>
-    </rating>
-	
   </customView>
 
 <!-- Scaling Box Art --> 
