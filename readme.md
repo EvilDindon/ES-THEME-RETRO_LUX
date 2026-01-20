@@ -27,5 +27,5 @@ I recommand SCRAPING all your games using SCREENSCRAPER with the following param
 
 # SCRAP FANART : YES
 
-These 3 parameters are mandatory. If you put other thing (mix images, etc.) the theme will not look as good as intended.
+These 4 parameters are mandatory. If you put other thing (mix images, etc.) the theme will not look as good as intended.
 
