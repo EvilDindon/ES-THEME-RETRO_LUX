@@ -1043,7 +1043,7 @@ Numero de juegos : {binding:total}</text>
       <fontSize>0.023</fontSize>
 	  <glowColor>00000080</glowColor>
 	  <glowSize>1</glowSize>
-	  <lineSpacing>1.15</lineSpacing>
+	  <lineSpacing>1.2</lineSpacing>
 	  <glowOffset>1</glowOffset>
 	 <zIndex>21</zIndex>
 		<storyboard>
@@ -1289,12 +1289,12 @@ Numero de juegos : {binding:total}</text>
 	<path>./_art/whiteLogos/${system.theme}.png</path>
       <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
 	  <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
-	 <size>0.2510416 0</size>
 	 <origin>0.5 0.5</origin>
 	 <linearSmooth>true</linearSmooth>
 	 <opacity>1</opacity>
 	 <pos>0.1901 0.0638</pos>
 	 <color>AAAA9A</color>
+	 <maxSize>0.2510416 0.1444444</maxSize>
 	 <zIndex>21</zIndex>
 	</image>
 	
@@ -1454,7 +1454,7 @@ Numero de juegos : {binding:total}</text>
 	 <zIndex>20</zIndex>
 	</image>
 	
-		<image name="bgdetailedlist" extra="true">
+	<image name="bgdetailedlist" extra="true">
 		  <path>./_art/assets/bgdetailedlist.png</path>
 		  <pos>0.190625 0</pos>
 		  <origin>0.5 0</origin>
@@ -1609,14 +1609,25 @@ Numero de juegos : {binding:total}</text>
 	<image name="bgcontroller">
       <pos>0.5 0</pos>
 	  <origin>0.5 0</origin>
-      <size>1 0</size>
+      <maxSize>1 1</maxSize>
 	  <rotation>0</rotation>
     </image>
 	
-	<image name="whitelogo">
-	<rotation>0</rotation>
-	 <pos>0.5 0.058</pos>
-	 <opacity>1</opacity>
+	<image name="topboxlogogriddetails" extra="true">
+      <pos>0 0</pos>
+      <size>1 0</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/topboxlogogriddetails.png</path>
+      <zIndex>2</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
+	<image name="whitelogo" extra="true">
+	 <maxSize>0.154 0.2215</maxSize>
+	 <origin>0.5 0.5</origin>
+	 <pos>0.5 0.038</pos>
+	 <rotation>0</rotation>
 	</image>
 	
 	<image name="infoboxcarousel" extra="static">
@@ -2063,25 +2074,15 @@ Numero de juegos : {binding:total}</text>
   
   <customView name="logogrid+details" inherits="grid" displayName="${logogriddetails}">
 	
-	<image name="md_thumbnail,md_flag">
+	<image name="md_thumbnail,md_flag,infoboxgrid">
 	 <visible>true</visible>
 	</image>
 		
-		<image name="topboxlogogriddetails" extra="true">
+	<image name="topboxlogogriddetails" extra="true">
       <pos>0 0</pos>
       <size>1 0</size>
       <origin>0 0</origin>
 	  <path>./_art/assets/topboxlogogriddetails.png</path>
-      <zIndex>2</zIndex>	  
-	  <color>AAAAAA</color>
-	  <linearSmooth>false</linearSmooth>
-    </image>
-	
-	<image name="infoboxlogogriddetails" extra="true">
-      <pos>0.5 0.7833333</pos>
-      <size>0.996354166 0.31111111</size>
-      <origin>0.5 0.5</origin>
-	  <path>./_art/assets/infoboxlogogriddetails.png</path>
       <zIndex>2</zIndex>	  
 	  <color>AAAAAA</color>
 	  <linearSmooth>false</linearSmooth>
@@ -2093,6 +2094,16 @@ Numero de juegos : {binding:total}</text>
 	 <pos>0.5 0.039</pos>
 	</image>
 	
+	<image name="infoboxlogogriddetails" extra="true">
+      <pos>0.5 0.7833333</pos>
+      <size>0.996354166 0.31111111</size>
+      <origin>0.5 0.5</origin>
+	  <path>./_art/assets/infoboxlogogriddetails.png</path>
+      <zIndex>2</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+
 	<imagegrid name="gamegrid">
       <autoLayout>6 4</autoLayout>
 	  <imageSource>marquee</imageSource>
