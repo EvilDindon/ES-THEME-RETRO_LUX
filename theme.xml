@@ -50,6 +50,12 @@ originally based on: "carbon" and "Arcade Planet"
 			
 	<boxcarousel>Box Carousel</boxcarousel>
     <boxcarousel lang="fr">Carousel de Boîtes</boxcarousel>
+	
+	<logogrid>Logo Grid</logogrid>
+	<logogrid lang="fr">Grille de Logos</logogrid>
+	
+	<logogriddetails>Logo Grid + Details</logogriddetails>
+	<logogriddetails lang="fr">Grille de Logos + Détails</logogriddetails>
 
 	<default>default</default>
     <default lang="fr">Par Défaut</default>
@@ -102,9 +108,6 @@ originally based on: "carbon" and "Arcade Planet"
 	<gamelistalignment>Gamelist Text Alignment</gamelistalignment>
 	<gamelistalignment lang="fr">Alignement du Texte des Listes de Jeux</gamelistalignment>
 	
-	<logogrid>Logo Grid</logogrid>
-	<logogrid lang="fr">Grille de Logos</logogrid>
-  
   </variables>
   
    <!-- Subset options for Regional Artwork and Logos -->
@@ -1531,8 +1534,8 @@ Numero de juegos : {binding:total}</text>
       <pos>0.19 0.47</pos>
       <size>0.5 0.945</size>
       <logoScale>1</logoScale>
-      <logoSize>0.41666666 0.1</logoSize>
-      <maxLogoCount>9</maxLogoCount>
+      <logoSize>0.41666666 0.142</logoSize>
+      <maxLogoCount>7</maxLogoCount>
       <imageSource>marquee</imageSource>
       <minLogoOpacity>0.5</minLogoOpacity>
 	  <scaledLogoSpacing>0.05</scaledLogoSpacing>
@@ -1552,7 +1555,7 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="selectedlogobg" extra="true">
     <path>./_art/assets/white.png</path>
-	 <size>0.21354166 0.09</size>
+	 <size>0.21354166 0.142</size>
 	 <origin>0.5 0.5</origin>
 	 <linearSmooth>false</linearSmooth>
 	 <color>112856</color>
@@ -2013,8 +2016,8 @@ Numero de juegos : {binding:total}</text>
 	</datetime>
 	
   </view>
-
-<customView name="logogrid" inherits="grid" displayName="${logogrid}">
+ 
+  <customView name="logogrid" inherits="grid" displayName="${logogrid}">
 	 		
 	<imagegrid name="gamegrid">
       <autoLayout>6 6</autoLayout>
@@ -2057,10 +2060,201 @@ Numero de juegos : {binding:total}</text>
     </ninepatch>
 	
   </customView>
+  
+  <customView name="logogrid+details" inherits="grid" displayName="${logogriddetails}">
+	
+	<image name="md_thumbnail,md_flag">
+	 <visible>true</visible>
+	</image>
+		
+		<image name="topboxlogogriddetails" extra="true">
+      <pos>0 0</pos>
+      <size>1 0</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/topboxlogogriddetails.png</path>
+      <zIndex>2</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
+	<image name="infoboxlogogriddetails" extra="true">
+      <pos>0.5 0.7833333</pos>
+      <size>0.996354166 0.31111111</size>
+      <origin>0.5 0.5</origin>
+	  <path>./_art/assets/infoboxlogogriddetails.png</path>
+      <zIndex>2</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
+	<image name="whitelogo" extra="true">
+	 <size>0.15 0</size>
+	 <origin>0.5 0.5</origin>
+	 <pos>0.5 0.039</pos>
+	</image>
+	
+	<imagegrid name="gamegrid">
+      <autoLayout>6 4</autoLayout>
+	  <imageSource>marquee</imageSource>
+	        <size>1 0.55</size>
+	</imagegrid>
+	
+    <gridtile name="default">
+      <backgroundColor>00000000</backgroundColor>
+      <backgroundCornerSize>8 8</backgroundCornerSize>
+      <selectionMode>tile</selectionMode>
+      <padding>12 12</padding>
+      <imageColor>A8A8A8FF</imageColor>
+    </gridtile>
+	
+    <gridtile name="selected">
+      <backgroundCenterColor>88888888</backgroundCenterColor>
+      <backgroundEdgeColor>88888888</backgroundEdgeColor>
+	  <padding>2 2</padding>
+      <imageColor>FFFFFFFF</imageColor>
+    </gridtile>
+	    	
+	<image name="gridtile.favorite">
+	 <linearSmooth>true</linearSmooth>
+      <path>./icons/star_filled.svg</path>
+      <pos>0.93 0.07</pos>
+      <maxSize>0.15 0.15</maxSize>
+      <origin>0.5 0.5</origin>
+      <horizontalAlignment>right</horizontalAlignment>
+      <color>FFFF0080</color>
+    </image>
+	
+    <image name="gridtile.favorite:selected">
+	  <linearSmooth>true</linearSmooth>
+      <color>FFFF00D0</color>
+    </image>
+	
+    <ninepatch name="gridtile.background:selected">
+      <animateColor>88888828</animateColor>
+      <animateColorTime>500</animateColorTime>
+    </ninepatch>
+
+	<image name="md_thumbnail">
+	  <pos>0.104 0.783</pos>
+	  <origin>0.5 0.5</origin>
+      <maxSize>0.18 0.28</maxSize>
+	  <zIndex>21</zIndex>
+	  <storyboard event="activate">
+                <animation property="opacity" from="0" to="0" begin="" duration="250" mode="Linear"/>
+				<animation property="opacity" from="0" to="1" begin="250" duration="250" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
+			</storyboard>
+
+	</image>
+	
+	<video name="md_video">
+	  <visible>true</visible>
+	  <pos>0.897 0.783</pos>
+	  <maxSize>0.18 0.28</maxSize>
+	  <effect>none</effect>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+	  <delay>0.7</delay>
+	  <showSnapshotDelay>true</showSnapshotDelay>
+	  <snapshotSource>image</snapshotSource>
+      <loops>2</loops>
+	  <color>DDDDDD</color>
+      <roundCorners>0.02</roundCorners>
+	  	  <storyboard event="activate">
+                <animation property="opacity" from="0" to="0" begin="" duration="250" mode="Linear"/>
+				<animation property="opacity" from="0" to="1" begin="250" duration="250" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
+			</storyboard>
+	  <zIndex>3</zIndex>
+	  
+	  </video>
+	
+
+	
+    <image name="md_flag">
+		<origin>0.5 0.5</origin>
+		<size>0.02 0</size>
+		<pos>0.75 0.91</pos>
+	</image>
+	
+	<image name="players" extra="true">
+		<path>./_art/fonts/one_person_user.svg</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0.5 0.5</origin>
+		<size>0.006 0</size>
+		<pos>0.64 0.91</pos>
+		<color>909090</color>
+		<zIndex>22</zIndex>
+	</image>
+	
+	<text name="md_players">
+	<alignment>left</alignment>
+	<origin>0 0.5</origin>
+	<color>AAAAAA</color>
+	<pos>0.65 0.91</pos>
+	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+	<fontSize>0.026</fontSize>
+	<zIndex>22</zIndex>
+	</text>
+	
+	<text name="playcount" extra = "true">
+		<visible> false</visible>
+	</text>
+	
+	<text name="md_developer">
+	  <origin>0 0.5</origin>
+	  <alignment>left</alignment>	  
+	  <size>0.2625 0.0236</size>
+	  <pos>0.204 0.91</pos>
+	  <lineSpacing>1</lineSpacing>
+	</text>
+	
+	<text name="md_name">
+	  <origin>0.5 0.5</origin>
+	  <size>0.6 0.048</size>
+	  <pos>0.5 0.667</pos>
+	  <fontSize>0.034</fontSize>
+	</text>
+	
+	<datetime name="md_releasedate">
+	  <alignment>right</alignment>
+	  <pos>0.798 0.91</pos>
+	  <origin>1 0.5</origin>
+	  <size>0.04 0.037</size>
+	</datetime>
+	
+	<text name="md_description">
+      <origin>0.5 0</origin>
+	  <pos>0.5 0.6935</pos>
+	  <size>0.6 0.20185</size>
+	  <alignment>center</alignment>
+	  <lineSpacing>1.55</lineSpacing>
+    </text>
+	
+	<rating name="md_rating">
+      <pos>0.502 0.91</pos>
+      <size>0.06 0</size>
+	  <origin>0.5 0.5</origin>
+      <color>AAAA90</color>
+      <unfilledColor>808080</unfilledColor>
+	  <zIndex>41</zIndex>
+	  <storyboard event="activate">
+                <animation property="opacity" from="0" to="0" begin="" duration="1000" mode="EaseOutQuint"/>
+				<animation property="opacity" from="0" to="1" begin="1000" duration="1000" mode="EaseOutQuint"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="0" to="0" duration="" mode="Linear"/>
+			</storyboard>
+    </rating>
+	
+  </customView>
 
 <!-- Scaling Box Art --> 
    
-	<customView name="detailed,gamecarousel">
+	<customView name="detailed,gamecarousel,logogrid+details">
  
 		<image name="md_thumbnail"> 
 			<scale if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'gb2players' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx'">0.79</scale>
