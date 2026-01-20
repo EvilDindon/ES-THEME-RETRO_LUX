@@ -57,6 +57,9 @@ originally based on: "carbon" and "Arcade Planet"
 	<logogriddetails>Logo Grid + Details</logogriddetails>
 	<logogriddetails lang="fr">Grille de Logos + Détails</logogriddetails>
 
+	<retrotiles>Retro Tiles</retrotiles>
+	<retrotiles lang="fr">Tuiles Rétro</retrotiles>
+
 	<default>default</default>
     <default lang="fr">Par Défaut</default>
           
@@ -1072,7 +1075,7 @@ Numero de juegos : {binding:total}</text>
 	</datetime>
 	
 	<text name="md_name">
-			<color>AF0022</color>
+			<color>FFFFFF</color>
 	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
 		  <fontSize>0.03</fontSize>
 	  <forceUppercase>1</forceUppercase>
@@ -1465,7 +1468,13 @@ Numero de juegos : {binding:total}</text>
 		
 </view>
 		
+		
+		
+		
 <!-- GAMECAROUSEL VIEWS -->
+
+
+  <!-- GAMECAROUSEL -->
 
 <view name="gamecarousel">
 	
@@ -1592,6 +1601,9 @@ Numero de juegos : {binding:total}</text>
 	</image>
 
   </view>
+  
+  
+    <!-- DETAILED -->
 
 <customView name="boxcarousel" inherits="gamecarousel" displayName="${boxcarousel}">
 	
@@ -1700,6 +1712,7 @@ Numero de juegos : {binding:total}</text>
 		<pos>0.5 0.6175925</pos>
 		<color>eeeeee</color>
 	</text>
+	
 		<text name="md_description">
 			<offsetX>0</offsetX>
 	<size>0.19 0.284</size>
@@ -1708,9 +1721,12 @@ Numero de juegos : {binding:total}</text>
 	
   </customView>
   
+  
+    <!-- FANART -->
+  
   <customView name="fanart" inherits="boxcarousel" displayName="Fanart">
   
-  	<image name="bgcarousel,electronic2,selectedlogobg,infoboxdetailed,infoboxcarousel,arrowup,arrowdown,md_thumbnail">
+  	<image name="infoboxcarousel">
 			<visible>false</visible>
 	</image>
 	
@@ -1890,8 +1906,13 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
   </customView>
+  
+  
 
 	<!-- GRID VIEWS -->	
+	
+	
+	  <!-- GRID -->
   
 	<view name="grid">
 
@@ -2027,6 +2048,9 @@ Numero de juegos : {binding:total}</text>
 	</datetime>
 	
   </view>
+  
+  
+    <!-- LOGOGRID -->
  
   <customView name="logogrid" inherits="grid" displayName="${logogrid}">
 	 		
@@ -2071,6 +2095,9 @@ Numero de juegos : {binding:total}</text>
     </ninepatch>
 	
   </customView>
+  
+  
+      <!-- LOGOGRID -->
   
   <customView name="logogrid+details" inherits="grid" displayName="${logogriddetails}">
 	
@@ -2183,7 +2210,146 @@ Numero de juegos : {binding:total}</text>
 	  
 	  </video>
 	
+    <image name="md_flag">
+		<origin>0.5 0.5</origin>
+		<size>0.02 0</size>
+		<pos>0.75 0.91</pos>
+	</image>
+	
+	<image name="players" extra="true">
+		<path>./_art/fonts/one_person_user.svg</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0.5 0.5</origin>
+		<size>0.006 0</size>
+		<pos>0.64 0.91</pos>
+		<color>909090</color>
+		<zIndex>22</zIndex>
+	</image>
+	
+	<text name="md_players">
+	<alignment>left</alignment>
+	<origin>0 0.5</origin>
+	<color>AAAAAA</color>
+	<pos>0.65 0.91</pos>
+	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+	<fontSize>0.026</fontSize>
+	<zIndex>22</zIndex>
+	</text>
+	
+	<text name="playcount" extra = "true">
+		<visible> false</visible>
+	</text>
+	
+	<text name="md_developer">
+	  <origin>0 0.5</origin>
+	  <alignment>left</alignment>	  
+	  <size>0.2625 0.0236</size>
+	  <pos>0.204 0.91</pos>
+	  <lineSpacing>1</lineSpacing>
+	</text>
+	
+	<text name="md_name">
+	  <origin>0.5 0.5</origin>
+	  <size>0.6 0.048</size>
+	  <pos>0.5 0.667</pos>
+	  <fontSize>0.034</fontSize>
+	</text>
+	
+	<datetime name="md_releasedate">
+	  <alignment>right</alignment>
+	  <pos>0.798 0.91</pos>
+	  <origin>1 0.5</origin>
+	  <size>0.04 0.037</size>
+	</datetime>
+	
+	<text name="md_description">
+      <origin>0.5 0</origin>
+	  <pos>0.5 0.6935</pos>
+	  <size>0.6 0.20185</size>
+	  <alignment>center</alignment>
+	  <lineSpacing>1.55</lineSpacing>
+    </text>
+	
+	<rating name="md_rating">
+      <pos>0.502 0.91</pos>
+      <size>0.06 0</size>
+	  <origin>0.5 0.5</origin>
+      <color>AAAA90</color>
+      <unfilledColor>808080</unfilledColor>
+	  <zIndex>41</zIndex>
+	  <storyboard event="activate">
+                <animation property="opacity" from="0" to="0" begin="" duration="1000" mode="EaseOutQuint"/>
+				<animation property="opacity" from="0" to="1" begin="1000" duration="1000" mode="EaseOutQuint"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="0" to="0" duration="" mode="Linear"/>
+			</storyboard>
+    </rating>
+	
+  </customView>
+ 
 
+    <!-- RETROTILES -->
+	
+  <customView name="retrotiles" inherits="logogrid+details" displayName="${retrotiles}">
+
+	<video name="md_video">
+	        <visible>false</visible>
+	</video>
+
+	<imagegrid name="gamegrid">
+	  <padding>0 0 0 0</padding>
+      <pos>0 0.08</pos>
+	  <size>1 0.55</size>
+	  <scrollDirection>vertical</scrollDirection>
+      <autoLayout>5 2</autoLayout>
+      <autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+	  <imageSource>image</imageSource>
+      <margin>0 0</margin>
+	  <showVideoAtDelay>100</showVideoAtDelay>
+	  <effect>none</effect>
+    </imagegrid>
+		
+    <gridtile name="default">
+      <padding>16 16</padding>
+      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+      <backgroundEdgeColor>999999ff</backgroundEdgeColor>
+	  <selectionMode>image</selectionMode>
+      <imageSizeMode>maxSize</imageSizeMode>
+	  <imageColor>858585ff</imageColor>
+    </gridtile>
+	
+    <gridtile name="selected">
+	  <padding>4 4</padding>
+      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+      <backgroundEdgeColor>FFFFFFff</backgroundEdgeColor>
+	  <imageColor>FFFFFFFF</imageColor>
+	 </gridtile> 
+	    
+    <image name="gridtile.favorite:selected">
+	  <linearSmooth>true</linearSmooth>
+      <color>FFFF00D0</color>
+    </image>
+	
+    <ninepatch name="gridtile.background:selected">
+      <animateColor>88888828</animateColor>
+      <animateColorTime>1000</animateColorTime>
+    </ninepatch>
+
+	<image name="md_thumbnail">
+	  <pos>0.104 0.783</pos>
+	  <origin>0.5 0.5</origin>
+      <maxSize>0.18 0.28</maxSize>
+	  <zIndex>21</zIndex>
+	  <storyboard event="activate">
+                <animation property="opacity" from="0" to="0" begin="" duration="250" mode="Linear"/>
+				<animation property="opacity" from="0" to="1" begin="250" duration="250" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
+			</storyboard>
+
+	</image>
 	
     <image name="md_flag">
 		<origin>0.5 0.5</origin>
@@ -2265,7 +2431,7 @@ Numero de juegos : {binding:total}</text>
 
 <!-- Scaling Box Art --> 
    
-	<customView name="detailed,gamecarousel,logogrid+details">
+	<customView name="detailed,gamecarousel,logogrid+details,retrotiles">
  
 		<image name="md_thumbnail"> 
 			<scale if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'gb2players' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx'">0.79</scale>
