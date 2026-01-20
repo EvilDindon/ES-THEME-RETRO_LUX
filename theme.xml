@@ -807,6 +807,8 @@ Numero de juegos : {binding:total}</text>
 		<path>./_art/manfLogos/${system.theme}.svg</path>
 		<path>./_art/manfLogos/${system.hardwareType}.png</path>
 		<path>./_art/manfLogos/${system.hardwareType}.svg</path>
+		<path ifSubset="artworkregion:US">./_art/manfLogos/US/${system.manufacturer}.png</path>
+		<path ifSubset="artworkregion:US">./_art/manfLogos/US/${system.manufacturer}.svg</path>
 		<linearSmooth>true</linearSmooth>
 		<origin>0 0.5</origin>
 		<pos>0.25 0.45</pos>
