@@ -437,7 +437,6 @@ originally based on: "carbon" and "Arcade Planet"
     </carousel>
 	
 	<image name="whiteLogo" ifSubset="wheelStyle:default" extra="static">
-		<path>./_art/assets/underconstruction.png</path>
 		<path>./_art/whiteLogos/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/SPECIAL/${system.theme}.png</path>
@@ -459,7 +458,6 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
 	
 	<image name="colorLogo" extra="static">
-		<path>./_art/assets/underconstruction.png</path>
 		<path>./_art/colorLogos/${system.theme}.png</path>
 		 <path>./_art/colorLogos/${system.theme}-${lang}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/colorLogos/US/${system.theme}.png</path>
