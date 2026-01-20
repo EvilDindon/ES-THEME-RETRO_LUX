@@ -1900,13 +1900,13 @@ Numero de juegos : {binding:total}</text>
 		<pos>0.245 0.154</pos>
 		<color>eeeeee</color>
 		<fontSize>0.028</fontSize>
-		<lineSpacing>1</lineSpacing>
+		<lineSpacing>1.18</lineSpacing>
 	</text>
 	
 		<text name="md_description">
 			<offsetX>0</offsetX>
-	<size>0.2 0.222</size>
-	  <pos>0.245 0.5</pos>
+	<size>0.2 0.236</size>
+	  <pos>0.245 0.492</pos>
 	</text>
 	
   </customView>
