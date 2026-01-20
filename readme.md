@@ -3,7 +3,7 @@
  Theme for Emulation Station compatible with Batocera >=V35, Emuelec >=4.0 and Retrobat >= 5.0
  By EvilDindon (Mickaël ISMAN), 2021, based on "Carbon".
  
- V0.1
+ V0.5
  
  Features :
  - Clean retro style
@@ -11,8 +11,7 @@
  - 37 custom collections themed
  - 16/9, 4/3, 5/4 and 16/10 Support
  - 
-![nes left details](https://user-images.githubusercontent.com/30436625/222903739-b40d0d0c-86a5-4dc4-8ef1-e5bea0122a5a.jpg)
-
+<img width="1920" height="1080" alt="system WIP 6" src="https://github.com/user-attachments/assets/3402b2cc-98de-4a1d-8ff6-25e115e9e6e9" />
 
   # ** IMPORTANT SCRAPING INSTRUCTIONS **
 
