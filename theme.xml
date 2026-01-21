@@ -839,7 +839,7 @@ Numero de juegos : {binding:total}</text>
 		<linearSmooth>true</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<pos>0.35677 0.8178</pos>
-		<maxSize>0.16875 0.175925</maxSize>
+		<maxSize>0.18875 0.175925</maxSize>
 		<color>FFFFFF</color>
 		<zIndex>100</zIndex>
 		<storyboard>
