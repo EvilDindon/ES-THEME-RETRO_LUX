@@ -1661,8 +1661,8 @@ Numero de juegos : {binding:total}</text>
       <type>horizontal</type>
 	  <logoAlignment>center</logoAlignment>
 	  <origin>0.5 0</origin>
-      <pos>0.5 0.118</pos>
-      <size>1 0.459</size>
+      <pos>0.5 0.0905</pos>
+      <size>1 0.48</size>
       <logoScale>1.35</logoScale>
       <logoSize>0.15 0.34</logoSize>
 	  <logoSize if="{system.theme} == 'snes' || {system.theme} == 'snesh' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx' || {system.theme} == 'scv' || {system.theme} == 'lcdgames'">0.23 0.34</logoSize>
