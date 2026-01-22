@@ -285,12 +285,12 @@ originally based on: "carbon" and "Arcade Planet"
       <imagePath>./_art/icons/gamepad.svg</imagePath>
 	  <gunPath>./art/gun.svg</gunPath>
       <color>686068</color>
-      <activityColor>A0A0FFC0</activityColor>
+      <activityColor>881122ff</activityColor>
       <hotkeyColor>FFA0A0C0</hotkeyColor>
     </controllerActivity>
 	
 	<batteryIndicator name="batteryIndicator">
-      <pos>0.955 0.97</pos>
+      <pos>0.94 0.958</pos>
       <size>0.033 0.0275</size>
       <horizontalAlignment>right</horizontalAlignment>
       <incharge>./_art/battery/incharge.svg</incharge>
@@ -299,8 +299,19 @@ originally based on: "carbon" and "Arcade Planet"
       <at50>./_art/battery/50.svg</at50>
       <at25>./_art/battery/25.svg</at25>
       <empty>./_art/battery/empty.svg</empty>
-      <color>FFFFFFA0</color>
+      <color>686068</color>
     </batteryIndicator>
+		     
+	<networkIcon name="ss.network">
+        <networkIcon>./_art/icons/Network.png</networkIcon>
+        <planemodeIcon>./_art/icons/Planemode.png</planemodeIcon>
+        <size>0.033 0</size>
+		<pos>0.88 0.958</pos>
+        <linearSmooth>true</linearSmooth>
+	
+        <color>686068</color>
+      </networkIcon>
+	
 	
   </view>
     
@@ -805,12 +816,12 @@ Numero de juegos : {binding:total}</text>
       </text>
 	  
 	<image name="manfLogo" extra ="static">
-		<path>./_art/manfLogos/${system.manufacturer}.png</path>
-		<path>./_art/manfLogos/${system.manufacturer}.svg</path>
 		<path>./_art/manfLogos/${system.theme}.png</path>
 		<path>./_art/manfLogos/${system.theme}.svg</path>
 		<path>./_art/manfLogos/${system.hardwareType}.png</path>
 		<path>./_art/manfLogos/${system.hardwareType}.svg</path>
+		<path>./_art/manfLogos/${system.manufacturer}.png</path>
+		<path>./_art/manfLogos/${system.manufacturer}.svg</path>
 		<path ifSubset="artworkregion:US">./_art/manfLogos/US/${system.manufacturer}.png</path>
 		<path ifSubset="artworkregion:US">./_art/manfLogos/US/${system.manufacturer}.svg</path>
 		<linearSmooth>true</linearSmooth>
@@ -962,7 +973,6 @@ Numero de juegos : {binding:total}</text>
 	
 	<video name="md_video">
       <origin>0.5 0.5</origin>
-	  <maxSize>0.43125 0.509</maxSize>
 	  <delay>0.1</delay>
 	  <effect>none</effect>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
@@ -973,6 +983,16 @@ Numero de juegos : {binding:total}</text>
       <roundCorners>0</roundCorners>
 	  <zIndex>3</zIndex>	  
 	</video>
+	
+	<image name="green filter" extra="true">
+		  <visible>false</visible>
+		<visible if="${system.theme} == 'gb' || 'supervision' || 'gb2players' || 'megaduck'">true</visible>
+		  <path>./_art/assets/white.png</path>
+		  <linearSmooth>false</linearSmooth>
+		  <origin>0.5 0.5</origin>
+		  <color>11881122</color>
+		  <zIndex>4</zIndex>
+	</image>
 	
 	<image name="md_flag">
 		<color>D8D8D8</color>
@@ -992,7 +1012,6 @@ Numero de juegos : {binding:total}</text>
 	  <zIndex>149</zIndex>
 	  <visible>false</visible>	  
 	</image>
-	
 	
 	<image name="md_hidden,ghosthidden">
       <path>./_art/icons/hidden.svg</path>
@@ -1140,7 +1159,6 @@ Numero de juegos : {binding:total}</text>
 		  <color>0FFFFF15</color>
 		  <zIndex>4</zIndex>
 	</image>
-	
 	 
 	<image name="bgbasiclist" extra="true">
 	<path>./_art/assets/bgbasiclist.png</path>
@@ -1282,7 +1300,6 @@ Numero de juegos : {binding:total}</text>
 	 <zIndex>21</zIndex>
 	</image>
 	
-	
 	<image name="md_marquee">
 	  <visible>false</visible>
 	</image>	
@@ -1298,8 +1315,7 @@ Numero de juegos : {binding:total}</text>
 	  <snapshotSource>image</snapshotSource>
       <loops>2</loops>
 	  <color>DDDDDD</color>
-      <roundCorners>0.02</roundCorners>
-	  <zIndex>3</zIndex>	 
+      <roundCorners>0.02</roundCorners> 
 
 	  <storyboard event="activate">
                 <animation property="offsetX" from="-0.3" to="0" duration="500" mode="EaseOutQuint"/>
@@ -1311,6 +1327,20 @@ Numero de juegos : {binding:total}</text>
 				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
 			</storyboard>	  
 	</video>
+
+	<image name="green filter">
+		  <size>0.333 0.53</size>
+		  <pos>0.6845166 0.29</pos>
+		  	  <storyboard event="activate">
+                <animation property="offsetX" from="-0.3" to="0" duration="500" mode="EaseOutQuint"/>
+                <animation property="opacity" from="1" to="1" duration="" mode="Linear"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="500" mode="Linear"/>
+				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
+				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
+			</storyboard>
+	</image>
 	
 	<image name="md_thumbnail">
 	  <pos>0.476 0.7555</pos>
@@ -1409,13 +1439,13 @@ Numero de juegos : {binding:total}</text>
     </rating>
 
 	<image name="arrowup">
-		<pos>0.3685 0.498629</pos>
+		<pos>0.008 0.498629</pos>
 		<color>FFFFFFdd</color>
 		<scale>0.57</scale>
 	</image>
 	
 	<image name="arrowdown">
-		<pos>0.3685 0.584</pos>     
+		<pos>0.008 0.584</pos>     
 		<color>FFFFFFdd</color>
 		<scale>0.57</scale>
 	</image>
@@ -2105,7 +2135,7 @@ Numero de juegos : {binding:total}</text>
   </customView>
   
   
-      <!-- LOGOGRID -->
+      <!-- LOGOGRID + DETAILS -->
   
   <customView name="logogrid+details" inherits="grid" displayName="${logogriddetails}">
 	
