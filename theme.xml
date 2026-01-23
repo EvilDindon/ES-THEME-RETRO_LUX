@@ -2360,7 +2360,7 @@ Numero de juegos : {binding:total}</text>
 	  <margin>0.01 0.01</margin>
       <padding>0.005 0.007</padding>
 	  	  <autoLayoutSelectedZoom>1.05</autoLayoutSelectedZoom>
-		  <size>1 0.55</size>
+		  <size>1 0.552</size>
       <pos>0 0.078</pos>
 	</imagegrid>
 	
