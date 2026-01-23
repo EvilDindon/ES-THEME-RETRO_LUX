@@ -2016,7 +2016,7 @@ Numero de juegos : {binding:total}</text>
       <animateSelection>false</animateSelection>
       <centerSelection>false</centerSelection>
 	  <scrollLoop>true</scrollLoop>
-	  <scrollSound>./_art/sounds/scroll2.wav</scrollSound>
+	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
 	  <scrollDirection>vertical</scrollDirection>
 	</imagegrid>
 	
