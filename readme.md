@@ -8,8 +8,7 @@
  Features :
  - Clean retro style
  - Ultra customizable
- - 37 custom collections themed
- - 9 Game List View Styles
+ - 10 Game List View Styles
  - 16/9, 4/3, 5/4 and 16/10 Support (only 16/9 for now)
    
 <img width="1920" height="1080" alt="system WIP 6" src="https://github.com/user-attachments/assets/3402b2cc-98de-4a1d-8ff6-25e115e9e6e9" />
