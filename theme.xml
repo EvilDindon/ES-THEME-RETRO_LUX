@@ -2434,14 +2434,14 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
 	<imagegrid name="gamegrid">
-	  <padding>0.003 0.003 0.003 0.023</padding>
-      <pos>0 0.076</pos>
-	  <size>1 0.865</size>
+	  <padding>0.005 0.005 0.005 0.039</padding>
+      <pos>0 0.077</pos>
+	  <size>1 0.87</size>
 	  <scrollDirection>vertical</scrollDirection>
       <autoLayout>6 3</autoLayout>
-	  <autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+	  <autoLayoutSelectedZoom>1.05</autoLayoutSelectedZoom>
 	  <imageSource>image</imageSource>
-      <margin>0 0.02</margin>
+      <margin>0.01 0.037</margin>
 	  <showVideoAtDelay>100</showVideoAtDelay>
 	  <effect>none</effect>
     </imagegrid>
