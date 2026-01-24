@@ -112,8 +112,11 @@ originally based on: "carbon" and "Arcade Planet"
 	<theme.aspect-ratio>aspect ratio</theme.aspect-ratio>
     <theme.aspect-ratio lang="fr">format d'écran</theme.aspect-ratio>
 		
-	<gamelistalignment>Gamelist Text Alignment</gamelistalignment>
-	<gamelistalignment lang="fr">Alignement du Texte des Listes de Jeux</gamelistalignment>
+	<gamelistalignment>Text Alignment in Detailed View</gamelistalignment>
+	<gamelistalignment lang="fr">Alignement du Texte Dans la Vue Détails</gamelistalignment>
+	
+	<gamelistposition>Gamelist Position</gamelistposition>
+	<gamelistposition lang="fr">Position de la Liste de Jeux</gamelistposition>
 	
   </variables>
   
@@ -180,16 +183,14 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="mvs" displayName="MVS (Arcade)"/>
 	</subset>
 	
-	<!-- Subset options for Text Alignment in Game Lists -->
+	<!-- Subset options for Text Alignment in Detailed View -->
 	<subset name="gamelistalignment" displayName="${gamelistalignment}" appliesTo="detailed">
-		<include name="center" displayName="${center}"/>
 		<include name="left" displayName="${left}"/>
-		<include name="right" displayName="${right}"/>
+		<include name="center" displayName="${center}"/>
 	</subset>
 	
-	<!-- Subset options for Text Alignment in Game Lists -->
-	<subset name="gamelistalignment" displayName="${gamelistalignment}" appliesTo="detailed">
-		<include name="center" displayName="${center}"/>
+	<!-- Subset options for Gamelist Position -->
+	<subset name="gamelistposition" displayName="${gamelistposition}" appliesTo="detailed,gamecarousel">
 		<include name="left" displayName="${left}"/>
 		<include name="right" displayName="${right}"/>
 	</subset>
@@ -1247,6 +1248,7 @@ Numero de juegos : {binding:total}</text>
 	</textlist>
 		
     </view>
+	
   
   <!-- COMMON ELEMENTS TO DETAILED AND GAMECAROUSEL -->
  
@@ -1254,10 +1256,10 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="backgound" extra="true">
       <pos>0.6845166 0</pos>
+	  <pos ifSubset="gamelistposition:right">0.3154834 0</pos>
       <size>0.9 0</size>
       <origin>0.5 0</origin>
 	  <path>./_art/assets/graphite.jpg</path>
-      <zIndex>0</zIndex>
 		<color ifSubset="bgcolor:purple">FFAAFF</color>
 		<color ifSubset="bgcolor:blue">B0D8FF</color>
 		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
@@ -1267,6 +1269,7 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="bgcontroller" extra="static">
       <pos>0.33 0</pos>
+	  <pos ifSubset="gamelistposition:right">0 0</pos>
       <size>0.72 0</size>
       <origin>0 0</origin>
 	  <tile>false</tile>
@@ -1284,12 +1287,14 @@ Numero de juegos : {binding:total}</text>
 		  <tile>true</tile>
 		  <scale>1</scale>
 		  <pos>0.19 0.472</pos>
+		  <pos ifSubset="gamelistposition:right">0.81 0.472</pos>
 		  <color>00000055</color>
 		  <zIndex>13</zIndex>
 	</image>
 	
 		<image name="infoboxdetailed" extra="static">
       <pos>0.6845166 0.756</pos>
+	  <pos ifSubset="gamelistposition:right">0.3154834 0.756</pos>
       <size>0.6203125 0</size>
       <origin>0.5 0.5</origin>
 	  <path>./_art/assets/infoboxdetailed.png</path>
@@ -1306,6 +1311,7 @@ Numero de juegos : {binding:total}</text>
 	 <linearSmooth>true</linearSmooth>
 	 <opacity>1</opacity>
 	 <pos>0.1901 0.0638</pos>
+	 <pos ifSubset="gamelistposition:right">0.8099 0.0638</pos>
 	 <color>AAAA9A</color>
 	 <maxSize>0.2510416 0.1444444</maxSize>
 	 <zIndex>21</zIndex>
@@ -1318,6 +1324,7 @@ Numero de juegos : {binding:total}</text>
 	<video name="md_video">
 	  <visible>true</visible>
 	  <pos>0.6845166 0.29</pos>
+	  <pos ifSubset="gamelistposition:right">0.3154834 0.29</pos>
 	  <maxSize>0.65 0.53</maxSize>
 	  <effect>none</effect>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
@@ -1339,22 +1346,9 @@ Numero de juegos : {binding:total}</text>
 			</storyboard>	  
 	</video>
 
-	<image name="green filter">
-		  <size>0.333 0.53</size>
-		  <pos>0.6845166 0.29</pos>
-		  	  <storyboard event="activate">
-                <animation property="offsetX" from="-0.3" to="0" duration="500" mode="EaseOutQuint"/>
-                <animation property="opacity" from="1" to="1" duration="" mode="Linear"/>
-			</storyboard>
-			<storyboard event="deactivate">
-                <animation property="opacity" from="1" to="0" duration="500" mode="Linear"/>
-				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
-				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
-			</storyboard>
-	</image>
-	
 	<image name="md_thumbnail">
 	  <pos>0.476 0.7555</pos>
+	  <pos ifSubset="gamelistposition:right">0.1069668 0.7555</pos>
 	  <origin>0.5 0.5</origin>
       <maxSize>0.18 0.325</maxSize>
 	  <zIndex>21</zIndex>
@@ -1371,6 +1365,7 @@ Numero de juegos : {binding:total}</text>
 		<origin>0.5 0.5</origin>
 		<size>0.03 0</size>
 		<pos>0.936 0.798</pos>
+		<pos ifSubset="gamelistposition:right">0.5669668 0.798</pos>
 	</image>
 	
 	<image name="players" extra="true">
@@ -1379,6 +1374,7 @@ Numero de juegos : {binding:total}</text>
 		<origin>0.5 0.5</origin>
 		<size>0.008 0</size>
 		<pos>0.93 0.845</pos>
+		<pos ifSubset="gamelistposition:right">0.562 0.845</pos>
 		<color>909090</color>
 		<zIndex>22</zIndex>
 	</image>
@@ -1388,6 +1384,7 @@ Numero de juegos : {binding:total}</text>
 	<origin>0 0.5</origin>
 	<color>AAAAAA</color>
 	<pos>0.9365 0.845</pos>
+	<pos ifSubset="gamelistposition:right">0.568 0.845</pos>
 	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
 	<fontSize>0.026</fontSize>
 	<zIndex>22</zIndex>
@@ -1400,6 +1397,7 @@ Numero de juegos : {binding:total}</text>
 	<size>0.1015625 0.03</size>
 	<color>a0a0a0</color>
 	<pos>0.9365 0.88</pos>
+	<pos ifSubset="gamelistposition:right">0.5669668 0.88</pos>
 	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
 	<fontSize>0.022</fontSize>
 	<zIndex>22</zIndex>
@@ -1410,6 +1408,7 @@ Numero de juegos : {binding:total}</text>
 	  <alignment>center</alignment>	  
 	  <size>0.0982 0.048</size>
 	  <pos>0.936 0.679</pos>
+	  <pos ifSubset="gamelistposition:right">0.5669668 0.679</pos>
 	  <lineSpacing>1</lineSpacing>
 	</text>
 	
@@ -1417,11 +1416,13 @@ Numero de juegos : {binding:total}</text>
 	  <origin>0.5 0.5</origin>
 	  <size>0.41 0.048</size>
 	  <pos>0.779 0.611</pos>
+	  <pos ifSubset="gamelistposition:right">0.41 0.611</pos>
 	</text>
 	
 	<datetime name="md_releasedate">
 	  <alignment>left</alignment>
 	  <pos>0.94 0.751</pos>
+	  <pos ifSubset="gamelistposition:right">0.57 0.751</pos>
 	  <origin>0.5 0.5</origin>
 	  <size>0.04 0.037</size>
 	</datetime>
@@ -1429,12 +1430,14 @@ Numero de juegos : {binding:total}</text>
 	<text name="md_description">
       <origin>0.5 0</origin>
 	  <pos>0.7289 0.637</pos>
+	  <pos ifSubset="gamelistposition:right">0.36 0.637</pos>
 	  <size>0.312 0.285</size>
 	  <alignment>center</alignment>
     </text>
 	
 	<rating name="md_rating">
       <pos>0.94 0.91</pos>
+	  <pos ifSubset="gamelistposition:right">0.568 0.91</pos>
       <size>0.06 0</size>
 	  <origin>0.5 0.5</origin>
       <color>AAAA90</color>
@@ -1451,12 +1454,14 @@ Numero de juegos : {binding:total}</text>
 
 	<image name="arrowup">
 		<pos>0.008 0.498629</pos>
+		<pos ifSubset="gamelistposition:right">0.998 0.498629</pos>
 		<color>FFFFFFdd</color>
 		<scale>0.57</scale>
 	</image>
 	
 	<image name="arrowdown">
 		<pos>0.008 0.584</pos>     
+		<pos ifSubset="gamelistposition:right">0.998 0.584</pos>
 		<color>FFFFFFdd</color>
 		<scale>0.57</scale>
 	</image>
@@ -1474,13 +1479,15 @@ Numero de juegos : {binding:total}</text>
 	 <linearSmooth>false</linearSmooth>
 	 <color>00000088</color>
 	 <opacity>0.8</opacity>
-	 <pos>0.1901 0.0638</pos>
+	 <pos>0.190625 0.0638</pos>
+	 <pos ifSubset="gamelistposition:right">0.809375 0.0638</pos>
 	 <zIndex>20</zIndex>
 	</image>
 	
 	<image name="bgdetailedlist" extra="true">
 		  <path>./_art/assets/bgdetailedlist.png</path>
 		  <pos>0.190625 0</pos>
+	  	  <pos ifSubset="gamelistposition:right">0.811 0</pos>
 		  <origin>0.5 0</origin>
 		  <size>0.3760416 0</size>
 		  <color>dddddd</color>
@@ -1499,21 +1506,37 @@ Numero de juegos : {binding:total}</text>
 	  <fontSize>0.038</fontSize>
 	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
       <forceUppercase>0</forceUppercase>
-	  <pos>0.02 0.1268</pos>
-	  <origin>0 0</origin>
+	  <pos>0.190625 0.1268</pos>
+	  <pos ifSubset="gamelistposition:right">0.809375 0.1268</pos>
+	  <origin>0.5 0</origin>
       <size>0.34 0.81584</size>
 	  <glowColor>000000aa</glowColor>
 	  <glowSize>1.5</glowSize>
 	  <glowOffset>1.5 1.5</glowOffset>
 	  <lines>15</lines>
       <alignment>left</alignment>
+	  <alignment ifSubset="gamelistalignment:center">center</alignment>
 	  <horizontalMargin>0.005</horizontalMargin>
 	  <zIndex>14</zIndex>
 	</textlist>
+	
+		<image name="green filter">
+		  <size>0.333 0.53</size>
+		  <pos>0.6845166 0.29</pos>
+		  <pos ifSubset="gamelistposition:right">0.3154834 0.637</pos>
+		  	  <storyboard event="activate">
+                <animation property="offsetX" from="-0.3" to="0" duration="500" mode="EaseOutQuint"/>
+                <animation property="opacity" from="1" to="1" duration="" mode="Linear"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="500" mode="Linear"/>
+				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
+				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
+			</storyboard>
+	</image>
 		
 </view>
 		
-	
 	
 		
 <!-- GAMECAROUSEL VIEWS -->
@@ -1526,57 +1549,50 @@ Numero de juegos : {binding:total}</text>
 		<image name="bgcarousel" extra="true">
 		  <path>./_art/assets/bgcarousel.png</path>
 		  <pos>0.190625 0</pos>
+		  <pos ifSubset="gamelistposition:right">0.809375 0</pos>
 		  <origin>0.5 0</origin>
 		  <size>0.2515625 0</size>
 		  <color>dddddd</color>
 		  <zIndex>12</zIndex>
 	</image>
 	
-	<image name="backgound2" extra="true">
-      <pos>0 0</pos>
-      <size>0.9 0</size>
-      <origin>0 0</origin>
-	  <path>./_art/assets/graphite.jpg</path>
-      <zIndex>0</zIndex>
-		<color ifSubset="bgcolor:purple">FFAAFF</color>
-		<color ifSubset="bgcolor:blue">B0D8FF</color>
-		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
-	  <linearSmooth>false</linearSmooth>
-    </image>
-
 	<image name="bgcontroller">
       <pos>0.27 0</pos>
+	  <pos ifSubset="gamelistposition:right">0 0</pos>
       <size>0.74 0</size>
     </image>
 	
 	<image name="electronic2">
 		   <size>0.2151 2</size>
 	</image>
-	
-		<image name="infoboxdetailed" extra="static">
+		
+	<image name="infoboxdetailed">
       <pos>0.653125 0.756</pos>
-      <size>0.6203125 0</size>
-      <origin>0.5 0.5</origin>
-	  <path>./_art/assets/infoboxdetailed.png</path>
-      <zIndex>20</zIndex>	  
-	  <color>AAAAAA</color>
-	  <linearSmooth>false</linearSmooth>
+	  <pos ifSubset="gamelistposition:right">0.346875 0.756</pos>	  
     </image>
 	
 	<video name="md_video">
-   <visible>true</visible>
 	  <pos>0.653125 0.29</pos>
-	  <maxSize>0.7 0.53</maxSize>
+	  <pos ifSubset="gamelistposition:right">0.346875 0.29</pos>	  
 	  	  <storyboard event="activate">
 		  </storyboard>
 		  <storyboard event="deactivate">
 		  </storyboard>
-		<zIndex>21</zIndex>
 	</video>
+	
+		<image name="green filter">
+		  <pos>0.653125 0.29</pos>
+		  <pos ifSubset="gamelistposition:right">0.346875 0.29</pos>	  
+	  	  <storyboard event="activate">
+		  </storyboard>
+		  <storyboard event="deactivate">
+		  </storyboard>
+	</image>
 	
 	<image name="whitelogo">
 	<rotation>270</rotation>
 	 <pos>0.037 0.472</pos>
+	 <pos ifSubset="gamelistposition:right">0.963 0.472</pos>	  
 	 <opacity>0.85</opacity>
 	</image>
 	
@@ -1586,6 +1602,7 @@ Numero de juegos : {binding:total}</text>
 	  <logoRotation>0</logoRotation>
 	  <origin>0.5 0.5</origin>
       <pos>0.19 0.47</pos>
+	  <pos ifSubset="gamelistposition:right">0.81 0.47</pos>	  
       <size>0.5 0.945</size>
       <logoScale>1</logoScale>
       <logoSize>0.41666666 0.142</logoSize>
@@ -1615,6 +1632,7 @@ Numero de juegos : {binding:total}</text>
 	 <color>112856</color>
 	 <opacity>0.5</opacity>
 	 <pos>0.19 0.47</pos>
+	  <pos ifSubset="gamelistposition:right">0.81 0.47</pos>	  
 	 <zIndex>23</zIndex>
 	 	  <storyboard repeat="forever">
                 <animation property="color" from="112856" to="3384A2" begin="" duration="1000" mode="Linear" autoReverse="true"/>
@@ -1623,26 +1641,32 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="md_thumbnail,md_flag,players">
 		<offsetX>-0.0313916</offsetX>
+		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
 	</image>
    
-	<text name="md_players,playcount,md_developer,md_name,md_releasedate,md_description">
+	<text name="md_players,playcount,md_developer,md_name,md_description">
 		<offsetX>-0.0313916</offsetX>
+		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
 	</text>
 	
 	<datetime name="md_releasedate">
 		<offsetX>-0.0313916</offsetX>
+		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
 	</datetime>
 	
 	<rating name="md_rating">
 		<offsetX>-0.0313916</offsetX>
+		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
     </rating>
 	
 	<image name="arrowup">
-		<pos>0.3065 0.418629</pos>
+		<pos>0.302 0.418629</pos>
+		<pos ifSubset="gamelistposition:right">0.699 0.418629</pos>	  
 	</image>
 	
 	<image name="arrowdown">
-		<pos>0.3065 0.534</pos>
+		<pos>0.302 0.534</pos>
+		<pos ifSubset="gamelistposition:right">0.699 0.534</pos>	  
 	</image>
 
   </view>
@@ -1656,7 +1680,7 @@ Numero de juegos : {binding:total}</text>
 			<visible>false</visible>
 	</image>
 	
-	<image name="backgound2">
+	<image name="backgound">
       <pos>0.5 0</pos>
       <size>1 1.11111111</size>
       <origin>0.5 0</origin>
@@ -1775,13 +1799,6 @@ Numero de juegos : {binding:total}</text>
   	<image name="infoboxcarousel">
 			<visible>false</visible>
 	</image>
-	
-	<image name="backgound2">
-      <pos>0.5 0</pos>
-      <size>1 1.11111111</size>
-      <origin>0.5 0</origin>
-	  <zIndex>1</zIndex>
-    </image>
 	
 	<image name="bottom bg fade" extra="true">
       <path>./_art/assets/white.png</path>
@@ -2012,8 +2029,8 @@ Numero de juegos : {binding:total}</text>
     <imagegrid name="gamegrid">
       <pos>0 0.08</pos>
       <size>1 0.86</size>
-	  <margin>0.024 0.024</margin>
-      <padding>0.024 0.024 0.024 0.024</padding>
+	  <margin>0.015 0.015</margin>
+      <padding>0.024 0.024</padding>
       <zIndex>10</zIndex>
       <autoLayout>6 2</autoLayout>
       <autoLayout if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb'">6 3</autoLayout>
@@ -2046,7 +2063,7 @@ Numero de juegos : {binding:total}</text>
 	 <linearSmooth>true</linearSmooth>
       <path>./icons/star_filled.svg</path>
       <pos>0.93 0.07</pos>
-      <maxSize>0.15 0.15</maxSize>
+      <maxSize>0.12 0.12</maxSize>
       <origin>0.5 0.5</origin>
       <horizontalAlignment>right</horizontalAlignment>
       <color>FFFF00ff</color>
@@ -2106,6 +2123,7 @@ Numero de juegos : {binding:total}</text>
 	 		
 	<imagegrid name="gamegrid">
       <autoLayout>6 6</autoLayout>
+	  <padding>0.015 0.015</padding>
 	  <imageSource>marquee</imageSource>
 	</imagegrid>
 	
@@ -2113,14 +2131,14 @@ Numero de juegos : {binding:total}</text>
       <backgroundColor>00000000</backgroundColor>
       <backgroundCornerSize>8 8</backgroundCornerSize>
       <selectionMode>tile</selectionMode>
-      <padding>12 12</padding>
+      <padding>0 0</padding>
       <imageColor>A8A8A8FF</imageColor>
     </gridtile>
 	
     <gridtile name="selected">
       <backgroundCenterColor>88888888</backgroundCenterColor>
       <backgroundEdgeColor>88888888</backgroundEdgeColor>
-	  <padding>2 2</padding>
+	  <padding>0 0</padding>
       <imageColor>FFFFFFFF</imageColor>
     </gridtile>
 	    	
@@ -2188,6 +2206,7 @@ Numero de juegos : {binding:total}</text>
 	<imagegrid name="gamegrid">
       <autoLayout>6 4</autoLayout>
 	  <imageSource>marquee</imageSource>
+	  <padding>0.015 0.015</padding>
 	  <size>1 0.55</size>
 	</imagegrid>
 	
@@ -2195,14 +2214,14 @@ Numero de juegos : {binding:total}</text>
       <backgroundColor>00000000</backgroundColor>
       <backgroundCornerSize>8 8</backgroundCornerSize>
       <selectionMode>tile</selectionMode>
-      <padding>12 12</padding>
+      <padding>0 0</padding>
       <imageColor>A8A8A8FF</imageColor>
     </gridtile>
 	
     <gridtile name="selected">
       <backgroundCenterColor>88888888</backgroundCenterColor>
       <backgroundEdgeColor>88888888</backgroundEdgeColor>
-	  <padding>2 2</padding>
+	  <padding>0 0</padding>
       <imageColor>FFFFFFFF</imageColor>
     </gridtile>
 	    	
@@ -2210,7 +2229,7 @@ Numero de juegos : {binding:total}</text>
 	 <linearSmooth>true</linearSmooth>
       <path>./_art/icons/star_filled.svg</path>
       <pos>0.93 0.07</pos>
-      <maxSize>0.15 0.15</maxSize>
+      <maxSize>0.12 0.12</maxSize>
       <origin>0.5 0.5</origin>
       <horizontalAlignment>right</horizontalAlignment>
       <color>FFFF0080</color>
