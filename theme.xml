@@ -996,16 +996,6 @@ Numero de juegos : {binding:total}</text>
 	  <zIndex>3</zIndex>	  
 	</video>
 	
-	<image name="green filter" extra="true">
-		  <visible>false</visible>
-		<visible if="${system.theme} == 'gb' || 'supervision' || 'gb2players' || 'megaduck'">true</visible>
-		  <path>./_art/assets/white.png</path>
-		  <linearSmooth>false</linearSmooth>
-		  <origin>0.5 0.5</origin>
-		  <color>11881122</color>
-		  <zIndex>4</zIndex>
-	</image>
-	
 	<image name="md_flag">
 		<color>D8D8D8</color>
 	</image>
@@ -1334,16 +1324,6 @@ Numero de juegos : {binding:total}</text>
       <loops>2</loops>
 	  <color>DDDDDD</color>
       <roundCorners>0.02</roundCorners> 
-
-	  <storyboard event="activate">
-                <animation property="offsetX" from="-0.3" to="0" duration="500" mode="EaseOutQuint"/>
-                <animation property="opacity" from="1" to="1" duration="" mode="Linear"/>
-			</storyboard>
-			<storyboard event="deactivate">
-                <animation property="opacity" from="1" to="0" duration="500" mode="Linear"/>
-				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
-				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
-			</storyboard>	  
 	</video>
 
 	<image name="md_thumbnail">
@@ -1519,21 +1499,6 @@ Numero de juegos : {binding:total}</text>
 	  <horizontalMargin>0.005</horizontalMargin>
 	  <zIndex>14</zIndex>
 	</textlist>
-	
-		<image name="green filter">
-		  <size>0.333 0.53</size>
-		  <pos>0.6845166 0.29</pos>
-		  <pos ifSubset="gamelistposition:right">0.3154834 0.637</pos>
-		  	  <storyboard event="activate">
-                <animation property="offsetX" from="-0.3" to="0" duration="500" mode="EaseOutQuint"/>
-                <animation property="opacity" from="1" to="1" duration="" mode="Linear"/>
-			</storyboard>
-			<storyboard event="deactivate">
-                <animation property="opacity" from="1" to="0" duration="500" mode="Linear"/>
-				<animation property="scale" from="1" to="0" duration="250" mode="EaseIn"/>
-				<animation property="offsetX" from="0.0" to="0.1" duration="250" mode="EaseOut"/>
-			</storyboard>
-	</image>
 		
 </view>
 		
@@ -1574,20 +1539,7 @@ Numero de juegos : {binding:total}</text>
 	<video name="md_video">
 	  <pos>0.653125 0.29</pos>
 	  <pos ifSubset="gamelistposition:right">0.346875 0.29</pos>	  
-	  	  <storyboard event="activate">
-		  </storyboard>
-		  <storyboard event="deactivate">
-		  </storyboard>
 	</video>
-	
-		<image name="green filter">
-		  <pos>0.653125 0.29</pos>
-		  <pos ifSubset="gamelistposition:right">0.346875 0.29</pos>	  
-	  	  <storyboard event="activate">
-		  </storyboard>
-		  <storyboard event="deactivate">
-		  </storyboard>
-	</image>
 	
 	<image name="whitelogo">
 	<rotation>270</rotation>
