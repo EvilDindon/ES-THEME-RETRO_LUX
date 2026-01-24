@@ -1549,7 +1549,7 @@ Numero de juegos : {binding:total}</text>
 		<image name="bgcarousel" extra="true">
 		  <path>./_art/assets/bgcarousel.png</path>
 		  <pos>0.190625 0</pos>
-		  <pos ifSubset="gamelistposition:right">0.809375 0</pos>
+		  <pos ifSubset="gamelistposition:right">0.811 0</pos>
 		  <origin>0.5 0</origin>
 		  <size>0.2515625 0</size>
 		  <color>dddddd</color>
