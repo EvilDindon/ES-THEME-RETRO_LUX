@@ -368,6 +368,7 @@ originally based on: "carbon" and "Arcade Planet"
 
     <image name="backgound" extra="true">
       <pos>0 0</pos>
+	  <pos ifSubset="systemviewlayout:left">0.1 0</pos>
       <size>0.9 1</size>
       <origin>0 0</origin>
 	  <path>./_art/assets/graphite.jpg</path>
@@ -383,7 +384,8 @@ originally based on: "carbon" and "Arcade Planet"
 		  <origin>0.5 0.5</origin>
 		  <size>0.353125 0</size>
 		  <pos>0.854979 0.471296</pos>
-		  <pos ifSubset="systemviewlayout:right">0.854979 0.471296</pos>
+		  <pos ifSubset="systemviewlayout:left">0.145021 0.471296</pos>
+		  <flipX ifSubset="systemviewlayout:left">true</flipX>
 		  <color>e8e8e8ff</color>
 		  <zIndex>48</zIndex>
 	</image>
@@ -394,14 +396,15 @@ originally based on: "carbon" and "Arcade Planet"
 		  <size>0.264 2.8</size>
 		  <tile>true</tile>
 		  <scale>1</scale>
-		  <pos>0.854979 0.53</pos>
-		  <pos ifSubset="systemviewlayout:right">0.854979 0.497</pos>
+		  <pos>0.854979 0.497</pos>
+		  <pos ifSubset="systemviewlayout:left">0.145021 0.497</pos>
 		  <color>00000060</color>
 		  <zIndex>49</zIndex>
 	</image>
 	
  	<image name="bgcontroller" extra="static">
       <pos>-0.03 0</pos>
+	  <pos ifSubset="systemviewlayout:left">0.3 0</pos>
       <size>0.72 0</size>
       <origin>0 0</origin>
 	  <tile>false</tile>
@@ -414,6 +417,8 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<image name="infobox2" extra="static">
       <pos>0.3552083 0.79166666</pos>
+	  <pos ifSubset="systemviewlayout:left">0.6447917 0.79166666</pos>
+	  <flipX ifSubset="systemviewlayout:left">true</flipX>
       <size>0.6880208 0</size>
       <origin>0.5 0.5</origin>
 	  <path>./_art/assets/infobox2.png</path>
@@ -445,7 +450,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <size>0.42 0.94259259259</size>
 	  <size ifSubset="aspect-ratio:4-3">0.5472222 0.94259259259</size>
       <pos>0.803 0.471296295</pos>
-	  <pos ifSubset="systemviewlayout:left">0.195 0.471296295</pos>
+	  <pos ifSubset="systemviewlayout:left">0.197 0.471296295</pos>
 	  <pos ifSubset="aspect-ratio:4-3">0.7098 0.471296295</pos>
 	  <logoAlignment>right</logoAlignment>
 	  <logoAlignment ifSubset="systemviewlayout:left">left</logoAlignment>
@@ -475,6 +480,7 @@ originally based on: "carbon" and "Arcade Planet"
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
 		<pos>0.81185 0.471</pos>
+		<pos ifSubset="systemviewlayout:left">0.18815 0.471</pos>
 		<zIndex>62</zIndex>
 		<opacity>0</opacity>
 		<storyboard>
@@ -497,7 +503,9 @@ originally based on: "carbon" and "Arcade Planet"
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
 		<pos>0.81185 0.471</pos>
+		<pos ifSubset="systemviewlayout:left">0.18815 0.471</pos>
 		<pos ifSubset="wheelStyle:NoSprite">0.78580833 0.471</pos>
+		<pos ifSubset="systemviewlayout:left,wheelStyle:NoSprite">0.16215833 0.471</pos>
 		<zIndex>63</zIndex>
 		<opacity>0</opacity>
 		<storyboard repeatAt="5000">
@@ -528,6 +536,7 @@ originally based on: "carbon" and "Arcade Planet"
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
 		<pos>0.81185 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0.18815 0.471296295</pos>
 		<path>./_art/assets/underconstruction.png</path>
 		<path>./_art/nakedWheel/${system.theme}.png</path>
 		 <path>./_art/nakedWheel/${system.theme}-${lang}.png</path>
@@ -551,7 +560,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<path>./_art/assets/reflet.png</path>
 		<size>0.0546875 0</size>
 		<pos>0.978 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left">0.3552083 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0.022 0.471296295</pos>
 		<origin>0.5 0.5</origin>
 		<zIndex>62</zIndex>
 		<opacity>0</opacity>
@@ -573,7 +582,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<path>./_art/assets/reflet.png</path>
 		<size>0.041015625 0</size>
 		<x>0.9792708</x>
-		<x ifSubset="systemviewlayout:left">0.303125</x>
+		<x ifSubset="systemviewlayout:left">0.0207292</x>
 		<origin>0.5 0.5</origin>
 		<zIndex>62</zIndex>
 		<color>FFFFFFaa</color>
@@ -673,10 +682,11 @@ originally based on: "carbon" and "Arcade Planet"
 		<zIndex>65</zIndex>
 		<linearSmooth>false</linearSmooth>
 		<opacity>0</opacity>
-		<pos>0.6842458 0.471296295</pos>
+		<pos>0.0562  0.471296295</pos>
 		<pos ifSubset="wheelStyle:NoSprite">0.3615 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left">0.0562 0.471296295</pos>
-		<storyboard ifSubset="systemviewlayout:right" repeatAt="1500">
+		<pos ifSubset="systemviewlayout:left">0.0605458 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left,wheelStyle:NoSprite">0.6385 0.471296295</pos>
+		<storyboard repeatAt="1500">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
 			<animation property="scale" from="1" to="2" begin="500" duration="1000" mode="EaseOutCubic"/>
 			<animation property="offsetX" from="0" to="-0.555" begin="500" duration="800" mode="EaseOutCubic"/>
@@ -686,7 +696,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
 			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
-	  	<storyboard ifSubset="wheelStyle:NoSprite,systemviewlayout:right" repeatAt="1500">
+	  	<storyboard ifSubset="wheelStyle:NoSprite" repeatAt="1500">
 			<animation property="opacity" from="0" to="1" begin="" duration="" mode="Linear"/>
 			<animation property="scale" from="0" to="3" begin="" duration="500" mode="EaseOutCubic"/>
 			<animation property="scale" from="3" to="2" begin="500" duration="800" mode="EaseOutCubic"/>
@@ -697,19 +707,33 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
 			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
-	  
+		  
 	  <storyboard ifSubset="systemviewlayout:left" repeatAt="2750">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
-			<animation property="scale" from="1" to="3" begin="2000" duration="750" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="0" to="0.636" begin="2000" duration="750" mode="EaseOutCubic"/>
-			<animation property="offsetY" to="-0.2" begin="2000" duration="375" mode="EaseOutCubic" autoReverse="true"/>
-			<animation property="scale" from="3" to="2" begin="6250" duration="125" mode="Linear"/>
-			<animation property="scale" from="2" to="3" begin="6850" duration="125" mode="Linear"/>
-			<animation property="scale" from="3" to="3" begin="6975" duration="3025" mode="Linear"/>				
+			<animation property="scale" from="1" to="2" begin="500" duration="1000" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="0.805" begin="500" duration="800" mode="EaseOutCubic"/>
+			<animation property="offsetY" to="-0.2" begin="500" duration="400" mode="EaseOutCubic" autoReverse="true"/>
+			<animation property="offsetY" from ="0" to="0.32" begin="1300" duration="200" mode="EaseOutCubic"/>
+			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
+			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
+			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>			
 	  </storyboard>
+	  
+	  	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:NoSprite" repeatAt="2750">
+			<animation property="opacity" from="0" to="1" begin="" duration="" mode="Linear"/>
+			<animation property="scale" from="0" to="3" begin="" duration="500" mode="EaseOutCubic"/>
+			<animation property="scale" from="3" to="2" begin="500" duration="800" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="0.2322542" begin="500" duration="800" mode="EaseOutCubic"/>
+			<animation property="offsetY" to="-0.2" begin="500" duration="400" mode="EaseOutCubic" autoReverse="true"/>
+			<animation property="offsetY" from ="0" to="0.32" begin="1300" duration="200" mode="EaseOutCubic"/>
+			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
+			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
+			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>			
+	  </storyboard>
+	  
 	 </image>
 	 	 
-	<image name="randomFanart1,randomFanart2" extra="true" ifSubset="systemviewstyle:randomfanart,systemviewlayout:left|right">
+	<image name="randomFanart1,randomFanart2" extra="true" ifSubset="systemviewstyle:randomfanart">
 			<path>{random:image}</path>
 			<path>{random:thumbnail}</path>
 			<path>{random:fanart}</path>
@@ -719,7 +743,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<opacity>1</opacity>
 			<origin>0.5 0.5</origin>
 			<pos>0.3615 0.47</pos>
- 	        <pos ifSubset="systemviewlayout:left">0.65 0.383</pos>
+ 	        <pos ifSubset="systemviewlayout:left">0.6385 0.47</pos>
 			<saturation>0.66</saturation>
      		<color>D8D8D8</color>
 	</image>
@@ -746,7 +770,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<color>E0E0E0</color>
 			<origin>0.5 0.5</origin>
 			<pos>0.3615 0.33</pos>
-			<pos ifSubset="systemviewlayout:left">0.682 0.471296295</pos>
+			<pos ifSubset="systemviewlayout:left">0.64375 0.33</pos>
 			<scale if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'gb2players' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx'">0.79</scale>
 			<zIndex>10</zIndex>
 	</image>
@@ -801,7 +825,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<origin>0.5 0.5</origin>
 	    <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
         <fontSize>0.03</fontSize>
-        <pos ifSubset="systemviewlayout:left">0.36 0.724</pos>
+        <pos ifSubset="systemviewlayout:left">0.53 0.8165</pos>
 		<pos ifSubset="systemviewlayout:right">0.46979 0.8165</pos>
         <size>0.441666 0.28</size>
 		<color>00BBFF</color>
@@ -818,7 +842,7 @@ Nombre de Jeux : {binding:total}</text>
 		<text lang="es">
 ${system.hardwareType} ${system.releaseYearOrNull}
 Numero de juegos : {binding:total}</text>
-        <pos ifSubset="systemviewlayout:left">0.36 0.736</pos>
+        <pos ifSubset="systemviewlayout:left">0.533 0.736</pos>
 		<pos ifSubset="systemviewlayout:right">0.48125 0.736</pos>
         <size>0.22 0.28</size>
 		<storyboard>
@@ -839,6 +863,7 @@ Numero de juegos : {binding:total}</text>
 		<linearSmooth>true</linearSmooth>
 		<origin>0 0.5</origin>
 		<pos>0.25 0.45</pos>
+		<pos ifSubset="systemviewlayout:left">0.5 0.45</pos>	
 		<maxSize>0.255 0.175</maxSize>
 		<color>AAAAAAee</color>
 		<saturation>0</saturation>
@@ -848,6 +873,13 @@ Numero de juegos : {binding:total}</text>
 		  <animation property="scale" from="0" to="1" begin="1300" duration="200" mode="Linear"/>
 		  <animation property="scale" from="1" to="0.333333" begin="2000" duration="200" mode="Linear"/>
 		  <animation property="offsetX" from="0" to="0.23125" begin="2000" duration="200" mode="Linear"/>
+		  <animation property="offsetY" from="0" to="0.422" begin="2000" duration="200" mode="Linear"/>
+	  </storyboard>
+	  	<storyboard ifSubset="systemviewlayout:left">
+		  <animation property="scale" from="0" to="0" begin="" duration="1300" mode="Linear"/>
+		  <animation property="scale" from="0" to="1" begin="1300" duration="200" mode="Linear"/>
+		  <animation property="scale" from="1" to="0.333333" begin="2000" duration="200" mode="Linear"/>
+		  <animation property="offsetX" from="0" to="0.034" begin="2000" duration="200" mode="Linear"/>
 		  <animation property="offsetY" from="0" to="0.422" begin="2000" duration="200" mode="Linear"/>
 	  </storyboard>
 	</image>
@@ -862,6 +894,7 @@ Numero de juegos : {binding:total}</text>
 		<linearSmooth>true</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<pos>0.35677 0.8178</pos>
+        <pos ifSubset="systemviewlayout:left">0.419 0.8178</pos>		
 		<maxSize>0.18875 0.175925</maxSize>
 		<color>FFFFFF</color>
 		<zIndex>100</zIndex>
@@ -875,7 +908,7 @@ Numero de juegos : {binding:total}</text>
       <origin>0.5 0.5</origin>
 	  <size>0.031 0</size>
 	  <pos>0.7 0.398</pos>
-      <pos ifSubset="systemviewlayout:left">0.34 0.4</pos>   
+      <pos ifSubset="systemviewlayout:left">0.314 0.4</pos>   
 	  <color>A0A0AAff</color>
 	  <path>./_art/assets/arrowup.png</path>
       <linearSmooth>true</linearSmooth>
@@ -889,7 +922,7 @@ Numero de juegos : {binding:total}</text>
       <origin>0.5 0.5</origin>
 	  <size>0.031 0</size>
 	  <pos>0.7 0.567</pos>
-	  <pos ifSubset="systemviewlayout:left" >0.34 0.564</pos>
+	  <pos ifSubset="systemviewlayout:left" >0.314 0.564</pos>
 	  <color>A0A0AAff</color>
 	  <path>./_art/assets/arrowdown.png</path>
       <linearSmooth>true</linearSmooth>
