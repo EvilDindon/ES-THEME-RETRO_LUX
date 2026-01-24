@@ -183,17 +183,19 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="mvs" displayName="MVS (Arcade)"/>
 	</subset>
 	
+	<!-- Subset options for Gamelist Position -->
+	<subset name="gamelistposition" displayName="${gamelistposition}" appliesTo="detailed,gamecarousel">
+		<include name="left" displayName="${left}"/>
+		<include name="right" displayName="${right}"/>
+	</subset>
+	
 	<!-- Subset options for Text Alignment in Detailed View -->
 	<subset name="gamelistalignment" displayName="${gamelistalignment}" appliesTo="detailed">
 		<include name="left" displayName="${left}"/>
 		<include name="center" displayName="${center}"/>
 	</subset>
 	
-	<!-- Subset options for Gamelist Position -->
-	<subset name="gamelistposition" displayName="${gamelistposition}" appliesTo="detailed,gamecarousel">
-		<include name="left" displayName="${left}"/>
-		<include name="right" displayName="${right}"/>
-	</subset>
+
 
 <!-- MENU -->
 	
@@ -1257,7 +1259,7 @@ Numero de juegos : {binding:total}</text>
 	  <secondaryColor>7a6161</secondaryColor>
 	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
 	  <fontSize>0.038</fontSize>
-	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
+	  <fontPath>./_art/fonts/Saira_SemiCondensed-SemiBold.ttf</fontPath>
       <forceUppercase>0</forceUppercase>
 	  <pos>0.5 0</pos>
 	  <origin>0.5 0</origin>
@@ -1487,7 +1489,7 @@ Numero de juegos : {binding:total}</text>
   
 	<image name="logobox" extra="true">
     <path>./_art/assets/white.png</path>
-	 <size>0.340625 0.1259259</size>
+	 <size>0.34 0.1259259</size>
 	 <origin>0.5 0.5</origin>
 	 <linearSmooth>false</linearSmooth>
 	 <color>00000088</color>
@@ -1503,26 +1505,27 @@ Numero de juegos : {binding:total}</text>
 	  	  <pos ifSubset="gamelistposition:right">0.811 0</pos>
 		  <origin>0.5 0</origin>
 		  <size>0.3760416 0</size>
-		  <color>dddddd</color>
+		  <color>f8f8f8</color>
 		  <zIndex>12</zIndex>
 	</image>
 	
 		<textlist name="gamelist">
-	 <selectorColor>224668dd</selectorColor>
+	 <selectorColor>113568ff</selectorColor>
+	 <selectorColorEnd>11356855</selectorColorEnd>	 
 <!-- 	  <selectorHeight>0.05</selectorHeight> -->
 	  <selectorOffsetY>0.02</selectorOffsetY>
 	  <selectedColor>FFFFFF</selectedColor>
-	  <primaryColor>AAAAAA</primaryColor>
+	  <primaryColor>999999</primaryColor>
 	  <secondaryColor>7a6161</secondaryColor>
 	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
 	  <secondaryColor>7a6161</secondaryColor>
 	  <fontSize>0.038</fontSize>
-	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
+	  <fontPath>./_art/fonts/Saira_SemiCondensed-SemiBold.ttf</fontPath>
       <forceUppercase>0</forceUppercase>
 	  <pos>0.190625 0.1268</pos>
 	  <pos ifSubset="gamelistposition:right">0.809375 0.1268</pos>
 	  <origin>0.5 0</origin>
-      <size>0.34 0.81584</size>
+      <size>0.339 0.81584</size>
 	  <glowColor>000000aa</glowColor>
 	  <glowSize>1.5</glowSize>
 	  <glowOffset>1.5 1.5</glowOffset>
@@ -1550,7 +1553,7 @@ Numero de juegos : {binding:total}</text>
 		  <pos ifSubset="gamelistposition:right">0.811 0</pos>
 		  <origin>0.5 0</origin>
 		  <size>0.2515625 0</size>
-		  <color>dddddd</color>
+		  <color>f8f8f8</color>
 		  <zIndex>12</zIndex>
 	</image>
 	
@@ -1614,13 +1617,13 @@ Numero de juegos : {binding:total}</text>
 	 <size>0.21354166 0.142</size>
 	 <origin>0.5 0.5</origin>
 	 <linearSmooth>false</linearSmooth>
-	 <color>112856</color>
-	 <opacity>0.5</opacity>
+	 <color>113568</color>
+	 <opacity>0.65</opacity>
 	 <pos>0.19 0.47</pos>
 	  <pos ifSubset="gamelistposition:right">0.81 0.47</pos>	  
 	 <zIndex>23</zIndex>
 	 	  <storyboard repeat="forever">
-                <animation property="color" from="112856" to="3384A2" begin="" duration="1000" mode="Linear" autoReverse="true"/>
+                <animation property="color" from="113568" to="3394D2" begin="" duration="1000" mode="Linear" autoReverse="true"/>
 			</storyboard>
 	</image>
 	
@@ -2441,7 +2444,7 @@ Numero de juegos : {binding:total}</text>
       <autoLayout>6 3</autoLayout>
 	  <autoLayoutSelectedZoom>1.05</autoLayoutSelectedZoom>
 	  <imageSource>image</imageSource>
-      <margin>0.01 0.037</margin>
+      <margin>0.018 0.037</margin>
 	  <showVideoAtDelay>100</showVideoAtDelay>
 	  <effect>none</effect>
     </imagegrid>
