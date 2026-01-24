@@ -1113,7 +1113,7 @@ Numero de juegos : {binding:total}</text>
 	
 	<text name="md_developer">
 	 <color>AAAA9A</color>
-	  	  <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
+	  	  <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
 		  <fontSize>0.026</fontSize>
 	  <forceUppercase>0</forceUppercase>
 	  <glowColor>00000016</glowColor>
