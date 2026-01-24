@@ -282,7 +282,7 @@ originally based on: "carbon" and "Arcade Planet"
     
 	<text name="clock">
       <color>777777</color>
-	  <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
+	  <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
       <fontSize>0.037</fontSize>
       <pos>0.99 0.972</pos>
 	  <origin>1 0.5</origin>
@@ -337,7 +337,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <pos>0.01 0.972</pos>
 	  <size>1 0.01</size>
 	  <origin>0 0.5</origin>
-	  <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
+	  <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
 	  <iconA>:/help/buttons_east.svg</iconA>
       <iconB>:/help/buttons_south.svg</iconB>
       <iconX>:/help/buttons_north.svg</iconX>
@@ -947,7 +947,7 @@ Numero de juegos : {binding:total}</text>
 	  <pos>0.01 0.972</pos>
 	  <size>1 0.01</size>
 	  <origin>0 0.5</origin>
-	  <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
+	  <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
 	  <fontSize>0.033</fontSize>
 	  <textColor>777777</textColor>
       <iconColor>888888</iconColor>
@@ -1113,7 +1113,7 @@ Numero de juegos : {binding:total}</text>
 	
 	<text name="md_developer">
 	 <color>AAAA9A</color>
-	  	  <fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+	  	  <fontPath>./_art/fonts/SairaCondensed-Regular.ttf</fontPath>
 		  <fontSize>0.026</fontSize>
 	  <forceUppercase>0</forceUppercase>
 	  <glowColor>00000016</glowColor>
@@ -1510,8 +1510,7 @@ Numero de juegos : {binding:total}</text>
 	</image>
 	
 		<textlist name="gamelist">
-	 <selectorColor>113568ff</selectorColor>
-	 <selectorColorEnd>11356855</selectorColorEnd>	 
+	 <selectorColor>224668dd</selectorColor>
 <!-- 	  <selectorHeight>0.05</selectorHeight> -->
 	  <selectorOffsetY>0.02</selectorOffsetY>
 	  <selectedColor>FFFFFF</selectedColor>
