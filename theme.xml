@@ -2147,6 +2147,10 @@ Numero de juegos : {binding:total}</text>
 	<image name="md_thumbnail,md_flag,infoboxgrid">
 	 <visible>true</visible>
 	</image>
+	
+	<image name="infoboxgrid">
+	 <visible>false</visible>
+	</image>
 		
 	<image name="topboxlogogriddetails" extra="true">
       <pos>0 0</pos>
