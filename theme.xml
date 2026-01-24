@@ -18,8 +18,8 @@ originally based on: "carbon" and "Arcade Planet"
 	<artworkregion>Logos and Artwork Region</artworkregion>
 	<artworkregion lang="fr">Région des Logos et Artworks</artworkregion>
 	
-	<bgcolor>System View Background color</bgcolor>
-	<bgcolor lang="fr">Couleur du fond d'écran vue système</bgcolor>
+	<bgcolor>Background color</bgcolor>
+	<bgcolor lang="fr">Couleur du fond d'écran</bgcolor>
 	
 	<carouselLogoStyle>Carousel Logo Style</carouselLogoStyle>
 	<carouselLogoStyle lang="fr">Style de Logos dans le Carousel</carouselLogoStyle>
@@ -178,6 +178,13 @@ originally based on: "carbon" and "Arcade Planet"
 	<subset name="neogeostyle" displayName="Neo-Geo Style">
 		<include name="aes" displayName="AES (Console)"/>
 		<include name="mvs" displayName="MVS (Arcade)"/>
+	</subset>
+	
+	<!-- Subset options for Text Alignment in Game Lists -->
+	<subset name="gamelistalignment" displayName="${gamelistalignment}" appliesTo="detailed">
+		<include name="center" displayName="${center}"/>
+		<include name="left" displayName="${left}"/>
+		<include name="right" displayName="${right}"/>
 	</subset>
 	
 	<!-- Subset options for Text Alignment in Game Lists -->
@@ -1199,9 +1206,9 @@ Numero de juegos : {binding:total}</text>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
 		<path>./_art/consoles/${system.theme}.png</path>
 		<path>./_art/consoles/${system.theme}.svg</path>
-		  <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
-		  <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.svg</path>
-		<path ifSubset="neogeostyle:mvs">./_art/whiteLogos/special/${system.theme}.png</path>	  
+		  <path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.png</path>
+		  <path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.svg</path>
+		<path ifSubset="neogeostyle:mvs">./_art/consoles/special/${system.theme}.png</path>	  
 		<saturation>1</saturation>
 		<color>E8E8E8</color>
 		<origin>0.5 0.5</origin>
