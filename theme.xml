@@ -682,7 +682,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<zIndex>65</zIndex>
 		<linearSmooth>false</linearSmooth>
 		<opacity>0</opacity>
-		<pos>0.6842 0.471296295</pos>
+		<pos>0.6845 0.471296295</pos>
 		<pos ifSubset="wheelStyle:NoSprite">0.3615 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:left">0.0605458 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:left,wheelStyle:NoSprite">0.6385 0.471296295</pos>
