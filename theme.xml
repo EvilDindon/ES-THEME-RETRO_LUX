@@ -1663,125 +1663,6 @@ Numero de juegos : {binding:total}</text>
   
     <!-- BOX CAROUSEL -->
 
-<!-- <customView name="boxcarousel" inherits="gamecarousel" displayName="${boxcarousel}">
-	
-	<image name="bgcarousel,electronic2,selectedlogobg,infoboxdetailed,arrowup,arrowdown,md_thumbnail">
-			<visible>false</visible>
-	</image>
-	
-	<image name="backgound">
-      <pos>0.5 0</pos>
-      <size>1 1.11111111</size>
-      <origin>0.5 0</origin>
-	  <zIndex>1</zIndex>
-    </image>
-
-	<image name="bgcontroller">
-      <pos>0.5 0</pos>
-	  <origin>0.5 0</origin>
-      <maxSize>1 1</maxSize>
-	  <rotation>0</rotation>
-    </image>
-	
-	<image name="topboxlogogriddetails" extra="true">
-      <pos>0 0</pos>
-      <size>1 0</size>
-      <origin>0 0</origin>
-	  <path>./_art/assets/topboxlogogriddetails.png</path>
-      <zIndex>2</zIndex>	  
-	  <color>AAAAAA</color>
-	  <linearSmooth>false</linearSmooth>
-    </image>
-	
-	<image name="whitelogo" extra="true">
-	 <maxSize>0.154 0.2215</maxSize>
-	 <origin>0.5 0.5</origin>
-	 <pos>0.5 0.038</pos>
-	 <rotation>0</rotation>
-	</image>
-	
-	<image name="infoboxcarousel" extra="static">
-      <pos>0.5 0.762037</pos>
-      <size>0.62135416666 0</size>
-      <origin>0.5 0.5</origin>
-	  <path>./_art/assets/infoboxcarousel.png</path>
-      <zIndex>20</zIndex>	  
-	  <color>AAAAAA</color>
-	  <linearSmooth>false</linearSmooth>
-    </image>
-	
-	<video name="md_video">
-	  <pos>0.5 0.788</pos>
-	  <maxSize>0.21 0.272</maxSize>
-	</video>
-
-	<gamecarousel name="gamecarousel">
-      <type>horizontal</type>
-	  <logoAlignment>center</logoAlignment>
-	  <origin>0.5 0</origin>
-      <pos>0.5 0.0905</pos>
-      <size>1 0.48</size>
-      <logoScale>1.35</logoScale>
-      <logoSize>0.15 0.34</logoSize>
-	  <logoSize if="{system.theme} == 'snes' || {system.theme} == 'snesh' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx' || {system.theme} == 'scv' || {system.theme} == 'lcdgames'">0.23 0.34</logoSize>
-	  <maxLogoCount>5</maxLogoCount>
-      <maxLogoCount if="{system.theme} == 'snes' || {system.theme} == 'snesh' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx' || {system.theme} == 'scv' || {system.theme} == 'lcdgames'">3</maxLogoCount>
-      <imageSource>thumbnail</imageSource>
-      <minLogoOpacity>1</minLogoOpacity>
-    </gamecarousel>    
-    
-	<text name="gamecarouselLogoText">
-      <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
-	  <forceUppercase>1</forceUppercase>
-	  <color>AA1122</color>
-	  <fontSize>0.058</fontSize>
-      <glowColor>000000FF</glowColor>
-      <glowSize>2</glowSize>
-      <lineSpacing>1.0</lineSpacing>
-    </text>
-	
-	<image name="md_flag,players">
-		<offsetX ifSubset="gamelistposition:left">-0.228787433</offsetX>
-		<offsetX ifSubset="gamelistposition:right">0.1421</offsetX>
-	</image>
-  	
-	<text name="playcount,md_developer">
-		<size>0.19</size>
-	</text>
-	
-	<text name="md_players,playcount,md_developer,md_name,md_releasedate">
-		<offsetX ifSubset="gamelistposition:left">-0.228787433</offsetX>
-		<offsetX ifSubset="gamelistposition:right">0.14128</offsetX>
-	</text>
-	
-	<text name="md_developer">
-		<fontSize>0.03</fontSize>
-	</text>
-	
-	<datetime name="md_releasedate">
-		<offsetX ifSubset="gamelistposition:left">-0.228787433</offsetX>
-		<offsetX ifSubset="gamelistposition:right">0.14128</offsetX>
-	</datetime>
-	
-	<rating name="md_rating">
-		<offsetX ifSubset="gamelistposition:left">-0.228787433</offsetX>
-		<offsetX ifSubset="gamelistposition:right">0.14128</offsetX>
-    </rating>
-	
-	 <text name="md_name">
-		<offsetX>0</offsetX>
-		<size>0.604166666 0.048</size>
-		<pos>0.5 0.6175925</pos>
-		<color>eeeeee</color>
-	</text>
-	
-		<text name="md_description">
-			<offsetX>0</offsetX>
-	<size>0.19 0.284</size>
-	  <pos>0.29270833 0.644</pos>
-	</text>
-	
-  </customView> -->
 
 <customView name="boxcarousel" inherits="gamecarousel" displayName="${boxcarousel}">
 	
@@ -1866,7 +1747,7 @@ Numero de juegos : {binding:total}</text>
 		<offsetX>0</offsetX>
 	</image>
 	
-	<text name="md_players,playcount,md_developer,md_name,md_releasedate,md_name,md_description">
+	<text name="md_players,md_developer,md_name,md_releasedate,md_name,md_description">
 		<offsetX>0</offsetX>
 	</text>
 	
@@ -1877,20 +1758,6 @@ Numero de juegos : {binding:total}</text>
 	<rating name="md_rating">
 		<offsetX>0</offsetX>
     </rating>
-	
-	<image name="md_thumbnail">
-	  <pos>0.104 0.783</pos>
-	  <origin>0.5 0.5</origin>
-      <maxSize>0.18 0.28</maxSize>
-	  <zIndex>21</zIndex>
-	  <storyboard event="activate">
-                <animation property="opacity" from="0" to="0" begin="" duration="250" mode="Linear"/>
-				<animation property="opacity" from="0" to="1" begin="250" duration="250" mode="EaseIn"/>
-			</storyboard>
-			<storyboard event="deactivate">
-                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
-			</storyboard>
-	</image>
 	
 	<video name="md_video">
 	  <visible>true</visible>
