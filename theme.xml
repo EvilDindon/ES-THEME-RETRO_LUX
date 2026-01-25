@@ -2446,10 +2446,6 @@ Numero de juegos : {binding:total}</text>
 		<pos>0.105 0.783</pos>
 	</image>
 	
-	<video name="md_video">
-	  <pos>0.897 0.783</pos>
-  </video>
-	
 	<imagegrid name="gamegrid">
       <autoLayout>8 2</autoLayout>
 	  <autoLayout if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb'">8 3</autoLayout>
