@@ -1126,6 +1126,7 @@ Numero de juegos : {binding:total}</text>
 	  	  <fontPath>./_art/fonts/Saira_SemiCondensed-Bold.ttf</fontPath>
 	  <format>%Y</format>
 	  		  <fontSize>0.028</fontSize>
+			  	  <size>0.065 0.037</size>
 	  <glowColor>00000016</glowColor>
       <glowSize>2</glowSize>
 	</datetime>
@@ -1439,7 +1440,7 @@ Numero de juegos : {binding:total}</text>
 	  <pos>0.936 0.751</pos>
 	  <pos ifSubset="gamelistposition:right">0.57 0.751</pos>
 	  <origin>0.5 0.5</origin>
-	  <size>0.04 0.037</size>
+	  <size>0.065 0.037</size>
 	</datetime>
 	
 	<text name="md_description">
@@ -1913,10 +1914,12 @@ Numero de juegos : {binding:total}</text>
 		<pos>0.225 0.303</pos>
 	</image>
 	
-		<datetime name="md_releasedate">
+	<datetime name="md_releasedate">
 		<offsetX>0</offsetX>
-		<pos>0.5 0.303</pos>
-		<alignment>left></alignment>
+		<alignment>left</alignment>
+		<origin>0 0.5</origin>
+		<pos>0.475 0.303</pos>
+		<pos ifSubset="gamelistposition:right">0.105 0.303</pos>
 	</datetime>
 	
 	<image name="players">
@@ -1933,7 +1936,7 @@ Numero de juegos : {binding:total}</text>
 		<pos>0.245 0.465</pos>
 	</text>
 	
-	<text name="md_players,playcount,md_developer,md_name">
+	<text name="md_players,playcount,md_developer,md_name,md_description">
 		<offsetX>0</offsetX>
 	</text>
 	
@@ -1950,7 +1953,6 @@ Numero de juegos : {binding:total}</text>
     </rating>
 	
 	 <text name="md_name">
-		<offsetX>0</offsetX>
 		<size>0.23 0.096</size>
 		<pos>0.245 0.154</pos>
 		<color>eeeeee</color>
@@ -1958,9 +1960,8 @@ Numero de juegos : {binding:total}</text>
 		<lineSpacing>1.18</lineSpacing>
 	</text>
 	
-		<text name="md_description">
-			<offsetX>0</offsetX>
-	<size>0.2 0.236</size>
+	<text name="md_description">
+	  <size>0.2 0.236</size>
 	  <pos>0.245 0.492</pos>
 	</text>
 	
