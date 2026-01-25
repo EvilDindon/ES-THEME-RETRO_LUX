@@ -1663,7 +1663,7 @@ Numero de juegos : {binding:total}</text>
   
     <!-- BOX CAROUSEL -->
 
-<customView name="boxcarousel" inherits="gamecarousel" displayName="${boxcarousel}">
+<!-- <customView name="boxcarousel" inherits="gamecarousel" displayName="${boxcarousel}">
 	
 	<image name="bgcarousel,electronic2,selectedlogobg,infoboxdetailed,arrowup,arrowdown,md_thumbnail">
 			<visible>false</visible>
@@ -1781,9 +1781,218 @@ Numero de juegos : {binding:total}</text>
 	  <pos>0.29270833 0.644</pos>
 	</text>
 	
+  </customView> -->
+
+<customView name="boxcarousel" inherits="gamecarousel" displayName="${boxcarousel}">
+	
+	<image name="bgcarousel,electronic2,selectedlogobg,infoboxdetailed,arrowup,arrowdown,md_thumbnail">
+			<visible>false</visible>
+	</image>
+	
+	<image name="backgound">
+      <pos>0.5 0</pos>
+      <size>1 1.11111111</size>
+      <origin>0.5 0</origin>
+	  <zIndex>1</zIndex>
+    </image>
+
+	<image name="bgcontroller">
+      <pos>0.5 0</pos>
+	  <origin>0.5 0</origin>
+      <maxSize>1 1</maxSize>
+	  <rotation>0</rotation>
+    </image>
+	
+	<image name="topboxlogogriddetails" extra="true">
+      <pos>0 0</pos>
+      <size>1 0</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/topboxlogogriddetails.png</path>
+      <zIndex>2</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
+	<image name="whitelogo" extra="true">
+	 <maxSize>0.154 0.2215</maxSize>
+	 <origin>0.5 0.5</origin>
+	 <pos>0.5 0.038</pos>
+	 <rotation>0</rotation>
+	</image>
+	
+	<image name="infoboxlogogriddetails" extra="true">
+      <pos>0.5 0.7833333</pos>
+      <size>0.996354166 0.31111111</size>
+      <origin>0.5 0.5</origin>
+	  <path>./_art/assets/infoboxlogogriddetails.png</path>
+      <zIndex>2</zIndex>	  
+	  <color>AAAAAA</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
+	<image name="md_marquee">
+		<visible>true</visible>
+		<maxSize>0.188 0.14</maxSize>
+		<reflexion>0.06 0</reflexion>
+		<pos>0.105 0.783</pos>
+	</image>
+
+	<gamecarousel name="gamecarousel">
+      <type>horizontal</type>
+	  <logoAlignment>center</logoAlignment>
+	  <origin>0.5 0</origin>
+      <pos>0.5 0.0905</pos>
+      <size>1 0.525</size>
+      <logoScale>1.35</logoScale>
+      <logoSize>0.15 0.3888888</logoSize>
+	  <logoSize if="{system.theme} == 'snes' || {system.theme} == 'snesh' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx' || {system.theme} == 'scv' || {system.theme} == 'lcdgames'">0.23 0.34</logoSize>
+	  <maxLogoCount>5</maxLogoCount>
+      <maxLogoCount if="{system.theme} == 'snes' || {system.theme} == 'snesh' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx' || {system.theme} == 'scv' || {system.theme} == 'lcdgames'">3</maxLogoCount>
+      <imageSource>thumbnail</imageSource>
+      <minLogoOpacity>1</minLogoOpacity>
+    </gamecarousel>    
+    
+	<text name="gamecarouselLogoText">
+      <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
+	  <forceUppercase>1</forceUppercase>
+	  <color>AA1122</color>
+	  <fontSize>0.058</fontSize>
+      <glowColor>000000FF</glowColor>
+      <glowSize>2</glowSize>
+      <lineSpacing>1.0</lineSpacing>
+    </text>
+	
+	<image name="md_flag,players">
+		<offsetX>0</offsetX>
+	</image>
+	
+	<text name="md_players,playcount,md_developer,md_name,md_releasedate,md_name,md_description">
+		<offsetX>0</offsetX>
+	</text>
+	
+	<datetime name="md_releasedate">
+		<offsetX>0</offsetX>
+	</datetime>
+	
+	<rating name="md_rating">
+		<offsetX>0</offsetX>
+    </rating>
+	
+	<image name="md_thumbnail">
+	  <pos>0.104 0.783</pos>
+	  <origin>0.5 0.5</origin>
+      <maxSize>0.18 0.28</maxSize>
+	  <zIndex>21</zIndex>
+	  <storyboard event="activate">
+                <animation property="opacity" from="0" to="0" begin="" duration="250" mode="Linear"/>
+				<animation property="opacity" from="0" to="1" begin="250" duration="250" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
+			</storyboard>
+	</image>
+	
+	<video name="md_video">
+	  <visible>true</visible>
+	  <pos>0.897 0.783</pos>
+	  <maxSize>0.18 0.28</maxSize>
+	  <effect>none</effect>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+	  <delay>0.7</delay>
+	  <showSnapshotDelay>true</showSnapshotDelay>
+	  <snapshotSource>image</snapshotSource>
+      <loops>2</loops>
+	  <color>DDDDDD</color>
+      <roundCorners>0.02</roundCorners>
+	  	  <storyboard event="activate">
+                <animation property="opacity" from="0" to="0" begin="" duration="250" mode="Linear"/>
+				<animation property="opacity" from="0" to="1" begin="250" duration="250" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="250" mode="Linear"/>
+			</storyboard>
+	  <zIndex>3</zIndex>
+	  
+	  </video>
+	
+    <image name="md_flag">
+		<origin>0.5 0.5</origin>
+		<size>0.02 0</size>
+		<pos>0.75 0.91</pos>
+	</image>
+	
+	<image name="players" extra="true">
+		<path>./_art/fonts/one_person_user.svg</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0.5 0.5</origin>
+		<size>0.006 0</size>
+		<pos>0.64 0.91</pos>
+		<color>909090</color>
+		<zIndex>22</zIndex>
+	</image>
+	
+	<text name="md_players">
+	<alignment>left</alignment>
+	<origin>0 0.5</origin>
+	<color>AAAAAA</color>
+	<pos>0.65 0.91</pos>
+	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
+	<fontSize>0.026</fontSize>
+	<zIndex>22</zIndex>
+	</text>
+	
+	<text name="playcount" extra = "true">
+		<visible> false</visible>
+	</text>
+	
+	<text name="md_developer">
+	  <origin>0 0.5</origin>
+	  <alignment>left</alignment>	  
+	  <size>0.2625 0.0236</size>
+	  <pos>0.204 0.91</pos>
+	  <lineSpacing>1</lineSpacing>
+	</text>
+	
+	<text name="md_name">
+	  <origin>0.5 0.5</origin>
+	  <size>0.6 0.048</size>
+	  <pos>0.5 0.667</pos>
+	  <fontSize>0.034</fontSize>
+	</text>
+	
+	<datetime name="md_releasedate">
+	  <alignment>right</alignment>
+	  <pos>0.798 0.91</pos>
+	  <origin>1 0.5</origin>
+	  <size>0.04 0.037</size>
+	</datetime>
+	
+	<text name="md_description">
+      <origin>0.5 0</origin>
+	  <pos>0.5 0.6935</pos>
+	  <size>0.6 0.20185</size>
+	  <alignment>center</alignment>
+	  <lineSpacing>1.55</lineSpacing>
+    </text>
+	
+	<rating name="md_rating">
+      <pos>0.502 0.91</pos>
+      <size>0.06 0</size>
+	  <origin>0.5 0.5</origin>
+      <color>AAAA90</color>
+      <unfilledColor>808080</unfilledColor>
+	  <zIndex>41</zIndex>
+	  <storyboard event="activate">
+                <animation property="opacity" from="0" to="0" begin="" duration="1000" mode="EaseOutQuint"/>
+				<animation property="opacity" from="0" to="1" begin="1000" duration="1000" mode="EaseOutQuint"/>
+			</storyboard>
+			<storyboard event="deactivate">
+                <animation property="opacity" from="0" to="0" duration="" mode="Linear"/>
+			</storyboard>
+    </rating>
+	
   </customView>
-
-
+  
   
     <!-- FANART -->
   
