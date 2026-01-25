@@ -214,7 +214,7 @@ originally based on: "carbon" and "Arcade Planet"
     </menuText>
 	
     <menuText name="menutext">
-      <fontPath>./_art/fonts/Eurostib.TTF</fontPath>
+      <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
       <fontSize>0.031</fontSize>
       <color>969696</color>
       <separatorColor>323232FF</separatorColor>
@@ -1028,7 +1028,7 @@ Numero de juegos : {binding:total}</text>
 	  <snapshotSource>image</snapshotSource>
       <loops>2</loops>
       <roundCorners>0</roundCorners>
-	  <zIndex>3</zIndex>	  
+	  <zIndex>25</zIndex>	  
 	</video>
 	
 	<image name="md_flag">
@@ -1578,6 +1578,7 @@ Numero de juegos : {binding:total}</text>
 	
 	<image name="whitelogo">
 	<rotation>270</rotation>
+	<rotation ifSubset="gamelistposition:right">90</rotation>
 	 <pos>0.037 0.472</pos>
 	 <pos ifSubset="gamelistposition:right">0.963 0.472</pos>	  
 	 <opacity>0.85</opacity>
@@ -1739,7 +1740,8 @@ Numero de juegos : {binding:total}</text>
     </text>
 	
 	<image name="md_flag,players">
-		<offsetX>-0.228787433</offsetX>
+		<offsetX ifSubset="gamelistposition:left">-0.228787433</offsetX>
+		<offsetX ifSubset="gamelistposition:right">0.1421</offsetX>
 	</image>
   	
 	<text name="playcount,md_developer">
@@ -1747,7 +1749,8 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
 	<text name="md_players,playcount,md_developer,md_name,md_releasedate">
-		<offsetX>-0.228787433</offsetX>
+		<offsetX ifSubset="gamelistposition:left">-0.228787433</offsetX>
+		<offsetX ifSubset="gamelistposition:right">0.14128</offsetX>
 	</text>
 	
 	<text name="md_developer">
@@ -1755,11 +1758,13 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
 	<datetime name="md_releasedate">
-		<offsetX>-0.228787433</offsetX>
+		<offsetX ifSubset="gamelistposition:left">-0.228787433</offsetX>
+		<offsetX ifSubset="gamelistposition:right">0.14128</offsetX>
 	</datetime>
 	
 	<rating name="md_rating">
-		<offsetX>-0.228787433</offsetX>
+		<offsetX ifSubset="gamelistposition:left">-0.228787433</offsetX>
+		<offsetX ifSubset="gamelistposition:right">0.14128</offsetX>
     </rating>
 	
 	 <text name="md_name">
