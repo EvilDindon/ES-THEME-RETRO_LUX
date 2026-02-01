@@ -562,7 +562,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<path>./_art/assets/reflet.png</path>
 		<size>0.0546875 0</size>
 		<pos>0.978 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left">0.022 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left">0.35 0.471296295</pos>
 		<origin>0.5 0.5</origin>
 		<zIndex>62</zIndex>
 		<opacity>0</opacity>
@@ -584,7 +584,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<path>./_art/assets/reflet.png</path>
 		<size>0.041015625 0</size>
 		<x>0.9792708</x>
-		<x ifSubset="systemviewlayout:left">0.0207292</x>
+		<x ifSubset="systemviewlayout:left">0.261349</x>
 		<origin>0.5 0.5</origin>
 		<zIndex>62</zIndex>
 		<color>FFFFFFaa</color>
