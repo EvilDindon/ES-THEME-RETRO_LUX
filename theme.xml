@@ -767,7 +767,7 @@ originally based on: "carbon" and "Arcade Planet"
 
 	<image name="randombox1,randombox2" extra="static" ifSubset="systemviewstyle:randomboxart">
 			<linearSmooth>true</linearSmooth>
-            <maxSize>0.37 0.54</maxSize>
+            <maxSize>0.37 0.52</maxSize>
 			<path>{random:thumbnail}</path>
 			<color>E0E0E0</color>
 			<origin>0.5 0.5</origin>
