@@ -1320,7 +1320,7 @@ Numero de juegos : {binding:total}</text>
 	 <selectorColor>224668dd</selectorColor>
 	  <selectedColor>FFFFFF</selectedColor>
 <!-- 	  <selectorHeight>0.05</selectorHeight> -->
-	  <selectorOffsetY>0.02</selectorOffsetY>
+	  <selectorOffsetY>0</selectorOffsetY>
 	  <primaryColor>AAAAAA</primaryColor>
 	  <secondaryColor>7a6161</secondaryColor>
 	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
@@ -1578,7 +1578,7 @@ Numero de juegos : {binding:total}</text>
 		<textlist name="gamelist">
 	 <selectorColor>224668dd</selectorColor>
 <!-- 	  <selectorHeight>0.05</selectorHeight> -->
-	  <selectorOffsetY>0.02</selectorOffsetY>
+	  <selectorOffsetY>0</selectorOffsetY>
 	  <selectedColor>FFFFFF</selectedColor>
 	  <primaryColor>999999</primaryColor>
 	  <secondaryColor>7a6161</secondaryColor>
