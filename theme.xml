@@ -1879,7 +1879,7 @@ Numero de juegos : {binding:total}</text>
 	
 	<text name="md_developer">
 	  <origin>0 0.5</origin>
-	  <alignment>left</alignment>	  
+	  <alignment>left</alignment>	 	  
 	  <size>0.2625 0.0236</size>
 	  <pos>0.204 0.91</pos>
 	  <lineSpacing>1</lineSpacing>
@@ -2057,10 +2057,10 @@ Numero de juegos : {binding:total}</text>
 	
 	<datetime name="md_releasedate">
 		<offsetX>0</offsetX>
+		<size>0.22 0.048</size>
 		<alignment>left</alignment>
 		<origin>0 0.5</origin>
-		<pos>0.475 0.303</pos>
-		<pos ifSubset="gamelistposition:right">0.105 0.303</pos>
+		<pos>0.239 0.303</pos>
 	</datetime>
 	
 	<image name="players">
@@ -2083,6 +2083,8 @@ Numero de juegos : {binding:total}</text>
 	
 	<text name="md_developer">
 		<fontSize>0.03</fontSize>
+		<alignment>center</alignment>
+		<origin>0.5 0.5</origin>
 		<pos>0.245 0.23</pos>
 		<size>0.23 0.048</size>
 		<color>aaaaaa</color>
