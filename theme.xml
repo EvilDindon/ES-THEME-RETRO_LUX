@@ -2075,6 +2075,7 @@ Numero de juegos : {binding:total}</text>
 	<text name="playcount">
 		<size>0.22 0.048</size>
 		<pos>0.245 0.465</pos>
+		<visible>true</visible>
 	</text>
 	
 	<text name="md_players,playcount,md_developer,md_name,md_description">
