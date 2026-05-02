@@ -399,9 +399,9 @@ originally based on: "carbon" and "Arcade Planet"
 		<image name="wheelbgelectronic" extra="true">
 		  <path>./_art/assets/electronic.png</path>
 		  <origin>0.5 0.5</origin>
-		  <size>0.264 2.8</size>
+		  <size>0.88 3.3333333</size>
 		  <tile>true</tile>
-		  <scale>1</scale>
+		  <scale>0.3</scale>
 		  <pos>0.854979 0.497</pos>
 		  <pos ifSubset="systemviewlayout:left">0.145021 0.497</pos>
 		  <color>00000060</color>
@@ -1374,9 +1374,9 @@ Numero de juegos : {binding:total}</text>
 	<image name="electronic2" extra="true">
 		  <path>./_art/assets/electronic2.png</path>
 		  <origin>0.5 0.5</origin>
-		  <size>0.34 3.5</size>
+		  <size>1.133333333 3.33</size>
 		  <tile>true</tile>
-		  <scale>1</scale>
+		  <scale>0.3</scale>
 		  <pos>0.19 0.472</pos>
 		  <pos ifSubset="gamelistposition:right">0.81 0.472</pos>
 		  <color>00000055</color>
@@ -1629,7 +1629,7 @@ Numero de juegos : {binding:total}</text>
     </image>
 	
 	<image name="electronic2">
-		   <size>0.2151 2</size>
+		   <size>0.717 3</size>
 	</image>
 		
 	<image name="infoboxdetailed">
@@ -1704,8 +1704,8 @@ Numero de juegos : {binding:total}</text>
 	</text>
 	
 	<datetime name="md_releasedate">
-		<offsetX>-0.0313916</offsetX>
-		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
+	  <pos>0.9046084 0.751</pos>
+	  <pos ifSubset="gamelistposition:right">0.6013916 0.751</pos>
 	</datetime>
 	
 	<rating name="md_rating">
