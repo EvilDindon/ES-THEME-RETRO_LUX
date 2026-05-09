@@ -85,8 +85,8 @@
 			
 		<image name="progressbar">
 			<origin>0 0.5</origin>
-			<pos>0.24 0.8</pos>
-			<size>0.25 0.03</size>
+			<pos>0.25 0.8</pos>
+			<size>0.5 0.03</size>
 			<color>800000</color>
 			<colorEnd>000000</colorEnd>
 		</image>
