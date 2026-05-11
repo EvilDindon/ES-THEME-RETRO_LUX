@@ -1474,6 +1474,8 @@ Numero de juegos : {binding:total}</text>
 	
 	<text name="playcount" extra = "true">
 	<text>Played {game:playcount} time(s)</text>
+	<text lang="fr">Joué {game:playcount} fois</text>
+	<text lang="es">Jugado {game:playcount} vez(ces)</text>
 	<alignment>center</alignment>
 	<origin>0.5 0.5</origin>
 	<size>0.1015625 0.03</size>
