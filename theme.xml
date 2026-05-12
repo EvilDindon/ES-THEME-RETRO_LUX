@@ -906,10 +906,12 @@ Games : {binding:total}
 Favorites : {binding:favorites}</text>
 		<text lang="fr">
 ${system.hardwareType} ${system.releaseYearOrNull}
-Nombre de Jeux : {binding:total}</text>
+Nombre de Jeux : {binding:total}
+Favoris : {binding:favorites}</text>
 		<text lang="es">
 ${system.hardwareType} ${system.releaseYearOrNull}
-Numero de juegos : {binding:total}</text>
+Numero de juegos : {binding:total}
+Favoritos : {binding:favorites}</text>
         <pos ifSubset="systemviewlayout:left">0.533 0.736</pos>
 		<pos ifSubset="systemviewlayout:right">0.48125 0.736</pos>
         <size>0.22 0.28</size>
