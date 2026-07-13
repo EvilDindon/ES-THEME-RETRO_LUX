@@ -925,6 +925,8 @@ Favoritos : {binding:favorites}</text>
 		<path>./_art/manfLogos/${system.hardwareType}.svg</path>
 		<path>./_art/manfLogos/${system.manufacturer}.png</path>
 		<path>./_art/manfLogos/${system.manufacturer}.svg</path>
+		<path ifSubset="artworkregion:US">./_art/manfLogos/US/${system.manufacturer}.png</path>
+		<path ifSubset="artworkregion:US">./_art/manfLogos/US/${system.manufacturer}.svg</path>
 		<path>./_art/manfLogos/${system.theme}.png</path>
 		<path>./_art/manfLogos/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
