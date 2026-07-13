@@ -13,6 +13,9 @@
    
 <img width="1920" height="1080" alt="system WIP 6" src="https://github.com/user-attachments/assets/3402b2cc-98de-4a1d-8ff6-25e115e9e6e9" />
 
+<img width="1920" height="1080" alt="5200 carousel 
+ purple" src="https://github.com/user-attachments/assets/b763e400-5441-4182-8df4-a281bcb772ee" />
+
   # ** IMPORTANT SCRAPING INSTRUCTIONS **
 
 This theme relies on clean artwork.
