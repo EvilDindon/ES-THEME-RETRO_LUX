@@ -938,9 +938,9 @@ Favoritos : {binding:favorites}</text>
 		<storyboard>
 		  <animation property="scale" from="0" to="0" begin="" duration="800" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="1000" duration="200" mode="Linear"/>
-		  <animation property="scale" from="1" to="0.333333" begin="1500" duration="200" mode="Linear"/>
-		  <animation property="offsetX" from="0" to="0.23125" begin="1500" duration="200" mode="Linear"/>
-		  <animation property="offsetY" from="0" to="0.422" begin="1500" duration="200" mode="Linear"/>
+		  <animation property="scale" from="1" to="0.333333" begin="1500" duration="200" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.23125" begin="1500" duration="200" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.422" begin="1500" duration="200" mode="EaseOutCubic"/>
 	  </storyboard>
 	  <storyboard ifSubset="wheelStyle:NoSprite">
 		  <animation property="scale" from="0" to="0" begin="" duration="500" mode="Linear"/>
@@ -952,9 +952,9 @@ Favoritos : {binding:favorites}</text>
 	  	<storyboard ifSubset="systemviewlayout:left">
 		  <animation property="scale" from="0" to="0" begin="" duration="800" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="1000" duration="200" mode="Linear"/>
-		  <animation property="scale" from="1" to="0.333333" begin="1500" duration="200" mode="Linear"/>
-		  <animation property="offsetX" from="0" to="0.034" begin="1500" duration="200" mode="Linear"/>
-		  <animation property="offsetY" from="0" to="0.422" begin="1500" duration="200" mode="Linear"/>
+		  <animation property="scale" from="1" to="0.333333" begin="1500" duration="200" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.034" begin="1500" duration="200" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.422" begin="1500" duration="200" mode="EaseOutCubic"/>
 	  </storyboard>
 	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:NoSprite">
 		  <animation property="scale" from="0" to="0" begin="" duration="500" mode="EaseOutCubic"/>
