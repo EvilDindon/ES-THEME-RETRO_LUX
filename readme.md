@@ -10,8 +10,21 @@
  - Ultra customizable
  - 10 Game List View Styles
  - 16/9, 4/3, 5/4 and 16/10 Support (only 16/9 for now)
-   
+
 <img width="1920" height="1080" alt="system WIP 6" src="https://github.com/user-attachments/assets/3402b2cc-98de-4a1d-8ff6-25e115e9e6e9" />
+
+<img width="1920" height="1080" alt="2600 3BOX PURPLE" src="https://github.com/user-attachments/assets/47433395-d419-4560-b11e-1c97f241e340" />
+
+<img width="1920" height="1080" alt="GHOULS NO SPRIE FANART" src="https://github.com/user-attachments/assets/69bab437-e487-43c0-8b78-1bb0793801bf" />
+
+<img width="1920" height="1080" alt="jaguar boxcarousel purple" src="https://github.com/user-attachments/assets/d17e83ae-84f4-4089-ae8f-ba4a9172322b" />
+ 
+<img width="1920" height="1080" alt="5200 carousel 
+ purple" src="https://github.com/user-attachments/assets/b763e400-5441-4182-8df4-a281bcb772ee" />
+
+ <img width="1920" height="1080" alt="FANART TG16CD" src="https://github.com/user-attachments/assets/d98344b1-79d8-4621-b968-d8ed41f2351a" />
+
+ <img width="1920" height="1080" alt="FAVORITES RETROTILES" src="https://github.com/user-attachments/assets/c345e8dd-8a29-4daa-9175-b511d6b71caf" />
 
   # ** IMPORTANT SCRAPING INSTRUCTIONS **
 
