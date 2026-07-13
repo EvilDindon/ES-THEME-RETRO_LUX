@@ -925,8 +925,6 @@ Favoritos : {binding:favorites}</text>
 		<path>./_art/manfLogos/${system.hardwareType}.svg</path>
 		<path>./_art/manfLogos/${system.manufacturer}.png</path>
 		<path>./_art/manfLogos/${system.manufacturer}.svg</path>
-		<path ifSubset="artworkregion:US">./_art/manfLogos/US/${system.manufacturer}.png</path>
-		<path ifSubset="artworkregion:US">./_art/manfLogos/US/${system.manufacturer}.svg</path>
 		<path>./_art/manfLogos/${system.theme}.png</path>
 		<path>./_art/manfLogos/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
@@ -936,7 +934,7 @@ Favoritos : {binding:favorites}</text>
 		<maxSize>0.255 0.175</maxSize>
 		<color>AAAAAAee</color>
 		<saturation>0</saturation>
-		<zIndex>100</zIndex>
+		<zIndex>64</zIndex>
 		<storyboard>
 		  <animation property="scale" from="0" to="0" begin="" duration="800" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="1000" duration="200" mode="Linear"/>
@@ -944,12 +942,26 @@ Favoritos : {binding:favorites}</text>
 		  <animation property="offsetX" from="0" to="0.23125" begin="1500" duration="200" mode="Linear"/>
 		  <animation property="offsetY" from="0" to="0.422" begin="1500" duration="200" mode="Linear"/>
 	  </storyboard>
+	  <storyboard ifSubset="wheelStyle:NoSprite">
+		  <animation property="scale" from="0" to="0" begin="" duration="500" mode="Linear"/>
+		  <animation property="scale" from="0" to="1" begin="580" duration="400" mode="EaseOutCubic"/>
+		  <animation property="scale" from="1" to="0.333333" begin="1200" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.23125" begin="1200" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.422" begin="1200" duration="300" mode="EaseOutCubic"/>
+	  </storyboard>
 	  	<storyboard ifSubset="systemviewlayout:left">
 		  <animation property="scale" from="0" to="0" begin="" duration="800" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="1000" duration="200" mode="Linear"/>
 		  <animation property="scale" from="1" to="0.333333" begin="1500" duration="200" mode="Linear"/>
 		  <animation property="offsetX" from="0" to="0.034" begin="1500" duration="200" mode="Linear"/>
 		  <animation property="offsetY" from="0" to="0.422" begin="1500" duration="200" mode="Linear"/>
+	  </storyboard>
+	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:NoSprite">
+		  <animation property="scale" from="0" to="0" begin="" duration="500" mode="EaseOutCubic"/>
+		  <animation property="scale" from="0" to="1" begin="580" duration="400" mode="EaseOutCubic"/>
+		  <animation property="scale" from="1" to="0.333333" begin="1200" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.034" begin="1200" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.422" begin="1200" duration="300" mode="EaseOutCubic"/>
 	  </storyboard>
 	</image>
 	
@@ -970,6 +982,10 @@ Favoritos : {binding:favorites}</text>
 		<storyboard>
 		  <animation property="scale" from="0" to="0" begin="" duration="200" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="200" duration="1000" mode="Linear"/>
+	  </storyboard>
+	  <storyboard ifSubset="wheelStyle:NoSprite">
+		  <animation property="scale" from="0" to="0" begin="" duration="" mode="Linear"/>
+		  <animation property="scale" from="0" to="1" begin="" duration="500" mode="EaseOutCubic"/>
 	  </storyboard>
 	</image>
 
