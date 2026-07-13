@@ -402,6 +402,8 @@ originally based on: "carbon" and "Arcade Planet"
 		  <size>0.88 3.3333333</size>
 		  <tile>true</tile>
 		  <scale>0.3</scale>
+		  <scale if="{screen.height} > '1080'">0.6</scale>
+		  <size if="{screen.height} > '1080'">0.44 1.6666666666</size>
 		  <pos>0.854979 0.497</pos>
 		  <pos ifSubset="systemviewlayout:left">0.145021 0.497</pos>
 		  <color>00000060</color>
