@@ -2222,7 +2222,7 @@ Favoritos : {binding:favorites}</text>
 	    	
 	<image name="gridtile.favorite">
 	 <linearSmooth>true</linearSmooth>
-      <path>./icons/star_filled.svg</path>
+      <path>./_art/icons/star_filled.svg</path>
       <pos>0.93 0.07</pos>
       <maxSize>0.12 0.12</maxSize>
       <origin>0.5 0.5</origin>
@@ -2305,7 +2305,7 @@ Favoritos : {binding:favorites}</text>
 	    	
 	<image name="gridtile.favorite">
 	 <linearSmooth>true</linearSmooth>
-      <path>./icons/star_filled.svg</path>
+      <path>./_art/icons/star_filled.svg</path>
       <pos>0.93 0.07</pos>
       <maxSize>0.15 0.15</maxSize>
       <origin>0.5 0.5</origin>
