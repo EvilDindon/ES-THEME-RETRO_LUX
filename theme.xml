@@ -1669,6 +1669,15 @@ Favoritos : {binding:favorites}</text>
 			</storyboard>
 	</image>
 	
+	<image name="md_favorite">
+		<visible>true</visible>
+		<path>./resources/fontoverrides/F006.png</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0.5 0.5</origin>
+		<size>0.018 0</size>
+	 <pos>0.092 0.416</pos>
+	</image>
+	
 	<image name="md_thumbnail,md_flag,players">
 		<offsetX>-0.0313916</offsetX>
 		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
@@ -1829,6 +1838,15 @@ Favoritos : {binding:favorites}</text>
 		<pos>0.75 0.91</pos>
 	</image>
 	
+	<image name="md_favorite">
+		<visible>true</visible>
+		<path>./resources/fontoverrides/F006.png</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0.5 0.5</origin>
+		<size>0.02 0</size>
+		<pos>0.725 0.91</pos>
+	</image>
+	
 	<image name="players" extra="true">
 		<path>./_art/fonts/one_person_user.svg</path>
 		<linearSmooth>true</linearSmooth>
@@ -1848,6 +1866,8 @@ Favoritos : {binding:favorites}</text>
 	<fontSize>0.026</fontSize>
 	<zIndex>22</zIndex>
 	</text>
+	
+
 	
 	<text name="playcount" extra = "true">
 		<visible> false</visible>
@@ -2031,6 +2051,15 @@ Favoritos : {binding:favorites}</text>
 		<pos>0.225 0.303</pos>
 	</image>
 	
+	<image name="md_favorite">
+		<visible>true</visible>
+		<path>./resources/fontoverrides/F006.png</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0.5 0.5</origin>
+		<size>0.021 0</size>
+		<pos>0.245 0.75</pos>
+	</image>
+	
 	<datetime name="md_releasedate">
 		<offsetX>0</offsetX>
 		<size>0.22 0.048</size>
@@ -2171,22 +2200,17 @@ Favoritos : {binding:favorites}</text>
 	  <padding>4 4</padding>
       <imageColor>FFFFFFFF</imageColor>
     </gridtile>
-	    	
+	
 	<image name="gridtile.favorite">
 	 <linearSmooth>true</linearSmooth>
-      <path>./_art/icons/star_filled.svg</path>
-      <pos>0.93 0.07</pos>
-      <maxSize>0.12 0.12</maxSize>
+      <path>./resources/fontoverrides/F006.png</path>
+      <pos>0.97 0.05</pos>
+      <size>0.055 0</size>
       <origin>0.5 0.5</origin>
-      <horizontalAlignment>right</horizontalAlignment>
-      <color>FFFF00ff</color>
+      <horizontalAlignment>center</horizontalAlignment>
+      <color>FFFFFF</color>
     </image>
-	
-    <image name="gridtile.favorite:selected">
-	  <linearSmooth>true</linearSmooth>
-      <color>FFFF00D0</color>
-    </image>
-	
+	  	
     <ninepatch name="gridtile.background:selected">
       <animateColor>EEFFFF</animateColor>
       <animateColorTime>750</animateColorTime>
@@ -2257,17 +2281,12 @@ Favoritos : {binding:favorites}</text>
 	    	
 	<image name="gridtile.favorite">
 	 <linearSmooth>true</linearSmooth>
-      <path>./_art/icons/star_filled.svg</path>
-      <pos>0.93 0.07</pos>
-      <maxSize>0.15 0.15</maxSize>
+      <path>./resources/fontoverrides/F006.png</path>
+      <pos>0.98 0.02</pos>
+      <size>0.055 0</size>
       <origin>0.5 0.5</origin>
-      <horizontalAlignment>right</horizontalAlignment>
-      <color>FFFF0080</color>
-    </image>
-	
-    <image name="gridtile.favorite:selected">
-	  <linearSmooth>true</linearSmooth>
-      <color>FFFF00D0</color>
+      <horizontalAlignment>center</horizontalAlignment>
+      <color>FFFFFF</color>
     </image>
 	
     <ninepatch name="gridtile.background:selected">
@@ -2338,21 +2357,6 @@ Favoritos : {binding:favorites}</text>
       <imageColor>FFFFFFFF</imageColor>
     </gridtile>
 	    	
-	<image name="gridtile.favorite">
-	 <linearSmooth>true</linearSmooth>
-      <path>./_art/icons/star_filled.svg</path>
-      <pos>0.93 0.07</pos>
-      <maxSize>0.12 0.12</maxSize>
-      <origin>0.5 0.5</origin>
-      <horizontalAlignment>right</horizontalAlignment>
-      <color>FFFF0080</color>
-    </image>
-	
-    <image name="gridtile.favorite:selected">
-	  <linearSmooth>true</linearSmooth>
-      <color>FFFF00D0</color>
-    </image>
-	
     <ninepatch name="gridtile.background:selected">
       <animateColor>88888828</animateColor>
       <animateColorTime>500</animateColorTime>
@@ -2518,21 +2522,6 @@ Favoritos : {binding:favorites}</text>
       <imageColor>FFFFFFFF</imageColor>
     </gridtile>
 	    	
-	<image name="gridtile.favorite">
-	 <linearSmooth>true</linearSmooth>
-      <path>./_art/icons/star_filled.svg</path>
-      <pos>0.93 0.07</pos>
-      <maxSize>0.15 0.15</maxSize>
-      <origin>0.5 0.5</origin>
-      <horizontalAlignment>right</horizontalAlignment>
-      <color>FFFF00ff</color>
-    </image>
-	
-    <image name="gridtile.favorite:selected">
-	  <linearSmooth>true</linearSmooth>
-      <color>FFFF00D0</color>
-    </image>
-	
     <ninepatch name="gridtile.background:selected">
       <animateColor>EEFFFF</animateColor>
       <animateColorTime>750</animateColorTime>
@@ -2587,9 +2576,14 @@ Favoritos : {binding:favorites}</text>
 	  <imageColor>FFFFFFFF</imageColor>
 	 </gridtile> 
 	    
-    <image name="gridtile.favorite:selected">
-	  <linearSmooth>true</linearSmooth>
-      <color>FFFF00D0</color>
+	<image name="gridtile.favorite">
+	 <linearSmooth>true</linearSmooth>
+      <path>./resources/fontoverrides/F006.png</path>
+      <pos>0.98 0.02</pos>
+      <size>0.0585 0</size>
+      <origin>0.5 0.5</origin>
+      <horizontalAlignment>center</horizontalAlignment>
+      <color>FFFFFF</color>
     </image>
 	
     <ninepatch name="gridtile.background:selected">
