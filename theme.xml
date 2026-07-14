@@ -1122,65 +1122,10 @@ Favoritos : {binding:favorites}</text>
 		<color>D8D8D8</color>
 	</image>
 	
-	<image name="md_hidden,md_kidgame,md_favorite,md_manual,md_cheevos,md_savestate">
-	  <linearSmooth>true</linearSmooth>
-	  <origin>0.5 0.5</origin>
-	  <zIndex>150</zIndex>	  
+	<image name="md_hidden,md_kidgame,md_favorite,md_manual,md_cheevos,md_savestate,md_notkidgame,md_nomanual,md_notcheevos,md_nosavestate">
 	  <visible>false</visible>
 	</image>
-	
-	<image name="md_notkidgame,md_nomanual,md_notcheevos,md_nosavestate">
-	  <linearSmooth>true</linearSmooth>
-	  <origin>0.5 0.5</origin>
-      <color>808080F0</color>
-	  <zIndex>149</zIndex>
-	  <visible>false</visible>	  
-	</image>
-	
-	<image name="md_hidden,ghosthidden">
-      <path>./_art/icons/hidden.svg</path>
-    </image>
-	
-    <image name="md_kidgame,md_notkidgame,ghostkidgame">
-      <path>./_art/icons/kid.svg</path>
-    </image>
-	
-	<image name="md_kidgame">
-	  <color>994444</color>
-    </image>
 		
-    <image name="md_favorite,ghostfavorite">
-	      <path>./_art/icons/favorite.svg</path>
-	</image>
-	
-	<image name="md_favorite">
-      <color>960000</color>
-	</image>
-		
-	<image name="md_manual,md_nomanual,ghostmanual">
-			<path>./_art/icons/manual.svg</path>
-	</image>
-	
-	<image name="md_manual">
-			<color>009600</color>
-	</image>
-		
-	<image name="md_cheevos,md_notcheevos,ghostcheevos">
-			<path>./_art/icons/cheevos.png</path>
-	</image>
-	
-	<image name="md_cheevos">
-			<color>969600</color>
-	</image>
-			
-	<image name="md_savestate,md_nosavestate,ghostsavestate">
-			<path>./_art/icons/SaveState.png</path>
-	</image>
-	
-	<image name="md_savestate">
-			<color>0022FF</color>
-	</image>
-					
 	<text name="md_description">
       <origin>0.5 0.5</origin>
       <color>C0C0C0ff</color>
@@ -1703,7 +1648,7 @@ Favoritos : {binding:favorites}</text>
       <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
 	  <forceUppercase>1</forceUppercase>
 	  <color>AA1122</color>
-	  <fontSize>0.058</fontSize>
+	  <fontSize>0.04</fontSize>
       <glowColor>000000FF</glowColor>
       <glowSize>2</glowSize>
       <lineSpacing>1.0</lineSpacing>
