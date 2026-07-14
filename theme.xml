@@ -2051,15 +2051,6 @@ Favoritos : {binding:favorites}</text>
 		<pos>0.225 0.303</pos>
 	</image>
 	
-	<image name="md_favorite">
-		<visible>true</visible>
-		<path>./resources/fontoverrides/F006.png</path>
-		<linearSmooth>true</linearSmooth>
-		<origin>0.5 0.5</origin>
-		<size>0.021 0</size>
-		<pos>0.245 0.75</pos>
-	</image>
-	
 	<datetime name="md_releasedate">
 		<offsetX>0</offsetX>
 		<size>0.22 0.048</size>
@@ -2067,6 +2058,15 @@ Favoritos : {binding:favorites}</text>
 		<origin>0 0.5</origin>
 		<pos>0.239 0.303</pos>
 	</datetime>
+	
+	<image name="md_favorite">
+		<visible>true</visible>
+		<path>./resources/fontoverrides/F006.png</path>
+		<linearSmooth>true</linearSmooth>
+		<origin>0.5 0.5</origin>
+		<size>0.019 0</size>
+		<pos>0.215 0.37</pos>
+	</image>
 	
 	<image name="players">
 		<offsetX>0</offsetX>
