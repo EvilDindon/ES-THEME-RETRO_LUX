@@ -320,7 +320,7 @@ originally based on: "carbon" and "Arcade Planet"
       <color>686068</color>
     </batteryIndicator>
 		     
-	<networkIcon name="ss.network">
+<!-- 	<networkIcon name="ss.network">
         <networkIcon>./_art/icons/Network.png</networkIcon>
         <planemodeIcon>./_art/icons/Planemode.png</planemodeIcon>
         <size>0.033 0</size>
@@ -328,7 +328,7 @@ originally based on: "carbon" and "Arcade Planet"
         <linearSmooth>true</linearSmooth>
 	
         <color>686068</color>
-      </networkIcon>
+      </networkIcon> -->
 	
 	
   </view>
@@ -1269,6 +1269,8 @@ Favoritos : {binding:favorites}</text>
 		  <size>3.3333 3.333333</size>
 		  <tile>true</tile>
 		  <scale>0.3</scale>
+  		  <scale if="{screen.height} > '1080'">0.6</scale>
+		  <size if="{screen.height} > '1080'">1.6666666 1.6666666666</size>
 		  <pos>0.48 0.5</pos>
 		  <color>00000045</color>
 		  <zIndex>1</zIndex>
@@ -1280,6 +1282,8 @@ Favoritos : {binding:favorites}</text>
 		  <size>1.78333 3.3333333333</size>
 		  <tile>true</tile>
 		  <scale>0.3</scale>
+		  <scale if="{screen.height} > '1080'">0.6</scale>
+		  <size if="{screen.height} > '1080'">0.89166 1.6666666666</size>
 		  <pos>0.5 0.472</pos>
 		  <color>0FFFFF15</color>
 		  <zIndex>4</zIndex>
@@ -1399,6 +1403,8 @@ Favoritos : {binding:favorites}</text>
 		  <size>1.133333333 3.33</size>
 		  <tile>true</tile>
 		  <scale>0.3</scale>
+		  <scale if="{screen.height} > '1080'">0.6</scale>
+		  <size if="{screen.height} > '1080'">0.56666 1.6666666666</size>
 		  <pos>0.19 0.472</pos>
 		  <pos ifSubset="gamelistposition:right">0.81 0.472</pos>
 		  <color>00000055</color>
@@ -1654,6 +1660,7 @@ Favoritos : {binding:favorites}</text>
 	
 	<image name="electronic2">
 		   <size>0.717 3</size>
+		  <size if="{screen.height} > '1080'">0.3585 1.5</size>
 	</image>
 		
 	<image name="infoboxdetailed">
