@@ -33,6 +33,8 @@ You can also download Video previews, many views are compatible with it.
 <img width="1920" height="1080" alt="dk detailed" src="https://github.com/user-attachments/assets/6cae6431-cb23-4ffc-a091-eee260bc5d65" />
 
 <img width="1920" height="1080" alt="jaguar boxcarousel purple" src="https://github.com/user-attachments/assets/d17e83ae-84f4-4089-ae8f-ba4a9172322b" />
+
+<img width="1920" height="1080" alt="gba logogrid+details" src="https://github.com/user-attachments/assets/592bb6ff-20c4-408b-95dd-b764e522cde2" />
  
 <img width="1920" height="1080" alt="5200 carousel 
  purple" src="https://github.com/user-attachments/assets/b763e400-5441-4182-8df4-a281bcb772ee" />
