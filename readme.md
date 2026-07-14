@@ -30,6 +30,8 @@ You can also download Video previews, many views are compatible with it.
 
 <img width="1920" height="1080" alt="GHOULS NO SPRIE FANART" src="https://github.com/user-attachments/assets/69bab437-e487-43c0-8b78-1bb0793801bf" />
 
+<img width="1920" height="1080" alt="dk detailed" src="https://github.com/user-attachments/assets/6cae6431-cb23-4ffc-a091-eee260bc5d65" />
+
 <img width="1920" height="1080" alt="jaguar boxcarousel purple" src="https://github.com/user-attachments/assets/d17e83ae-84f4-4089-ae8f-ba4a9172322b" />
  
 <img width="1920" height="1080" alt="5200 carousel 
