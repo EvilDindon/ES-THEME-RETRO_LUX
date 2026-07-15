@@ -2214,7 +2214,7 @@ Favoritos : {binding:favorites}</text>
 	 <linearSmooth>true</linearSmooth>
       <path>./resources/fontoverrides/F006.png</path>
       <pos>0.97 0.03</pos>
-      <size>0.075 0</size>
+      <size>0.085 0</size>
       <origin>0.5 0.5</origin>
       <horizontalAlignment>center</horizontalAlignment>
       <color>FFFFFF</color>
@@ -2289,13 +2289,7 @@ Favoritos : {binding:favorites}</text>
     </gridtile>
 	    	
 	<image name="gridtile.favorite">
-	 <linearSmooth>true</linearSmooth>
-      <path>./resources/fontoverrides/F006.png</path>
-      <pos>0.98 0.02</pos>
       <size>0.065 0</size>
-      <origin>0.5 0.5</origin>
-      <horizontalAlignment>center</horizontalAlignment>
-      <color>FFFFFF</color>
     </image>
 	
     <ninepatch name="gridtile.background:selected">
@@ -2536,6 +2530,10 @@ Favoritos : {binding:favorites}</text>
       <animateColorTime>750</animateColorTime>
     </ninepatch>
 	
+	<image name="gridtile.favorite">
+      <size>0.095 0</size>
+    </image>
+	
   </customView>
   
   
@@ -2586,13 +2584,7 @@ Favoritos : {binding:favorites}</text>
 	 </gridtile> 
 	    
 	<image name="gridtile.favorite">
-	 <linearSmooth>true</linearSmooth>
-      <path>./resources/fontoverrides/F006.png</path>
-      <pos>0.98 0.02</pos>
-      <size>0.0585 0</size>
-      <origin>0.5 0.5</origin>
-      <horizontalAlignment>center</horizontalAlignment>
-      <color>FFFFFF</color>
+      <size>0.085 0</size>
     </image>
 	
     <ninepatch name="gridtile.background:selected">
