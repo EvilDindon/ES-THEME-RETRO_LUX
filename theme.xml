@@ -90,6 +90,9 @@ originally based on: "carbon" and "Arcade Planet"
             
     <blue>blue</blue>
     <blue lang="fr">bleu</blue>
+	
+	<darkblue>dark blue</darkblue>
+    <darkblue lang="fr">bleu nuit</darkblue>
 
     <purple>purple</purple>
     <purple lang="fr">violet</purple>
@@ -175,7 +178,7 @@ originally based on: "carbon" and "Arcade Planet"
 
 <!-- Subset for System view Background Color Color -->
 	<subset name="bgcolor" displayName="${bgcolor}">
-		<include name="blue" displayName="${blue}"/>
+		<include name="darkblue" displayName="${darkblue}"/>
 		<include name="darkgrey" displayName="${darkgrey}"/>
 		<include name="purple" displayName="${purple}"/>
 
@@ -359,18 +362,20 @@ originally based on: "carbon" and "Arcade Planet"
 		  <pos>0 0.94259</pos>
 		  <color>112838ff</color>
 		  <colorEnd>000000ff</colorEnd>
-		  <zIndex>54</zIndex>
+		<color ifSubset="bgcolor:purple">281138</color>
+		<color ifSubset="bgcolor:darkgrey">303030</color>
+ 	  <zIndex>54</zIndex>
 	</image>
 	
-		<image name="bottom line" extra="static">
-		  <path>./_art/assets/white.png</path>
-		  <linearSmooth>false</linearSmooth>
-		  <origin>0 0</origin>
-		  <size>1 0.000925925</size>
-		  <pos>0 0.94259</pos>
-		  <color>557788ff</color>
-		  <zIndex>55</zIndex>
-	</image>
+		<!-- <image name="bottom line" extra="static"> -->
+		  <!-- <path>./_art/assets/white.png</path> -->
+		  <!-- <linearSmooth>false</linearSmooth> -->
+		  <!-- <origin>0 0</origin> -->
+		  <!-- <size>1 0.000925925</size> -->
+		  <!-- <pos>0 0.94259</pos> -->
+		  <!-- <color>557788ff</color> -->
+		  <!-- <zIndex>55</zIndex> -->
+	<!-- </image> -->
 
     <image name="backgound" extra="true">
       <pos>0 0</pos>
@@ -380,7 +385,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <path>./_art/assets/graphite.jpg</path>
       <zIndex>0</zIndex>
 		<color ifSubset="bgcolor:purple">FFAAFF</color>
-		<color ifSubset="bgcolor:blue">B0D8FF</color>
+		<color ifSubset="bgcolor:darkblue">B0D8FF</color>
 		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
 	  <linearSmooth>false</linearSmooth>
     </image>
@@ -1052,10 +1057,12 @@ Favoritos : {binding:favorites}</text>
 		  <pos>0 0.94259</pos>
 		  <color>112838ff</color>
 		  <colorEnd>000000ff</colorEnd>
-		  <zIndex>54</zIndex>
+		<color ifSubset="bgcolor:purple">281138</color>
+		<color ifSubset="bgcolor:darkgrey">303030</color>
+ 	  <zIndex>54</zIndex>
 	</image>
 	
-		<image name="bottom line" extra="static">
+<!-- 		<image name="bottom line" extra="static">
 		  <path>./_art/assets/white.png</path>
 		  <linearSmooth>false</linearSmooth>
 		  <origin>0 0</origin>
@@ -1063,7 +1070,7 @@ Favoritos : {binding:favorites}</text>
 		  <pos>0 0.94259</pos>
 		  <color>557788ff</color>
 		  <zIndex>55</zIndex>
-	</image>
+	</image> -->
 	
 	<image name="arrowup" extra="static">
       <origin>0.5 0.5</origin>
@@ -1323,7 +1330,7 @@ Favoritos : {binding:favorites}</text>
       <origin>0.5 0</origin>
 	  <path>./_art/assets/graphite.jpg</path>
 		<color ifSubset="bgcolor:purple">FFAAFF</color>
-		<color ifSubset="bgcolor:blue">B0D8FF</color>
+		<color ifSubset="bgcolor:darkblue">B0D8FF</color>
 		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
 	  <linearSmooth>false</linearSmooth>
 	  <zIndex>1</zIndex>
@@ -2133,7 +2140,7 @@ Favoritos : {binding:favorites}</text>
       <origin>0.5 0</origin>
 	  <path>./_art/assets/graphite.jpg</path>
 		<color ifSubset="bgcolor:purple">FFAAFF</color>
-		<color ifSubset="bgcolor:blue">B0D8FF</color>
+		<color ifSubset="bgcolor:darkblue">B0D8FF</color>
 		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
 	  <linearSmooth>true</linearSmooth>
 	  <zIndex>1</zIndex>
