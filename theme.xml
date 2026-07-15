@@ -1656,16 +1656,18 @@ Favoritos : {binding:favorites}</text>
 	
 	<image name="selectedlogobg" extra="true">
     <path>./_art/assets/white.png</path>
-	 <size>0.21354166 0.142</size>
-	 <origin>0.5 0.5</origin>
+	 <size>0.2135416 0.142</size>
+	 <origin>0 0.5</origin>
 	 <linearSmooth>false</linearSmooth>
-	 <color>113568</color>
+	 <gradientType>horizontal</gradientType>
+	 <color>555565</color>
+	 <colorEnd>55556500</colorEnd>
 	 <opacity>0.65</opacity>
-	 <pos>0.19 0.47</pos>
-	  <pos ifSubset="gamelistposition:right">0.81 0.47</pos>	  
+	 <pos>0.083229 0.47</pos>
+	 <pos ifSubset="gamelistposition:right">0.70322917 0.47</pos>	  
 	 <zIndex>23</zIndex>
 	 	  <storyboard repeat="forever">
-                <animation property="color" from="113568" to="3394D2" begin="" duration="1000" mode="Linear" autoReverse="true"/>
+                <animation property="opacity" from="0.2" to="0.9" begin="" duration="1250" mode="Linear" autoReverse="true"/>
 			</storyboard>
 	</image>
 	
