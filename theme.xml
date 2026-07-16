@@ -1654,7 +1654,9 @@ Favoritos : {binding:favorites}</text>
 	
 	<video name="md_video">
 	  <pos>0.653125 0.29</pos>
+	  <pos ifSubset="detailedartworklayout:thumbnailtop">0.346875 0.7555</pos>
 	  <pos ifSubset="gamelistposition:right">0.346875 0.29</pos>	  
+	  <pos ifSubset="gamelistposition:right,detailedartworklayout:thumbnailtop">0.1069668 0.7555</pos>
 	</video>
 	
 	<image name="whitelogo">
