@@ -124,11 +124,11 @@ originally based on: "carbon" and "Arcade Planet"
 	<gamelistposition>Gamelist Position</gamelistposition>
 	<gamelistposition lang="fr">Position de la Liste de Jeux</gamelistposition>
 	
-	<detailedartworklayout>Detailed View Artwork Layout</detailedartworklayout>
-	<detailedartworklayout lang="fr">Agencement de la vue Détaillée</detailedartworklayout>
+	<detailedartworklayout>Detailed and Gamecarousel Views Artwork Layout</detailedartworklayout>
+	<detailedartworklayout lang="fr">Agencement des vues Détaillée et Carousel</detailedartworklayout>
 	
-	<imagetop>Game Image on Top</imagetop>
-	<imagetop lang="fr">Aperçu du Jeu en Haut</imagetop>
+	<imagetop>Game Image/Video on Top</imagetop>
+	<imagetop lang="fr">Aperçu du Jeu/Vidéo en Haut</imagetop>
 	
 	<thumbnailtop>Boxart on Top</thumbnailtop>
 	<thumbnailtop lang="fr">Boîte de jeu en Haut</thumbnailtop>
@@ -211,10 +211,11 @@ originally based on: "carbon" and "Arcade Planet"
 		<include name="center" displayName="${center}"/>
 	</subset>
 	
-		<!-- Subset options for Artwork Layout in Detailed View -->
+		<!-- Subset options for Artwork Layout in Detailed and GameCarousel Views -->
 	<subset name="detailedartworklayout" displayName="${detailedartworklayout}" appliesTo="detailed,gamecarousel">
 		<include name="thumbnailtop" displayName="${thumbnailtop}"/>
 		<include name="imagetop" displayName="${imagetop}"/>
+		<include name="Fanart"/>
 	</subset>
 	
 
@@ -237,7 +238,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
     <menuText name="menutext">
       <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
-      <fontSize>0.031</fontSize>
+      <fontSize>0.029</fontSize>
       <color>969696</color>
       <separatorColor>323232FF</separatorColor>
       <selectorColor>225676ff</selectorColor>
@@ -1347,6 +1348,7 @@ Favoritos : {binding:favorites}</text>
 		<color ifSubset="bgcolor:purple">FFAAFF</color>
 		<color ifSubset="bgcolor:darkblue">B0D8FF</color>
 		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
+		<color ifSubset="detailedartworklayout:Fanart">000000</color>
 	  <linearSmooth>false</linearSmooth>
 	  <zIndex>1</zIndex>
     </image>
@@ -1404,17 +1406,49 @@ Favoritos : {binding:favorites}</text>
 	</image>
 	
 	<image name="md_marquee">
-	  <visible>false</visible>
+	  	  <visible>false</visible>
+		  <visible ifSubset="detailedartworklayout:Fanart">true</visible>
+		  <pos>0.372 0.576</pos>
+		  <pos ifSubset="gamelistposition:right">0.002 0.576</pos>
+		  <size>0.2083333 0</size>
+		  <origin>0 1</origin>
+		  <linearSmooth>true</linearSmooth>
+		  <zIndex>22</zIndex>		  
 	</image>	
+	
+		<image name="md_fanart">
+	  	  <visible>false</visible>
+		  <visible ifSubset="detailedartworklayout:Fanart">true</visible>
+		  <linearSmooth>true</linearSmooth>
+		  <origin>0 1</origin>
+		  <pos>0.372 0.6375</pos>
+		  <pos ifSubset="gamelistposition:right">0 0.6375</pos>
+		  <color>BBBBBB</color>
+		  <saturation>0.75</saturation>
+		  <size>0.6375 0</size>
+		  <zIndex>2</zIndex>
+	</image>
+	
+	<image name="fanartbottomfade" extra="true">
+    	  	  <visible>false</visible>
+		  <visible ifSubset="detailedartworklayout:Fanart">true</visible>
+		<path>./_art/assets/fanartbottomfade.png</path>
+	 <size>0.63125 0</size>
+	 <origin>0 1</origin>
+	 <linearSmooth>false</linearSmooth>
+	 <pos>0.372 0.6375</pos>
+	 <pos ifSubset="gamelistposition:right">0 0.6375</pos>
+	 <zIndex>3</zIndex>
+	</image>
 	
 	<video name="md_video">
 	  <visible>true</visible>
-	  <pos>0.6845166 0.29</pos>
-	  <pos ifSubset="detailedartworklayout:thumbnailtop">0.476 0.7555</pos>
-	  <pos ifSubset="gamelistposition:right">0.3154834 0.29</pos>
-	  <pos ifSubset="gamelistposition:right,detailedartworklayout:thumbnailtop">0.1069668 0.7555</pos>
-  	  <maxSize>0.65 0.53</maxSize>
-	  <maxSize ifSubset="detailedartworklayout:thumbnailtop">0.18 0.325</maxSize>
+	  <pos ifSubset="detailedartworklayout:thumbnailtop|Fanart">0.476 0.7555</pos>
+	  <pos ifSubset="detailedartworklayout:imagetop">0.6845166 0.29</pos>
+	  <pos ifSubset="gamelistposition:right,detailedartworklayout:thumbnailtop|Fanart">0.1069668 0.7555</pos>
+	  <pos ifSubset="gamelistposition:right,detailedartworklayout:imagetop">0.3154834 0.29</pos>
+  	  <maxSize ifSubset="detailedartworklayout:thumbnailtop|Fanart">0.18 0.325</maxSize>
+	  <maxSize ifSubset="detailedartworklayout:imagetop">0.65 0.53</maxSize>
 	  <effect>none</effect>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
 	  <delay>0.7</delay>
@@ -1434,13 +1468,14 @@ Favoritos : {binding:favorites}</text>
 	</video>
 
 	<image name="md_thumbnail">
-	  <pos>0.476 0.7555</pos>
+      <visible ifSubset="detailedartworklayout:Fanart">false</visible>
 	  <pos ifSubset="detailedartworklayout:thumbnailtop">0.6845166 0.29</pos>
-	  <pos ifSubset="gamelistposition:right">0.1069668 0.7555</pos>
+	  <pos ifSubset="detailedartworklayout:imagetop">0.476 0.7555</pos>
 	  <pos ifSubset="gamelistposition:right,detailedartworklayout:thumbnailtop">0.3154834 0.29</pos>
+	  <pos ifSubset="gamelistposition:right,detailedartworklayout:imagetop">0.1069668 0.7555</pos>
 	  <origin>0.5 0.5</origin>
-      <maxSize>0.18 0.325</maxSize>
 	  <maxSize ifSubset="detailedartworklayout:thumbnailtop">0.4 0.53</maxSize>
+      <maxSize ifSubset="detailedartworklayout:imagetop">0.18 0.325</maxSize>
 	  <zIndex>21</zIndex>
 	  <opacity ifSubset="detailedartworklayout:thumbnailtop">0</opacity>
 	  <storyboard ifSubset="detailedartworklayout:thumbnailtop" event="activate">
@@ -1653,10 +1688,10 @@ Favoritos : {binding:favorites}</text>
     </image>
 	
 	<video name="md_video">
-	  <pos>0.653125 0.29</pos>
-	  <pos ifSubset="detailedartworklayout:thumbnailtop">0.346875 0.7555</pos>
-	  <pos ifSubset="gamelistposition:right">0.346875 0.29</pos>	  
-	  <pos ifSubset="gamelistposition:right,detailedartworklayout:thumbnailtop">0.1069668 0.7555</pos>
+	  <pos ifSubset="detailedartworklayout:imagetop">0.653125 0.29</pos>
+	  <pos ifSubset="detailedartworklayout:thumbnailtop|Fanart">0.4446084 0.7555</pos>
+	  <pos ifSubset="gamelistposition:right,detailedartworklayout:imagetop">0.346875 0.29</pos>	  
+	  <pos ifSubset="gamelistposition:right,detailedartworklayout:thumbnailtop|Fanart">0.13836 0.7555</pos>
 	</video>
 	
 	<image name="whitelogo">
@@ -1665,6 +1700,22 @@ Favoritos : {binding:favorites}</text>
 	 <pos>0.037 0.472</pos>
 	 <pos ifSubset="gamelistposition:right">0.963 0.472</pos>	  
 	 <opacity>0.85</opacity>
+	</image>
+	
+		<image name="md_marquee">
+	  	  <visible>false</visible>
+		</image>
+		
+	<image name="md_fanart">
+		  <pos>0.31 0.6375</pos>
+		  <pos ifSubset="gamelistposition:right">0 0.6375</pos>
+		  <size>0.6925 0</size>
+	</image>
+	
+	<image name="fanartbottomfade" extra="true">
+	 <size>0.7 0.1722</size>
+	 <pos>0.31 0.6375</pos>
+	 <pos ifSubset="gamelistposition:right">0 0.6375</pos>
 	</image>
 	
 	<gamecarousel name="gamecarousel">
@@ -1721,9 +1772,14 @@ Favoritos : {binding:favorites}</text>
 	 <pos>0.092 0.416</pos>
 	</image>
 	
-	<image name="md_thumbnail,md_flag,players">
+	<image name="md_flag,players">
 		<offsetX>-0.0313916</offsetX>
 		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
+	</image>
+	
+		<image name="md_thumbnail">
+		<offsetX ifSubset="detailedartworklayout:thumbnailtop">-0.0613916</offsetX>
+		<offsetX ifSubset="gamelistposition:right,detailedartworklayout:imagetop">0.0313916</offsetX>
 	</image>
    
 	<text name="md_players,playcount,md_developer,md_name,md_description">
