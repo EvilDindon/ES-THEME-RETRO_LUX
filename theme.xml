@@ -1713,7 +1713,7 @@ Favoritos : {binding:favorites}</text>
 	</image>
 	
 	<image name="fanartbottomfade" extra="true">
-	 <size>0.7 0.1722</size>
+	 <size>0.6925 0</size>
 	 <pos>0.31 0.6375</pos>
 	 <pos ifSubset="gamelistposition:right">0 0.6375</pos>
 	</image>
