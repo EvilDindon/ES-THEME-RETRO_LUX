@@ -421,7 +421,7 @@ originally based on: "carbon" and "Arcade Planet"
 		  <zIndex>48</zIndex>
 	</image>
 	
-		<image name="wheelbgelectronic" extra="true">
+<!-- 		<image name="wheelbgelectronic" extra="true">
 		  <path>./_art/assets/electronic.png</path>
 		  <origin>0.5 0.5</origin>
 		  <size>0.88 3.3333333</size>
@@ -433,7 +433,7 @@ originally based on: "carbon" and "Arcade Planet"
 		  <pos ifSubset="systemviewlayout:left">0.145021 0.497</pos>
 		  <color>00000060</color>
 		  <zIndex>49</zIndex>
-	</image>
+	</image> -->
 	
  	<image name="bgcontroller" extra="static">
       <pos>-0.03 0</pos>
@@ -501,7 +501,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <logoSize ifSubset="aspect-ratio:4-3">0.4104166 0.19444444</logoSize>
 	  <minLogoOpacity>1</minLogoOpacity>
 	  <transitionSpeed>200</transitionSpeed>
-	  <scrollSound>./_art/soundS/scroll.wav</scrollSound>
+	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
 	  <systemInfoDelay>1500</systemInfoDelay>
 	  <zIndex>60</zIndex>
     </carousel>
@@ -987,7 +987,7 @@ Favoritos : {binding:favorites}</text>
 		<path>./_art/manfLogos/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
 		<origin>0.5 0.5</origin>
-		<pos>0.37 0.45</pos>
+		<pos>0.3615 0.33</pos>
 		<pos ifSubset="systemviewlayout:left">0.5 0.45</pos>	
 		<maxSize>0.29 0.22</maxSize>
 		<color>AAAAAAee</color>
@@ -1694,9 +1694,7 @@ Favoritos : {binding:favorites}</text>
 
 <view name="gamecarousel">
 	
-		<image name=" 
-		 
-		 " extra="true">
+		<image name="bgcarousel" extra="true">
 		  <path>./_art/assets/bgcarousel.png</path>
 		  <pos>0.190625 0</pos>
 		  <pos ifSubset="gamelistposition:right">0.811 0</pos>
