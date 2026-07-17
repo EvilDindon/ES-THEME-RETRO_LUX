@@ -50,6 +50,9 @@ originally based on: "carbon" and "Arcade Planet"
 	
 	<NoSprite>Without Sprite</NoSprite>
     <NoSprite lang="fr">Sans Sprite</NoSprite>
+	
+	<NoIcon>Without Icon</NoIcon>
+    <NoIcon lang="fr">Sans Icône</NoIcon>
 			
 	<boxcarousel>Box Carousel</boxcarousel>
     <boxcarousel lang="fr">Carousel de Boîtes</boxcarousel>
@@ -175,6 +178,7 @@ originally based on: "carbon" and "Arcade Planet"
 	<subset name="wheelStyle" displayName="${wheelImageStyle}">
 		<include name="default" displayName="${default}"/>
 		<include name="NoSprite" displayName="${NoSprite}"/>
+		<include name="NoIcon" displayName="${NoIcon}"/>
 	</subset>
 
 		<!-- Subset for Selected Border Color -->
@@ -450,7 +454,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <flipX ifSubset="systemviewlayout:left">true</flipX>
       <size>0.6880208 0</size>
       <origin>0.5 0.5</origin>
-	  <path>./_art/assets/infobox2.png</path>
+	  <path>./_art/assets/infobox4.png</path>
       <zIndex>4</zIndex>	  
 	  <color>AAAAAA</color>
 	  <linearSmooth>false</linearSmooth>
@@ -466,8 +470,11 @@ originally based on: "carbon" and "Arcade Planet"
 		 <path ifSubset="artworkregion:US">./_art/wheel/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/wheel/SPECIAL/${system.theme}.png</path>
 		 <path ifSubset ="wheelStyle:NoSprite">./_art/wheelNoSprite/${system.theme}.png</path>
+		 <path ifSubset ="wheelStyle:NoIcon">./_art/wheelNoIcon/${system.theme}.png</path>
 		 <path ifSubset="wheelStyle:NoSprite,artworkregion:US">./_art/wheelNoSprite/US/${system.theme}.png</path>
+		 <path ifSubset="wheelStyle:NoIcon,artworkregion:US">./_art/wheelNoIcon/US/${system.theme}.png</path>
 		 <path ifSubset="wheelStyle:NoSprite,neogeostyle:mvs">./_art/wheelNoSprite/SPECIAL/${system.theme}.png</path>
+		 <path ifSubset="wheelStyle:NoIcon,neogeostyle:mvs">./_art/wheelNoIcon/SPECIAL/${system.theme}.png</path>
 		 <storyboard event="activate">
 			<animation property="color" from="C0C0C0ff" to="00000000" begin="200" duration="" mode="Linear"/>			
 	  </storyboard>
@@ -499,7 +506,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  <zIndex>60</zIndex>
     </carousel>
 	
-	<image name="whiteLogo" ifSubset="wheelStyle:default" extra="static">
+	<image name="whiteLogo" extra="static">
+	<visible ifSubset ="wheelStyle:NoSprite">false</visible> 
 		<path>./_art/whiteLogos/${system.theme}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/whiteLogos/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/whiteLogos/SPECIAL/${system.theme}.png</path>
@@ -509,7 +517,9 @@ originally based on: "carbon" and "Arcade Planet"
 	    <size ifSubset="aspect-ratio:4-3">0.4104166 0</size>
 		<origin>0.5 0.5</origin>
 		<pos>0.81185 0.471</pos>
+		<pos ifSubset="wheelStyle:NoIcon">0.83789166 0.471</pos>
 		<pos ifSubset="systemviewlayout:left">0.18815 0.471</pos>
+		<pos ifSubset="systemviewlayout:left,wheelStyle:NoIcon">0.21421466 0.471</pos>
 		<zIndex>62</zIndex>
 		<opacity>0</opacity>
 		<storyboard>
@@ -517,6 +527,9 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="0.7" to="1" begin="200" duration="1000" mode="Linear"/>
 			<animation property="opacity" from="1" to="0" begin="200" duration="1000" mode="Linear"/>
 			<animation property="offsetX" from="0" to="-0.02604167" begin="200" duration="1000" mode="Linear"/>
+		</storyboard>
+		<storyboard ifSubset="wheelStyle:NoIcon">
+			<animation property="opacity" from="1" to="0" begin="200" duration="200"/>
 		</storyboard>
 	</image>
 	
@@ -533,7 +546,9 @@ originally based on: "carbon" and "Arcade Planet"
 		<pos>0.81185 0.471</pos>
 		<pos ifSubset="systemviewlayout:left">0.18815 0.471</pos>
 		<pos ifSubset="wheelStyle:NoSprite">0.78580833 0.471</pos>
+		<pos ifSubset="wheelStyle:NoIcon">0.83789166 0.471</pos>
 		<pos ifSubset="systemviewlayout:left,wheelStyle:NoSprite">0.16215833 0.471</pos>
+		<pos ifSubset="systemviewlayout:left,wheelStyle:NoIcon">0.21421466 0.471</pos>
 		<zIndex>63</zIndex>
 		<opacity>0</opacity>
 		<storyboard repeatAt="5000">
@@ -548,6 +563,14 @@ originally based on: "carbon" and "Arcade Planet"
 			
 		<storyboard ifSubset="wheelStyle:NoSprite" repeatAt="5000">
 			<animation property="opacity" from="1" to="1" begin="200"/>
+			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
+		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
+			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
+			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
+		</storyboard>
+		
+		<storyboard ifSubset="wheelStyle:NoIcon" repeatAt="5000">
+			<animation property="opacity" from="0" to="1" begin="200" duration="200"/>
 			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
 		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
 			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
@@ -569,6 +592,7 @@ originally based on: "carbon" and "Arcade Planet"
 		 <path>./_art/nakedWheel/${system.theme}-${lang}.png</path>
 		 <path ifSubset="artworkregion:US">./_art/nakedWheel/US/${system.theme}.png</path>
 		 <path ifSubset="neogeostyle:mvs">./_art/nakedWheel/SPECIAL/${system.theme}.png</path>
+		 <path ifSubset ="wheelStyle:NoIcon">./_art/assets/totalnakedwheel.png</path>
 		<color ifSubset="selectedBorderColor:gold">D8C844</color>
 		<color ifSubset="selectedBorderColor:red">FF4444</color>
 		<color ifSubset="selectedBorderColor:blue">44C0D8</color>
@@ -706,7 +730,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<size>0.1010416666 0</size>
 		<size ifSubset="aspect-ratio:4-3">0.1347222213 0</size>
 		<origin>0.5 0.5</origin>
-		<zIndex>65</zIndex>
+		<zIndex>102</zIndex>
 		<linearSmooth>false</linearSmooth>
 		<opacity>0</opacity>
 		<flipX ifSubset="systemviewlayout:left,wheelStyle:NoSprite">true</flipX>
@@ -717,7 +741,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<storyboard repeatAt="1200">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
 			<animation property="scale" from="1" to="2" begin="200" duration="1000" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="0" to="-0.555" begin="200" duration="800" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="-0.595" begin="200" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 			<animation property="offsetY" from ="0" to="0.32" begin="1000" duration="200" mode="EaseOutCubic"/>
 			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
@@ -728,13 +752,14 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="opacity" from="0" to="1" begin="" duration="" mode="Linear"/>
 			<animation property="scale" from="0" to="3" begin="" duration="500" mode="EaseOutCubic"/>
 			<animation property="scale" from="3" to="2" begin="500" duration="800" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="0" to="-0.2322542" begin="500" duration="800" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="-0.274" begin="500" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="500" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 			<animation property="offsetY" from ="0" to="0.32" begin="1300" duration="200" mode="EaseOutCubic"/>
 			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
 			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
 			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
+	  
 		  
 	  <storyboard ifSubset="systemviewlayout:left" repeatAt="1200">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
@@ -757,6 +782,13 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
 			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
 			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>			
+	  </storyboard>
+	  
+	  	<storyboard ifSubset="wheelStyle:NoIcon" repeatAt="1200">
+			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
+			<animation property="scale" from="1" to="1.5" begin="6250" duration="125" mode="Linear"/>
+			<animation property="scale" from="1.5" to="1" begin="6850" duration="125" mode="Linear"/>
+			<animation property="scale" from="1" to="1" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
 	  
 	 </image>
@@ -897,8 +929,6 @@ originally based on: "carbon" and "Arcade Planet"
 	 </text>
 	
 	<text name="systemdetails,systemdetails2" extra="static">
-        <alignment>left</alignment>
-		<verticalAlignment>top</verticalAlignment>
         <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
         <fontSize>0.024</fontSize>
         <zIndex>100</zIndex>
@@ -906,16 +936,17 @@ originally based on: "carbon" and "Arcade Planet"
         <glowSize>1</glowSize>
 		<glowOffset>1 1</glowOffset>
 		 <color>C0C0C0FF</color>
+		 <alignment>left</alignment>
+		<verticalAlignment>top</verticalAlignment>
 	</text>
 	  
 	  <text name="systemdetails">
        <text>${system.fullName}</text>
-	    <alignment>center</alignment>
-		<origin>0.5 0.5</origin>
-	    <fontPath>./_art/fonts/EurostileExtended.ttf</fontPath>
-        <fontSize>0.03</fontSize>
-        <pos ifSubset="systemviewlayout:left">0.53 0.8165</pos>
-		<pos ifSubset="systemviewlayout:right">0.46979 0.8165</pos>
+
+		<origin>0 0.5</origin>
+        <fontSize>0.024</fontSize>
+        <pos ifSubset="systemviewlayout:left">0.35833 0.81</pos>
+		<pos ifSubset="systemviewlayout:right">0.35833 0.81</pos>
         <size>0.441666 0.28</size>
 		<color>00BBFF</color>
 	</text>
@@ -924,7 +955,8 @@ originally based on: "carbon" and "Arcade Planet"
        <text>
 ${system.hardwareType} ${system.releaseYearOrNull}
 Games : {binding:total}
-Favorites : {binding:favorites}</text>
+Favorites : {binding:favorites}
+Most Played : {binding:mostPlayed}</text>
 		<text lang="fr">
 ${system.hardwareType} ${system.releaseYearOrNull}
 Nombre de Jeux : {binding:total}
@@ -933,9 +965,10 @@ Favoris : {binding:favorites}</text>
 ${system.hardwareType} ${system.releaseYearOrNull}
 Numero de juegos : {binding:total}
 Favoritos : {binding:favorites}</text>
-        <pos ifSubset="systemviewlayout:left">0.533 0.736</pos>
-		<pos ifSubset="systemviewlayout:right">0.48125 0.736</pos>
-        <size>0.22 0.28</size>
+        <pos ifSubset="systemviewlayout:left">0.533 0.758</pos>
+		<pos ifSubset="systemviewlayout:right">0.35833 0.758</pos>
+        <size>0.33 0.1</size>
+				<origin>0 0.5</origin>
 		<storyboard>
 		  <animation property="opacity" from="0" to="0" begin="" duration="1500" mode="Linear"/>
 		  <animation property="opacity" from="0" to="1" begin="1500" duration="200" mode="Linear"/>
@@ -953,10 +986,10 @@ Favoritos : {binding:favorites}</text>
 		<path>./_art/manfLogos/${system.theme}.png</path>
 		<path>./_art/manfLogos/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
-		<origin>0 0.5</origin>
-		<pos>0.25 0.45</pos>
+		<origin>0.5 0.5</origin>
+		<pos>0.37 0.45</pos>
 		<pos ifSubset="systemviewlayout:left">0.5 0.45</pos>	
-		<maxSize>0.255 0.175</maxSize>
+		<maxSize>0.29 0.22</maxSize>
 		<color>AAAAAAee</color>
 		<saturation>0</saturation>
 		<zIndex>64</zIndex>
@@ -964,14 +997,14 @@ Favoritos : {binding:favorites}</text>
 		  <animation property="scale" from="0" to="0" begin="" duration="800" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="1000" duration="200" mode="Linear"/>
 		  <animation property="scale" from="1" to="0.333333" begin="1500" duration="200" mode="EaseOutCubic"/>
-		  <animation property="offsetX" from="0" to="0.23125" begin="1500" duration="200" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.26" begin="1500" duration="200" mode="EaseOutCubic"/>
 		  <animation property="offsetY" from="0" to="0.422" begin="1500" duration="200" mode="EaseOutCubic"/>
 	  </storyboard>
 	  <storyboard ifSubset="wheelStyle:NoSprite">
 		  <animation property="scale" from="0" to="0" begin="" duration="500" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="580" duration="400" mode="EaseOutCubic"/>
 		  <animation property="scale" from="1" to="0.333333" begin="1200" duration="300" mode="EaseOutCubic"/>
-		  <animation property="offsetX" from="0" to="0.23125" begin="1200" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.26" begin="1200" duration="300" mode="EaseOutCubic"/>
 		  <animation property="offsetY" from="0" to="0.422" begin="1200" duration="300" mode="EaseOutCubic"/>
 	  </storyboard>
 	  	<storyboard ifSubset="systemviewlayout:left">
@@ -999,16 +1032,16 @@ Favoritos : {binding:favorites}</text>
 		<path ifSubset="neogeostyle:mvs">./_art/consoles/special/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
 		<origin>0.5 0.5</origin>
-		<pos>0.35677 0.8178</pos>
+		<pos>0.2562 0.79</pos>
         <pos ifSubset="systemviewlayout:left">0.419 0.8178</pos>		
-		<maxSize>0.18875 0.175925</maxSize>
+		<maxSize>0.19 0.23</maxSize>
 		<color>FFFFFF</color>
 		<zIndex>100</zIndex>
 		<storyboard>
 		  <animation property="scale" from="0" to="0" begin="" duration="200" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="200" duration="1000" mode="Linear"/>
 	  </storyboard>
-	  <storyboard ifSubset="wheelStyle:NoSprite">
+	  <storyboard ifSubset="wheelStyle:NoSprite|NoIcon">
 		  <animation property="scale" from="0" to="0" begin="" duration="" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="" duration="500" mode="EaseOutCubic"/>
 	  </storyboard>
@@ -1661,7 +1694,9 @@ Favoritos : {binding:favorites}</text>
 
 <view name="gamecarousel">
 	
-		<image name="bgcarousel" extra="true">
+		<image name=" 
+		 
+		 " extra="true">
 		  <path>./_art/assets/bgcarousel.png</path>
 		  <pos>0.190625 0</pos>
 		  <pos ifSubset="gamelistposition:right">0.811 0</pos>
@@ -2028,7 +2063,7 @@ Favoritos : {binding:favorites}</text>
   
   <customView name="fanart" inherits="boxcarousel" displayName="Fanart">
   
-  	<image name="infoboxcarousel,infoboxlogogriddetails,topboxlogogriddetails,infoboxdetailed,md_marquee,bgcarousel,bgcontroller,background">
+  	<image name="infoboxlogogriddetails,topboxlogogriddetails,infoboxdetailed,md_marquee,bgcarousel,bgcontroller,background">
 			<visible>false</visible>
 	</image>
 	
