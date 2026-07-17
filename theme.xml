@@ -1348,7 +1348,7 @@ Favoritos : {binding:favorites}</text>
 		<color ifSubset="bgcolor:purple">FFAAFF</color>
 		<color ifSubset="bgcolor:darkblue">B0D8FF</color>
 		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
-		<color ifSubset="detailedartworklayout:Fanart">000000</color>
+		<visible ifSubset="detailedartworklayout:Fanart">false</visible>
 	  <linearSmooth>false</linearSmooth>
 	  <zIndex>1</zIndex>
     </image>
@@ -1712,7 +1712,7 @@ Favoritos : {binding:favorites}</text>
 		  <size>0.6925 0</size>
 	</image>
 	
-	<image name="fanartbottomfade" extra="true">
+	<image name="fanartbottomfade">
 	 <size>0.6925 0</size>
 	 <pos>0.31 0.6375</pos>
 	 <pos ifSubset="gamelistposition:right">0 0.6375</pos>
@@ -1815,12 +1815,14 @@ Favoritos : {binding:favorites}</text>
 
 <customView name="boxcarousel" inherits="gamecarousel" displayName="${boxcarousel}">
 	
-	<image name="bgcarousel,electronic2,selectedlogobg,infoboxdetailed,arrowup,arrowdown,md_thumbnail">
+	<image name="bgcarousel,electronic2,selectedlogobg,infoboxdetailed,arrowup,arrowdown,md_thumbnail,md_fanart,fanartbottomfade">
 			<visible>false</visible>
 	</image>
 	
+	
 	<image name="backgound">
       <pos>0.5 0</pos>
+	  <visible>true</visible>
       <size>1 1.11111111</size>
       <origin>0.5 0</origin>
 	  <zIndex>1</zIndex>
@@ -1862,7 +1864,8 @@ Favoritos : {binding:favorites}</text>
 	
 	<image name="md_marquee">
 		<visible>true</visible>
-		<maxSize>0.188 0.14</maxSize>
+		<origin>0.5 0.5</origin>
+		<size>0.18 0</size>
 		<reflexion>0.06 0</reflexion>
 		<pos>0.105 0.783</pos>
 	</image>
@@ -2025,7 +2028,7 @@ Favoritos : {binding:favorites}</text>
   
   <customView name="fanart" inherits="boxcarousel" displayName="Fanart">
   
-  	<image name="infoboxcarousel,md_marquee">
+  	<image name="infoboxcarousel,infoboxlogogriddetails,topboxlogogriddetails,infoboxdetailed,md_marquee,bgcarousel,bgcontroller,background">
 			<visible>false</visible>
 	</image>
 	
@@ -2114,6 +2117,7 @@ Favoritos : {binding:favorites}</text>
       <size>1 0</size>
 	  <color>dddddd</color>
       <origin>0.5 0.5</origin>
+	  <visible>true</visible>
 	  <linearSmooth>true</linearSmooth>
 	  <zIndex>4</zIndex>
 	  		<storyboard repeat="forever">
