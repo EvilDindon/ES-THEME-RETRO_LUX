@@ -435,10 +435,9 @@ originally based on: "carbon" and "Arcade Planet"
 		  <zIndex>49</zIndex>
 	</image>
 	
-	<image name="infobox2" extra="static">
+	<image name="infoboxsystem" extra="static">
       <pos>0.3552083 0.79166666</pos>
 	  <pos ifSubset="systemviewlayout:left">0.6447917 0.79166666</pos>
-	  <flipX ifSubset="systemviewlayout:left">true</flipX>
       <size>0.6880208 0</size>
       <origin>0.5 0.5</origin>
 	  <path>./_art/assets/infobox4.png</path>
@@ -783,7 +782,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<size>1 0</size>
 			<opacity>1</opacity>
 			<origin>1 1</origin>
-			<origin ifSubset="systemviewlayout:left">1 1</origin>
+			<origin ifSubset="systemviewlayout:left">0 1</origin>
 			<pos>0.75 1</pos>
  	        <pos ifSubset="systemviewlayout:left">0.25 1</pos>
 			<saturation>0.66</saturation>
@@ -959,10 +958,8 @@ originally based on: "carbon" and "Arcade Planet"
 	  
 	  <text name="systemdetails">
        <text>${system.fullName}</text>
-
-		<origin>0 0.5</origin>
-
-        <pos ifSubset="systemviewlayout:left">0.35833 0.81</pos>
+     	<origin>0 0.5</origin>
+        <pos ifSubset="systemviewlayout:left">0.647 0.81</pos>
 		<pos ifSubset="systemviewlayout:right">0.35833 0.81</pos>
         <size>0.441666 0.28</size>
 		<color>00BBFF</color>
@@ -983,7 +980,7 @@ ${system.hardwareType} ${system.releaseYearOrNull}
 Numero de juegos : {binding:total}
 Favoritos : {binding:favorites}</text>
         <fontSize>0.023</fontSize>
-        <pos ifSubset="systemviewlayout:left">0.533 0.756</pos>
+        <pos ifSubset="systemviewlayout:left">0.647 0.756</pos>
 		<pos ifSubset="systemviewlayout:right">0.35833 0.756</pos>
         <size>0.33 0.1</size>
 				<origin>0 0.5</origin>
@@ -1006,7 +1003,7 @@ Favoritos : {binding:favorites}</text>
 		<linearSmooth>true</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<pos>0.3615 0.33</pos>
-		<pos ifSubset="systemviewlayout:left">0.5 0.45</pos>	
+		<pos ifSubset="systemviewlayout:left">0.62 0.33</pos>	
 		<maxSize>0.29 0.22</maxSize>
 		<color>AAAAAAee</color>
 		<saturation>0</saturation>
@@ -1034,8 +1031,8 @@ Favoritos : {binding:favorites}</text>
 	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:NoSprite|NoIcon">
 		  <animation property="scale" from="0" to="1" begin="" duration="400" mode="EaseOutCubic"/>
 		  <animation property="scale" from="1" to="0.333333" begin="800" duration="300" mode="EaseOutCubic"/>
-		  <animation property="offsetX" from="0" to="0.034" begin="800" duration="300" mode="EaseOutCubic"/>
-		  <animation property="offsetY" from="0" to="0.55" begin="800" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.3" begin="800" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.54" begin="800" duration="300" mode="EaseOutCubic"/>
 	  </storyboard>
 	</image>
 	
@@ -1055,7 +1052,7 @@ Favoritos : {binding:favorites}</text>
 		<linearSmooth>false</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<pos>0.2562 0.79</pos>
-        <pos ifSubset="systemviewlayout:left">0.419 0.8178</pos>		
+        <pos ifSubset="systemviewlayout:left">0.546 0.79</pos>		
 		<maxSize>0.19 0.23</maxSize>
 		<color>FFFFFF</color>
 		<zIndex>100</zIndex>
@@ -1082,7 +1079,7 @@ Favoritos : {binding:favorites}</text>
 		<linearSmooth>false</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<pos>0.088 0.792</pos>
-        <pos ifSubset="systemviewlayout:left">0.419 0.794</pos>		
+        <pos ifSubset="systemviewlayout:left">0.377 0.794</pos>		
 		<maxSize>0.133 0.215</maxSize>
 		<color>FFFFFF</color>
 		<zIndex>100</zIndex>
@@ -1091,8 +1088,9 @@ Favoritos : {binding:favorites}</text>
 			<animation property="offsetX" from="-0.3" to="0" begin="800" duration="250" mode="EaseOutCubic"/>
 	  </storyboard>
 	  	  	<storyboard ifSubset="systemviewlayout:left">
-			<animation property="offsetX" from="0.3" to="0.3" begin="" duration="800" mode="Linear"/>
-			<animation property="offsetX" from="0.3" to="0" begin="800" duration="250" mode="EaseOutCubic"/>
+			<animation property="opacity" from="0" to="0" begin="" duration="800" mode="Linear"/>
+			<animation property="opacity" from="0" to="1" begin="800" duration="125" mode="Linear"/>
+			<animation property="offsetX" from="-0.05" to="0" begin="800" duration="250" mode="EaseOutCubic"/>
 	  </storyboard>
 	</image>
 
