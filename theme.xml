@@ -780,11 +780,12 @@ originally based on: "carbon" and "Arcade Planet"
 			<path>{random:thumbnail}</path>
 			<path>{random:fanart}</path>
 			<linearSmooth>true</linearSmooth>
-			<size>0.95 0</size>
+			<size>1 0</size>
 			<opacity>1</opacity>
-			<origin>0.5 0.5</origin>
-			<pos>0.3615 0.47</pos>
- 	        <pos ifSubset="systemviewlayout:left">0.6385 0.47</pos>
+			<origin>1 1</origin>
+			<origin ifSubset="systemviewlayout:left">1 1</origin>
+			<pos>0.75 1</pos>
+ 	        <pos ifSubset="systemviewlayout:left">0.25 1</pos>
 			<saturation>0.66</saturation>
      		<color>D8D8D8</color>
 	</image>
@@ -792,7 +793,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<image name="randomFanart1">
 			<storyboard repeat="forever">
 				<animation property="scale" from="" to="" begin="" duration="" mode="linear"/>				
-				<animation property="scale" from="1" to="1.33" begin="" duration="10000" mode="linear"/>
+				<animation property="scale" from="1" to="1.12" begin="" duration="10000" mode="linear"/>
 				<animation property="scale" from="" to="" begin="10000" duration="10000" mode="linear"/>	
 		            </storyboard>			
 			<zIndex>2</zIndex>	
@@ -801,7 +802,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<image name="randomFanart2">
 			<storyboard repeat="forever">
 				<animation property="scale" from="" to="" begin="" duration="10000" mode="linear"/>		
-				<animation property="scale" from="1" to="1.33" begin="10000" duration="10000" mode="linear"/>
+				<animation property="scale" from="1" to="1.12" begin="10000" duration="10000" mode="linear"/>
             </storyboard>			
 			<zIndex>3</zIndex>	
 		</image>
