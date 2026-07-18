@@ -726,7 +726,7 @@ originally based on: "carbon" and "Arcade Planet"
 		<pos ifSubset="systemviewlayout:right,wheelStyle:default|NoIcon">0.6845 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:left,wheelStyle:default|NoIcon">0.0605458 0.471296295</pos>
 		<pos ifSubset="systemviewlayout:right,wheelStyle:NoSprite">0.632 0.758</pos>
-		<pos ifSubset="systemviewlayout:left,wheelStyle:NoSprite">0.0605458 0.758</pos>
+		<pos ifSubset="systemviewlayout:left,wheelStyle:NoSprite">0.9205458 0.758</pos>
 		
 		<storyboard ifSubset="systemviewlayout:right,wheelStyle:default|NoIcon">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
