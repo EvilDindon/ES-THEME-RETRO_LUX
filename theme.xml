@@ -1051,7 +1051,7 @@ Favoritos : {binding:favorites}</text>
 		<path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.svg</path>
 		<path ifSubset="neogeostyle:mvs">./_art/consoles/special/${system.theme}.png</path>
 		<path ifSubset="neogeostyle:mvs">./_art/consoles/special/${system.theme}.svg</path>
-		<linearSmooth>true</linearSmooth>
+		<linearSmooth>false</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<pos>0.2562 0.79</pos>
         <pos ifSubset="systemviewlayout:left">0.419 0.8178</pos>		
@@ -1078,7 +1078,7 @@ Favoritos : {binding:favorites}</text>
 		<path>./_art/controllers/${system.theme}.svg</path>
 		<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.png</path>
 		<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.svg</path>
-		<linearSmooth>true</linearSmooth>
+		<linearSmooth>false</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<pos>0.088 0.792</pos>
         <pos ifSubset="systemviewlayout:left">0.419 0.794</pos>		
