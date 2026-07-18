@@ -514,8 +514,11 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="opacity" from="1" to="0" begin="200" duration="1000" mode="Linear"/>
 			<animation property="offsetX" from="0" to="-0.02604167" begin="200" duration="1000" mode="Linear"/>
 		</storyboard>
+		
 		<storyboard ifSubset="wheelStyle:NoIcon">
-			<animation property="opacity" from="1" to="0" begin="200" duration="200"/>
+			<animation property="opacity" from="1" to="1" begin="200" duration=""/>
+			<animation property="opacity" from="1" to="0" begin="400" duration="600" mode="Linear"/>
+			<animation property="offsetX" from="0" to="-0.02604167" begin="400" duration="600" mode="Linear"/>
 		</storyboard>
 	</image>
 	
@@ -556,11 +559,12 @@ originally based on: "carbon" and "Arcade Planet"
 		</storyboard>
 		
 		<storyboard ifSubset="wheelStyle:NoIcon" repeatAt="5000">
-			<animation property="opacity" from="0" to="1" begin="200" duration="200"/>
-			<animation property="offsetX" from="0" to="-0.03" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
-		    <animation property="offsetX" from="0" to="0.02" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
-			<animation property="offsetX" from="0" to="-0.01" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
-			<animation property="offsetX" from="0" to="0" begin="6250" duration="8750" mode="Linear"/>
+			<animation property="opacity" from="0" to="1" begin="400" duration="600"/>
+			<animation property="offsetX" from="0" to="-0.02604167" begin="400" duration="600" mode="Linear"/>
+			<animation property="offsetX" from="-0.02604167" to="-0.05604167" begin="5000" duration="250" mode="EaseOut" autoreverse="true"/>
+		    <animation property="offsetX" from="-0.02604167" to="0.00604167" begin="5500" duration="250" mode="EaseOut" autoreverse="true"/>							
+			<animation property="offsetX" from="-0.02604167" to="-0.03604167" begin="6000" duration="125" mode="EaseOut" autoreverse="true"/>
+			<animation property="offsetX" from="-0.02604167" to="-0.02604167" begin="6250" duration="8750" mode="Linear"/>
 		</storyboard>
 
 	</image>
@@ -719,57 +723,34 @@ originally based on: "carbon" and "Arcade Planet"
 		<zIndex>102</zIndex>
 		<linearSmooth>false</linearSmooth>
 		<opacity>0</opacity>
-		<flipX ifSubset="systemviewlayout:left,wheelStyle:NoSprite">true</flipX>
-		<pos>0.6845 0.471296295</pos>
-		<pos ifSubset="wheelStyle:NoSprite">0.088 0.79</pos>
-		<pos ifSubset="systemviewlayout:left">0.0605458 0.471296295</pos>
-		<pos ifSubset="systemviewlayout:left,wheelStyle:NoSprite">0.6385 0.471296295</pos>
-		<storyboard repeatAt="1200">
+		<pos ifSubset="systemviewlayout:right,wheelStyle:default|NoIcon">0.6845 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:left,wheelStyle:default|NoIcon">0.0605458 0.471296295</pos>
+		<pos ifSubset="systemviewlayout:right,wheelStyle:NoSprite">0.632 0.758</pos>
+		<pos ifSubset="systemviewlayout:left,wheelStyle:NoSprite">0.0605458 0.758</pos>
+		
+		<storyboard ifSubset="systemviewlayout:right,wheelStyle:default|NoIcon">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
-			<animation property="scale" from="1" to="2" begin="200" duration="1000" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="0" to="-0.595" begin="200" duration="800" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="-0.052" begin="200" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
-			<animation property="offsetY" from ="0" to="0.32" begin="1000" duration="200" mode="EaseOutCubic"/>
-			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
-			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
-			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>				
+			<animation property="offsetY" from ="0" to="0.287" begin="1000" duration="200" mode="EaseOutCubic"/>
 	  </storyboard>
-	  	<storyboard ifSubset="wheelStyle:NoSprite" repeatAt="2750">
-					<animation property="opacity" from="1" to="1" begin="500" duration="" mode="Linear"/>
-			<animation property="scale" from="2" to="2" begin="500" duration="" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="-0.3" to="-0.3" begin="" duration="1200" mode="Linear"/>
+	  
+	  	<storyboard ifSubset="systemviewlayout:right,wheelStyle:NoSprite">
+			<animation property="opacity" from="0" to="1" begin="1600" duration="100" mode="Linear"/>
 			<animation property="offsetX" from="-0.3" to="0" begin="1500" duration="200" mode="EaseOutCubic"/>
-			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
-			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
-			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
 	  
 		  
-	  <storyboard ifSubset="systemviewlayout:left" repeatAt="1200">
+	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:default|NoIcon">
 			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
-			<animation property="scale" from="1" to="2" begin="200" duration="1000" mode="EaseOutCubic"/>
-			<animation property="offsetX" from="0" to="0.805" begin="200" duration="800" mode="EaseOutCubic"/>
+			<animation property="offsetX" from="0" to="0.86" begin="200" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
-			<animation property="offsetY" from ="0" to="0.32" begin="1000" duration="200" mode="EaseOutCubic"/>
-			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
-			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
-			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>			
+			<animation property="offsetY" from ="0" to="0.287" begin="1000" duration="200" mode="EaseOutCubic"/>
 	  </storyboard>
 	  
-	  	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:NoSprite" repeatAt="2750">
+	  	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:NoSprite">
 					<animation property="opacity" from="1" to="1" begin="500" duration="" mode="Linear"/>
-			<animation property="scale" from="2" to="2" begin="500" duration="" mode="EaseOutCubic"/>
 			<animation property="offsetX" from="-0.3" to="-0.3" begin="" duration="1200" mode="Linear"/>
-			<animation property="scale" from="2" to="1.5" begin="6250" duration="125" mode="Linear"/>
-			<animation property="scale" from="1.5" to="2" begin="6850" duration="125" mode="Linear"/>
-			<animation property="scale" from="2" to="2" begin="6975" duration="3025" mode="Linear"/>			
-	  </storyboard>
-	  
-	  	<storyboard ifSubset="wheelStyle:NoIcon" repeatAt="1200">
-			<animation property="opacity" from="0" to="1" begin="200" duration="" mode="Linear"/>
-			<animation property="scale" from="1" to="1.5" begin="6250" duration="125" mode="Linear"/>
-			<animation property="scale" from="1.5" to="1" begin="6850" duration="125" mode="Linear"/>
-			<animation property="scale" from="1" to="1" begin="6975" duration="3025" mode="Linear"/>				
 	  </storyboard>
 	  
 	 </image>
@@ -819,7 +800,7 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
 	
 		<image name="randombox1">
-			<storyboard ifSubset="systemviewlayout:right" repeatAt="1">
+			<storyboard ifSubset="systemviewlayout:right,wheelStyle:default" repeatAt="1">
 				<animation property="offsetX" from="-0.568" to="-0.568" begin= "" duration="1500" mode="linear"/>
                 <animation property="offsetX" from="-0.568" to="0" begin="1500" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="-0.568" begin="4750" duration="250" mode="easeOut"/>
@@ -833,12 +814,20 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="offsetX" from="-0.568" to="-0.568" begin="5000" duration="5000" mode="linear"/>
             </storyboard>
 			
-			<storyboard ifSubset="systemviewlayout:left" repeatAt="1">
+			<storyboard ifSubset="systemviewlayout:left,wheelStyle:default" repeatAt="1">
+				<animation property="offsetX" from="0.568" to="0.568" begin= "" duration="1500" mode="linear"/>
+                <animation property="offsetX" from="0.568" to="0" begin="1500" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0" to="0.568" begin="4750" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0.568" to="0.568" begin="5000" duration="5000" mode="linear"/>
+            </storyboard>
+			
+			<storyboard ifSubset="systemviewlayout:left,wheelStyle:NoIcon|NoSprite" repeatAt="1">
 				<animation property="offsetX" from="0.568" to="0.568" begin= "" duration="800" mode="linear"/>
                 <animation property="offsetX" from="0.568" to="0" begin="800" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="0.568" begin="4750" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0.568" to="0.568" begin="5000" duration="5000" mode="linear"/>
             </storyboard>
+			
 		</image>
 		
 		<image name="randombox2">
@@ -868,7 +857,7 @@ originally based on: "carbon" and "Arcade Planet"
 
 	<image name="randombox1" ifSubset="systemviewstyle:randomboxartsX3">
 				<zIndex>10</zIndex>
-			<storyboard ifSubset="systemviewlayout:right" repeatAt="0">
+			<storyboard ifSubset="systemviewlayout:right,wheelStyle:default" repeatAt="0">
 				<animation property="offsetX" from="-0.568" to="-0.568" begin= "" duration="1500" mode="linear"/>
                 <animation property="offsetX" from="-0.568" to="0.2" begin="1500" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="-0.568" begin="8750" duration="250" mode="easeOut"/>
@@ -882,17 +871,25 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="rotation" from="" to="370" begin="800" duration="250" mode="EaseOut"/>
             </storyboard>
 			
-			<storyboard ifSubset="systemviewlayout:left" repeatAt="">
+			<storyboard ifSubset="systemviewlayout:left,wheelStyle:default" repeatAt="">
 				<animation property="offsetX" from="0.568" to="0.568" begin= "" duration="1500" mode="linear"/>
                 <animation property="offsetX" from="0.568" to="-0.2" begin="1500" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="0.568" begin="8750" duration="250" mode="easeOut"/>
 				<animation property="rotation" from="" to="350" begin="1500" duration="250" mode="linear"/>
             </storyboard>
+			
+			<storyboard ifSubset="systemviewlayout:left,wheelStyle:NoIcon|NoSprite" repeatAt="">
+				<animation property="offsetX" from="0.568" to="0.568" begin= "" duration="800" mode="linear"/>
+                <animation property="offsetX" from="0.568" to="-0.2" begin="800" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0" to="0.568" begin="8750" duration="250" mode="easeOut"/>
+				<animation property="rotation" from="" to="350" begin="1500" duration="250" mode="linear"/>
+            </storyboard>
+			
 		</image>
 		
 		<image name="randombox2" ifSubset="systemviewstyle:randomboxartsX3">
 					<zIndex>11</zIndex>
-			<storyboard ifSubset="systemviewlayout:right" repeatAt="0">
+			<storyboard ifSubset="systemviewlayout:right,wheelStyle:default" repeatAt="0">
 				<animation property="offsetX" from="-0.568" to="-0.568" begin= "" duration="1750" mode="linear"/>
                 <animation property="offsetX" from="-0.568" to="0" begin="1750" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="-0.568" begin="8750" duration="250" mode="easeOut"/>
@@ -912,11 +909,18 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="offsetX" from="0" to="0.568" begin="8750" duration="250" mode="easeOut"/>
 				<animation property="rotation" from="" to="360" begin="1750" duration="250" mode="linear"/>
             </storyboard>
+			
+			<storyboard ifSubset="systemviewlayout:NoIcon|NoSprite" repeatAt="">
+				<animation property="offsetX" from="0.568" to="0.568" begin= "" duration="1050" mode="linear"/>
+                <animation property="offsetX" from="0.568" to="0" begin="1050" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0" to="0.568" begin="8750" duration="250" mode="easeOut"/>
+				<animation property="rotation" from="" to="360" begin="1050" duration="250" mode="linear"/>
+            </storyboard>
 		</image>
 		
 		<image name="randombox3">
 					<zIndex>12</zIndex>
-			<storyboard ifSubset="systemviewlayout:right" repeatAt="0">
+			<storyboard ifSubset="systemviewlayout:right,wheelStyle:default" repeatAt="0">
 				<animation property="offsetX" from="-0.568" to="-0.568" begin= "" duration="2000" mode="linear"/>
                 <animation property="offsetX" from="-0.568" to="-0.2" begin="2000" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="-0.568" begin="8750" duration="250" mode="easeOut"/>
@@ -931,11 +935,18 @@ originally based on: "carbon" and "Arcade Planet"
             </storyboard>
 			
 			
-			<storyboard ifSubset="systemviewlayout:left" repeatAt="">
+			<storyboard ifSubset="systemviewlayout:left,wheelStyle:default" repeatAt="">
 				<animation property="offsetX" from="0.568" to="0.568" begin= "" duration="2000" mode="linear"/>
                 <animation property="offsetX" from="0.568" to="0.2" begin="2000" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="0.568" begin="8750" duration="250" mode="easeOut"/>
 				<animation property="rotation" from="" to="370" begin="2000" duration="250" mode="linear"/>
+            </storyboard>
+			
+						<storyboard ifSubset="systemviewlayout:left,wheelStyle:NoIcon|NoSprite" repeatAt="">
+				<animation property="offsetX" from="0.568" to="0.568" begin= "" duration="1300" mode="linear"/>
+                <animation property="offsetX" from="0.568" to="0.2" begin="1300" duration="250" mode="easeOut"/>
+				<animation property="offsetX" from="0" to="0.568" begin="8750" duration="250" mode="easeOut"/>
+				<animation property="rotation" from="" to="370" begin="1300" duration="250" mode="linear"/>
             </storyboard>
 		</image>
 		
@@ -1017,22 +1028,22 @@ Favoritos : {binding:favorites}</text>
 	  </storyboard>
 	  <storyboard ifSubset="wheelStyle:NoSprite|NoIcon">
 		  <animation property="scale" from="0" to="1" begin="0" duration="400" mode="EaseOutCubic"/>
-		  <animation property="scale" from="1" to="0.333333" begin="800" duration="300" mode="EaseOutCubic"/>
-		  <animation property="offsetX" from="0" to="0.27" begin="800" duration="300" mode="EaseOutCubic"/>
-		  <animation property="offsetY" from="0" to="0.54" begin="800" duration="300" mode="EaseOutCubic"/>
+		  <animation property="scale" from="1" to="0.333333" begin="900" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.27" begin="900" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.54" begin="900" duration="300" mode="EaseOutCubic"/>
 	  </storyboard>
 	  	<storyboard ifSubset="systemviewlayout:left">
 		  <animation property="scale" from="0" to="0" begin="" duration="800" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="1000" duration="200" mode="Linear"/>
 		  <animation property="scale" from="1" to="0.333333" begin="1500" duration="200" mode="EaseOutCubic"/>
-		  <animation property="offsetX" from="0" to="0.034" begin="1500" duration="200" mode="EaseOutCubic"/>
-		  <animation property="offsetY" from="0" to="0.55" begin="1500" duration="200" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.3" begin="1500" duration="200" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.54" begin="1500" duration="200" mode="EaseOutCubic"/>
 	  </storyboard>
 	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:NoSprite|NoIcon">
 		  <animation property="scale" from="0" to="1" begin="" duration="400" mode="EaseOutCubic"/>
-		  <animation property="scale" from="1" to="0.333333" begin="800" duration="300" mode="EaseOutCubic"/>
-		  <animation property="offsetX" from="0" to="0.3" begin="800" duration="300" mode="EaseOutCubic"/>
-		  <animation property="offsetY" from="0" to="0.54" begin="800" duration="300" mode="EaseOutCubic"/>
+		  <animation property="scale" from="1" to="0.333333" begin="900" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetX" from="0" to="0.3" begin="900" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.54" begin="900" duration="300" mode="EaseOutCubic"/>
 	  </storyboard>
 	</image>
 	
@@ -1066,7 +1077,7 @@ Favoritos : {binding:favorites}</text>
 	  </storyboard>
 	</image>
 	
-	<image name="controller" ifSubset="wheelStyle:NoIcon" extra ="static">
+	<image name="controller" extra ="static">
 		<path>./_art/controllers/default.png</path>
 		<path>./_art/controllers/${system.hardwareType}.png</path>
 		<path>./_art/controllers/${system.hardwareType}.svg</path>
@@ -1078,20 +1089,18 @@ Favoritos : {binding:favorites}</text>
 		<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.svg</path>
 		<linearSmooth>false</linearSmooth>
 		<origin>0.5 0.5</origin>
-		<pos>0.088 0.792</pos>
+		<pos>0.088 0.794</pos>
         <pos ifSubset="systemviewlayout:left">0.377 0.794</pos>		
 		<maxSize>0.133 0.215</maxSize>
 		<color>FFFFFF</color>
 		<zIndex>100</zIndex>
-	  	<storyboard ifSubset="systemviewlayout:right">
-			<animation property="offsetX" from="-0.3" to="-0.3" begin="" duration="800" mode="Linear"/>
-			<animation property="offsetX" from="-0.3" to="0" begin="800" duration="250" mode="EaseOutCubic"/>
+		
+  	  <storyboard>
+			<animation property="opacity" from="0" to="0" begin="" duration="950" mode="Linear"/>
+			<animation property="opacity" from="0" to="1" begin="950" duration="125" mode="Linear"/>
+			<animation property="offsetX" from="-0.05" to="0" begin="950" duration="250" mode="EaseOutCubic"/>
 	  </storyboard>
-	  	  	<storyboard ifSubset="systemviewlayout:left">
-			<animation property="opacity" from="0" to="0" begin="" duration="800" mode="Linear"/>
-			<animation property="opacity" from="0" to="1" begin="800" duration="125" mode="Linear"/>
-			<animation property="offsetX" from="-0.05" to="0" begin="800" duration="250" mode="EaseOutCubic"/>
-	  </storyboard>
+	  
 	</image>
 
 	<image name="arrowup" extra="static">
