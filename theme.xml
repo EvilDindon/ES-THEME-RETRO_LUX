@@ -765,7 +765,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<origin>1 1</origin>
 			<origin ifSubset="systemviewlayout:left">0 1</origin>
 			<pos>0.75 1</pos>
- 	        <pos ifSubset="systemviewlayout:left">0.15 1</pos>
+ 	        <pos ifSubset="systemviewlayout:left">0.2 1</pos>
 			<saturation>0.66</saturation>
      		<color>D8D8D8</color>
 	</image>
