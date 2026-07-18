@@ -1091,8 +1091,8 @@ Favoritos : {binding:favorites}</text>
 		
   	  <storyboard>
 			<animation property="opacity" from="0" to="0" begin="" duration="950" mode="Linear"/>
-			<animation property="opacity" from="0" to="1" begin="1075" duration="125" mode="Linear"/>
-			<animation property="offsetX" from="-0.05" to="0" begin="950" duration="250" mode="EaseOutCubic"/>
+			<animation property="opacity" from="0" to="1" begin="975" duration="125" mode="Linear"/>
+			<animation property="offsetX" from="-0.05" to="0" begin="850" duration="250" mode="EaseOutCubic"/>
 	  </storyboard>
 	  
 	</image>
