@@ -448,7 +448,7 @@ originally based on: "carbon" and "Arcade Planet"
     </image>
 	
 	<image name="logo">
-		 <color>99A0A0ff</color>
+		 <color>aaaaaa</color>
 		 <saturation>0.75</saturation>
 		 <linearSmooth>true</linearSmooth>
 	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
@@ -463,7 +463,7 @@ originally based on: "carbon" and "Arcade Planet"
 		 <path ifSubset="wheelStyle:NoSprite,neogeostyle:mvs">./_art/wheelNoSprite/SPECIAL/${system.theme}.png</path>
 		 <path ifSubset="wheelStyle:NoIcon,neogeostyle:mvs">./_art/wheelNoIcon/SPECIAL/${system.theme}.png</path>
 		 <storyboard event="activate">
-			<animation property="color" from="C0C0C0ff" to="00000000" begin="200" duration="" mode="Linear"/>			
+			<animation property="color" from="00000000" to="00000000" begin="200" duration="" mode="Linear"/>			
 	  </storyboard>
 	</image>
 	 			   
@@ -1043,6 +1043,8 @@ Favoritos : {binding:favorites}</text>
 		<path>./_art/colorLogos/${system.theme}.svg</path>
 		<path>./_art/consoles/${system.hardwareType}.png</path>
 		<path>./_art/consoles/${system.hardwareType}.svg</path>
+		<path>./_art/consoles/${system.group}.png</path>
+		<path>./_art/consoles/${system.group}.svg</path>
 		<path>./_art/consoles/${system.theme}.png</path>
 		<path>./_art/consoles/${system.theme}.svg</path>
 		<path ifSubset="artworkregion:US">./_art/consoles/US/${system.theme}.png</path>
@@ -1068,15 +1070,19 @@ Favoritos : {binding:favorites}</text>
 	
 	<image name="controller" ifSubset="wheelStyle:NoIcon" extra ="static">
 		<path>./_art/controllers/default.png</path>
+		<path>./_art/controllers/${system.hardwareType}.png</path>
+		<path>./_art/controllers/${system.hardwareType}.svg</path>
+		<path>./_art/controllers/${system.group}.png</path>
+		<path>./_art/controllers/${system.group}.svg</path>
 		<path>./_art/controllers/${system.theme}.png</path>
 		<path>./_art/controllers/${system.theme}.svg</path>
 		<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.png</path>
 		<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.svg</path>
 		<linearSmooth>true</linearSmooth>
 		<origin>0.5 0.5</origin>
-		<pos>0.089 0.794</pos>
+		<pos>0.088 0.792</pos>
         <pos ifSubset="systemviewlayout:left">0.419 0.794</pos>		
-		<maxSize>0.13 0.265</maxSize>
+		<maxSize>0.133 0.215</maxSize>
 		<color>FFFFFF</color>
 		<zIndex>100</zIndex>
 	  	<storyboard ifSubset="systemviewlayout:right">
