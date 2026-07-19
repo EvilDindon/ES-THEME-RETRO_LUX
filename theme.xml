@@ -949,7 +949,7 @@ originally based on: "carbon" and "Arcade Planet"
 	  <visible>false</visible>
 	 </text>
 	
-	<text name="systemdetails,systemdetails2" extra="static">
+	<text name="systemdetails,systemdetails2,systemdetails3" extra="static">
         <fontPath>./_art/fonts/Bank Gothic Medium.otf</fontPath>
         <fontSize>0.024</fontSize>
         <zIndex>100</zIndex>
@@ -972,23 +972,47 @@ originally based on: "carbon" and "Arcade Planet"
 	  
 	  <text name="systemdetails2">
        <text>
-${system.hardwareType} ${system.releaseYearOrNull}
+${system.manufacturer} ${system.releaseYearOrNull}
+${system.hardwareType}
 Games : {binding:total}
 Favorites : {binding:favorites}
-Most Played : {binding:mostPlayed}</text>
+Total Playtime : {binding:gameTime}</text>
 		<text lang="fr">
 ${system.hardwareType} ${system.releaseYearOrNull}
+${system.hardwareType}
 Nombre de Jeux : {binding:total}
-Favoris : {binding:favorites}</text>
+Favoris : {binding:favorites}
+Temps de Jeu Total : {binding:gameTime}</text>
 		<text lang="es">
 ${system.hardwareType} ${system.releaseYearOrNull}
+${system.hardwareType}
 Numero de juegos : {binding:total}
-Favoritos : {binding:favorites}</text>
+Favoritos : {binding:favorites}
+Tiempo de Juego Total : {binding:gameTime}</text>
         <fontSize>0.023</fontSize>
         <pos ifSubset="systemviewlayout:left">0.647 0.756</pos>
 		<pos ifSubset="systemviewlayout:right">0.35833 0.756</pos>
         <size>0.33 0.1</size>
 				<origin>0 0.5</origin>
+		<storyboard>
+		  <animation property="opacity" from="0" to="0" begin="" duration="1500" mode="Linear"/>
+		  <animation property="opacity" from="0" to="1" begin="1500" duration="200" mode="Linear"/>
+		 </storyboard>
+      </text>
+	  
+	  	  <text name="systemdetails3">
+       <text>
+Most Played : {binding:mostPlayed}</text>
+		<text lang="fr">
+Le Plus Joué : {binding:mostPlayed}</text>
+		<text lang="es">
+El Mas Jugado : {binding:mostPlayed}</text>
+        <fontSize>0.013</fontSize>
+        <pos ifSubset="systemviewlayout:left">0.647 0.874</pos>
+		<pos ifSubset="systemviewlayout:right">0.35833 0.874</pos>
+		<lineSpacing>0.8</lineSpacing>
+        <size>0.21 0.038</size>
+				<origin>0 0</origin>
 		<storyboard>
 		  <animation property="opacity" from="0" to="0" begin="" duration="1500" mode="Linear"/>
 		  <animation property="opacity" from="0" to="1" begin="1500" duration="200" mode="Linear"/>
@@ -1059,6 +1083,7 @@ Favoritos : {binding:favorites}</text>
 		<pos>0.2562 0.79</pos>
         <pos ifSubset="systemviewlayout:left">0.546 0.79</pos>		
 		<maxSize>0.19 0.23</maxSize>
+	    <maxSize if="{system.theme} == 'scv' || {system.theme} == 'atari5200' || {system.theme} == 'atari7800' || {system.theme} == 'amiga500' || {system.theme} == 'atarilynx' || {system.theme} == 'astrocade' || {system.theme} == 'amigacd32' || {system.theme} == 'lowresnx' || {system.theme} == 'oric' || {system.theme} == 'megadrive' || {system.theme} == 'megadrive-msu' || {system.theme} == 'zxspectrum' || {system.theme} == 'lcdgames'|| {system.theme} == 'neogeo'">0.1501 0.1817</maxSize>							
 		<color>FFFFFF</color>
 		<zIndex>100</zIndex>
 		<storyboard>
