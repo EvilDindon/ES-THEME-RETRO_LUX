@@ -848,7 +848,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<origin>0.5 0.5</origin>
 			<pos>0.358 0.33</pos>
 			<pos ifSubset="systemviewlayout:left">0.64375 0.33</pos>
-			
+       <scale if="{system.theme} == 'gb' || {system.theme} == 'gb2players' || {system.theme} == 'gbc' || {system.theme} == 'gbc2players' || {system.theme} == 'gba' || {system.theme} == 'gba2players' || {system.theme} == '3ds' || {system.theme} == 'amigacd32' || {system.theme} == 'amigacdtv' || {system.theme} == 'cdi' || {system.theme} == 'dreamcast' || {system.theme} == 'fds' || {system.theme} == 'nds' || {system.theme} == 'neogeocd' || {system.theme} == 'gb2players' || {system.theme} == 'ngp' || {system.theme} == 'ngpc' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'pokemini' || {system.theme} == 'psx' || {system.theme} == 'sgb' || {system.theme} == 'virtualboy' || {system.theme} == 'gx4000' || {system.theme} == 'supergrafx'">0.79</scale>			
 	</image>
 
 	<image name="randombox1" ifSubset="systemviewstyle:randomboxartsX3">
