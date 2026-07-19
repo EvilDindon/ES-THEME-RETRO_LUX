@@ -1975,10 +1975,10 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	<text name="gamecarouselLogoText">
       <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
 	  <forceUppercase>1</forceUppercase>
-	  <color>AA1122</color>
-	  <fontSize>0.058</fontSize>
+	  <color>1199AA</color>
+	  <fontSize>0.05</fontSize>
       <glowColor>000000FF</glowColor>
-      <glowSize>2</glowSize>
+      <glowSize>1.5</glowSize>
       <lineSpacing>1.0</lineSpacing>
     </text>
 	
