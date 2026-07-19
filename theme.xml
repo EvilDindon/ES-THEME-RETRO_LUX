@@ -1582,8 +1582,8 @@ El Mas Jugado : {binding:mostPlayed}</text>
 
 	<image name="md_thumbnail">
       <visible ifSubset="detailedartworklayout:Fanart">false</visible>
-	  <pos ifSubset="detailedartworklayout:thumbnailtop">0.6845166 0.29</pos>
-	  <pos ifSubset="detailedartworklayout:imagetop">0.476 0.7555</pos>
+	  <pos ifSubset="gamelistposition:left,detailedartworklayout:thumbnailtop">0.6845166 0.29</pos>
+	  <pos ifSubset="gamelistposition:left,detailedartworklayout:imagetop">0.476 0.7555</pos>
 	  <pos ifSubset="gamelistposition:right,detailedartworklayout:thumbnailtop">0.3154834 0.29</pos>
 	  <pos ifSubset="gamelistposition:right,detailedartworklayout:imagetop">0.1069668 0.7555</pos>
 	  <origin>0.5 0.5</origin>
@@ -1612,7 +1612,7 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<linearSmooth>true</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<size>0.008 0</size>
-		<pos>0.93 0.845</pos>
+		<pos ifSubset="gamelistposition:left">0.93 0.845</pos>
 		<pos ifSubset="gamelistposition:right">0.562 0.845</pos>
 		<color>909090</color>
 		<zIndex>22</zIndex>
@@ -1622,11 +1622,20 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	<alignment>left</alignment>
 	<origin>0 0.5</origin>
 	<color>AAAAAA</color>
-	<pos>0.9365 0.845</pos>
+	<pos ifSubset="gamelistposition:left">0.9365 0.845</pos>
 	<pos ifSubset="gamelistposition:right">0.568 0.845</pos>
 	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
 	<fontSize>0.026</fontSize>
 	<zIndex>22</zIndex>
+	</text>
+	
+	<text name="md_developer">
+	  <origin>0.5 0.5</origin>
+	  <alignment>center</alignment>	  
+	  <size>0.0982 0.048</size>
+	  <pos ifSubset="gamelistposition:left">0.936 0.679</pos>
+	  <pos ifSubset="gamelistposition:right">0.5669668 0.679</pos>
+	  <lineSpacing>1</lineSpacing>
 	</text>
 	
 	<text name="playcount" extra = "true">
@@ -1637,47 +1646,38 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	<origin>0.5 0.5</origin>
 	<size>0.1015625 0.03</size>
 	<color>a0a0a0</color>
-	<pos>0.9365 0.88</pos>
+	<pos ifSubset="gamelistposition:left">0.9365 0.88</pos>
 	<pos ifSubset="gamelistposition:right">0.5669668 0.88</pos>
 	<fontPath>./_art/fonts/SairaCondensed-Medium.ttf</fontPath>
 	<fontSize>0.022</fontSize>
 	<zIndex>22</zIndex>
 	</text>
 	
-	<text name="md_developer">
-	  <origin>0.5 0.5</origin>
-	  <alignment>center</alignment>	  
-	  <size>0.0982 0.048</size>
-	  <pos>0.936 0.679</pos>
-	  <pos ifSubset="gamelistposition:right">0.5669668 0.679</pos>
-	  <lineSpacing>1</lineSpacing>
-	</text>
-	
 	<text name="md_name">
 	  <origin>0.5 0.5</origin>
 	  <size>0.41 0.048</size>
-	  <pos>0.779 0.611</pos>
+	  <pos ifSubset="gamelistposition:left">0.779 0.611</pos>
 	  <pos ifSubset="gamelistposition:right">0.41 0.611</pos>
 	</text>
 	
-	<datetime name="md_releasedate">
-	  <alignment>center</alignment>
-	  <pos>0.936 0.751</pos>
-	  <pos ifSubset="gamelistposition:right">0.57 0.751</pos>
-	  <origin>0.5 0.5</origin>
-	  <size>0.065 0.037</size>
-	</datetime>
-	
 	<text name="md_description">
       <origin>0.5 0</origin>
-	  <pos>0.7289 0.637</pos>
+	  <pos ifSubset="gamelistposition:left">0.7289 0.637</pos>
 	  <pos ifSubset="gamelistposition:right">0.36 0.637</pos>
 	  <size>0.312 0.285</size>
 	  <alignment>center</alignment>
     </text>
 	
+	<datetime name="md_releasedate">
+	  <alignment>center</alignment>
+	  <pos ifSubset="gamelistposition:left">0.936 0.751</pos>
+	  <pos ifSubset="gamelistposition:right">0.57 0.751</pos>
+	  <origin>0.5 0.5</origin>
+	  <size>0.065 0.037</size>
+	</datetime>
+	
 	<rating name="md_rating">
-      <pos>0.94 0.91</pos>
+      <pos ifSubset="gamelistposition:left">0.94 0.91</pos>
 	  <pos ifSubset="gamelistposition:right">0.568 0.91</pos>
       <size>0.06 0</size>
 	  <origin>0.5 0.5</origin>
@@ -1879,30 +1879,57 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<pos>0.092 0.416</pos>
 		<pos ifSubset="gamelistposition:right">0.712 0.416</pos>
 	</image>
-	
-	<image name="md_flag,players">
-		<offsetX>-0.0313916</offsetX>
-		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
+
+	<image name="md_flag">
+		<pos ifSubset="gamelistposition:left">0.9046084 0.798</pos>
+		<pos ifSubset="gamelistposition:right">0.5983584 0.798</pos>
 	</image>
 	
-		<image name="md_thumbnail">
-		<offsetX ifSubset="detailedartworklayout:thumbnailtop">-0.0613916</offsetX>
-		<offsetX ifSubset="gamelistposition:right,detailedartworklayout:imagetop">0.0313916</offsetX>
+	<image name="players">
+     	<pos ifSubset="gamelistposition:left">0.8986084 0.845</pos>
+	    <pos ifSubset="gamelistposition:right">0.5933916 0.845</pos>
+	</image>
+	
+	<image name="md_thumbnail">
+	  <pos ifSubset="gamelistposition:left,detailedartworklayout:thumbnailtop">0.623125 0.29</pos>
+	  <pos ifSubset="gamelistposition:left,detailedartworklayout:imagetop">0.4446084 0.7555</pos>
+	  <pos ifSubset="gamelistposition:right,detailedartworklayout:thumbnailtop">0.3154834 0.29</pos>
+	  <pos ifSubset="gamelistposition:right,detailedartworklayout:imagetop">0.1383584 0.7555</pos>
 	</image>
    
-	<text name="md_players,playcount,md_developer,md_name,md_description">
-		<offsetX>-0.0313916</offsetX>
-		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
+	<text name="md_players">
+		<pos ifSubset="gamelistposition:left">0.9051084 0.845</pos>
+		<pos ifSubset="gamelistposition:right">0.5993916 0.845</pos>
+	</text>
+	
+	<text name="md_developer">
+		<pos ifSubset="gamelistposition:left">0.9046084 0.679</pos>
+		<pos ifSubset="gamelistposition:right">0.5983584 0.679</pos>
+	</text>
+	
+	<text name="playcount">
+		<pos ifSubset="gamelistposition:left">0.9051084 0.88</pos>
+		<pos ifSubset="gamelistposition:right">0.5983584 0.88</pos>
+	</text>
+	
+	<text name="md_name">
+		<pos ifSubset="gamelistposition:left">0.7476084 0.611</pos>
+		<pos ifSubset="gamelistposition:right">0.4413916 0.611</pos>
+	</text>
+	
+	<text name="md_description">
+		<pos ifSubset="gamelistposition:left">0.6975084 0.637</pos>
+	    <pos ifSubset="gamelistposition:right">0.3913916 0.637</pos>
 	</text>
 	
 	<datetime name="md_releasedate">
-	  <pos>0.9046084 0.751</pos>
+	  <pos ifSubset="gamelistposition:left">0.9046084 0.751</pos>
 	  <pos ifSubset="gamelistposition:right">0.6013916 0.751</pos>
 	</datetime>
 	
 	<rating name="md_rating">
-		<offsetX>-0.0313916</offsetX>
-		<offsetX ifSubset="gamelistposition:right">0.0313916</offsetX>
+      <pos ifSubset="gamelistposition:left">0.9086084 0.91</pos>
+	  <pos ifSubset="gamelistposition:right">0.5993916 0.91</pos>
     </rating>
 	
 	<image name="arrowup">
@@ -1995,23 +2022,7 @@ El Mas Jugado : {binding:mostPlayed}</text>
       <glowSize>1.5</glowSize>
       <lineSpacing>1.0</lineSpacing>
     </text>
-	
-	<image name="md_flag,players">
-		<offsetX>0</offsetX>
-	</image>
-	
-	<text name="md_players,md_developer,md_name,md_releasedate,md_name,md_description">
-		<offsetX>0</offsetX>
-	</text>
-	
-	<datetime name="md_releasedate">
-		<offsetX>0</offsetX>
-	</datetime>
-	
-	<rating name="md_rating">
-		<offsetX>0</offsetX>
-    </rating>
-	
+		
 	<video name="md_video">
 	  <visible>true</visible>
 	  <pos>0.897 0.783</pos>
@@ -2069,8 +2080,6 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	<fontSize>0.026</fontSize>
 	<zIndex>22</zIndex>
 	</text>
-	
-
 	
 	<text name="playcount" extra = "true">
 		<visible> false</visible>
@@ -2251,12 +2260,10 @@ El Mas Jugado : {binding:mostPlayed}</text>
     </gamecarousel>    
 	
 	<image name="md_flag">
-		<offsetX>0</offsetX>
 		<pos>0.225 0.303</pos>
 	</image>
 	
 	<datetime name="md_releasedate">
-		<offsetX>0</offsetX>
 		<size>0.22 0.048</size>
 		<alignment>left</alignment>
 		<origin>0 0.5</origin>
@@ -2273,7 +2280,6 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	</image>
 	
 	<image name="players">
-		<offsetX>0</offsetX>
 		<pos>0.235 0.37</pos>
 	</image>
 	
