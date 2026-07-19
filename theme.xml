@@ -897,7 +897,7 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="rotation" from="" to="360" begin="1050" duration="250" mode="EaseOut"/>
             </storyboard>
 			
-			<storyboard ifSubset="systemviewlayout:left" repeatAt="">
+			<storyboard ifSubset="systemviewlayout:left" repeatAt="1">
 				<animation property="offsetX" from="0.568" to="0.568" begin= "1" duration="1750" mode="linear"/>
                 <animation property="offsetX" from="0.568" to="0" begin="1750" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="0.568" begin="8750" duration="250" mode="easeOut"/>
