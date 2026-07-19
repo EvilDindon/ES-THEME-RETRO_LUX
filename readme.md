@@ -24,28 +24,19 @@ I recommand SCRAPING all your games using SCREENSCRAPER with the following param
 These 4 parameters are mandatory. If you put other thing (mix images, etc.) the theme will not look as good as intended.
 You can also download Video previews, many views are compatible with it.
 
-<img width="1920" height="1080" alt="system WIP 6" src="https://github.com/user-attachments/assets/3402b2cc-98de-4a1d-8ff6-25e115e9e6e9" />
+<img width="1920" height="1080" alt="gamecube left 3box" src="https://github.com/user-attachments/assets/f523c652-6bd2-4dda-a2e1-cd0d194c12be" />
 
-<img width="1920" height="1080" alt="2600 3BOX PURPLE" src="https://github.com/user-attachments/assets/47433395-d419-4560-b11e-1c97f241e340" />
+<img width="1920" height="1080" alt="pce cd left fanart" src="https://github.com/user-attachments/assets/eb2e509e-969f-4c37-ae8e-a620e2595332" />
 
-<img width="1920" height="1080" alt="GHOULS NO SPRIE FANART" src="https://github.com/user-attachments/assets/69bab437-e487-43c0-8b78-1bb0793801bf" />
+<img width="1920" height="1080" alt="segacd detailedleft fanart" src="https://github.com/user-attachments/assets/f699da48-97e6-4412-928f-ba31d4cf7f28" />
 
-<img width="1920" height="1080" alt="dk detailed" src="https://github.com/user-attachments/assets/6cae6431-cb23-4ffc-a091-eee260bc5d65" />
+<img width="1920" height="1080" alt="snes gamecarousel fanart left" src="https://github.com/user-attachments/assets/515feb11-2e3c-425b-baaf-012a11369bdb" />
 
-<img width="1920" height="1080" alt="gamecarousel neogeo" src="https://github.com/user-attachments/assets/5403d31a-c8c0-41ae-9a12-e2003851798f" />
+<img width="1920" height="1080" alt="gs rightdetailed boxart" src="https://github.com/user-attachments/assets/ab88fb91-66c2-4c38-9bdd-d21be60b49d4" />
 
-<img width="1920" height="1080" alt="jaguar boxcarousel purple" src="https://github.com/user-attachments/assets/d17e83ae-84f4-4089-ae8f-ba4a9172322b" />
+<img width="1920" height="1080" alt="FAVORITES RETROTILES" src="https://github.com/user-attachments/assets/be5a8732-66cb-48f4-878c-a6ef7bb31391" />
 
-<img width="1920" height="1080" alt="gba logogrid+details" src="https://github.com/user-attachments/assets/592bb6ff-20c4-408b-95dd-b764e522cde2" />
- 
-<img width="1920" height="1080" alt="5200 carousel 
- purple" src="https://github.com/user-attachments/assets/b763e400-5441-4182-8df4-a281bcb772ee" />
+<img width="1920" height="1080" alt="box carousel lynx" src="https://github.com/user-attachments/assets/d582d159-89d4-4fa3-8104-dd71e6660122" />
 
- <img width="1920" height="1080" alt="FANART TG16CD" src="https://github.com/user-attachments/assets/d98344b1-79d8-4621-b968-d8ed41f2351a" />
-
- <img width="1920" height="1080" alt="FAVORITES RETROTILES" src="https://github.com/user-attachments/assets/c345e8dd-8a29-4daa-9175-b511d6b71caf" />
-
-
-
-
+<img width="1920" height="1080" alt="gba logogrid+details" src="https://github.com/user-attachments/assets/74bfcada-a094-4dc4-9a7f-d44384b29414" />
 
