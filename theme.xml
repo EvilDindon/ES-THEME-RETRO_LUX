@@ -410,6 +410,19 @@ originally based on: "carbon" and "Arcade Planet"
 	  <linearSmooth>false</linearSmooth>
     </image>
 	
+	  <image name="backgoundfade" extra="true">
+      <pos>0 0</pos>
+	  <pos ifSubset="systemviewlayout:left">0.1 0</pos>
+      <size>0.9 1</size>
+      <origin>0 0</origin>
+	  <path>./_art/assets/graphitefade.png</path>
+      <zIndex>4</zIndex>
+		<color ifSubset="bgcolor:purple">FFAAFF</color>
+		<color ifSubset="bgcolor:darkblue">B0D8FF</color>
+		<color ifSubset="bgcolor:darkgrey">FFFFFF</color>
+	  <linearSmooth>false</linearSmooth>
+    </image>
+	
 	<image name="wheelbg" extra="true">
 		  <path>./_art/assets/wheelbg.png</path>
 		  <origin>0.5 0.5</origin>
@@ -756,12 +769,12 @@ originally based on: "carbon" and "Arcade Planet"
 			<path>{random:thumbnail}</path>
 			<path>{random:fanart}</path>
 			<linearSmooth>true</linearSmooth>
-			<size>1 0</size>
+			<size>0 0.819444</size>
 			<opacity>1</opacity>
 			<origin>1 1</origin>
 			<origin ifSubset="systemviewlayout:left">0 1</origin>
-			<pos>0.75 1</pos>
- 	        <pos ifSubset="systemviewlayout:left">0.2 1</pos>
+			<pos>0.75 0.8194444</pos>
+ 	        <pos ifSubset="systemviewlayout:left">0.2 0.8194444</pos>
 			<saturation>0.66</saturation>
      		<color>D8D8D8</color>
 	</image>
