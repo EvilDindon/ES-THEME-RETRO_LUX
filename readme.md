@@ -24,7 +24,7 @@ I recommand SCRAPING all your games using SCREENSCRAPER with the following param
 These 4 parameters are mandatory. If you put other thing (mix images, etc.) the theme will not look as good as intended.
 You can also download Video previews, many views are compatible with it.
 
-<img width="1920" height="1080" alt="gamecube left 3box" src="https://github.com/user-attachments/assets/f523c652-6bd2-4dda-a2e1-cd0d194c12be" />
+<img width="1920" height="1080" alt="gc right fanart" src="https://github.com/user-attachments/assets/621cee13-fc72-43b1-9896-dc4bd1d16d44" />
 
 <img width="1920" height="1080" alt="pce cd left fanart" src="https://github.com/user-attachments/assets/eb2e509e-969f-4c37-ae8e-a620e2595332" />
 
