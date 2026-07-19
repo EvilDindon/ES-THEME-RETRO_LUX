@@ -1081,6 +1081,8 @@ Favoritos : {binding:favorites}</text>
 		<path>./_art/controllers/${system.theme}.svg</path>
 		<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.png</path>
 		<path ifSubset="artworkregion:US">./_art/controllers/US/${system.theme}.svg</path>
+		<path ifSubset="neogeostyle:mvs">./_art/controllers/SPECIAL/${system.theme}.png</path>
+		<path ifSubset="neogeostyle:mvs">./_art/controllers/SPECIAL/${system.theme}.svg</path>
 		<linearSmooth>false</linearSmooth>
 		<origin>0.5 0.5</origin>
 		<pos>0.088 0.794</pos>
