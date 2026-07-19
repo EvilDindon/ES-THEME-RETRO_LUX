@@ -1819,11 +1819,11 @@ El Mas Jugado : {binding:mostPlayed}</text>
       <pos>0.19 0.47</pos>
 	  <pos ifSubset="gamelistposition:right">0.81 0.47</pos>	  
       <size>0.5 0.945</size>
-      <logoScale>1</logoScale>
-      <logoSize>0.41666666 0.142</logoSize>
+      <logoScale>1.15</logoScale>
+      <logoSize>0.36231883478 0.142</logoSize>
       <maxLogoCount>7</maxLogoCount>
       <imageSource>marquee</imageSource>
-      <minLogoOpacity>0.5</minLogoOpacity>
+      <minLogoOpacity>0.67</minLogoOpacity>
 	  <scaledLogoSpacing>0.05</scaledLogoSpacing>
 	  <zIndex>24</zIndex>
 	  <scrollSound>./_art/sounds/scroll.wav</scrollSound>
@@ -1832,10 +1832,10 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	<text name="gamecarouselLogoText">
       <fontPath>./_art/fonts/SairaCondensed-SemiBold.ttf</fontPath>
 	  <forceUppercase>1</forceUppercase>
-	  <color>AA1122</color>
-	  <fontSize>0.04</fontSize>
+	  <color>1199AA</color>
+	  <fontSize>0.03</fontSize>
       <glowColor>000000FF</glowColor>
-      <glowSize>2</glowSize>
+      <glowSize>1</glowSize>
       <lineSpacing>1.0</lineSpacing>
     </text>
 	
