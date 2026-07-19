@@ -1087,7 +1087,7 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<maxSize>0.19 0.23</maxSize>
 	    <maxSize if="{system.theme} == 'scv' || {system.theme} == 'atari5200' || {system.theme} == 'atari7800' || {system.theme} == 'amiga500' || {system.theme} == 'atarilynx' || {system.theme} == 'astrocade' || {system.theme} == 'amigacd32' || {system.theme} == 'lowresnx' || {system.theme} == 'oric' || {system.theme} == 'megadrive' || {system.theme} == 'megadrive-msu' || {system.theme} == 'zxspectrum' || {system.theme} == 'lcdgames'|| {system.theme} == 'neogeo' || {system.theme} == 'n64'">0.1501 0.1817</maxSize>							
 		<color>FFFFFF</color>
-		<color if="{system.theme} == 'megacd' || {system.theme} == 'dreamcast' || {system.theme} == 'gamegear || {system.theme} == 'neogeo''">DDDDDD</color>
+		<color if="{system.theme} == 'megacd' || {system.theme} == 'dreamcast' || {system.theme} == 'gamegear || {system.theme} == 'neogeo'|| {system.theme} == 'dreamcast'|| {system.theme} == '3do'">DDDDDD</color>
 		<zIndex>100</zIndex>
 		<storyboard>
 		  <animation property="scale" from="0" to="0" begin="" duration="200" mode="Linear"/>
