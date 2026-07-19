@@ -733,6 +733,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="-0.052" begin="200" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 			<animation property="offsetY" from ="0" to="0.287" begin="1000" duration="200" mode="EaseOutCubic"/>
+			<animation property="scale" from="1" to="2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 	  </storyboard>
 	  
 	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:default|NoIcon">
@@ -740,6 +741,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="0.86" begin="200" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 			<animation property="offsetY" from ="0" to="0.287" begin="1000" duration="200" mode="EaseOutCubic"/>
+			<animation property="scale" from="1" to="2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 	  </storyboard>
 	  
 	  	<storyboard ifSubset="wheelStyle:NoSprite">
@@ -1033,7 +1035,7 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<origin>0.5 0.5</origin>
 		<pos>0.3615 0.33</pos>
 		<pos ifSubset="systemviewlayout:left">0.62 0.33</pos>	
-		<maxSize>0.29 0.22</maxSize>
+		<maxSize>0.316 0.23</maxSize>
 		<color>AAAAAAee</color>
 		<saturation>0</saturation>
 		<zIndex>64</zIndex>
@@ -1042,26 +1044,26 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		  <animation property="scale" from="0" to="1" begin="1000" duration="200" mode="Linear"/>
 		  <animation property="scale" from="1" to="0.333333" begin="1500" duration="200" mode="EaseOutCubic"/>
 		  <animation property="offsetX" from="0" to="0.27" begin="1500" duration="200" mode="EaseOutCubic"/>
-		  <animation property="offsetY" from="0" to="0.54" begin="1500" duration="200" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.538" begin="1500" duration="200" mode="EaseOutCubic"/>
 	  </storyboard>
 	  <storyboard ifSubset="wheelStyle:NoSprite|NoIcon">
 		  <animation property="scale" from="0" to="1" begin="0" duration="400" mode="EaseOutCubic"/>
 		  <animation property="scale" from="1" to="0.333333" begin="900" duration="300" mode="EaseOutCubic"/>
 		  <animation property="offsetX" from="0" to="0.27" begin="900" duration="300" mode="EaseOutCubic"/>
-		  <animation property="offsetY" from="0" to="0.54" begin="900" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.538" begin="900" duration="300" mode="EaseOutCubic"/>
 	  </storyboard>
 	  	<storyboard ifSubset="systemviewlayout:left">
 		  <animation property="scale" from="0" to="0" begin="" duration="800" mode="Linear"/>
 		  <animation property="scale" from="0" to="1" begin="1000" duration="200" mode="Linear"/>
 		  <animation property="scale" from="1" to="0.333333" begin="1500" duration="200" mode="EaseOutCubic"/>
 		  <animation property="offsetX" from="0" to="0.3" begin="1500" duration="200" mode="EaseOutCubic"/>
-		  <animation property="offsetY" from="0" to="0.54" begin="1500" duration="200" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.538" begin="1500" duration="200" mode="EaseOutCubic"/>
 	  </storyboard>
 	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:NoSprite|NoIcon">
 		  <animation property="scale" from="0" to="1" begin="" duration="400" mode="EaseOutCubic"/>
 		  <animation property="scale" from="1" to="0.333333" begin="900" duration="300" mode="EaseOutCubic"/>
 		  <animation property="offsetX" from="0" to="0.3" begin="900" duration="300" mode="EaseOutCubic"/>
-		  <animation property="offsetY" from="0" to="0.54" begin="900" duration="300" mode="EaseOutCubic"/>
+		  <animation property="offsetY" from="0" to="0.538" begin="900" duration="300" mode="EaseOutCubic"/>
 	  </storyboard>
 	</image>
 	
