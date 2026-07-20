@@ -536,10 +536,10 @@ originally based on: "carbon" and "Arcade Planet"
 	</image>
 	
 	<image name="colorLogo" extra="static">
-		<path>./_art/colorLogos/${system.theme}.png</path>
-		 <path>./_art/colorLogos/${system.theme}-${lang}.png</path>
-		 <path ifSubset="artworkregion:US">./_art/colorLogos/US/${system.theme}.png</path>
-		 <path ifSubset="neogeostyle:mvs">./_art/colorLogos/SPECIAL/${system.theme}.png</path>
+		<path>./_art/colorlogos/${system.theme}.png</path>
+		 <path>./_art/colorlogos/${system.theme}-${lang}.png</path>
+		 <path ifSubset="artworkregion:US">./_art/colorlogos/US/${system.theme}.png</path>
+		 <path ifSubset="neogeostyle:mvs">./_art/colorlogos/SPECIAL/${system.theme}.png</path>
 		 <size>0.25104166 0.1444444</size>
 		 <linearSmooth>true</linearSmooth>
 	     <linearSmooth if="{screen.height} == '1080' || {screen.height} == '2160'">false</linearSmooth>
@@ -1081,8 +1081,8 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	</image>
 	
 	<image name="miniature" extra ="static">
-		<path>./_art/colorLogos/${system.theme}.png</path>
-		<path>./_art/colorLogos/${system.theme}.svg</path>
+		<path>./_art/colorlogos/${system.theme}.png</path>
+		<path>./_art/colorlogos/${system.theme}.svg</path>
 		<path>./_art/consoles/${system.hardwareType}.png</path>
 		<path>./_art/consoles/${system.hardwareType}.svg</path>
 		<path>./_art/consoles/${system.group}.png</path>
