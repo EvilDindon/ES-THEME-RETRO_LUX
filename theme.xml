@@ -230,7 +230,7 @@ originally based on: "carbon" and "Arcade Planet"
   
     <menuText name="menutitle">
       <fontPath>./_art/fonts/EurostileExtendedBlack.ttf</fontPath>
-      <fontSize>0.035</fontSize>
+      <fontSize>0.032</fontSize>
       <color>FFFFFFff</color>
     </menuText>
 	
@@ -242,7 +242,7 @@ originally based on: "carbon" and "Arcade Planet"
 	
     <menuText name="menutext">
       <fontPath>./_art/fonts/Eurosti.TTF</fontPath>
-      <fontSize>0.029</fontSize>
+      <fontSize>0.028</fontSize>
       <color>969696</color>
       <separatorColor>323232FF</separatorColor>
       <selectorColor>225676ff</selectorColor>
@@ -1273,6 +1273,35 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<color>D8D8D8</color>
 	</image>
 	
+	<image name="cheevos" extra="true">
+		<visible>false</visible>
+		<color>EFEFEF</color>
+		<opacity>{game:cheevos} ? 1 : 0.1</opacity>
+		<path>./resources/fontoverrides/F091.png</path>
+		<origin>0.5 0.5</origin>
+		<size>0.0185 0</size>
+		<zIndex>41</zIndex>
+	</image>
+	
+	<image name="favorite" extra="true">
+		<visible>false</visible>
+		<opacity>{game:favorite} ? 1 : 0.1</opacity>
+		<path>./resources/fontoverrides/F006.png</path>
+		<origin>0.5 0.5</origin>
+		<size>0.019 0</size>
+		<zIndex>41</zIndex>
+	</image>
+	
+	<image name="savestate" extra="true">
+		<visible>false</visible>
+		<color>D0D0D0</color>
+		<opacity>{game:hasSaveState} ? 1 : 0.1</opacity>
+		<path>./resources/fontoverrides/savestate.svg</path>
+		<origin>0.5 0.5</origin>
+		<size>0.013 0</size>
+		<zIndex>41</zIndex>
+	</image>
+	
 	<image name="md_hidden,md_kidgame,md_favorite,md_manual,md_cheevos,md_savestate,md_notkidgame,md_nomanual,md_notcheevos,md_nosavestate">
 	  <visible>false</visible>
 	</image>
@@ -1835,8 +1864,8 @@ El Mas Jugado : {binding:mostPlayed}</text>
       <pos>0.19 0.47</pos>
 	  <pos ifSubset="gamelistposition:right">0.81 0.47</pos>	  
       <size>0.5 0.945</size>
-      <logoScale>1.15</logoScale>
-      <logoSize>0.36231883478 0.142</logoSize>
+      <logoScale>1.2</logoScale>
+      <logoSize>0.3472222 0.118333333</logoSize>
       <maxLogoCount>7</maxLogoCount>
       <imageSource>marquee</imageSource>
       <minLogoOpacity>0.67</minLogoOpacity>
@@ -1872,14 +1901,22 @@ El Mas Jugado : {binding:mostPlayed}</text>
 			</storyboard>
 	</image>
 	
-	<image name="md_favorite">
+	<image name="favorite">
 		<visible>true</visible>
-		<path>./resources/fontoverrides/F006.png</path>
-		<linearSmooth>true</linearSmooth>
-		<origin>0.5 0.5</origin>
-		<size>0.018 0</size>
 		<pos>0.092 0.416</pos>
 		<pos ifSubset="gamelistposition:right">0.712 0.416</pos>
+	</image>
+	
+	<image name="cheevos">
+		<visible>true</visible>
+		<pos ifSubset="gamelistposition:left">0.9377168 0.798</pos>
+		<pos ifSubset="gamelistposition:right">0.6314684 0.798</pos>
+	</image>
+	
+	<image name="savestate">
+		<visible>true</visible>
+		<pos ifSubset="gamelistposition:left">0.8715 0.798</pos>
+		<pos ifSubset="gamelistposition:right">0.5652484 0.798</pos>
 	</image>
 
 	<image name="md_flag">
@@ -2054,11 +2091,16 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<pos>0.75 0.91</pos>
 	</image>
 	
-	<image name="md_favorite">
+	<image name="cheevos">
+		<pos >0.598 0.91</pos>
+	</image>
+	
+	<image name="savestate">
+		<pos>0.575 0.91</pos>
+	</image>
+	
+	<image name="favorite">
 		<visible>true</visible>
-		<path>./resources/fontoverrides/F006.png</path>
-		<linearSmooth>true</linearSmooth>
-		<origin>0.5 0.5</origin>
 		<size>0.02 0</size>
 		<pos>0.725 0.91</pos>
 	</image>
@@ -2272,13 +2314,17 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<pos>0.239 0.303</pos>
 	</datetime>
 	
-	<image name="md_favorite">
-		<visible>true</visible>
-		<path>./resources/fontoverrides/F006.png</path>
-		<linearSmooth>true</linearSmooth>
-		<origin>0.5 0.5</origin>
-		<size>0.019 0</size>
-		<pos>0.215 0.37</pos>
+	<image name="favorite">
+		<pos>0.2 0.303</pos>
+		<size>0.018 0</size>
+	</image>
+	
+	<image name="cheevos">
+		<pos>0.21 0.37</pos>
+	</image>
+	
+	<image name="savestate">
+		<pos>0.19 0.37</pos>
 	</image>
 	
 	<image name="players">
@@ -2288,7 +2334,7 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	<text name="md_players">
 		<pos>0.245 0.37</pos>
 	</text>
-  	
+	
 	<text name="playcount">
 		<size>0.22 0.048</size>
 		<pos>0.245 0.465</pos>
@@ -2450,6 +2496,18 @@ El Mas Jugado : {binding:mostPlayed}</text>
       <unfilledColor>808080</unfilledColor>
 	  <zIndex>41</zIndex>	  
     </rating>
+	
+	<image name="cheevos">
+		<visible>true</visible>
+		<opacity>{game:cheevos} ? 1 : 0.12</opacity>
+		<pos >0.96875 0.03</pos>
+	</image>
+	
+	<image name="savestate">
+		<visible>true</visible>
+		<opacity>{game:hasSaveState} ? 1 : 0.12</opacity>
+		<pos>0.86875 0.03</pos>
+	</image>
 		
     <text name="md_developer,md_genre,md_description">
       <pos>2 2</pos>
@@ -2611,6 +2669,14 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<pos>0.75 0.91</pos>
 	</image>
 	
+	<image name="cheevos">
+		<pos >0.598 0.91</pos>
+	</image>
+	
+	<image name="savestate">
+		<pos>0.575 0.91</pos>
+	</image>
+	
 	<image name="players" extra="true">
 		<path>./_art/fonts/one_person_user.svg</path>
 		<linearSmooth>true</linearSmooth>
@@ -2748,13 +2814,29 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	        <visible>false</visible>
 	</video>
 	
-	<image name="infoboxlogogriddetails,md_thumbnail,players,md_flag,md_rating">
+	<image name="infoboxlogogriddetails,topboxlogogriddetails,md_thumbnail,players,md_flag,cheevos,savestate">
 		<visible>false</visible>
 	</image>
 	
-	<text name="md_description,md_name,md_developer,md_releasedate,md_playcount,md_players">
+	<image name="infoboxgrid,md_rating,md_marquee">
+	 <visible>true</visible>
+	</image>
+	
+	<text name="md_description,md_name,md_developer,md_playcount,md_players">
 		<visible>false</visible>	
 	</text>
+	
+    <image name="whitelogo" extra="true">
+	 <size>0.15 0</size>
+	 <origin>0 0.5</origin>
+    <pos>0.005 0.039</pos>
+	</image>
+	
+	<image name="md_marquee">
+	 <maxSize>0.20833333 0.063</maxSize>
+	 <origin>0.5 0.5</origin>
+	 <pos>0.5 0.039</pos>
+	</image>
 	
 	<imagegrid name="gamegrid">
 	  <padding>0.005 0.005 0.005 0.039</padding>
@@ -2827,6 +2909,18 @@ El Mas Jugado : {binding:mostPlayed}</text>
 	  <glowSize>1</glowSize>
 	  <glowOffset>1</glowOffset>
 	</text>
+	
+	<rating name="md_rating">
+      <pos>0.921 0.053</pos>
+      <size>0.065 </size>
+    </rating>
+	
+	<datetime name="md_releasedate">
+	  <alignment>center</alignment>
+	  <pos>0.91875 0.027</pos>
+	  <origin>0.5 0.5</origin>
+	  <size>0.04 0.037</size>
+	</datetime>
 
   </customView>
 
