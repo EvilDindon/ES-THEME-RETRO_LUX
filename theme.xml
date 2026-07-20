@@ -870,14 +870,14 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="offsetX" from="-0.568" to="-0.568" begin= "" duration="1500" mode="linear"/>
                 <animation property="offsetX" from="-0.568" to="0.2" begin="1500" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="-0.568" begin="8750" duration="250" mode="easeOut"/>
-				<animation property="rotation" from="" to="350" begin="1500" duration="250" mode="EaseOut"/>
+				<animation property="rotation" from="" to="370" begin="1500" duration="250" mode="EaseOut"/>
             </storyboard>
 			
 			<storyboard ifSubset="systemviewlayout:right,wheelStyle:NoIcon|NoSprite" repeatAt="1">
 				<animation property="offsetX" from="-0.568" to="-0.568" begin= "" duration="900" mode="linear"/>
                 <animation property="offsetX" from="-0.568" to="0.2" begin="900" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="-0.568" begin="8750" duration="250" mode="easeOut"/>
-				<animation property="rotation" from="" to="350" begin="900" duration="250" mode="EaseOut"/>
+				<animation property="rotation" from="" to="370" begin="900" duration="250" mode="EaseOut"/>
             </storyboard>
 			
 			<storyboard ifSubset="systemviewlayout:left,wheelStyle:default" repeatAt="1">
@@ -933,14 +933,14 @@ originally based on: "carbon" and "Arcade Planet"
 				<animation property="offsetX" from="-0.568" to="-0.568" begin= "" duration="2000" mode="linear"/>
                 <animation property="offsetX" from="-0.568" to="-0.2" begin="2000" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="-0.568" begin="8750" duration="250" mode="easeOut"/>
-				<animation property="rotation" from="" to="370" begin="2000" duration="250" mode="easeOut"/>
+				<animation property="rotation" from="" to="350" begin="2000" duration="250" mode="easeOut"/>
             </storyboard>
 			
 			<storyboard ifSubset="systemviewlayout:right,wheelStyle:NoIcon|NoSprite" repeatAt="1">
 				<animation property="offsetX" from="-0.568" to="-0.568" begin= "" duration="1300" mode="linear"/>
                 <animation property="offsetX" from="-0.568" to="-0.2" begin="1300" duration="250" mode="easeOut"/>
 				<animation property="offsetX" from="0" to="-0.568" begin="8750" duration="250" mode="easeOut"/>
-				<animation property="rotation" from="" to="370" begin="1300" duration="250" mode="easeOut"/>
+				<animation property="rotation" from="" to="350" begin="1300" duration="250" mode="easeOut"/>
             </storyboard>
 			
 			
