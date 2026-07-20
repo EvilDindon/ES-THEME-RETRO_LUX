@@ -34,7 +34,9 @@ You can also download Video previews, many views are compatible with it.
 
 <img width="1920" height="1080" alt="gs rightdetailed boxart" src="https://github.com/user-attachments/assets/ab88fb91-66c2-4c38-9bdd-d21be60b49d4" />
 
-<img width="1920" height="1080" alt="FAVORITES RETROTILES" src="https://github.com/user-attachments/assets/be5a8732-66cb-48f4-878c-a6ef7bb31391" />
+<img width="1920" height="1080" alt="fanart new" src="https://github.com/user-attachments/assets/219df630-169e-4a58-9c79-4032364abe9c" />
+
+<img width="1920" height="1080" alt="retrotiles updated" src="https://github.com/user-attachments/assets/17f12482-af15-4ca2-8c13-c3e0ee8a95c9" />
 
 <img width="1920" height="1080" alt="box carousel lynx" src="https://github.com/user-attachments/assets/d582d159-89d4-4fa3-8104-dd71e6660122" />
 
