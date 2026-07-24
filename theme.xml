@@ -17,125 +17,162 @@ originally based on: "carbon" and "Arcade Planet"
 	<!--LANGS-->
 	<artworkregion>Logos and Artwork Region</artworkregion>
 	<artworkregion lang="fr">Région des Logos et Artworks</artworkregion>
+	<artworkregion lang="es">Región de Logos y Artworks</artworkregion>
 	
 	<bgcolor>Background color</bgcolor>
 	<bgcolor lang="fr">Couleur du fond d'écran</bgcolor>
+	<bgcolor lang="es">Color del Papel Pintado</bgcolor>
 	
 	<carouselLogoStyle>Carousel Logo Style</carouselLogoStyle>
 	<carouselLogoStyle lang="fr">Style de Logos dans le Carousel</carouselLogoStyle>
+	<carouselLogoStyle lang="es">Estilo de Logos en el Carrusel</carouselLogoStyle>
 	
 	<selectedLogoStyle>Selected Logo Style</selectedLogoStyle>
 	<selectedLogoStyle lang="fr">Style du logo actif</selectedLogoStyle>
+	<selectedLogoStyle lang="es">Estilo del logo activo</selectedLogoStyle>
 	
 	<selectedBorderColor>Selected Logo Border Color</selectedBorderColor>
 	<selectedBorderColor lang="fr">Couleur de la bordure du logo actif</selectedBorderColor>
+	<selectedBorderColor lang="es">Color de la bordura del logo activo</selectedBorderColor>
 		
 	<systemviewlayout>System View Layout</systemviewlayout>
 	<systemviewlayout lang="fr">Disposition de vue système</systemviewlayout>
+	<systemviewlayout lang="es">Disposición de la vista de Sistemas</systemviewlayout>
 	
 	<wheelImageStyle>System View Wheel Image Style</wheelImageStyle>
-	<wheelImageStyle lang="fr">Style d'Images Carousel Sysytèmes</wheelImageStyle>
+	<wheelImageStyle lang="fr">Style d'Images Carousel Système</wheelImageStyle>
+	<wheelImageStyle lang="es">Estilo  de Imagenes en el Carrusel de Sistemas</wheelImageStyle>
 	
 	<systemviewstyle>System view Style</systemviewstyle>
 	<systemviewstyle lang="fr">Style de vue Système</systemviewstyle>
+	<systemviewstyle lang="es">Estilo de vista de Sistemas</systemviewstyle>
 
 	<randomfanart>Random Fan Art</randomfanart>
 	<randomfanart lang="fr">Fan Art aléatoire</randomfanart>
+	<randomfanart lang="es">Fan Art Aleatorio</randomfanart>
 	
 	<randomboxart>Random Box Art</randomboxart>
 	<randomboxart lang="fr">Jacquettes Aléatoires</randomboxart>
+	<randomboxart lang="es">Portadas Aleatorias</randomboxart>
 	
 	<randomboxartsX3>3 Random Box Arts</randomboxartsX3>
 	<randomboxartsX3 lang="fr">3 Jacquettes Aléatoires</randomboxartsX3>
+	<randomboxartsX3 lang="es">3 Portadas Aleatorias</randomboxartsX3>
 	
 	<NoSprite>Without Sprite</NoSprite>
     <NoSprite lang="fr">Sans Sprite</NoSprite>
+	<NoSprite lang="es">Sin Sprite</NoSprite>
 	
 	<NoIcon>Without Icon</NoIcon>
     <NoIcon lang="fr">Sans Icône</NoIcon>
+	<NoIcon lang="es">Sin Icono</NoIcon>
 			
 	<boxcarousel>Box Carousel</boxcarousel>
     <boxcarousel lang="fr">Carousel de Boîtes</boxcarousel>
+	<boxcarousel lang="es">Carrusel de Portadas</boxcarousel>
 	
 	<logogrid>Logo Grid</logogrid>
 	<logogrid lang="fr">Grille de Logos</logogrid>
+	<logogrid lang="es">Red de Logos</logogrid>
 	
 	<logogriddetails>Logo Grid + Details</logogriddetails>
 	<logogriddetails lang="fr">Grille de Logos + Détails</logogriddetails>
+	<logogriddetails lang="es">Red de Logos + Detalles</logogriddetails>
 	
 	<smallboxesdetails>Small Boxes + Details</smallboxesdetails>
 	<smallboxesdetails lang="fr">Small Boxes + Détails</smallboxesdetails>
-	
+	<smallboxesdetails lang="es">Pequeñas Portadas + Detalles</smallboxesdetails>
 
 	<retrotiles>Retro Tiles</retrotiles>
 	<retrotiles lang="fr">Tuiles Rétro</retrotiles>
+	<retrotiles lang="es">Azulejos Retro</retrotiles>
 
 	<default>default</default>
     <default lang="fr">Par Défaut</default>
+	<default lang="es">Por Defecto</default>
           
 	<yes>yes</yes>
     <yes lang="fr">oui</yes>
+	<yes lang="es">si</yes>
 	
     <no>no</no>
     <no lang="fr">non</no>
 	
 	<left>left</left>
     <left lang="fr">gauche</left>
+	<left lang="es">izquierda</left>
 		
 	<color>color</color>
-    <color lang="fr">couleur</color>
-   
+    <color lang="es">couleur</color>
+	
    	<none>none</none>
     <none lang="fr">aucun</none>
+	<none lang="es">ninguno</none>
 	
     <red>red</red>
     <red lang="fr">rouge</red>
+	<red lang="es">rojo</red>
             
     <blue>blue</blue>
     <blue lang="fr">bleu</blue>
+	<blue lang="es">azul</blue>
 	
 	<darkblue>dark blue</darkblue>
     <darkblue lang="fr">bleu nuit</darkblue>
+	<darkblue lang="es">azul medianoche</darkblue>
 
     <purple>purple</purple>
     <purple lang="fr">violet</purple>
+    <purple lang="es">púrpura</purple>
 	
 	<green>green</green>
     <green lang="fr">vert</green>
+    <green lang="es">verde</green>
 	
     <yellow>yellow</yellow>
     <yellow lang="fr">jaune</yellow>
-
+    <yellow lang="es">amarillo</yellow>
+	
 	<white>white</white>
     <white lang="fr">blanc</white>
+    <white lang="es">blanco</white>
 	
 	<black>black</black>
     <black lang="fr">noir</black>
+    <black lang="es">negro</black>
 	
 	<gold>gold</gold>
 	<gold lang="fr">dorée</gold>
+	<gold lang="es">dorado</gold>
 	
 	<silver>silver</silver>
 	<silver lang="fr">chromée</silver>
+	<silver lang="es">cromo</silver>
 	
 	<theme.aspect-ratio>aspect ratio</theme.aspect-ratio>
     <theme.aspect-ratio lang="fr">format d'écran</theme.aspect-ratio>
-		
+    <theme.aspect-ratio lang="es">format d'écran</theme.aspect-ratio>
+	
 	<gamelistalignment>Text Alignment in Detailed View</gamelistalignment>
 	<gamelistalignment lang="fr">Alignement du Texte Dans la Vue Détails</gamelistalignment>
+	<gamelistalignment lang="es">Alignement du Texte Dans la Vue Détails</gamelistalignment>
 	
 	<gamelistposition>Gamelist Position</gamelistposition>
 	<gamelistposition lang="fr">Position de la Liste de Jeux</gamelistposition>
+	<gamelistposition lang="es">Position de la Liste de Jeux</gamelistposition>
 	
 	<detailedartworklayout>Detailed and Gamecarousel Views Artwork Layout</detailedartworklayout>
 	<detailedartworklayout lang="fr">Agencement des vues Détaillée et Carousel</detailedartworklayout>
+	<detailedartworklayout lang="es">Agencement des vues Détaillée et Carousel</detailedartworklayout>
 	
 	<imagetop>Game Image/Video on Top</imagetop>
 	<imagetop lang="fr">Aperçu du Jeu/Vidéo en Haut</imagetop>
+	<imagetop lang="es">Aperçu du Jeu/Vidéo en Haut</imagetop>
 	
 	<thumbnailtop>Boxart on Top</thumbnailtop>
 	<thumbnailtop lang="fr">Boîte de jeu en Haut</thumbnailtop>
-		
+	<thumbnailtop lang="es">Boîte de jeu en Haut</thumbnailtop>
+	
   </variables>
   
    <!-- Subset options for Regional Artwork and Logos -->
