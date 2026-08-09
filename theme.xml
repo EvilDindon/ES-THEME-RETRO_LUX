@@ -1121,6 +1121,7 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<path>./_art/colorlogos/${system.theme}.png</path>
 		<path>./_art/colorlogos/${system.theme}.svg</path>
 		<path>./_art/consoles/${system.hardwareType}.png</path>
+				<path>./_art/consoles/${system.platform}.png</path>
 		<path>./_art/consoles/${system.hardwareType}.svg</path>
 		<path>./_art/consoles/${system.group}.png</path>
 		<path>./_art/consoles/${system.group}.svg</path>
