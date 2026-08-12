@@ -783,7 +783,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="-0.052" begin="200" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 			<animation property="offsetY" from ="0" to="0.287" begin="1000" duration="200" mode="EaseOutCubic"/>
-			<animation property="scale" from="1" to="2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
+			<animation property="scale" from="1" to="3" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 	  </storyboard>
 	  
 	  <storyboard ifSubset="systemviewlayout:left,wheelStyle:default|NoIcon">
@@ -791,7 +791,7 @@ originally based on: "carbon" and "Arcade Planet"
 			<animation property="offsetX" from="0" to="0.86" begin="200" duration="800" mode="EaseOutCubic"/>
 			<animation property="offsetY" to="-0.2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 			<animation property="offsetY" from ="0" to="0.287" begin="1000" duration="200" mode="EaseOutCubic"/>
-			<animation property="scale" from="1" to="2" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
+			<animation property="scale" from="1" to="3" begin="200" duration="400" mode="EaseOutCubic" autoReverse="true"/>
 	  </storyboard>
 	  
 	  	<storyboard ifSubset="wheelStyle:NoSprite">
@@ -1121,7 +1121,6 @@ El Mas Jugado : {binding:mostPlayed}</text>
 		<path>./_art/colorlogos/${system.theme}.png</path>
 		<path>./_art/colorlogos/${system.theme}.svg</path>
 		<path>./_art/consoles/${system.hardwareType}.png</path>
-				<path>./_art/consoles/${system.platform}.png</path>
 		<path>./_art/consoles/${system.hardwareType}.svg</path>
 		<path>./_art/consoles/${system.group}.png</path>
 		<path>./_art/consoles/${system.group}.svg</path>
