@@ -6,6 +6,7 @@
  - Clean retro style
  - Ultra customizable
  - 10 Game List View Styles
+ - 39 Custom Collections
  - 16/9, 4/3, 5/4 and 16/10 Support (only 16/9 for now)
    
   # ** IMPORTANT SCRAPING INSTRUCTIONS **
